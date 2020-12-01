@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery+Bootstrap响应式步骤向导代码</title>
+
+<link rel="stylesheet" href="http://letmefly666.gitee.io/various/计算机Code/懒人之家-响应步骤/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://letmefly666.gitee.io/various/计算机Code/懒人之家-响应步骤/css/jquery.steps.css" />
+
+</head>
+<body>
+
+<div id="example-basic" style="width: 60%;margin: 50px auto;">
+	<h3>第一步</h3>
+	<section>
+		<div>
+			<p>这是一首简单的小情歌</p>
+			<p>唱出人们心中的曲折</p>
+			<p>我想我很适合</p>
+			<p>当一个歌颂者</p>
+			<p>啦啦啦啦啦啦啦</p>
+		</div>
+	</section>
+	<h3>第二步</h3>
+	<section>
+		<p>第二步</p>
+	</section>
+	<h3>第三步</h3>
+	<section>
+		<p>第三步</p>
+	</section>
+</div>
+
+<script src="http://letmefly666.gitee.io/various/计算机Code/懒人之家-响应步骤/js/jquery.min.js"></script>
+<script src="http://letmefly666.gitee.io/various/计算机Code/懒人之家-响应步骤/js/jquery.steps.js"></script>
+<script>
+	$(function(){
+		$("#example-basic").steps({
+			headerTag: "h3",
+			bodyTag: "section",
+			transitionEffect: "slideLeft",
+			autoFocus: true,
+			onStepChanging:function(){/*步骤更改之前进行验证，默认验证结果是true*/
+				// alert('步骤变更前触发');
+				return true;
+			},
+			onStepChanged:function(){/*步骤后变更后  触发的函数   */
+				return true;
+				// return false;
+				// alert('步骤变更后触发');
+			},
+			onFinishing:function () {/*点击 提交 前 触发的事件，默认验证结果是false */
+				return true;
+				// alert('提交前触发');
+				// return false;/*验证结果*/
+			},
+			onFinished:function () {/*点击 提交 后触发的事件*/
+				alert('提交');
+			}
+		});
+	})
+</script>
+
+</body>
+</html>
