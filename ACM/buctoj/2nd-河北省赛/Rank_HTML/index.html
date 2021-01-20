@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="ico/favicon.ico">
+
+    <title>BUCTOJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="template/bs3/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="template/bs3/bootstrap-theme.min.css">
+<link rel="stylesheet" href="template/bs3/white.css">
+<link rel="stylesheet" href="template/bs3/katex.min.css">
+<link rel="stylesheet" href="template/bs3/mathjax.css">
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=66522048" charset="UTF-8"></script>
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./"><i class="icon-home"></i>BUCTOJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      	                    <li ><a href="faqs.php">
+			<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> 常见问答</a></li>
+		      			      <li ><a href="bbs.php?cid=1819"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 讨论版</a></li>
+			      
+	      	                    <li ><a href="problemset.php" ><span class="glyphicon glyphicon-book" aria-hidden="true"></span> 问题</a></li>
+              <li > <a href="category.php"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> 来源/分类</a></li>
+              <li ><a href="status.php"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> 状态</a></li>
+              <li ><a href="ranklist.php"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 排名</a></li>
+              <li ><a href="contest.php"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> 竞赛&作业</a></li>
+	      	      <li><a>[</a></li>
+              <li class="active" ><a href="contest.php?cid=1819">
+			问题	      </a></li>
+               <li  class="active" ><a href="status.php?cid=1819">
+			状态	      </a></li>
+              <li  class="active" ><a href="contestrank.php?cid=1819">
+			排名	      </a></li>
+              <li  class="active" ><a href="contestrank-oi.php?cid=1819">OI
+			排名	      </a></li>
+              <li  class="active" ><a href="conteststatistics.php?cid=1819">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+<li><a href="http://acmer.site/" target="_blank">竞赛专区</a></li>
+	     <!-- <li ><a href="recent-contest.php"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> 名校联赛</a></li>
+	     -->
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Login</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="template/bs3/profile.php?1166737285" ></script>
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+
+            <!-- select language -->
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">Language</span><span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="setlang.php?lang=cn">中文</a></li>
+                <li><a href="setlang.php?lang=en">English</a></li>
+              </ul>
+            </ul><!-- select language -->
+
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+<center><h3>Contest RankList -- <font color='green'>2020河北省赛训练赛一</font></h3>
+<h4></h4>
+<a href="contestrank.xls.php?cid=1819" >Download</a>
+</center>
+<div style="overflow: auto">
+<table id=rank><thead><tr class=toprow align=center><td class="{sorter:'false'}" width=5%>Rank<th width=10%>User</th><th width=10%>Nick</th><th width=5%>Solved</th><th width=5%>Penalty</th>
+<td><a href=problem.php?cid=1819&pid=0>A</a></td><td><a href=problem.php?cid=1819&pid=1>B</a></td><td><a href=problem.php?cid=1819&pid=2>C</a></td><td><a href=problem.php?cid=1819&pid=3>D</a></td><td><a href=problem.php?cid=1819&pid=4>E</a></td><td><a href=problem.php?cid=1819&pid=5>F</a></td><td><a href=problem.php?cid=1819&pid=6>G</a></td><td><a href=problem.php?cid=1819&pid=7>H</a></td><td><a href=problem.php?cid=1819&pid=8>I</a></td><td><a href=problem.php?cid=1819&pid=9>J</a></td><td><a href=problem.php?cid=1819&pid=10>K</a></td><td><a href=problem.php?cid=1819&pid=11>L</a></td></tr></thead>
+<tbody><tr class=evenrow align=center>
+<td>1<td><a name="2019040474" href=userinfo.php?user=2019040474>2019040474</a><td><a href=userinfo.php?user=2019040474>计科1906李腾飞</a><td><a href=status.php?user_id=2019040474&cid=1819>7</a><td>08:36:49<td class=well style='background-color:#33ff33'>00:03:45<td class=well style='background-color:#aaffaa'>03:48:36(-4)<td class=well style='background-color:#33ff33'>00:11:32<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:13:52<td class=well style='background-color:#33ff33'>00:38:33<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:45:59<td class=well style='background-color:#ffa0a0'>(-1)<td class=well style='background-color:#33ff33'>01:34:32</tr>
+<tr class=oddrow align=center>
+<td>2<td><a name="2018040358" href=userinfo.php?user=2018040358>2018040358</a><td><a href=userinfo.php?user=2018040358>计科1801黄福龙</a><td><a href=status.php?user_id=2018040358&cid=1819>7</a><td>11:29:01<td class=well style='background-color:#33ff33'>00:11:19<td class=well style='background-color:#53ff53'>03:19:33(-1)<td class=well style='background-color:#33ff33'>00:14:47<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:17:16<td class=well style='background-color:#33ff33'>00:25:11<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:54:08<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>03:46:47</tr>
+<tr class=evenrow align=center>
+<td>3<td><a name="2019040418" href=userinfo.php?user=2019040418>2019040418</a><td><a href=userinfo.php?user=2019040418>dongdziz</a><td><a href=status.php?user_id=2019040418&cid=1819>7</a><td>17:18:15<td class=well style='background-color:#33ff33'>02:04:32<td class=well style='background-color:#aaaaff'>02:50:46(-1)<td class=well style='background-color:#73ff73'>02:07:05(-2)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:08:06<td class=well style='background-color:#33ff33'>02:12:05<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:23:44<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:31:57</tr>
+<tr class=oddrow align=center>
+<td>4<td><a name="2018040337" href=userinfo.php?user=2018040337>2018040337</a><td><a href=userinfo.php?user=2018040337>计科1801 王彤彤</a><td><a href=status.php?user_id=2018040337&cid=1819>6</a><td>08:06:09<td class=well style='background-color:#33ff33'>00:06:39<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:10:41<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:15:49<td class=well style='background-color:#aaaaff'>00:23:33<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#73ff73'>02:20:27(-2)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#aaffaa'>02:49:00(-4)</tr>
+<tr class=evenrow align=center>
+<td>5<td><a name="2019040472" href=userinfo.php?user=2019040472>2019040472</a><td><a href=userinfo.php?user=2019040472>计科1906杜子涵</a><td><a href=status.php?user_id=2019040472&cid=1819>6</a><td>08:12:52<td class=well style='background-color:#aaaaff'>00:03:05<td class=well style='background-color:#ffa0a0'>(-1)<td class=well style='background-color:#33ff33'>00:12:51<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:15:21<td class=well style='background-color:#73ff73'>01:35:12(-2)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#53ff53'>02:03:08(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>03:03:15</tr>
+<tr class=oddrow align=center>
+<td>6<td><a name="2018040503" href=userinfo.php?user=2018040503>2018040503</a><td><a href=userinfo.php?user=2018040503>计科1807-赵云启</a><td><a href=status.php?user_id=2018040503&cid=1819>5</a><td>03:39:53<td class=well style='background-color:#33ff33'>00:03:59<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:08:04<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#53ff53'>00:18:27(-1)<td class=well style='background-color:#73ff73'>00:35:32(-2)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>01:33:51<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#ff9696'>(-2)</tr>
+<tr class=evenrow align=center>
+<td>7<td><a name="2018040453" href=userinfo.php?user=2018040453>2018040453</a><td><a href=userinfo.php?user=2018040453>计科1805刘源源</a><td><a href=status.php?user_id=2018040453&cid=1819>5</a><td>03:44:39<td class=well style='background-color:#33ff33'>00:24:30<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:27:58<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:30:31<td class=well style='background-color:#33ff33'>00:40:38<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>01:41:02<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>8<td><a name="2019040385" href=userinfo.php?user=2019040385>2019040385</a><td><a href=userinfo.php?user=2019040385>计科1902梅雨婷</a><td><a href=status.php?user_id=2019040385&cid=1819>5</a><td>04:52:43<td class=well style='background-color:#53ff53'>00:05:36(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:08:29<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#aaaaff'>00:13:43<td class=well style='background-color:#53ff53'>00:54:23(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:50:32<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>9<td><a name="2019040500" href=userinfo.php?user=2019040500>2019040500</a><td><a href=userinfo.php?user=2019040500>计科1907姜晨</a><td><a href=status.php?user_id=2019040500&cid=1819>5</a><td>05:32:02<td class=well style='background-color:#33ff33'>00:16:25<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#53ff53'>00:23:49(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:27:40<td class=well style='background-color:#33ff33'>00:44:05<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>03:20:03<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>10<td><a name="2018040496" href=userinfo.php?user=2018040496>2018040496</a><td><a href=userinfo.php?user=2018040496>计科1807-李潇</a><td><a href=status.php?user_id=2018040496&cid=1819>5</a><td>06:01:22<td class=well style='background-color:#33ff33'>00:07:06<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#73ff73'>00:12:08(-2)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:17:04<td class=well style='background-color:#53ff53'>02:06:59(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:18:05<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>11<td><a name="2019040471" href=userinfo.php?user=2019040471>2019040471</a><td><a href=userinfo.php?user=2019040471>计科1906 李楠</a><td><a href=status.php?user_id=2019040471&cid=1819>5</a><td>06:32:37<td class=well style='background-color:#53ff53'>00:18:30(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#53ff53'>00:26:35(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:39:21<td class=well style='background-color:#33ff33'>01:59:00<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:29:11<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>12<td><a name="2018040497" href=userinfo.php?user=2018040497>2018040497</a><td><a href=userinfo.php?user=2018040497>计科1807-陈聘之</a><td><a href=status.php?user_id=2018040497&cid=1819>5</a><td>11:35:46<td class=well style='background-color:#33ff33'>00:06:30<td class=well style='background-color:#33ff33'>03:29:25<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#aaaaff'>02:28:58(-4)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:17:40<td class=well style='background-color:#93ff93'>02:53:13(-3)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>13<td><a name="2018040336" href=userinfo.php?user=2018040336>2018040336</a><td><a href=userinfo.php?user=2018040336>计科1801 王举</a><td><a href=status.php?user_id=2018040336&cid=1819>5</a><td>14:08:23<td class=well style='background-color:#33ff33'>01:58:50<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:04:15<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:49:41<td class=well style='background-color:#93ff93'>02:57:29(-3)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>03:18:08<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#ffa0a0'>(-1)</tr>
+<tr class=oddrow align=center>
+<td>14<td><a name="2019040388" href=userinfo.php?user=2019040388>2019040388</a><td><a href=userinfo.php?user=2019040388>计科1903 于博</a><td><a href=status.php?user_id=2019040388&cid=1819>4</a><td>02:06:27<td class=well style='background-color:#53ff53'>00:16:14(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:22:12<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:24:40<td class=well style='background-color:#33ff33'>00:43:21<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>15<td><a name="2018040449" href=userinfo.php?user=2018040449>2018040449</a><td><a href=userinfo.php?user=2018040449>计科1805-向煜</a><td><a href=status.php?user_id=2018040449&cid=1819>4</a><td>04:36:34<td class=well style='background-color:#33ff33'>00:48:55<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:52:31<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:53:37<td class=well style='background-color:#33ff33'>02:01:31<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>16<td><a name="2018040477" href=userinfo.php?user=2018040477>2018040477</a><td><a href=userinfo.php?user=2018040477>2018040477-CS1806-杨泽忠</a><td><a href=status.php?user_id=2018040477&cid=1819>4</a><td>06:10:01<td class=well style='background-color:#33ff33'>00:37:21<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#53ff53'>00:40:02(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:13:49<td class=well style='background-color:#33ff33'>02:18:49<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>17<td><a name="2019040400" href=userinfo.php?user=2019040400>2019040400</a><td><a href=userinfo.php?user=2019040400>计科1903李世琦</a><td><a href=status.php?user_id=2019040400&cid=1819>4</a><td>06:14:42<td class=well style='background-color:#aaffaa'>00:32:05(-7)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:36:51<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:39:44<td class=well style='background-color:#53ff53'>01:46:02(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>18<td><a name="2018040456" href=userinfo.php?user=2018040456>2018040456</a><td><a href=userinfo.php?user=2018040456>计科1805李思琪</a><td><a href=status.php?user_id=2018040456&cid=1819>4</a><td>11:44:20<td class=well style='background-color:#33ff33'>02:45:50<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:49:18<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:51:58<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>03:17:14</tr>
+<tr class=evenrow align=center>
+<td>19<td><a name="2018040450" href=userinfo.php?user=2018040450>2018040450</a><td><a href=userinfo.php?user=2018040450>计科1805-成亦峻</a><td><a href=status.php?user_id=2018040450&cid=1819>3</a><td>01:33:36<td class=well style='background-color:#33ff33'>00:06:37<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#aaaaff'>00:29:38<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#aaaaff'>00:57:21</tr>
+<tr class=oddrow align=center>
+<td>20<td><a name="2019040473" href=userinfo.php?user=2019040473>2019040473</a><td><a href=userinfo.php?user=2019040473>计科1906 陈柯舟</a><td><a href=status.php?user_id=2019040473&cid=1819>3</a><td>08:45:10<td class=well style='background-color:#33ff33'>02:50:30<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:55:23<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>02:59:17<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>21<td><a name="2018040461" href=userinfo.php?user=2018040461>2018040461</a><td><a href=userinfo.php?user=2018040461>计科1805胡澳</a><td><a href=status.php?user_id=2018040461&cid=1819>2</a><td>00:37:50<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#aaaaff'>00:05:10<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#33ff33'>00:32:40<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>22<td><a name="2019040410" href=userinfo.php?user=2019040410>2019040410</a><td><a href=userinfo.php?user=2019040410>计科1903谢文静</a><td><a href=status.php?user_id=2019040410&cid=1819>1</a><td>00:25:06<td class=well style='background-color:#33ff33'>00:25:06<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#ffa0a0'>(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>23<td><a name="2018040451" href=userinfo.php?user=2018040451>2018040451</a><td><a href=userinfo.php?user=2018040451>孙跃峰2018040451</a><td><a href=status.php?user_id=2018040451&cid=1819>1</a><td>01:50:07<td class=well style='background-color:#33ff33'>01:50:07<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=oddrow align=center>
+<td>24<td><a name="2018040532" href=userinfo.php?user=2018040532>2018040532</a><td><a href=userinfo.php?user=2018040532>2018040532-CS1808-章文</a><td><a href=status.php?user_id=2018040532&cid=1819>1</a><td>01:53:20<td class=well style='background-color:#33ff33'>01:53:20<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+<tr class=evenrow align=center>
+<td>25<td><a name="1027984377" href=userinfo.php?user=1027984377>1027984377</a><td><a href=userinfo.php?user=1027984377>柒街_</a><td><a href=status.php?user_id=1027984377&cid=1819>0</a><td>00:00:00<td class=well style='background-color:#ffa0a0'>(-1)<td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'><td class=well style='background-color:#eeeeee'></tr>
+</tbody></table></div>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="template/bs3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="template/bs3/bootstrap.min.js"></script>
+
+<!--  to enable mathjax in hustoj:
+svn export http://github.com/mathjax/MathJax/trunk /home/judge/src/web/mathjax
+<script type="text/javascript"
+  src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+or
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+-->
+<script>
+$(document).ready(function(){
+   
+  	// var msg="<div class=center > <a href='https://wj.qq.com/s2/6704778/310d/' target='_blank'><img src='/image/ad.png' width='50%'> </a></div>";
+    // $(".jumbotron").prepend(msg);
+    $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div class=center >系统维护人：刘勇</div>");
+  $("body").append("<div class=center >邮箱：lyong@mail.buct.edu.cn</div>");
+  $("body").append("<div class=center >博客地址：<a href=\"http://www.cnblogs.com/liuyong0076\">www.cnblogs.com/liuyong0076</a> </div>");
+  $("body").append("<div class=center >使用BuctOJ遇到问题，加入QQ群反馈，群号: 933410835</div>");
+  $("body").append("<div class=center ><img src='./image/qrcode.png' width='96px'></div>");
+  $("body").append("<div class=center >&nbsp;</div>");
+});
+
+$(".hint pre").each(function(){
+	var plus="<span class='glyphicon glyphicon-plus'>Click</span>";
+	var content=$(this);
+	$(this).before(plus);
+	$(this).prev().click(function(){
+		content.toggle();
+	});
+	
+});
+
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+  console.log("To enable mathjax in hustoj, check line 15 in /home/judge/src/web/template/bs3/js.php");
+
+</script>
+
+	    
+<script type="text/javascript" src="include/jquery.tablesorter.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+        $.tablesorter.addParser({
+              // set a unique id
+              id: 'punish',
+              is: function(s) {
+              // return false so this parser is not auto detected
+              return false;
+              },
+              format: function(s) {
+              // format your data for normalization
+              var v=s.toLowerCase().replace(/\:/,'').replace(/\:/,'').replace(/\(-/,'.').replace(/\)/,'');
+              //alert(v);
+              v=parseFloat('0'+v);
+              return v>1?v:v+Number.MAX_VALUE-1;
+              },
+              // set type, either numeric or text
+              type: 'numeric'
+              });
+              $("#rank").tablesorter({
+              headers: {
+              4: {
+              sorter:'punish'
+              }
+              ,5: {  sorter:'punish' },6: {  sorter:'punish' },7: {  sorter:'punish' },8: {  sorter:'punish' },9: {  sorter:'punish' },10: {  sorter:'punish' },11: {  sorter:'punish' },12: {  sorter:'punish' },13: {  sorter:'punish' },14: {  sorter:'punish' },15: {  sorter:'punish' },16: {  sorter:'punish' }              }
+        });
+  metal();
+$(document).ready(function(){
+        setTimeout(function(){document.location.href='/contestrank.php?cid=1819'},60000)
+});
+</script>
+<script>
+function getTotal(rows){
+var total=0;
+for(var i=0;i<rows.length&&total==0;i++){
+try{
+total=parseInt(rows[rows.length-i].cells[0].innerHTML);
+if(isNaN(total)) total=0;
+}catch(e){
+}
+}
+return total;
+}
+function metal(){
+var tb=window.document.getElementById('rank');
+var rows=tb.rows;
+try{
+  var total=getTotal(rows);//alert(total);
+for(var i=1;i<rows.length;i++){
+var cell=rows[i].cells[0];
+var acc=rows[i].cells[3];
+var ac=parseInt(acc.innerText);
+if (isNaN(ac)) ac=parseInt(acc.textContent);
+if(cell.innerHTML!="*"&&ac>0){
+var r=parseInt(cell.innerHTML);
+if(r==1){
+cell.innerHTML="Winner";
+//cell.style.cssText="background-color:gold;color:red";
+cell.className="badge btn-warning";
+}
+if(r>1&&r<=total*.05+1)
+cell.className="badge btn-warning";
+if(r>total*.05+1&&r<=total*.20+1)
+cell.className="badge";
+if(r>total*.20+1&&r<=total*.45+1)
+cell.className="badge btn-danger";
+if(r>total*.45+1&&ac>0)
+cell.className="badge badge-info";
+}
+}
+}catch(e){
+//alert(e);
+}
+}
+</script>
+<style>
+.well{
+   background-image:none;
+   padding:1px;
+}
+td{
+   white-space:nowrap;
+}
+</style>
+  </body>
+</html><!--not cached-->
