@@ -1,4 +1,4 @@
-name: 'Check the py by push'
+name: 'Auto Run At 21:00UTC And When Pulled'
 
 on:
   schedule:
