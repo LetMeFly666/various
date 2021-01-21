@@ -1,7 +1,7 @@
 name: Daily Check In
 on:
   schedule:
-    - cron: '49 8 * * *'
+    - cron: '55 8 * * *'
 
 
 jobs:
