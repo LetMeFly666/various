@@ -20,7 +20,8 @@ jobs:
 
     - name: Install Requests
       run: |
-        python pip install requests
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade requests
 
     - name: really run
       run: |
