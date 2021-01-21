@@ -16,7 +16,9 @@ if __name__ == '__main__':
     DATAS_BUCTDAKA = os.environ["DATAS_BUCTDAKA"]
     headers = HEADERS_BUCTDAKA
     datas = DATAS_BUCTDAKA
-    result = requests.post(url=url, headers=headers, data = datas)
+    print("headers:",headers)
+    print("datas:",datas)
+    result = requests.post(url=url, headers=json.loads(headers), data = json.loads(datas))
     print(result.text)
     # print(getdate())
 
