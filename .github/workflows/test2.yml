@@ -1,6 +1,8 @@
 name: 'Check the py by push'
 
 on:
+  schedule:
+    - cron: '0 21 * * *'
   push:
     branches: 
       - master
@@ -35,4 +37,4 @@ jobs:
           USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
           TEST: ${{ secrets.TEST }}
           # TEST_EMPTY: ${{ secrets.TEST_EMPTY }}  这里加上空的没事，但是python执行就不行了
-        run: python 自动运行脚本/BUCTdaka.py
+        run: python 自动脚本/BUCTdaka.py
