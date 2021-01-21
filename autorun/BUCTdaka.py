@@ -25,6 +25,7 @@ if __name__ == '__main__':
     TEST = os.environ["TEST"]
 
     print("Test for the secrets, TEST", TEST, "Right?")
+    print("Test for the secrets, empty", EMPTY, "Right?")
     print("ADDRESS_BUCTDAKA:",ADDRESS_BUCTDAKA, 'Is it right?')
     dbg(ADDRESS_BUCTDAKA)
     dbg(AREA_BUCTDAKA)

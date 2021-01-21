@@ -34,4 +34,5 @@ jobs:
           UID_BUCTDAKA: ${{ secrets.UID_BUCTDAKA }}
           USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
           TEST: ${{ secrets.TEST }}
+          TEST_EMPTY: ${{ secrets.TEST_EMPTY }}
         run: python autorun/BUCTdaka.py
