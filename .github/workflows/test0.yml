@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     # 定义系统类型，这里选择Ubuntu
     steps:
+    - name: show by echo
+      run: |
+        echo 'Hello world'
     - name: '[Prepare] Code Check'
       uses: actions/checkout@v2
       # 从该仓库clone代码到虚拟机
@@ -27,3 +30,6 @@ jobs:
         cd 自动脚本
         python 疫情防控自动打卡.py
         # 执行代码
+    - name: show by echo2
+      run: |
+        echo Daily Check In
