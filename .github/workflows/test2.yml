@@ -20,5 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --upgrade requests
       - name: 'run cf2dns'
-        
+        env:
+          HEADERS_BUCTDAKA: ${{ secrets.HEADERS_BUCTDAKA }}
+          DATAS_BUCTDAKA: ${{ secrets.DATAS_BUCTDAKA }}
         run: python autorun/BUCTdaka.py
