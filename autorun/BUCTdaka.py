@@ -6,6 +6,9 @@ def getdate():
     return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y%m%d")
 
 
+def dbg(a):
+    print(a,type(a))
+
 if __name__ == '__main__':
     ADDRESS_BUCTDAKA = os.environ["ADDRESS_BUCTDAKA"]
     AREA_BUCTDAKA = os.environ["AREA_BUCTDAKA"]
@@ -19,6 +22,19 @@ if __name__ == '__main__':
     PROVINCE_BUCTDAKA = os.environ["PROVINCE_BUCTDAKA"]
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
+    
+    dbg(ADDRESS_BUCTDAKA)
+    dbg(AREA_BUCTDAKA)
+    dbg(CITY_BUCTDAKA)
+    dbg(COOKIE_BUCTDAKA)
+    dbg(CREATED_BUCTDAKA)
+    dbg(DATAS_BUCTDAKA)
+    dbg(GEOAPIINFO_BUCTDAKA)
+    dbg(HEADERS_BUCTDAKA)
+    dbg(ID_BUCTDAKA)
+    dbg(PROVINCE_BUCTDAKA)
+    dbg(UID_BUCTDAKA)
+    dbg(USERAGENT_BUCTDAKA)
     
     headers = {
     'Host': 'eai.buct.edu.cn',
