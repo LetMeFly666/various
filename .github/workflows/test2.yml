@@ -21,6 +21,16 @@ jobs:
           python -m pip install --upgrade requests
       - name: 'run cf2dns'
         env:
-          HEADERS_BUCTDAKA: ${{ secrets.HEADERS_BUCTDAKA }}
+          USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
+          AREA_BUCTDAKA: ${{ secrets.AREA_BUCTDAKA }}
+          CITY_BUCTDAKA: ${{ secrets.CITY_BUCTDAKA }}
+          COOKIE_BUCTDAKA: ${{ secrets.COOKIE_BUCTDAKA }}
+          CREATED_BUCTDAKA: ${{ secrets.CREATED_BUCTDAKA }}
           DATAS_BUCTDAKA: ${{ secrets.DATAS_BUCTDAKA }}
+          GEOAPIINFO_BUCTDAKA: ${{ secrets.GEOAPIINFO_BUCTDAKA }}
+          HEADERS_BUCTDAKA: ${{ secrets.HEADERS_BUCTDAKA }}
+          ID_BUCTDAKA: ${{ secrets.ID_BUCTDAKA }}
+          PROVINCE_BUCTDAKA: ${{ secrets.PROVINCE_BUCTDAKA }}
+          UID_BUCTDAKA: ${{ secrets.UID_BUCTDAKA }}
+          USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
         run: python autorun/BUCTdaka.py
