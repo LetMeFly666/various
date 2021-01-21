@@ -19,6 +19,10 @@ jobs:
     - name: Install Requests
       run: |
         python install requests
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2261917546e7a80c2301c57f6e194d5fa012099d
     - name: really run
       run: |
         cd 自动脚本
