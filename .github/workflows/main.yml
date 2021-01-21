@@ -1,9 +1,9 @@
 name: BUCT daka with python
 
 on: 
-  schedule
-    -cron:'11 8 * * *'
-
+  schedule:
+    - cron: '29 8 * * *'
+      	
   workflow_dispatch:
 
 jobs:
@@ -16,8 +16,8 @@ jobs:
       with:
         python-version: 3.7
 
-    -name:Install Requests
-      run:|
+    - name: Install Requests
+      run: |
         python install requests
 		
     - name: really run
