@@ -20,7 +20,7 @@ jobs:
 
     - name: Install Requests
       run: |
-        python install requests
+        python pip install requests
 
     - name: really run
       run: |
