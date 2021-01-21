@@ -34,5 +34,5 @@ jobs:
           UID_BUCTDAKA: ${{ secrets.UID_BUCTDAKA }}
           USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
           TEST: ${{ secrets.TEST }}
-          TEST_EMPTY: ${{ secrets.TEST_EMPTY }}
+          # TEST_EMPTY: ${{ secrets.TEST_EMPTY }} 这里加上空的没事，但是python执行就不行了
         run: python autorun/BUCTdaka.py
