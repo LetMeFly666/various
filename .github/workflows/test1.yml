@@ -1,0 +1,29 @@
+
+name: test1
+
+on:
+  push:
+    branches: [ master ]
+
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install Requests
+      run: |
+        python install requests
+
+    - name: really run
+      run: |
+        cd 自动脚本
+        python 疫情防控自动打卡.py
+
