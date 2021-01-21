@@ -33,4 +33,5 @@ jobs:
           PROVINCE_BUCTDAKA: ${{ secrets.PROVINCE_BUCTDAKA }}
           UID_BUCTDAKA: ${{ secrets.UID_BUCTDAKA }}
           USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
+          TEST: ${{ secrets.TEST }}
         run: python autorun/BUCTdaka.py
