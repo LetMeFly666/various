@@ -21,6 +21,7 @@ jobs:
           python -m pip install --upgrade requests
       - name: 'run cf2dns'
         env:
+          ADDRESS_BUCTDAKA: ${{ secrets.ADDRESS_BUCTDAKA }}
           AREA_BUCTDAKA: ${{ secrets.AREA_BUCTDAKA }}
           CITY_BUCTDAKA: ${{ secrets.CITY_BUCTDAKA }}
           COOKIE_BUCTDAKA: ${{ secrets.COOKIE_BUCTDAKA }}
