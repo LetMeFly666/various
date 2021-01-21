@@ -25,8 +25,8 @@ if __name__ == '__main__':
     TEST = os.environ["TEST"]  # 不能加上‘secrets.’吗
 
     print("Begin")
-    print("Test for the secrets, TEST", TEST, "Right?")
-    print("ADDRESS_BUCTDAKA:",ADDRESS_BUCTDAKA, 'Is it right?')
+    # print("Test for the secrets, TEST", TEST, "Right?")
+    # print("ADDRESS_BUCTDAKA:",ADDRESS_BUCTDAKA, 'Is it right?')
     dbg(ADDRESS_BUCTDAKA)
     dbg(AREA_BUCTDAKA)
     dbg(CITY_BUCTDAKA)
