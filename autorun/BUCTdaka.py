@@ -22,7 +22,8 @@ if __name__ == '__main__':
     PROVINCE_BUCTDAKA = os.environ["PROVINCE_BUCTDAKA"]
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
-    
+
+    print("ADDRESS_BUCTDAKA",end='')
     dbg(ADDRESS_BUCTDAKA)
     dbg(AREA_BUCTDAKA)
     dbg(CITY_BUCTDAKA)
