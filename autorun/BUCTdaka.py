@@ -22,7 +22,9 @@ if __name__ == '__main__':
     PROVINCE_BUCTDAKA = os.environ["PROVINCE_BUCTDAKA"]
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
+    TEST = os.environ["TEST"]
 
+    print("Test for the secrets, TEST", TEST, "Right?")
     print("ADDRESS_BUCTDAKA:",ADDRESS_BUCTDAKA, 'Is it right?')
     dbg(ADDRESS_BUCTDAKA)
     dbg(AREA_BUCTDAKA)
