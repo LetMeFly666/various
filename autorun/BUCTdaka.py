@@ -22,7 +22,8 @@ if __name__ == '__main__':
     PROVINCE_BUCTDAKA = os.environ["PROVINCE_BUCTDAKA"]
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
-    TEST = os.environ["TEST"]
+    TEST = os.environ["secrets.TEST"]
+    EMPTY = os.environ["EMPTY"]
 
     print("Test for the secrets, TEST", TEST, "Right?")
     print("Test for the secrets, empty", EMPTY, "Right?")
