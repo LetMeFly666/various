@@ -3,7 +3,7 @@ name: BUCT daka with python
 on: 
   schedule
     -cron:'11 8 * * *'
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   build:
