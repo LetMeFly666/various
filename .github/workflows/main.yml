@@ -18,9 +18,9 @@ jobs:
 
     - name: Install Requests
       run: |
-        python pip install requests
+        python -m pip install --upgrade pip
+        python -m pip install --upgrade requests
 
     - name: really run
       run: |
-        cd 自动脚本
-        python 疫情防控自动打卡.py
+        python ./自动脚本/疫情防控自动打卡.py

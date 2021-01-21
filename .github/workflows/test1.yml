@@ -25,6 +25,5 @@ jobs:
 
     - name: really run
       run: |
-        cd 自动脚本
-        python 疫情防控自动打卡.py
+        python ./自动脚本/疫情防控自动打卡.py
 
