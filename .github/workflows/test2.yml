@@ -1,4 +1,4 @@
-name: 'CloudFlare2DNS'
+name: 'Check the py by push'
 
 on:
   push:
