@@ -23,7 +23,7 @@ if __name__ == '__main__':
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
 
-    print("ADDRESS_BUCTDAKA",end='')
+    print("ADDRESS_BUCTDAKA:",ADDRESS_BUCTDAKA, 'Is it right?')
     dbg(ADDRESS_BUCTDAKA)
     dbg(AREA_BUCTDAKA)
     dbg(CITY_BUCTDAKA)
