@@ -23,10 +23,8 @@ if __name__ == '__main__':
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
     TEST = os.environ["TEST"]  # 不能加上‘secrets.’吗
-    # EMPTY = os.environ["secrets.TEST_EMPTY"]
 
     print("Test for the secrets, TEST", TEST, "Right?")
-    print("Test for the secrets, empty", EMPTY, "Right?")
     print("ADDRESS_BUCTDAKA:",ADDRESS_BUCTDAKA, 'Is it right?')
     dbg(ADDRESS_BUCTDAKA)
     dbg(AREA_BUCTDAKA)
