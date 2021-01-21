@@ -1,5 +1,5 @@
 # name属性用来指定这个工作流的名字
-name: HELLO GITHUB ACITON
+name: Push Action of Master
 
 # 这个部分用来指定能够触发工作流执行的事件
 on:
@@ -21,5 +21,5 @@ jobs:
 
       # 步骤，这里只写了一个步骤，目的是输出hello github acition
       - name: Run a one-line script
-        run: echo Hello, github action!
+        run: echo Push Action of Master
 
