@@ -74,7 +74,7 @@ if __name__ == '__main__':
         'sfcxzysx': '0',
         'sfyyjc': '0',
         'jcjgqr': '0',
-        'remark': 'Good赞666666',
+        'remark': '尽量每天能够六点起床打卡',
         'address': ADDRESS_BUCTDAKA,
         'geo_api_info': GEOAPIINFO_BUCTDAKA,
         'area': AREA_BUCTDAKA,
