@@ -6,6 +6,15 @@ def getdate():
     return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y%m%d")
 
 
+def getTh():
+    a = str(datetime.datetime.utcnow() - datetime.datetime(2021,1,22))
+    try:
+        a = a.split(',')[0]
+    except:
+        a = a
+    return a
+
+
 def dbg(a):
     print(a,type(a))
 
@@ -74,7 +83,7 @@ if __name__ == '__main__':
         'sfcxzysx': '0',
         'sfyyjc': '0',
         'jcjgqr': '0',
-        'remark': '尽量每天能够六点起床打卡',
+        'remark': '尽量每天能够六点起床打卡，现在已经 ' + getTh(),
         'address': ADDRESS_BUCTDAKA,
         'geo_api_info': GEOAPIINFO_BUCTDAKA,
         'area': AREA_BUCTDAKA,
