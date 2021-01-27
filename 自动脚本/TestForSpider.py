@@ -1,7 +1,7 @@
 import requests
 import random
 import time
-import getCSDNarticle2
+from TFpacket import getCSDNarticle2
 
 if __name__ == "__main__":
     headers = {
