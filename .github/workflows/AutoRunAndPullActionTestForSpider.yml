@@ -1,0 +1,25 @@
+name: 'Auto Run Every Three Hours'
+
+on:
+  schedule:
+    - cron: '0 0 0/3 * * ?'
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: 'Install Requests'
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade requests
+      - name: 'run Spider'
+        run: python 自动脚本/TestForSpider.py
