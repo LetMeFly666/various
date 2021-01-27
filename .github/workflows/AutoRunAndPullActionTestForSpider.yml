@@ -21,5 +21,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade requests
+          python -m pip install --upgrade beautifulsoup4
       - name: 'run Spider'
         run: python 自动脚本/TestForSpider.py
