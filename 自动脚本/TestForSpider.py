@@ -1,5 +1,6 @@
 import requests
 import random
+import time
 import getCSDNarticle2
 
 if __name__ == "__main__":
@@ -15,7 +16,7 @@ if __name__ == "__main__":
     for url in articles:
         print(url)
         response = requests.get(url=url,headers=headers)
-        print(response.text)
+        # print(response.text)
         print(response.ok)
         print(response.headers)
         sleepTime = random.randint(5,15)
