@@ -9,10 +9,8 @@ headers = {
 def getArticleHref(url = "https://blog.csdn.net/Tisfy"):
     response = requests.get(url="https://blog.csdn.net/Tisfy", headers=headers)
     soup = BeautifulSoup(response.text,'lxml')
-    # /html/body/div[6]/main/div[2]/div[2]/div[1]/h4/a
     articleList = []
-    articles = soup.select('div[class="article-list"]')
-    article = articles[0].find_all('div',attrs={"class":"article-item-box csdn-tracking-statistics"})
+    article = soup.find_all('article',attrs={"class":"blog-list-box"})
     for i in article:
         href = i.find('a')['href']
         articleList.append(href)
