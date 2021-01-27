@@ -1,7 +1,9 @@
 import requests
 import random
 import time
+from TFpacket import getCSDNarticle
 from TFpacket import getCSDNarticle2
+from TFpacket import nowArticles
 
 if __name__ == "__main__":
     headers = {
@@ -10,7 +12,17 @@ if __name__ == "__main__":
             
         }
     print("Getting Articles...",end='')
-    articles = getCSDNarticle2.getArticleHref()
+    articles = []
+    try:
+        articles = getCSDNarticle.getArticleHref()
+        assert len(articles) >= len(nowArticles.nowArticles)
+    except:
+        try:
+            articles = getCSDNarticle2.getArticleHref()
+            assert len(articles) >= len(nowArticles.nowArticles)
+        except:
+            articles = nowArticles.nowArticles
+            
     print("Got!")
 
     for url in articles:
