@@ -31,7 +31,7 @@ if __name__ == "__main__":
         # print(response.text)
         print(response.ok)
         print(response.headers)
-        sleepTime = random.randint(5,15)
+        sleepTime = random.randint(2,8)
         print("Sleep:",sleepTime)
         time.sleep(sleepTime)
 
