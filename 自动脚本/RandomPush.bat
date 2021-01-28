@@ -1,0 +1,1 @@
+cd TFpacket&python RandomPush.py

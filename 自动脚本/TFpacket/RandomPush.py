@@ -10,5 +10,5 @@ os.system("git add .")
 os.system('git commit -m "Random to'+str(randNum)+'"')
 os.system("git push -u original master")
 print('\a')
-time.sleep(1)
+time.sleep(4)
 
