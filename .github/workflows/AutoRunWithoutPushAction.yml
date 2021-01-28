@@ -1,4 +1,4 @@
-name: 'Auto Run At 21:00UTC And When Pulled'
+name: 'Auto Run At 21:00UTC'
 
 on:
   schedule:
