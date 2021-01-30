@@ -12,7 +12,9 @@ def main(need = 1, maxTried = 50):
             toCommit += '、'
         toCommit += ' ' + get[i]
     os.system("git add .")
-    os.system(f"git commit -m '{toCommit}'")
+    realCommit = f'git commit -m "{toCommit}"'
+    print(realCommit)
+    os.system(realCommit)    
     os.system("git push -u original master")
 
 if __name__ == "__main__":
