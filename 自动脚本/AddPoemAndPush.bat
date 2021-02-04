@@ -1,1 +1,1 @@
-cd TFpacket&python AddPoemAndPush.py
+cd TFpacket&python RandPoemAndPush.py
