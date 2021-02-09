@@ -1,5 +1,7 @@
 nowArticles = [
         'https://blog.csdn.net/Tisfy/article/details/106959306',
+        'https://blog.csdn.net/Tisfy/article/details/113750462',
+        'https://blog.csdn.net/Tisfy/article/details/113750424',
         'https://blog.csdn.net/Tisfy/article/details/113390774',
         'https://blog.csdn.net/Tisfy/article/details/113387912',
         'https://blog.csdn.net/Tisfy/article/details/113362438',
