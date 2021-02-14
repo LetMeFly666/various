@@ -25,6 +25,7 @@ def getNew(need = 1, maxTried = 50):
         j = json.loads(response)
         ID = j['id']
         if ID in already:
+            print("已经出现过{}".format(ID))
             if tried >= maxTried:
                 break
         else:
