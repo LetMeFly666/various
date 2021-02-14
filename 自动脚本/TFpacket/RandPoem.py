@@ -11,7 +11,7 @@ def getAlready():
         temp = f.read()
     dic = temp.split('||')[1:]
     for i in dic:
-        ID = i.split('--')[-1:]
+        ID = i.split('--')[-1]
         already.append(ID)
 
 
