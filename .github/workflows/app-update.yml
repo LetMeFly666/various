@@ -1,9 +1,0 @@
-provider: s3
-bucket: progress-fiddler-production
-path: /win
-updaterCacheDirName: fiddler-everywhere-updater
-publisherName:
-  - Progress Software Corporation
-on:
-  push:
-    branches: [ master ]
