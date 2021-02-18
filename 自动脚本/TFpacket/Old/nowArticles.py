@@ -10,3 +10,4 @@ nowArticles = [
         'https://blog.csdn.net/Tisfy/article/details/104761388',
         'https://blog.csdn.net/Tisfy/article/details/104717034',
     ]
+# 难道是在其他文件夹下修改不能被git及时地识别出来吗
