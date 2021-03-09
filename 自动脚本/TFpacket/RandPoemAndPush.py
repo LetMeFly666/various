@@ -19,7 +19,7 @@ def main(need = 1, maxTried = 50):
     realCommit = f'git commit -m "{toCommit3}"'
     print(realCommit)
     os.system(realCommit)
-    os.system("git push -u original master")
+    # os.system("git push -u original master")
     print('\a')
     time.sleep(4)
 
