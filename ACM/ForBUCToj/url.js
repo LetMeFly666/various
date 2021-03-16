@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-03-16 15:08:45
+ * @LastEditTime: 2021-03-16 15:11:16
  */
 
 //#region function
@@ -10,7 +10,7 @@ dbg = toDebug => console.log((typeof toDebug) + "\n" + toDebug)
 ifCouldSee = problemId => new Date().getTime() > couldSeeList[problemId]["time"].getTime()
 couldPicUrl = () => `url('./Could/${Math.floor(Math.random() * 1000000) % couldPic + 1}.jpg')`
 couldnotPicUrl = () => `url('./Couldnot/${Math.floor(Math.random() * 1000000) % couldnotPic + 1}.jpg')`
-gotoUrl = (problemId, could) => from.length ? from : (couldSeeList[problemId][could ? "explanationHref" : "problemHref"])
+gotoUrl = (problemId, could) => document.referrer.length ? document.referrer : (couldSeeList[problemId][could ? "explanationHref" : "problemHref"])
 function jump() {
     outTime -= 1
     if (outTime == 0)
@@ -20,8 +20,6 @@ function jump() {
 //#endregion
 
 //#region data
-const from = document.referrer
-dbg(from)
 const couldPic = 3
 const couldnotPic = 6
 const couldSeeList = {
