@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-03-16 14:40:30
+ * @LastEditTime: 2021-03-16 15:08:45
  */
 
 //#region function
@@ -10,7 +10,7 @@ dbg = toDebug => console.log((typeof toDebug) + "\n" + toDebug)
 ifCouldSee = problemId => new Date().getTime() > couldSeeList[problemId]["time"].getTime()
 couldPicUrl = () => `url('./Could/${Math.floor(Math.random() * 1000000) % couldPic + 1}.jpg')`
 couldnotPicUrl = () => `url('./Couldnot/${Math.floor(Math.random() * 1000000) % couldnotPic + 1}.jpg')`
-gotoUrl = (problemId, could) => couldSeeList[problemId][could ? "explanationHref" : "problemHref"]
+gotoUrl = (problemId, could) => from.length ? from : (couldSeeList[problemId][could ? "explanationHref" : "problemHref"])
 function jump() {
     outTime -= 1
     if (outTime == 0)
@@ -20,12 +20,13 @@ function jump() {
 //#endregion
 
 //#region data
+const from = document.referrer
+dbg(from)
 const couldPic = 3
 const couldnotPic = 6
 const couldSeeList = {
-    5173: { "time": new Date("2021-03-25 16:25:0"), "explanationHref": "https://blog.csdn.net/Tisfy/article/details/114788865", "problemHref": "http://39.106.31.26/problem.php?cid=1975&pid=0" },
+    5173: { "time": new Date("2021-03-25 16:25:0"), "explanationHref": "https://blog.csdn.net/Tisfy/article/details/114788865", "problemHref": "http://39.106.31.26/problem.php?id=5173" },
 }
-
 //#endregion
 
 //#region main
