@@ -2,14 +2,14 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-03-16 14:18:55
+ * @LastEditTime: 2021-03-16 14:32:10
  */
 
 //#region function
 dbg = toDebug => console.log((typeof toDebug) + "\n" + toDebug)
 ifCouldSee = problemId => new Date().getTime() > couldSeeList[problemId]["time"]
-couldPicUrl = () => `url('./到时间了/${Math.floor(Math.random() * 1000000) % couldPic + 1}.jpg')`
-couldnotPicUrl = () => `url('./不到时间/${Math.floor(Math.random() * 1000000) % couldnotPic + 1}.jpg')`
+couldPicUrl = () => `url('./Could/${Math.floor(Math.random() * 1000000) % couldPic + 1}.jpg')`
+couldnotPicUrl = () => `url('./Couldnot/${Math.floor(Math.random() * 1000000) % couldnotPic + 1}.jpg')`
 gotoUrl = (problemId, could) => couldSeeList[problemId][could ? "explanationHref" : "problemHref"]
 function jump() {
     outTime -= 1
