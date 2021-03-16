@@ -2,12 +2,12 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-03-16 14:32:10
+ * @LastEditTime: 2021-03-16 14:40:30
  */
 
 //#region function
 dbg = toDebug => console.log((typeof toDebug) + "\n" + toDebug)
-ifCouldSee = problemId => new Date().getTime() > couldSeeList[problemId]["time"]
+ifCouldSee = problemId => new Date().getTime() > couldSeeList[problemId]["time"].getTime()
 couldPicUrl = () => `url('./Could/${Math.floor(Math.random() * 1000000) % couldPic + 1}.jpg')`
 couldnotPicUrl = () => `url('./Couldnot/${Math.floor(Math.random() * 1000000) % couldnotPic + 1}.jpg')`
 gotoUrl = (problemId, could) => couldSeeList[problemId][could ? "explanationHref" : "problemHref"]
