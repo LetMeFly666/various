@@ -31,7 +31,7 @@ const couldSeeList = {
 //#region main
 const problemId = location.href.split('?')[1].split('=')[1]
 const could = ifCouldSee(problemId)
-var outTime = could ? 7 : 3
+var outTime = could ? 1 : 3
 document.body.style.background = could ? couldPicUrl() : couldnotPicUrl()
 document.body.style.backgroundPosition = "center"
 document.body.style.backgroundRepeat = "no-repeat"
