@@ -7,7 +7,7 @@ def getdate():
 
 
 def getTh():
-    a = str(datetime.datetime.utcnow() - datetime.datetime(2021,1,22))
+    a = str(datetime.datetime.utcnow() - datetime.datetime(2021,3,26))
     try:
         a = a.split(',')[0]
     except:
@@ -83,7 +83,7 @@ if __name__ == '__main__':
         'sfcxzysx': '0',
         'sfyyjc': '0',
         'jcjgqr': '0',
-        'remark': '尽量每天能够六点起床打卡，现在已经 ' + getTh(),
+        'remark': '返校后继续发扬打卡习惯，现在已经 ' + getTh(),
         'address': ADDRESS_BUCTDAKA,
         'geo_api_info': GEOAPIINFO_BUCTDAKA,
         'area': AREA_BUCTDAKA,
