@@ -15,7 +15,7 @@ def getAlready():
         already.append(ID)
 
 
-def getNew(need = 1, maxTried = 50):
+def getNew(need = 1, maxTried = 500):
     url = 'https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335'
     success, tried = 0, 0
     allGet = []
