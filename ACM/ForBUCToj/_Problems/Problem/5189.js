@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:10:56
+ * @LastEditTime: 2021-04-28 21:12:41
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -430,7 +430,8 @@ window.onload = function () {
     // document.write('<div style="width: 100%; height: 100%; background-color: rgb(255,255,255);" id="mask__"></div>');
 
     var back = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body");
-    back.appendChild('<div style="width: 40%; height: 40%; background-color: pink;" id="mask__"></div>');
+    var para = document.createElement("p");
+    back.appendChild(para);
 
     setTimeout(function(){
         var author = document.querySelector("#creator > a");
