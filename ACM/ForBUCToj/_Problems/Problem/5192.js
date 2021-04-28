@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 23:37:51
+ * @LastEditTime: 2021-04-28 23:48:13
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -24,6 +24,7 @@ const problem_description_data = '\n\
 <h3><a id="_19"></a>题目描述</h3> \n\
 <p>星空点点&#xff0c;墨日曜淡。世界芳华灼灼&#xff0c;不及眼前的她。</p> \n\
 <p>你只用了几毫秒就得到了小L想要的答案&#xff0c;小L为此惊叹于计算机的算力&#xff0c;他天真地以为&#xff0c;计算机就是一步一步地计算下去才得到答案的。</p> \n\
+<p><a href="problem.php?id=5189"><small>不知道上面在说什么请点我</small></a></p>\n\
 <p>女神会心一笑&#xff0c;甩给小L一道题&#xff1a;<br /> 给你一个十进制正数&#xff0c;总共不超过<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
 \n\
      \n\
