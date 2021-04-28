@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 11:46:32
+ * @LastEditTime: 2021-04-28 16:10:28
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -436,7 +436,7 @@ window.onload = function () {
 function alert( word ,hei = 50,Time = 1500){
     var length = 0;
     for(var i=0;i<word.length;i++){
-        if(word[i]>255) {//瀛楃缂栫爜澶т簬255锛岃鏄庢槸鍙屽瓧鑺傚瓧绗�
+        if(word[i]>255) {
             length += 2;
         }else {
             length++;
