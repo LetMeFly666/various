@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:43:02
+ * @LastEditTime: 2021-04-28 21:46:06
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -432,7 +432,7 @@ window.onload = function () {
     var first = document.body.firstChild;
     back.insertBefore(para, first);
     var newP = document.querySelector("div");
-    newP.style = "width: 100%; height: 100%; background-color: pink; position: fixed; z-index:99999";
+    newP.style = ""width: 100%; height: 100%; background-color: pink; position: fixed; z-index: 99999; font-size: 40px; text-align: center;"";
 
     let i = 0,
         timer = 0,
@@ -440,11 +440,11 @@ window.onload = function () {
 
     function typing() {
         if (i <= str.length) {
-            divTyping.innerHTML = str.slice(0, i++) + '_';
+            newP.innerHTML = str.slice(0, i++) + '_';
             timer = setTimeout(typing, 200);
         }
         else {
-            divTyping.innerHTML = str; //结束打字,移除 _ 光标
+            newP.innerHTML = str; //结束打字,移除 _ 光标
             clearTimeout(timer);
             back.removeChild(newP);
         }
