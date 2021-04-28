@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:12:41
+ * @LastEditTime: 2021-04-28 21:14:55
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -427,11 +427,14 @@ window.onload = function () {
     input_description.innerHTML = begin+input_description_data+end;
     output_description.innerHTML = begin+output_description_data+end;
 
-    // document.write('<div style="width: 100%; height: 100%; background-color: rgb(255,255,255);" id="mask__"></div>');
+    // document.write('<div style="width: 40%; height: 40%; background-color: rgb(255,255,255);" id="mask__"></div>');
 
     var back = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body");
     var para = document.createElement("p");
     back.appendChild(para);
+    var newP = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > p");
+    newP.style = "width: 100%; height: 100%; background-color: pink;";
+    
 
     setTimeout(function(){
         var author = document.querySelector("#creator > a");
