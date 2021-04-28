@@ -19,7 +19,7 @@ const end='                </div><div data-report-view="{&quot;mod&quot;:&quot;1
         </div>'
 
 
-var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+
 const problem_description_data = '<h3><a id="_16"></a>题目描述</h3> \n\
 <p>后天就是五一假期了&#xff0c;小L约好了女生一起出去玩。他还剩下最后一道数论作业&#xff0c;写完就可以去嗨了。</p> \n\
 <p>题目是&#xff0c;求<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
@@ -96,5 +96,6 @@ const problem_description_data = '<h3><a id="_16"></a>题目描述</h3> \n\
 <p>于是他找到了会编程的你&#xff0c;想让你编个程序&#xff0c;在五一放假之前得到答案。</p> '
 
 window.onload = function () {
+	var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
     problem_description.innerHTML = begin+problem_description_data+end;
 }
