@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 10:38:45
+ * @LastEditTime: 2021-04-28 10:40:21
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -267,7 +267,7 @@ const input_description_data = '\n\
 
 window.onload = function () {
 	var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-    var input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+    var input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
 	var output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
 	
 	problem_description.innerHTML = begin+problem_description_data+end;
