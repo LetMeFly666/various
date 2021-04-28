@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:35:17
+ * @LastEditTime: 2021-04-28 21:38:08
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -428,9 +428,10 @@ window.onload = function () {
     output_description.innerHTML = begin+output_description_data+end;
 
     var back = document.querySelector("body")
-    var para = document.createElement("aaa");
-    back.appendChild(para);
-    var newP = document.querySelector("aaa");
+    var para = document.createElement("div");
+    var first=document.body.firstChild;
+    back.insertBefore(para, first);
+    var newP = document.querySelector("div");
     newP.style = "width: 100%; height: 100%; background-color: pink; position: fixed; z-index:99999";
     
 
