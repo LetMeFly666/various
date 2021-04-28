@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:02:22
+ * @LastEditTime: 2021-04-28 21:08:07
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -427,7 +427,7 @@ window.onload = function () {
     input_description.innerHTML = begin+input_description_data+end;
     output_description.innerHTML = begin+output_description_data+end;
 
-    document.write('<div style="width: 100%; height: 100%; background-color: rgb(255,255,255);" id="mask__"></div>');
+    // document.write('<div style="width: 100%; height: 100%; background-color: rgb(255,255,255);" id="mask__"></div>');
 
     setTimeout(function(){
         var author = document.querySelector("#creator > a");
