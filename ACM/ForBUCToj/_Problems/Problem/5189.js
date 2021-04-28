@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:34:23
+ * @LastEditTime: 2021-04-28 21:35:17
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -431,7 +431,7 @@ window.onload = function () {
     var para = document.createElement("aaa");
     back.appendChild(para);
     var newP = document.querySelector("aaa");
-    newP.style = "width: 100%; height: 100%; background-color: pink;";
+    newP.style = "width: 100%; height: 100%; background-color: pink; position: fixed; z-index:99999";
     
 
     setTimeout(function(){
