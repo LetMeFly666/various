@@ -81,6 +81,6 @@ const problem_description_data = '<h3><a id="_16"></a>题目描述</h3> \n\
 <p>于是他找到了会编程的你&#xff0c;想让你编个程序&#xff0c;在五一放假之前得到答案。</p> '
 
 window.onload = function () {
-    document.write("<script src='../Templates.js'></script>");
+    document.write("<script src='http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Templates.js'></script>");
 	problem_description.innerHTML = begin+problem_description_data+end;
 }
