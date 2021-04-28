@@ -18,3 +18,7 @@ const end='                </div><div data-report-view="{&quot;mod&quot;:&quot;1
         </div>'
 
 const toWrite = 'document.write("<script src=\'one.js\'></script>");'
+
+//var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+//var input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+//var output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
