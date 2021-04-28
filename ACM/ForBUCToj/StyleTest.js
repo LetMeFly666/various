@@ -1,1 +1,0 @@
-window.onload = function () {document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-heading > h4").style="color:red"}
