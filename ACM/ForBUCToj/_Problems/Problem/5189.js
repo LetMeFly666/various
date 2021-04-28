@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 10:46:42
+ * @LastEditTime: 2021-04-28 11:27:54
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -426,4 +426,7 @@ window.onload = function () {
 	problem_description.innerHTML = begin+problem_description_data+end;
     input_description.innerHTML = begin+input_description_data+end;
     output_description.innerHTML = begin+output_description_data+end;
+
+    var author = document.querySelector("#creator > a");
+    author.href = "userinfo.php?user=2019040474";
 }
