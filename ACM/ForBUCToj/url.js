@@ -26,6 +26,7 @@ const couldnotPic = 6
 const couldSeeList = {
     5173: { "time": new Date("2021-03-25 16:25:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/114788865", "problemHref": "http://39.106.31.26/problem.php?id=5173" },
     5189: { "time": new Date("2021-04-29 16:25:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/116211565", "problemHref": "http://39.106.31.26/problem.php?id=5189" },
+    5192: { "time": new Date("2021-04-29 16:25:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/116224285", "problemHref": "http://39.106.31.26/problem.php?id=5192" },
 }
 //#endregion
 
