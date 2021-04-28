@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 21:47:16
+ * @LastEditTime: 2021-04-28 22:02:23
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -432,7 +432,7 @@ window.onload = function () {
     var first = document.body.firstChild;
     back.insertBefore(para, first);
     var newP = document.querySelector("div");
-    newP.style = "width: 100%; height: 100%; background-color: pink; position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
+    newP.style = "width: 100%; height: 100%; background-color: rgb(248, 230, 233); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
     let i = 0,
         timer = 0,
@@ -441,7 +441,7 @@ window.onload = function () {
     function typing() {
         if (i <= str.length) {
             newP.innerHTML = str.slice(0, i++) + '_';
-            timer = setTimeout(typing, 200);
+            timer = setTimeout(typing, 150);
         }
         else {
             newP.innerHTML = str; //结束打字,移除 _ 光标
@@ -454,6 +454,7 @@ window.onload = function () {
     setTimeout(function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
+        
     }, 3000);
 }
 
