@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 11:39:04
+ * @LastEditTime: 2021-04-28 11:46:32
  */
 
 const begin='<div id="article_content" class="article_content clearfix">\n\
@@ -431,4 +431,37 @@ window.onload = function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
     }, 3000);
+}
+
+function alert( word ,hei = 50,Time = 1500){
+    var length = 0;
+    for(var i=0;i<word.length;i++){
+        if(word[i]>255) {//瀛楃缂栫爜澶т簬255锛岃鏄庢槸鍙屽瓧鑺傚瓧绗�
+            length += 2;
+        }else {
+            length++;
+        }
+    }
+    var rwid = length;
+    var line = 1;
+    while(rwid>40){
+        length = 40;
+        hei+=hei;
+        rwid-=40;
+        line++;
+    }
+    var reminder = document.createElement('div');
+    document.body.appendChild(reminder);
+    reminder.style.cssText = "width: " + length*24+ "px;height: " + hei + "px;position: fixed;display: block;border-radius: 5px;background-color: rgba(0, 0, 0, 0.3);text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;word-break:break-all;";
+    var left__ = 0.5*document.body.offsetWidth - 0.5*reminder.offsetWidth;
+    var top__ = 0.5*window.innerHeight - 0.5*reminder.offsetHeight;
+    reminder.id = "alert";
+    reminder.style.color = "#fff";
+    reminder.style.left = left__ + 'px';
+    reminder.style.top = top__ + 'px';
+    reminder.style.lineHeight = reminder.offsetHeight/line + 'px';
+    reminder.innerHTML = word;
+    setTimeout(function(){
+        reminder.style.display = "none";
+    },Time );
 }
