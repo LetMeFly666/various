@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-29 10:05:58
+ * @LastEditTime: 2021-04-29 10:09:22
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -432,7 +432,7 @@ window.onload = function () {
     var first = document.body.firstChild;
     back.insertBefore(para, first);
     var newP = document.querySelector("div");
-    newP.style = "width: 100%; height: 100%; background-color: rgb(248, 230, 233); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
+    newP.style = "width: 100%; height: 100%; background-color: rgb(255, 255, 255); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
     function show(){
         newP.innerHTML = '星空点点，墨日曜淡。世界芳华灼灼，不及眼前的她。';
