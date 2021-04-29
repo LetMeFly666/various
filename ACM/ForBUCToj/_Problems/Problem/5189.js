@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-28 22:02:23
+ * @LastEditTime: 2021-04-29 09:58:34
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -441,7 +441,7 @@ window.onload = function () {
     function typing() {
         if (i <= str.length) {
             newP.innerHTML = str.slice(0, i++) + '_';
-            timer = setTimeout(typing, 150);
+            timer = setTimeout(typing, 50);
         }
         else {
             newP.innerHTML = str; //结束打字,移除 _ 光标
