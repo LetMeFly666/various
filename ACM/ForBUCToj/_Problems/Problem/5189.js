@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-04-29 10:11:13
+ * @LastEditTime: 2021-04-29 10:17:56
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -434,13 +434,13 @@ window.onload = function () {
     var newP = document.querySelector("div");
     newP.style = "width: 100%; height: 100%; background-color: rgb(254, 254, 254); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
-    function show(){
-        newP.innerHTML = '后天就是五一假期了，小L约好了女生一起出去玩。他还剩下最后一道数论作业，写完就可以去嗨了。';
-        setTimeout(function(){
-            back.removeChild(newP);
-        }, 800);
-    }
-    show();
+    // function show(){
+    //     newP.innerHTML = '后天就是五一假期了，小L约好了女生一起出去玩。他还剩下最后一道数论作业，写完就可以去嗨了。';
+    //     setTimeout(function(){
+    //         back.removeChild(newP);
+    //     }, 800);
+    // }
+    // show();
 
     // let i = 0,
     // timer = 0,
