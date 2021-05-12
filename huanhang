@@ -1,0 +1,8 @@
+
+F:\OtherApps\Program\Git\Store\Store2_Web_Various\various>git add .   & git commit -m "kongge-"   & git checkout master   & git merge dev   & git push  & git checkout dev 
+[dev 5dd4051] kongge-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+ create mode 100644 huanhang
+Already up to date.
+M	huanhang
+Your branch is up to date with 'original/dev'.
