@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 22:43:33
+ * @LastEditTime: 2021-05-14 22:53:46
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -154,7 +154,7 @@ window.onload = function () {
     problem_description.innerHTML = begin + problem_description_data + end;
     input_description.innerHTML = begin + input_description_data + end;
     output_description.innerHTML = begin + output_description_data + end;
-    document.title="尝试看到这道题吧-BUCTOJ";
+    document.title = "尝试看到这道题吧-BUCTOJ";
 
     var back = document.querySelector("body")
     var para = document.createElement("div");
@@ -163,7 +163,7 @@ window.onload = function () {
     var newP = document.querySelector("div");
     newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
-    function show(){
+    function show() {
         newP.innerHTML = '<iframe src="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Live2D.html" width="100%" height="100%"></iframe>';
     }
     show();
@@ -175,6 +175,15 @@ window.onload = function () {
     }, 3000);
 
     console.clear();
+    var res = `
+//     __  __     ____         _       __           __    __
+//    / / / /__  / / /___     | |     / /___  _____/ /___/ /
+//   / /_/ / _ \\/ / / __ \\    | | /| / / __ \\/ ___/ / __  / 
+//  / __  /  __/ / / /_/ /    | |/ |/ / /_/ / /  / / /_/ /  
+// /_/ /_/\\___/_/_/\\____/     |__/|__/\\____/_/  /_/\\__,_/   
+//                                                          
+`
+    console.log(res)
 }
 
 function alert(word, hei = 50, Time = 1500) {
