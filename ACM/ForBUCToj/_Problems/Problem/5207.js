@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 22:53:46
+ * @LastEditTime: 2021-05-14 22:54:39
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -174,7 +174,7 @@ window.onload = function () {
 
     }, 3000);
 
-    console.clear();
+    
     var res = `
 //     __  __     ____         _       __           __    __
 //    / / / /__  / / /___     | |     / /___  _____/ /___/ /
@@ -183,7 +183,11 @@ window.onload = function () {
 // /_/ /_/\\___/_/_/\\____/     |__/|__/\\____/_/  /_/\\__,_/   
 //                                                          
 `
-    console.log(res)
+    setTimeout(() => {
+        console.clear();
+        console.log(res)
+    }, 3000);
+    
 }
 
 function alert(word, hei = 50, Time = 1500) {
