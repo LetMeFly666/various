@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 22:21:55
+ * @LastEditTime: 2021-05-14 22:25:36
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -150,7 +150,7 @@ const inner_html = '<!DOCTYPE html>\n\
 <title>能看到这道题吗</title>\n\
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">\n\
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">\n\
-<script src="../live2d.min.js"></script>\n\
+<script src="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Problem/live2d.min.js"></script>\n\
 <style>\n\
 html, body {\n\
 	height: 100%;\n\
@@ -436,7 +436,8 @@ window.onload = function () {
     newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
     function show(){
-        newP.innerHTML = '想办法看到这道题吧，毕竟这不是很难。';
+        newP.innerHTML = inner_html;
+        // newP.innerHTML = '想办法看到这道题吧，毕竟这不是很难。';
         // setTimeout(function(){
         //     back.removeChild(newP);
         // }, 1000);
