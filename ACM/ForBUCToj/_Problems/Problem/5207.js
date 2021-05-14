@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 22:55:43
+ * @LastEditTime: 2021-05-14 22:56:10
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -185,7 +185,7 @@ window.onload = function () {
 `
     setTimeout(() => {
         console.clear();
-        console.log(res)
+        console.log(res);
     }, 3000);
     
 }
