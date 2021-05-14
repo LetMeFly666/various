@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 22:33:59
+ * @LastEditTime: 2021-05-14 22:43:33
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -154,6 +154,7 @@ window.onload = function () {
     problem_description.innerHTML = begin + problem_description_data + end;
     input_description.innerHTML = begin + input_description_data + end;
     output_description.innerHTML = begin + output_description_data + end;
+    document.title="尝试看到这道题吧-BUCTOJ";
 
     var back = document.querySelector("body")
     var para = document.createElement("div");
@@ -164,35 +165,16 @@ window.onload = function () {
 
     function show(){
         newP.innerHTML = '<iframe src="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Live2D.html" width="100%" height="100%"></iframe>';
-        // newP.innerHTML = '想办法看到这道题吧，毕竟这不是很难。';
-        // setTimeout(function(){
-        //     back.removeChild(newP);
-        // }, 1000);
     }
     show();
-
-    // let i = 0,
-    //     timer = 0,
-    //     str = '星空点点，墨日曜淡。世界芳华灼灼，不及眼前的她。';
-
-    // function typing() {
-    //     if (i <= str.length) {
-    //         newP.innerHTML = str.slice(0, i++) + '_';
-    //         timer = setTimeout(typing, 25);
-    //     }
-    //     else {
-    //         newP.innerHTML = str; //结束打字,移除 _ 光标
-    //         clearTimeout(timer);
-    //         back.removeChild(newP);
-    //     }
-    // };
-    // typing();
 
     setTimeout(function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
 
     }, 3000);
+
+    console.clear();
 }
 
 function alert(word, hei = 50, Time = 1500) {
