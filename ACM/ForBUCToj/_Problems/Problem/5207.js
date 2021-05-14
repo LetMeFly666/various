@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 23:04:32
+ * @LastEditTime: 2021-05-14 23:37:03
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -20,131 +20,113 @@ const end = '                </div><div data-report-view="{&quot;mod&quot;:&quot
 
 
 
-const problem_description_data = '<p>世界上最遥远的距离&#xff0c;是加与减的距离。仅少一竖&#xff0c;却需重新重载。</p> \n\
-<p><span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
+const problem_description_data = '\n\
+<p><font color="pink">不论怎样&#xff0c;我终于见到了你。</font></p> \n\
+<p>鉴于<a title="2021.5.21">今天</a>的节日&#xff0c;给你<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
+    \n\
+     \n\
+      \n\
+       \n\
+        3\n\
+       \n\
+      \n\
+      \n\
+       3\n\
+      \n\
+     \n\
+    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">3</span></span></span></span></span>个数<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
+    \n\
+     \n\
+      \n\
+       \n\
+        a\n\
+       \n\
+       \n\
+        ,\n\
+       \n\
+       \n\
+        b\n\
+       \n\
+       \n\
+        ,\n\
+       \n\
+       \n\
+        c\n\
+       \n\
+      \n\
+      \n\
+       a,b,c\n\
+      \n\
+     \n\
+    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord mathdefault">c</span></span></span></span></span>&#xff0c;你只需要输出<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
+    \n\
+     \n\
+      \n\
+       \n\
+        5\n\
+       \n\
+       \n\
+        ×\n\
+       \n\
+       \n\
+        a\n\
+       \n\
+       \n\
+        &#43;\n\
+       \n\
+       \n\
+        2\n\
+       \n\
+       \n\
+        ×\n\
+       \n\
+       \n\
+        b\n\
+       \n\
+       \n\
+        &#43;\n\
+       \n\
+       \n\
+        1\n\
+       \n\
+       \n\
+        ×\n\
+       \n\
+       \n\
+        c\n\
+       \n\
+       \n\
+        &#43;\n\
+       \n\
+       \n\
+        1314\n\
+       \n\
+      \n\
+      \n\
+       5\times a&#43;2\times b&#43; 1\times c &#43; 1314\n\
+       \n\
+       \n\
+    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">&#43;</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">&#43;</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">&#43;</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">3</span><span class="mord">1</span><span class="mord">4</span></span></span></span></span>的值即可。</p> \n\
+<h2><a id="div_35"></a></h2> '
+
+const input_description_data = '\n\
+<p>输入包含一行&#xff0c;是三个由空格隔开的正整数&#xff0c;大小不超过<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
     \n\
      \n\
       \n\
        \n\
         2021\n\
        \n\
-       \n\
-        −\n\
-       \n\
-       \n\
-        1921\n\
-       \n\
-       \n\
-        &#61;\n\
-       \n\
       \n\
       \n\
-       2021-1921&#61;\n\
+       2021\n\
       \n\
      \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span><span class="mord">1</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">9</span><span class="mord">2</span><span class="mord">1</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">&#61;</span></span></span></span></span> <font size="1px">建党</font><span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-        100\n\
-       \n\
-      \n\
-      \n\
-       100\n\
-      \n\
-     \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span></span><font size="1px">周年&#xff01;</font></p> \n\
-<p>给你两行两个正整数<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-        a\n\
-       \n\
-      \n\
-      \n\
-       a\n\
-      \n\
-     \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">a</span></span></span></span></span>和<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-        b\n\
-       \n\
-      \n\
-      \n\
-       b\n\
-      \n\
-     \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathdefault">b</span></span></span></span></span>&#xff0c;范围是<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-        1\n\
-       \n\
-      \n\
-      \n\
-       1\n\
-      \n\
-     \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span> ~ <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-        1\n\
-       \n\
-       \n\
-        \n\
-         0\n\
-        \n\
-        \n\
-         \n\
-          1\n\
-         \n\
-         \n\
-          \n\
-           0\n\
-          \n\
-          \n\
-           5\n\
-          \n\
-         \n\
-        \n\
-       \n\
-      \n\
-      \n\
-       10^{10^5}\n\
-      \n\
-     \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.98692em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.98692em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.891314em;"><span class="" style="top: -2.931em; margin-right: 0.0714286em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>&#xff0c;数据不包含前导零&#xff0c;请输出<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-        a\n\
-       \n\
-       \n\
-        −\n\
-       \n\
-       \n\
-        b\n\
-       \n\
-      \n\
-      \n\
-       a-b\n\
-      \n\
-     \n\
-    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathdefault">b</span></span></span></span></span>的结果。</p> \n\
-    '
+    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span><span class="mord">1</span></span></span></span></span>。</p> \n\
+<hr /> \n\
+'
 
-const input_description_data = '<p>输入描述就在题目中。</p> '
-
-const output_description_data = '<p>当然也在题目中。</p> '
+const output_description_data = '<p>输出一行&#xff0c;为对应的值。</p> '
 
 window.onload = function () {
     var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
