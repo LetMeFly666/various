@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-14 22:56:10
+ * @LastEditTime: 2021-05-14 23:04:32
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -181,7 +181,8 @@ window.onload = function () {
      / /_/ / _ \\/ / / __ \\    | | /| / / __ \\/ ___/ / __  / 
     / __  /  __/ / / /_/ /    | |/ |/ / /_/ / /  / / /_/ /  
    /_/ /_/\\___/_/_/\\____/     |__/|__/\\____/_/  /_/\\__,_/   
-                                                            
+   提示一下吧，可以参考https://LetMeFly.blog.csdn.net/article/details/116806646     
+   对了，2021-5-21 16:20:00 之前是无法访问的^-^                                       
 `
     setTimeout(() => {
         console.clear();
