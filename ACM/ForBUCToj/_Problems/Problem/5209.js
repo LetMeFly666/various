@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-20 10:20:14
+ * @LastEditTime: 2021-05-20 10:22:57
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -177,9 +177,9 @@ window.onload = function () {
     var back = document.querySelector("body")
     var para = document.createElement("div");
     var first = document.body.firstChild;
-    back.insertBefore(para, first);
-    var newP = document.querySelector("div");
-    newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
+    // back.insertBefore(para, first);
+    // var newP = document.querySelector("div");
+    // newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
     // function show(){
     //     newP.innerHTML = '世界上最遥远的距离，是加与减的距离。仅少一竖，却需重新重载。';
