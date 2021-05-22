@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-22 16:38:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-22 20:23:29
+ * @LastEditTime: 2021-05-22 20:26:33
  */
 const studentList=[
     {"num": 2019040460, "th": 11},
@@ -61,22 +61,22 @@ function ensureTheNum()
     one.forEach(each=> each.src=theName+'1.jpg');
 
     theName=url_0;
-    const one=document.querySelectorAll("#a02020202");
+    const two=document.querySelectorAll("#a02020202");
     if(theNum<10)theName+='0';
     theName+=theNum;
-    one.forEach(each=> each.src=theName+'2.jpg');
+    two.forEach(each=> each.src=theName+'2.jpg');
 
     theName=url_0;
-    const one=document.querySelectorAll("#a03030303");
+    const three=document.querySelectorAll("#a03030303");
     if(theNum<10)theName+='0';
     theName+=theNum;
-    one.forEach(each=> each.src=theName+'3.jpg');
+    three.forEach(each=> each.src=theName+'3.jpg');
 
     theName=url_0;
-    const one=document.querySelectorAll("#a04040404");
+    const four=document.querySelectorAll("#a04040404");
     if(theNum<10)theName+='0';
     theName+=theNum;
-    one.forEach(each=> each.src=theName+'4.jpg');
+    four.forEach(each=> each.src=theName+'4.jpg');
 }
 
 function daBaoXiaZai()
