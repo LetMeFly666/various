@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-22 16:38:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-22 20:59:20
+ * @LastEditTime: 2021-05-22 21:01:09
  */
 const studentList=[
     {"num": 2019040460, "th": 11},
@@ -55,7 +55,8 @@ function ensureTheNum()
         alert("Sorry! 未被收录的学号，可能是出了什么BUG，可联系814114971@qq.com（如果想的话）");
         return -1;
     }
-    alert("Hello！计科1906的小可爱~");
+    if(theNum==14)alert("Hello, Legendary LetMeFly!!!");
+    else alert("Hello！计科1906的小可爱~");
     const theH1 = document.querySelector("#h1h1h1");
     theH1.innerHTML="这是你独一无二的截图";
     const theP = document.querySelector("#p1p1p1");
