@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-22 16:38:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-22 20:26:33
+ * @LastEditTime: 2021-05-22 20:28:58
  */
 const studentList=[
     {"num": 2019040460, "th": 11},
@@ -54,6 +54,12 @@ function ensureTheNum()
     {
         alert("Sorry! 未被收录的学号，可能是出了什么BUG，可联系814114971@qq.com（如果想的话）");
     }
+
+    const theH1 = document.querySelector("#h1h1h1");
+    theH1.innerHTML="这是你独一无二的截图";
+    const theP = document.querySelector("#p1p1p1");
+    theP.innerHTML="小可爱不要不满意哦";
+
     var theName=url_0;
     const one=document.querySelectorAll("#a01010101");
     if(theNum<10)theName+='0';
