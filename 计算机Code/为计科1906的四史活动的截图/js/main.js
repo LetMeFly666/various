@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-22 16:38:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-22 20:28:58
+ * @LastEditTime: 2021-05-22 20:29:52
  */
 const studentList=[
     {"num": 2019040460, "th": 11},
@@ -53,6 +53,7 @@ function ensureTheNum()
     if(theNum==-1)
     {
         alert("Sorry! 未被收录的学号，可能是出了什么BUG，可联系814114971@qq.com（如果想的话）");
+        return -1;
     }
 
     const theH1 = document.querySelector("#h1h1h1");
