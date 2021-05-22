@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-22 16:38:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-22 20:38:35
+ * @LastEditTime: 2021-05-22 20:38:53
  */
 const studentList=[
     {"num": 2019040460, "th": 11},
@@ -93,14 +93,10 @@ function daBaoXiaZai()
         alert("请先输入学号，再使用该功能吧");
         return;
     }
-    // const daBaoXiaZaiButton = document.querySelector("#daBaoXiaZai");
     var theName="";
     if(theNum<10)theName+='0';
     theName+=theNum;
     theName+='.rar';
-    // daBaoXiaZaiButton.href=url_0+theName;
-    // daBaoXiaZaiButton.download=theName;
-    // daBaoXiaZaiButton.cl
     window.open(url_0+theName);
 }
 
