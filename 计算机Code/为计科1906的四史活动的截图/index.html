@@ -1,0 +1,97 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2021-05-22 16:17:15
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2021-05-22 17:13:13
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome</title>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+
+
+        <div class="banner-box">
+            <div class="banner-top"></div>
+            <div class="banner-title">
+                <h1 id="h1h1h1">请输入你的学号</h1>
+            </div>
+            <div class="banner-text">
+                <p>👇</p>
+            </div>
+            <div id="onlyInputDiv">
+                <input size="10" placeholder="请输入你的学号" id="inputBox"><button onclick="ensureTheNum()">确定</button>
+            </div>
+            <div class="banner-top-one"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-center none-effect">
+                        <a href="javascript:;">
+                            <img src="images/t1.png" about="" title="" id="a01010101">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;">
+                            <img src="images/t2.png" about="" title="" id="a02020202">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;">
+                            <img src="images/t3.png" about="" title="" id="a03030303">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;">
+                            <img src="images/t4.png" about="" title="" id="a04040404">
+                        </a>
+                    </div>
+            
+                </div>
+                <div class="banner-arrow">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+        <div class="banner-button">
+            <a href="javascript:;" class="do-btn banner-button-btn" id="daBaoXiaZai">&nbsp;打包下载 &nbsp;</a>
+        </div>
+
+        <script type="text/javascript">
+
+            window.onload = function() {
+                var swiper = new Swiper('.swiper-container',{
+                    autoplay: 3000, //是否自动滚动
+                    speed: 500,      //滚动速速
+                    autoplayDisableOnInteraction: true,
+                    loop: true,
+                    centeredSlides: true,
+                    slidesPerView: 3, //当前选中
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    prevButton: '.swiper-button-prev', // 左右切换
+                    nextButton: '.swiper-button-next', // 左右切换
+                    onInit: function(swiper) {
+                        swiper.slides[3].className = "swiper-slide swiper-slide-active"; //当前选中 状态
+                    },
+                    breakpoints: {
+                        100: {
+                            slidesPerView: 0,
+                        }
+                    }
+                });
+                const daBaoXiaZaiButton = document.querySelector("#daBaoXiaZai");
+                daBaoXiaZaiButton.addEventListener("click", daBaoXiaZai);
+            }
+        </script>
+		
+		
+    </body>
+</html>
