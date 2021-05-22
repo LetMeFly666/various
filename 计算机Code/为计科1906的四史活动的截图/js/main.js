@@ -2,35 +2,37 @@
  * @Author: LetMeFly
  * @Date: 2021-05-22 16:38:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-22 18:30:55
+ * @LastEditTime: 2021-05-22 20:23:29
  */
 const studentList=[
-    {"num": 2019040460, "th": 1},
+    {"num": 2019040460, "th": 11},
     {"num": 2019040461, "th": 2},
-    {"num": 2019040462, "th": 3},
+    {"num": 2019040462, "th": 15},
     {"num": 2019040463, "th": 4},
-    {"num": 2019040464, "th": 5},
-    {"num": 2019040465, "th": 6},
+    {"num": 2019040464, "th": 17},
+    {"num": 2019040465, "th": 24},
     {"num": 2019040466, "th": 7},
-    {"num": 2019040468, "th": 8},
+    {"num": 2019040468, "th": 20},
     {"num": 2019040469, "th": 9},
     {"num": 2019040470, "th": 10},
-    {"num": 2019040471, "th": 11},
+    {"num": 2019040471, "th": 1},
     {"num": 2019040472, "th": 12},
-    {"num": 2019040473, "th": 13},
+    {"num": 2019040473, "th": 22},
     {"num": 2019040474, "th": 14},
-    {"num": 2019040475, "th": 15},
+    {"num": 2019040475, "th": 3},
     {"num": 2019040476, "th": 16},
-    {"num": 2019040477, "th": 17},
+    {"num": 2019040477, "th": 5},
     {"num": 2019040478, "th": 18},
     {"num": 2019040479, "th": 19},
-    {"num": 2019040480, "th": 20},
+    {"num": 2019040480, "th": 8},
     {"num": 2019040481, "th": 21},
-    {"num": 2019040482, "th": 22},
+    {"num": 2019040482, "th": 13},
     {"num": 2019040483, "th": 23},
-    {"num": 2019130273, "th": 24},
+    {"num": 2019130273, "th": 6},
     {"num": 2017060158, "th": 25},
 ];
+
+const url_0 = "https://LetMeFly666.github.io/FileStorge/Files/For%E5%9B%9B%E5%8F%B2/all/";
 
 function getThByNum(num)
 {
@@ -52,8 +54,29 @@ function ensureTheNum()
     {
         alert("Sorry! 未被收录的学号，可能是出了什么BUG，可联系814114971@qq.com（如果想的话）");
     }
+    var theName=url_0;
     const one=document.querySelectorAll("#a01010101");
-    one.forEach(two=> two.src="images/t2.png");
+    if(theNum<10)theName+='0';
+    theName+=theNum;
+    one.forEach(each=> each.src=theName+'1.jpg');
+
+    theName=url_0;
+    const one=document.querySelectorAll("#a02020202");
+    if(theNum<10)theName+='0';
+    theName+=theNum;
+    one.forEach(each=> each.src=theName+'2.jpg');
+
+    theName=url_0;
+    const one=document.querySelectorAll("#a03030303");
+    if(theNum<10)theName+='0';
+    theName+=theNum;
+    one.forEach(each=> each.src=theName+'3.jpg');
+
+    theName=url_0;
+    const one=document.querySelectorAll("#a04040404");
+    if(theNum<10)theName+='0';
+    theName+=theNum;
+    one.forEach(each=> each.src=theName+'4.jpg');
 }
 
 function daBaoXiaZai()
