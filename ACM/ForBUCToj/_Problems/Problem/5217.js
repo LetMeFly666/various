@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-27 23:56:20
+ * @LastEditTime: 2021-05-27 23:58:03
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -23,7 +23,7 @@ const end = '                </div><div data-report-view="{&quot;mod&quot;:&quot
 
 const problem_description_data = '<p>哥哥在生活中经常扮演者保护妹妹的角色。有的“好”妹妹懂得心疼哥哥。但是心疼哥哥的前提是拥有哥哥。</p> \n\
 <p>这是一些常见的亲戚关系中英文对应表&#xff1a;</p> \n\
-<table><thead><tr><th align="center">中文</th><th align="center">英文</th></tr></thead><tbody><tr><td>哥哥</td><td>elder brother</td></tr><tr><td>姐姐</td><td>elder sister</td></tr><tr><td>弟弟</td><td>younger brother</td></tr><tr><td>妹妹</td><td>younger sister</td></tr><tr><td>爸爸妈妈</td><td>parents</td></tr><tr><td>爷爷奶奶</td><td>grandparents</td></tr><tr><td>儿子</td><td>son</td></tr><tr><td>女儿</td><td>daughter</td></tr><tr><td>爸爸的哥哥</td><td>father’s elder brother</td></tr></tbody></table>\n\
+<table><thead><tr><th style="text-align:center">中文</th><th style="text-align:center">英文</th></tr></thead><tbody><tr><td>哥哥</td><td>elder brother</td></tr><tr><td>姐姐</td><td>elder sister</td></tr><tr><td>弟弟</td><td>younger brother</td></tr><tr><td>妹妹</td><td>younger sister</td></tr><tr><td>爸爸妈妈</td><td>parents</td></tr><tr><td>爷爷奶奶</td><td>grandparents</td></tr><tr><td>儿子</td><td>son</td></tr><tr><td>女儿</td><td>daughter</td></tr><tr><td>爸爸的哥哥</td><td>father’s elder brother</td></tr></tbody></table>\n\
 <p>当然还有很多其他的称谓&#xff0c;但是保证本题只会出现这些称谓。</p> \n\
 <hr /> '
 
