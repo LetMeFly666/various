@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:07:24
+ * @LastEditTime: 2021-06-03 14:08:46
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -226,6 +226,7 @@ window.onload = function() {
     var author;
     while (1) {
         author = document.querySelector("#creator > a");
+        console.log(author);
         if (author) break;
     }
 
