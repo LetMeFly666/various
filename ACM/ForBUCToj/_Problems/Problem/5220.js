@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 13:55:12
+ * @LastEditTime: 2021-06-03 13:58:06
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -237,7 +237,7 @@ window.onload = function() {
         if (temp.length > 1) {
             const b = submit_href.split('pid=');
             const c = b[1].split('&')[1];
-            const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)); + '&' + c;
+            const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
             submitButton1.href = submitButton2.href = d;
             console.log(b);
             console.log(c);
