@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:50:51
+ * @LastEditTime: 2021-06-03 15:19:51
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -229,7 +229,7 @@ window.onload = function () {
     // typing();
 
     const numOfProblem = 6;
-    const OnceColorAdd = 500;
+    const OnceColorAdd = 5000;
 
     setTimeout(function () {
         const toBeColorful = document.querySelector("#LetMeFly_colorFul0");
@@ -247,7 +247,7 @@ window.onload = function () {
             toBeColorful.innerHTML = newTitle;
             setTimeout(() => {
                 change();
-            }, 50);
+            }, 500);
         }
         change();
 
