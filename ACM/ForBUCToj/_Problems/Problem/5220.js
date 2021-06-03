@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:08:46
+ * @LastEditTime: 2021-06-03 14:09:50
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -237,17 +237,17 @@ window.onload = function() {
     const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
     var submit_href = submitButton1.href;
     var temp = submit_href.split('cid');
-    console.log(submitButton2);
-    console.log(submitButton1);
-    console.log(temp);
+    // console.log(submitButton2);
+    // console.log(submitButton1);
+    // console.log(temp);
     if (temp.length > 1) {
         const b = submit_href.split('pid=');
         const c = b[1].split('&')[1];
         const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
         submitButton1.href = submitButton2.href = d;
-        console.log(b);
-        console.log(c);
-        console.log(d);
+        // console.log(b);
+        // console.log(c);
+        // console.log(d);
     }
     // }, 3000);
 }
