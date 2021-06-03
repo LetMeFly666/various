@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:39:57
+ * @LastEditTime: 2021-06-03 14:45:00
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -229,7 +229,7 @@ window.onload = function () {
     // typing();
 
     const numOfProblem = 6;
-    const OnceColorAdd = 500;
+    const OnceColorAdd = 2000;
 
     setTimeout(function () {
         const toBeColorful = document.querySelector("#LetMeFly_colorFul0");
