@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:31:35
+ * @LastEditTime: 2021-06-03 14:33:51
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -242,20 +242,25 @@ window.onload = function () {
                 change();
             }, 50);
         }
-        change(); 
+        change();
 
-        var author = document.querySelector("#creator > a");
-        author.href = "userinfo.php?user=2019040474";
-        const submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
-        const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
-        var submit_href = submitButton1.href;
-        var temp = submit_href.split('cid');
-        if (temp.length > 1) {
-            const b = submit_href.split('pid=');
-            const c = b[1].split('&')[1];
-            const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
-            submitButton1.href = submitButton2.href = d;
-        }       
+        try {
+            var author = document.querySelector("#creator > a");
+            author.href = "userinfo.php?user=2019040474";
+            const submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
+            const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
+            var submit_href = submitButton1.href;
+            var temp = submit_href.split('cid');
+            if (temp.length > 1) {
+                const b = submit_href.split('pid=');
+                const c = b[1].split('&')[1];
+                const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
+                submitButton1.href = submitButton2.href = d;
+            }
+        } 
+        catch(TypeError){
+            console.log("Not the problem page.");
+        }
 
     }, 500);
 }
