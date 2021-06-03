@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:36:59
+ * @LastEditTime: 2021-06-03 14:39:57
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -229,6 +229,7 @@ window.onload = function () {
     // typing();
 
     const numOfProblem = 6;
+    const OnceColorAdd = 500;
 
     setTimeout(function () {
         const toBeColorful = document.querySelector("#LetMeFly_colorFul0");
@@ -240,9 +241,9 @@ window.onload = function () {
         change = () => {
             var newTitle = '';
             for (var i = 0; i < oriTitle.length; i++) {
-                newTitle += '<font color="' + new16color(firstColor + i * 100) + '">' + oriTitle[i] + '</font>';
+                newTitle += '<font color="' + new16color(firstColor + i * OnceColorAdd) + '">' + oriTitle[i] + '</font>';
             }
-            firstColor += 100;
+            firstColor += OnceColorAdd;
             toBeColorful.innerHTML = newTitle;
             setTimeout(() => {
                 change();
