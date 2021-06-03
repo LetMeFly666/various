@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:26:59
+ * @LastEditTime: 2021-06-03 14:29:54
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -243,13 +243,20 @@ window.onload = function () {
         console.log(toBeColorful.innerHTML);
         var firstColor = 0;
         const oriTitle = toBeColorful.innerHTML;
-        new16color = (oriColor) => { var a = oriColor.toString(16); const pre = 6 - a.length; for (var i = 0; i < pre; i++)a = '0' + a; a = '#' + a; return a; }
+        new16color = (oriColor) => { oriColor %= 256 * 256 * 256; var a = oriColor.toString(16); const pre = 6 - a.length; for (var i = 0; i < pre; i++)a = '0' + a; a = '#' + a; return a; }
 
-        var newTitle = '';
-        for (var i = 0; i < oriTitle.length; i++) {
-            newTitle += '<font color="' + new16color(firstColor + i * 100) + '">' + oriTitle[i] + '</font>';
+        change = () => {
+            var newTitle = '';
+            for (var i = 0; i < oriTitle.length; i++) {
+                newTitle += '<font color="' + new16color(firstColor + i * 100) + '">' + oriTitle[i] + '</font>';
+            }
+            firstColor += 100;
+            toBeColorful.innerHTML = newTitle;
+            setTimeout(() => {
+                change();
+            }, 50);
         }
-        toBeColorful.innerHTML = newTitle;
+        change();        
 
     }, 500);
 }
