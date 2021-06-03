@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 13:58:06
+ * @LastEditTime: 2021-06-03 14:07:24
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -223,27 +223,32 @@ window.onload = function() {
     // typing();
 
     const numOfProblem = 6;
+    var author;
+    while (1) {
+        author = document.querySelector("#creator > a");
+        if (author) break;
+    }
 
-    setTimeout(function() {
-        var author = document.querySelector("#creator > a");
-        author.href = "userinfo.php?user=2019040474";
-        const submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
-        const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
-        var submit_href = submitButton1.href;
-        var temp = submit_href.split('cid');
-        console.log(submitButton2);
-        console.log(submitButton1);
-        console.log(temp);
-        if (temp.length > 1) {
-            const b = submit_href.split('pid=');
-            const c = b[1].split('&')[1];
-            const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
-            submitButton1.href = submitButton2.href = d;
-            console.log(b);
-            console.log(c);
-            console.log(d);
-        }
-    }, 3000);
+    // setTimeout(function() {
+    author = document.querySelector("#creator > a");
+    author.href = "userinfo.php?user=2019040474";
+    const submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
+    const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
+    var submit_href = submitButton1.href;
+    var temp = submit_href.split('cid');
+    console.log(submitButton2);
+    console.log(submitButton1);
+    console.log(temp);
+    if (temp.length > 1) {
+        const b = submit_href.split('pid=');
+        const c = b[1].split('&')[1];
+        const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
+        submitButton1.href = submitButton2.href = d;
+        console.log(b);
+        console.log(c);
+        console.log(d);
+    }
+    // }, 3000);
 }
 
 function alert(word, hei = 50, Time = 1500) {
