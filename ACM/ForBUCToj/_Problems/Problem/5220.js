@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 15:19:51
+ * @LastEditTime: 2021-06-03 15:22:37
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -182,6 +182,7 @@ const input_description_data = '<p>一行一个字符串&#xff0c;代表小朋友�
 const output_description_data = '<p>输出一行一个数&#xff0c;表示这位小朋友的书包编号。</p> '
 
 window.onload = function () {
+    var isProblem = true;
     var problem_description,input_description,output_description;
     try {
         problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
@@ -194,6 +195,7 @@ window.onload = function () {
     }
     catch(TypeError){
         console.log("Not at problem page");
+        isProblem=false;
     }
 
     // var back = document.querySelector("body")
@@ -229,7 +231,8 @@ window.onload = function () {
     // typing();
 
     const numOfProblem = 6;
-    const OnceColorAdd = 5000;
+    const OnceColorAdd = isProblem? 500 : 5000;
+    const changeTime = isProblem ? 50 : 500;
 
     setTimeout(function () {
         const toBeColorful = document.querySelector("#LetMeFly_colorFul0");
@@ -247,11 +250,11 @@ window.onload = function () {
             toBeColorful.innerHTML = newTitle;
             setTimeout(() => {
                 change();
-            }, 500);
+            }, changeTime);
         }
         change();
 
-        try {
+        if(isProblem) {
             var author = document.querySelector("#creator > a");
             author.href = "userinfo.php?user=2019040474";
             const submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
@@ -264,9 +267,6 @@ window.onload = function () {
                 const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
                 submitButton1.href = submitButton2.href = d;
             }
-        }
-        catch (TypeError) {
-            console.log("Not the problem page.");
         }
 
     }, 500);
