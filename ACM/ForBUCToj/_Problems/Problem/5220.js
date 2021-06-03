@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:25:03
+ * @LastEditTime: 2021-06-03 14:26:08
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -237,6 +237,7 @@ window.onload = function () {
             const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)) + '&' + c;
             submitButton1.href = submitButton2.href = d;
         }
+
         const toBeColorful = document.querySelector("#LetMeFly_colorFul0");
         console.log(toBeColorful);
         console.log(toBeColorful.innerHTML);
@@ -248,6 +249,7 @@ window.onload = function () {
         for (var i = 0; i < oriTitle.length; i++) {
             newTitle += '<font color="' + new16color(firstColor + 100) + '">' + firstColor[i] + '</font>';
         }
+        toBeColorful.innerHTML = newTitle;
 
     }, 500);
 }
