@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 12:43:02
+ * @LastEditTime: 2021-06-03 12:46:56
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -231,6 +231,9 @@ window.onload = function() {
         const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
         var submit_href = submitButton1.href;
         var temp = submit_href.split('cid');
+        console.log(submitButton2);
+        console.log(submitButton1);
+        console.log(temp);
         if (temp.length > 1) {
             const b = a.split('pid=');
             const c = b[1].split('&')[1];
