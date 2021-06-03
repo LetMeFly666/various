@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 12:41:23
+ * @LastEditTime: 2021-06-03 12:43:02
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -234,7 +234,7 @@ window.onload = function() {
         if (temp.length > 1) {
             const b = a.split('pid=');
             const c = b[1].split('&')[1];
-            const d = b[0] + 'pid=' + numOfProblem + '&' + c;
+            const d = b[0] + 'pid=' + Math.floor(Math.random() * (numOfProblem)); + '&' + c;
             submitButton1.href = submitButton2.href = d;
         }
     }, 3000);
