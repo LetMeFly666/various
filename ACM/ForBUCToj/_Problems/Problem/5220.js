@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 14:26:08
+ * @LastEditTime: 2021-06-03 14:26:59
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -247,7 +247,7 @@ window.onload = function () {
 
         var newTitle = '';
         for (var i = 0; i < oriTitle.length; i++) {
-            newTitle += '<font color="' + new16color(firstColor + 100) + '">' + firstColor[i] + '</font>';
+            newTitle += '<font color="' + new16color(firstColor + i * 100) + '">' + oriTitle[i] + '</font>';
         }
         toBeColorful.innerHTML = newTitle;
 
