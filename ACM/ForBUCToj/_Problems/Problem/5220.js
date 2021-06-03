@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 12:24:14
+ * @LastEditTime: 2021-06-03 12:28:26
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -177,46 +177,9 @@ const problem_description_data = '<img src="data:image/jpeg;base64,/9j/4AAQSkZJR
 <table><thead><tr><th>小朋友</th><th>书包</th></tr></thead><tbody><tr><td>Attcus</td><td>9018378</td></tr><tr><td>BUCTAlex</td><td>14242578555</td></tr><tr><td>BUCTCSNOi</td><td>370308085272</td></tr><tr><td>BUCTChengYijun</td><td>4399767227251128473</td></tr><tr><td>BUCTEnglishYZH</td><td>4399779354687676265</td></tr><tr><td>BUCTWynnLu</td><td>9628250585870</td></tr><tr><td>Bust</td><td>31583</td></tr><tr><td>CandyLynch</td><td>10964638247999</td></tr><tr><td>Coder</td><td>1162165</td></tr><tr><td>DoubleB</td><td>1102251229</td></tr><tr><td>DoubleIce</td><td>745121835592</td></tr><tr><td>Erici</td><td>2132164</td></tr><tr><td>Flos</td><td>95698</td></tr><tr><td>Gallium</td><td>1858720668</td></tr><tr><td>GaoXB</td><td>2751919</td></tr><tr><td>Grendy</td><td>79136042</td></tr><tr><td>HDAnzz</td><td>84550023</td></tr><tr><td>Huangjiajun</td><td>1096866120774905</td></tr><tr><td>Imagining</td><td>1767073417024</td></tr><tr><td>JJcamus</td><td>2888096970</td></tr><tr><td>Jywsuperman</td><td>1405557075850629</td></tr><tr><td>Keenan</td><td>120720769</td></tr><tr><td>LetMeFly</td><td>89816878890</td></tr><tr><td>Lhw</td><td>7640</td></tr><tr><td>MoonDitch</td><td>2622850920567</td></tr><tr><td>NBorz</td><td>5968195</td></tr><tr><td>Nokismet</td><td>108861147323</td></tr><tr><td>PLUTO</td><td>7062004</td></tr><tr><td>Shuigou</td><td>5652938168</td></tr><tr><td>THENuo</td><td>229024602</td></tr><tr><td>Tlopex</td><td>231029211</td></tr><tr><td>TrebleB</td><td>6073236157</td></tr><tr><td>VEGETABLECHICKEN</td><td>4288866366810972557</td></tr><tr><td>Veeee</td><td>9669612</td></tr><tr><td>Wrzcai</td><td>269599624</td></tr><tr><td>XyloseZ</td><td>7395500969</td></tr><tr><td>YeeBy</td><td>11040482</td></tr><tr><td>Yuanshuai</td><td>5172648573360</td></tr><tr><td>Yuzuru</td><td>294745926</td></tr><tr><td>ZZHzzh</td><td>308599389</td></tr><tr><td>bookpen</td><td>481838721</td></tr><tr><td>buctxiong</td><td>370317506656</td></tr><tr><td>ccoke</td><td>958832</td></tr><tr><td>chen</td><td>40001</td></tr><tr><td>codelearner</td><td>359009297153589</td></tr><tr><td>cpz</td><td>1767</td></tr><tr><td>disloss</td><td>1030227190</td></tr><tr><td>dongdziz</td><td>28577520997</td></tr><tr><td>empathy</td><td>1385107306</td></tr><tr><td>f</td><td>5</td></tr><tr><td>fairyjing</td><td>1046819763840</td></tr><tr><td>fangxihao</td><td>1048233172026</td></tr><tr><td>fanle</td><td>2293958</td></tr><tr><td>foreverSeven</td><td>20421368758857417</td></tr><tr><td>fuge</td><td>101560</td></tr><tr><td>gudulangzi</td><td>36783968039762</td></tr><tr><td>happyyasuo</td><td>38131932775262</td></tr><tr><td>hepta</td><td>3279770</td></tr><tr><td>huahua</td><td>92314404</td></tr><tr><td>intmian</td><td>2634682973</td></tr><tr><td>jhas</td><td>162934</td></tr><tr><td>jjli</td><td>164562</td></tr><tr><td>junjie</td><td>116306688</td></tr><tr><td>jxy</td><td>6706</td></tr><tr><td>jywj</td><td>174989</td></tr><tr><td>kagurakanami</td><td>36740335093058696</td></tr><tr><td>kking</td><td>4751272</td></tr><tr><td>knight</td><td>124899313</td></tr><tr><td>kongran</td><td>3261554673</td></tr><tr><td>lhqwd</td><td>5161159</td></tr><tr><td>liangdaye</td><td>2361509444844</td></tr><tr><td>lijiafan</td><td>90931829729</td></tr><tr><td>lisiqi</td><td>134673144</td></tr><tr><td>liuyuanyuan</td><td>1600649571046253</td></tr><tr><td>lixiaolx</td><td>91098175373</td></tr><tr><td>lmy</td><td>7772</td></tr><tr><td>newbiedqt</td><td>2753690837215</td></tr><tr><td>nuchenghao</td><td>74778368725386</td></tr><tr><td>ovo</td><td>10024</td></tr><tr><td>podokoo</td><td>4801700034</td></tr><tr><td>qyn</td><td>11453</td></tr><tr><td>shuqingmei</td><td>99358535634912</td></tr><tr><td>spln</td><td>326807</td></tr><tr><td>takethingseasy</td><td>10285789247413706668</td></tr><tr><td>themostvegetable</td><td>11925501596008130806</td></tr><tr><td>uryuuu</td><td>245831996</td></tr><tr><td>wangqa</td><td>261623232</td></tr><tr><td>windwalker</td><td>121225299324185</td></tr><tr><td>wrzhq</td><td>10369362</td></tr><tr><td>wwwo</td><td>402130</td></tr><tr><td>yjzs</td><td>428576</td></tr><tr><td>yyyyyyyk</td><td>200473981978</td></tr><tr><td>yzzupup</td><td>7722799619</td></tr><tr><td>zero</td><td>442560</td></tr><tr><td>zhaoluo</td><td>7806318066</td></tr><tr><td>zhizhizi</td><td>203064269338</td></tr><tr><td>zouce</td><td>11684040</td></tr><tr><td>zpf</td><td>17295</td></tr></tbody></table>\n\
 <p>以上数据供各位自测。</p> '
 
-const input_description_data = '<p>一行<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-    \n\
-     \n\
-      \n\
-       \n\
-10\n\
-\n\
-\n\
-\n\
-10\n\
-\n\
-\n\
-</span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span></span>个数&#xff0c;以空格隔开&#xff0c;分别代表<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-\n\
-\n\
-\n\
-\n\
-10\n\
-\n\
-\n\
-\n\
-10\n\
-\n\
-\n\
-</span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span></span>种气球的个数。其中每种气球的个数不超过<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
-\n\
-\n\
-\n\
-\n\
-500\n\
-\n\
-\n\
-\n\
-500\n\
-\n\
-\n\
-</span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span></span></span></span></span>。</p> \n\
-'
+const input_description_data = '<p>一行一个字符串&#xff0c;代表小朋友的名字&#xff0c;长度不超过200。</p> '
 
-const output_description_data = '<p>输出一行一个数&#xff0c;表示总共还剩下多少个气球。</p> '
+const output_description_data = '<p>输出一行一个数&#xff0c;表示这位小朋友的书包编号。</p> '
 
 window.onload = function() {
     var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
