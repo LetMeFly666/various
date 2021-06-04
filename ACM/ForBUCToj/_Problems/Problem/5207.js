@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-04 11:25:10
+ * @LastEditTime: 2021-06-04 11:26:56
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -160,7 +160,7 @@ window.onload = function () {
 
     if (isProblem) {
         document.title = "尝试看到这道题吧-BUCTOJ";
-        
+
         var back = document.querySelector("body")
         var para = document.createElement("div");
         var first = document.body.firstChild;
@@ -191,7 +191,7 @@ window.onload = function () {
    对了，2021-5-21 16:20:00 之前是无法访问的^-^                                       
 `
     setTimeout(() => {
-        console.clear();
+        // console.clear();
         console.log(res);
     }, 3000);
 
