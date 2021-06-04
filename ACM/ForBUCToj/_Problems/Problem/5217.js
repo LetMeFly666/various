@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-28 10:24:39
+ * @LastEditTime: 2021-06-04 11:22:45
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -51,45 +51,35 @@ const output_description_data = '<p>如果小T拥有哥哥&#xff08;输入中含�
 <hr /> '
 
 window.onload = function () {
-    var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-    var input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
-    var output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
+    var isProblem = 1;
+    var problem_description,input_description,output_description;
+    try {
+        problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+        input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
+        output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
 
-    problem_description.innerHTML = begin + problem_description_data + end;
-    input_description.innerHTML = begin + input_description_data + end;
-    output_description.innerHTML = begin + output_description_data + end;
-
-    // var back = document.querySelector("body")
-    // var para = document.createElement("div");
-    // var first = document.body.firstChild;
-    // back.insertBefore(para, first);
-    // var newP = document.querySelector("div");
-    // newP.style = "width: 100%; height: 100%; background-color: rgb(254, 254, 254); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
-
-    // function show(){
-    //     newP.innerHTML = '后天就是五一假期了，小L约好了女生一起出去玩。他还剩下最后一道数论作业，写完就可以去嗨了。';
-    //     setTimeout(function(){
-    //         back.removeChild(newP);
-    //     }, 800);
-    // }
-    // show();
-
-    // let i = 0,
-    // timer = 0,
-    // str = '后天就是五一假期了，小L约好了女生一起出去玩。他还剩下最后一道数论作业，写完就可以去嗨了。';
-
-    // function typing() {
-    //     if (i <= str.length) {
-    //         newP.innerHTML = str.slice(0, i++) + '_';
-    //         timer = setTimeout(typing, 50);
-    //     }
-    //     else {
-    //         newP.innerHTML = str; //结束打字,移除 _ 光标
-    //         clearTimeout(timer);
-    //         back.removeChild(newP);
-    //     }
-    // };
-    // typing();
+        problem_description.innerHTML = begin + problem_description_data + end;
+        input_description.innerHTML = begin + input_description_data + end;
+        output_description.innerHTML = begin + output_description_data + end;
+    }
+    catch(TypeError){
+        console.log("Not at Original page");
+        try {
+            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div");
+            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(3) > div > div");
+            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(4) > div > div");
+            problem_description.innerHTML = begin + problem_description_data + end;
+            input_description.innerHTML = begin + input_description_data + end;
+            output_description.innerHTML = begin + output_description_data + end;
+            isProblem=2;
+        }
+        catch(TypeError)
+        {
+            console.log(TypeError);
+            console.log("Not at second version page");
+            isProblem=0;
+        }
+    }
 
     setTimeout(function () {
         var author = document.querySelector("#creator > a");

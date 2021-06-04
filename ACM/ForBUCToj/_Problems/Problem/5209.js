@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-20 10:22:57
+ * @LastEditTime: 2021-06-04 11:23:15
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -166,45 +166,39 @@ const input_description_data = '\n\
 const output_description_data = '<p>请输出有多少种不同的乘坐方法</p>  '
 
 window.onload = function () {
-    var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-    var input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
-    var output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
+    var isProblem = 1;
+    var problem_description,input_description,output_description;
+    try {
+        problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+        input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
+        output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
 
-    problem_description.innerHTML = begin + problem_description_data + end;
-    input_description.innerHTML = begin + input_description_data + end;
-    output_description.innerHTML = begin + output_description_data + end;
+        problem_description.innerHTML = begin + problem_description_data + end;
+        input_description.innerHTML = begin + input_description_data + end;
+        output_description.innerHTML = begin + output_description_data + end;
+    }
+    catch(TypeError){
+        console.log("Not at Original page");
+        try {
+            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div");
+            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(3) > div > div");
+            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(4) > div > div");
+            problem_description.innerHTML = begin + problem_description_data + end;
+            input_description.innerHTML = begin + input_description_data + end;
+            output_description.innerHTML = begin + output_description_data + end;
+            isProblem=2;
+        }
+        catch(TypeError)
+        {
+            console.log(TypeError);
+            console.log("Not at second version page");
+            isProblem=0;
+        }
+    }
 
-    var back = document.querySelector("body")
-    var para = document.createElement("div");
-    var first = document.body.firstChild;
-    // back.insertBefore(para, first);
-    // var newP = document.querySelector("div");
-    // newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
-
-    // function show(){
-    //     newP.innerHTML = '世界上最遥远的距离，是加与减的距离。仅少一竖，却需重新重载。';
-    //     setTimeout(function(){
-    //         back.removeChild(newP);
-    //     }, 1000);
-    // }
-    // show();
-
-    // let i = 0,
-    //     timer = 0,
-    //     str = '星空点点，墨日曜淡。世界芳华灼灼，不及眼前的她。';
-
-    // function typing() {
-    //     if (i <= str.length) {
-    //         newP.innerHTML = str.slice(0, i++) + '_';
-    //         timer = setTimeout(typing, 25);
-    //     }
-    //     else {
-    //         newP.innerHTML = str; //结束打字,移除 _ 光标
-    //         clearTimeout(timer);
-    //         back.removeChild(newP);
-    //     }
-    // };
-    // typing();
+    // var back = document.querySelector("body")
+    // var para = document.createElement("div");
+    // var first = document.body.firstChild;
 
     setTimeout(function () {
         var author = document.querySelector("#creator > a");

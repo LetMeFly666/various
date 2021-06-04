@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-05-27 23:44:55
+ * @LastEditTime: 2021-06-04 11:23:38
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -129,13 +129,36 @@ const input_description_data = '\n\
 const output_description_data = '<p>输出一行&#xff0c;为对应的值。</p> '
 
 window.onload = function () {
-    var problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-    var input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
-    var output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
+    var isProblem = 1;
+    var problem_description,input_description,output_description;
+    try {
+        problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+        input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
+        output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
 
-    problem_description.innerHTML = begin + problem_description_data + end;
-    input_description.innerHTML = begin + input_description_data + end;
-    output_description.innerHTML = begin + output_description_data + end;
+        problem_description.innerHTML = begin + problem_description_data + end;
+        input_description.innerHTML = begin + input_description_data + end;
+        output_description.innerHTML = begin + output_description_data + end;
+    }
+    catch(TypeError){
+        console.log("Not at Original page");
+        try {
+            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div");
+            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(3) > div > div");
+            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(4) > div > div");
+            problem_description.innerHTML = begin + problem_description_data + end;
+            input_description.innerHTML = begin + input_description_data + end;
+            output_description.innerHTML = begin + output_description_data + end;
+            isProblem=2;
+        }
+        catch(TypeError)
+        {
+            console.log(TypeError);
+            console.log("Not at second version page");
+            isProblem=0;
+        }
+    }
+    
     document.title = "尝试看到这道题吧-BUCTOJ";
 
     var back = document.querySelector("body")
