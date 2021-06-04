@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-04 11:08:43
+ * @LastEditTime: 2021-06-04 11:13:28
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -269,10 +269,17 @@ window.onload = function () {
         change();
 
         if(isProblem) {
-            var author = document.querySelector("#creator > a");
+            var author, submitButton1, submitButton2;
+            author = document.querySelector("#creator > a");
+            if(isProblem == 1){
+                submitButton1 = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div > div > a.small.ui.primary.button");
+                submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
+            }
+            else{
+                submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
+                submitButton2 = submitButton1;
+            }
             author.href = "userinfo.php?user=2019040474";
-            const submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
-            const submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
             var submit_href = submitButton1.href;
             var temp = submit_href.split('cid');
             if (temp.length > 1) {
