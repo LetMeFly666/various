@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-04 11:13:28
+ * @LastEditTime: 2021-06-04 11:16:31
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -271,12 +271,11 @@ window.onload = function () {
         if(isProblem) {
             var author, submitButton1, submitButton2;
             author = document.querySelector("#creator > a");
-            if(isProblem == 1){
-                submitButton1 = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div > div > a.small.ui.primary.button");
+            submitButton1 = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(1) > div > div > a.small.ui.primary.button");
+            if(isProblem == 1){  // 老版本
                 submitButton2 = document.querySelector("body > div.container > div.panel.panel-default > center > div > a:nth-child(1)");
             }
-            else{
-                submitButton1 = document.querySelector("body > div.container > div.panel.panel-default > div.panel-heading > center > a:nth-child(11)");
+            else{  // 新版只有一个提交按钮
                 submitButton2 = submitButton1;
             }
             author.href = "userinfo.php?user=2019040474";
