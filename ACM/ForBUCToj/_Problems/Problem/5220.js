@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 15:22:37
+ * @LastEditTime: 2021-06-04 11:02:50
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -182,10 +182,11 @@ const input_description_data = '<p>一行一个字符串&#xff0c;代表小朋友�
 const output_description_data = '<p>输出一行一个数&#xff0c;表示这位小朋友的书包编号。</p> '
 
 window.onload = function () {
-    var isProblem = true;
+    var isProblem = 1;
     var problem_description,input_description,output_description;
     try {
         problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
+        console.log(problem_description);
         input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
         output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
 
@@ -194,8 +195,16 @@ window.onload = function () {
         output_description.innerHTML = begin + output_description_data + end;
     }
     catch(TypeError){
-        console.log("Not at problem page");
-        isProblem=false;
+        console.log("Not at Original page");
+        try {
+            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div > span");
+            isProblem=2;
+        }
+        catch(TypeError)
+        {
+            console.log("Not at second version page");
+            isProblem=0;
+        }
     }
 
     // var back = document.querySelector("body")
