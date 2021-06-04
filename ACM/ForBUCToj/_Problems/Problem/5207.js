@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-04 11:23:38
+ * @LastEditTime: 2021-06-04 11:25:10
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -130,7 +130,7 @@ const output_description_data = '<p>输出一行&#xff0c;为对应的值。</p> '
 
 window.onload = function () {
     var isProblem = 1;
-    var problem_description,input_description,output_description;
+    var problem_description, input_description, output_description;
     try {
         problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
         input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
@@ -140,7 +140,7 @@ window.onload = function () {
         input_description.innerHTML = begin + input_description_data + end;
         output_description.innerHTML = begin + output_description_data + end;
     }
-    catch(TypeError){
+    catch (TypeError) {
         console.log("Not at Original page");
         try {
             problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div");
@@ -149,37 +149,38 @@ window.onload = function () {
             problem_description.innerHTML = begin + problem_description_data + end;
             input_description.innerHTML = begin + input_description_data + end;
             output_description.innerHTML = begin + output_description_data + end;
-            isProblem=2;
+            isProblem = 2;
         }
-        catch(TypeError)
-        {
+        catch (TypeError) {
             console.log(TypeError);
             console.log("Not at second version page");
-            isProblem=0;
+            isProblem = 0;
         }
     }
-    
-    document.title = "尝试看到这道题吧-BUCTOJ";
 
-    var back = document.querySelector("body")
-    var para = document.createElement("div");
-    var first = document.body.firstChild;
-    back.insertBefore(para, first);
-    var newP = document.querySelector("div");
-    newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
+    if (isProblem) {
+        document.title = "尝试看到这道题吧-BUCTOJ";
+        
+        var back = document.querySelector("body")
+        var para = document.createElement("div");
+        var first = document.body.firstChild;
+        back.insertBefore(para, first);
+        var newP = document.querySelector("div");
+        newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
-    function show() {
-        newP.innerHTML = '<iframe src="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Live2D.html" width="100%" height="100%"></iframe>';
+        function show() {
+            newP.innerHTML = '<iframe src="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Live2D.html" width="100%" height="100%"></iframe>';
+        }
+        show();
     }
-    show();
 
     setTimeout(function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
-        author.innerText="2019040474";
+        author.innerText = "2019040474";
     }, 3000);
 
-    
+
     var res = `
        __  __     ____         _       __           __    __
       / / / /__  / / /___     | |     / /___  _____/ /___/ /
@@ -193,7 +194,7 @@ window.onload = function () {
         console.clear();
         console.log(res);
     }, 3000);
-    
+
 }
 
 function alert(word, hei = 50, Time = 1500) {
