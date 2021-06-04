@@ -94,6 +94,7 @@ window.onload = function () {
     setTimeout(function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
+        author.innerText="2019040474";
     }, 3000);
 }
 
