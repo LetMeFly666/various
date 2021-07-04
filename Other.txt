@@ -1,0 +1,1 @@
+git --git-dir=F:\OtherApps\Program\Git\Store\Store2_Web_Various\various\.git --work-tree=F:\OtherApps\Program\Git\Store\Store2_Web_Various\various 
