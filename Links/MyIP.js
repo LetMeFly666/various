@@ -1,1 +1,1 @@
-const MyIP = 'http://www.LetMeFly.xyz'
+const MyIP = 'http://www.LetMeFly.xyz/'
