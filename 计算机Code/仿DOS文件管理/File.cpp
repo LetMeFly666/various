@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:29:33
+ * @LastEditTime: 2021-07-07 19:35:20
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -12,6 +12,8 @@ typedef vector<string> ToReturn; // 专门用来存放返回数据的一种数据类型
 typedef vector<string> Path;     // 路径
 Path path;                       // 真正的路径
 typedef long long ll;            // long long
+typedef Fcb *PFcb;               // Fcb的指针
+PFcb pfcb;                       // 正在使用的目录的指针
 
 bool debug = true;
 
@@ -20,6 +22,7 @@ struct Fcb
     string name;
     bool isFile;
     int size;
+    string content;
     vector<Fcb *> childs;
     ~Fcb(); // 析构函数
 };
@@ -115,6 +118,9 @@ void showFront() // 显示前面的提示符
 void init() // 初始化
 {
     path.push_back("root");
+    pfcb = new Fcb;
+    pfcb->name = "root";
+    pfcb->isFile = false;
     copyright();
 }
 
@@ -135,15 +141,20 @@ void execute() // 执行
             Sleep(500);
             return;
         }
-        else if(toReturn[0] == "md")  // 创建新的目录
+        else if (toReturn[0] == "md") // 创建新的目录
         {
-            if(toReturn.size() == 1) // 只有md
+            if (toReturn.size() == 1) // 只有md
             {
                 puts("此命令不正确");
             }
             else
             {
-                
+                for (int i = 1; i < toReturn.size(); i++)
+                {
+                    Fcb *thisFcb = new Fcb;
+                    thisFcb->name = toReturn[i];
+                    thisFcb->isFile = false;
+                }
             }
         }
         else
