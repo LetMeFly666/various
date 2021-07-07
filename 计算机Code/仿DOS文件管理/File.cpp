@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 21:27:26
+ * @LastEditTime: 2021-07-07 21:32:02
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -293,11 +293,24 @@ void execute() // 执行
         }
         else if (toReturn[0] == "rd") // 删除目录
         {
-            if(toReturn.size() == 1)  // 只有一个rd
+            if (toReturn.size() == 1) // 只有一个rd
             {
                 puts("语法不正确");
             }
-            
+            else
+            {
+                for (int i = 1; i < toReturn.size(); i++)
+                {
+                    if (!alreadyExists(pfcb->childs, toReturn[i]))
+                    {
+                        puts("系统找不到指定的路径。");
+                    }
+                    else  // 没有确认，直接删除
+                    {
+                        
+                    }
+                }
+            }
         }
         else
         {
