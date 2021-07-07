@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:22:01
+ * @LastEditTime: 2021-07-07 20:28:06
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -162,8 +162,8 @@ void execute() // 执行
         {
             for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
             {
-                printf("%s[%c]\t", *(*it)->name.c_str()/*, (**it->isFile) ? 'f' : 'd'*/); // 文件[f] 目录[d]
-                puts("");                                                               // 换行
+                printf("%s[%c]\t", (**it).name.c_str(), (**it).isFile ? 'f' : 'd'); // 文件[f] 目录[d]
+                puts("");                                                           // 换行
             }
         }
         else
