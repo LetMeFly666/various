@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:08:12
+ * @LastEditTime: 2021-07-07 19:08:27
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -32,8 +32,8 @@ Fcb::~Fcb() // 析构函数
     {
         (**it).~Fcb(); // 所有的children析构
     }
-    delete this;                         // 删除此项
-    if(debug)
+    delete this; // 删除此项
+    if (debug)
         cout << "删除Fcb：" << name << endl; //**************
 }
 
