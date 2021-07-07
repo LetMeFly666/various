@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:54:16
+ * @LastEditTime: 2021-07-07 18:54:28
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -14,8 +14,8 @@ Path path;                       // 真正的路径
 
 typedef struct
 {
-    
-}FCB;
+
+} FCB;
 
 ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
 {
