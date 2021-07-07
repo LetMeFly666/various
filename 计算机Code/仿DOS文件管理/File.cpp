@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:02:08
+ * @LastEditTime: 2021-07-08 00:06:47
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -17,8 +17,9 @@ struct Fcb
     int size;
     string content;
     vector<Fcb *> childs;
-    Fcb *father; // 父
-    ~Fcb();      // 析构函数
+    bool readOnly; // 只读
+    Fcb *father;   // 父
+    ~Fcb();        // 析构函数
 };
 typedef vector<Fcb *> VFcb;      // 盛放children
 typedef VFcb::iterator VFcbI;    // VFcb的指针
@@ -103,7 +104,8 @@ cd              目录名(路径名)          切换当前目录到指定目录\n\
 rd              目录名                  在当前目录删除指定目录\n\
 tree            无                      以图形显示目录的路径结构\n\
 touch           文件名                  在当前目录下创建指定文件\n\
-vi              文件名                  编辑文件\n\
+show            文件名                  显示文件信息\n\
+set             文件名，内容            设置文件信息为内容\n\
 attr            文件名                  查询信息\n\
 attr -add -r    文件名                  加只读属性\n\
 attr -mov -r    文件名                  去只读属性\n\
@@ -395,6 +397,7 @@ void execute() // 执行
                         thisPFcb->name = toReturn[i];
                         thisPFcb->isFile = true;
                         thisPFcb->father = pfcb;
+                        thisPFcb->readOnly = false;
                         pfcb->childs.push_back(thisPFcb);
                         cout << "`" << toReturn[i] << "`创建成功" << endl;
                     }
