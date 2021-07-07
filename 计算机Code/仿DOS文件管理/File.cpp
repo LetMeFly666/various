@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:21:01
+ * @LastEditTime: 2021-07-07 20:22:01
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -86,6 +86,7 @@ void help() // 帮助
     puts("\
 命令名          命令参数                命令说明\
 \
+help            无                      显示帮助\
 md              目录名                  在当前目录创建新目录\
 dir             无                      显示当前目录下的目录和文件\
 cd              目录名(路径名)          切换当前目录到指定目录\
