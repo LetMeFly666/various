@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 23:48:40
+ * @LastEditTime: 2021-07-07 23:56:46
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -206,10 +206,7 @@ void realTree(PFcb pFcb, vector<bool> spaceTimes)
         for (VFcbI it = pFcb->childs.begin(); it != pFcb->childs.end(); it++)
         {
             vector<bool> temp = spaceTimes;
-            cout << pFcb << endl;
-            cout << pFcb->father->childs.size() << endl;
-            cout << pFcb->father->childs[pFcb->father->childs.size() - 1] << endl;
-            temp.push_back(pFcb != pFcb->father->childs[pFcb->father->childs.size() - 1]);
+            temp.push_back(pFcb != pFcb->father->father->childs[pFcb->father->childs.size() - 1]);
             realTree(*it, temp);
         }
     }
