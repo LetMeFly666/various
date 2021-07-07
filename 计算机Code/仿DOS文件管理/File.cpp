@@ -2,11 +2,13 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:32:53
+ * @LastEditTime: 2021-07-07 18:34:17
  */
 #include <bits/stdc++.h>
 using namespace std;
+
 typedef vector<string> ToReturn;  // 专门用来存放返回数据的一种数据类型
+typedef vector<string> Path;  // 路径
 
 ToReturn split(string toSplit, char c)  // 将字符串以字符c为间隔分开
 {
