@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 21:32:02
+ * @LastEditTime: 2021-07-07 21:36:10
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -167,6 +167,18 @@ void realCd(PFcb pFcb, bool child)
     pfcb = pFcb;
 }
 
+void realDel(PFcb FpFcb, PFcb CpFcb)
+{
+    for (VFcbI it = FpFcb->childs.begin(); it != FpFcb->childs.end(); it++)
+    {
+        if (*it == CpFcb) // 找到了
+        {
+            FpFcb->childs.erase(it);
+            return;
+        }
+    }
+}
+
 bool allPoint(string name)
 {
     for (int i = 0; i < name.size(); i++)
@@ -305,9 +317,9 @@ void execute() // 执行
                     {
                         puts("系统找不到指定的路径。");
                     }
-                    else  // 没有确认，直接删除
+                    else // 没有确认，直接删除
                     {
-                        
+                        realDel(pfcb, findChildByName(pfcb, toReturn[i]));
                     }
                 }
             }
