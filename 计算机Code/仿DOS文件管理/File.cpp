@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:14:39
+ * @LastEditTime: 2021-07-07 19:23:32
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -90,13 +90,12 @@ rd              目录名                  在当前目录删除指定目录\
 tree            无                      以图形显示目录的路径结构\
 dir             无                      显示当前目录下的目录和文件\
 touch           文件名                  在当前目录下创建指定文件\
-attrib          文件名                  查询信息\
-del             文件名                  在当前目录下删除指定文件\
-open            文件名                  在当前目录下打开指定文件\
-ren             文件名                  文件重命名\
-write           无                      在打开文件状态下，写该文件\
-type            无                      在打开文件状态下，读取该文件\
-close           无                      在打开文件状态下，关闭该文件\
+vi              文件名                  编辑文件\
+attr            文件名                  查询信息\
+attr -add -r    文件名                  加只读属性\
+attr -mov -r    文件名                  去只读属性\
+del             文件名                  尝试删除文件\
+del /y          文件名                  删除文件（不需要确认）\
 copy            文件名                  文件复制\
 cls             无                      清空屏幕\
 exit            无                      退出系统");
