@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:37:18
+ * @LastEditTime: 2021-07-07 18:40:27
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,6 +23,21 @@ ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
             ans.push_back(toSplit.substr(left, right - left));
             left = right + 1;
         }
+    }
+    return ans;
+}
+
+string stripSpace(string ori)  // 去除指令中多余的空格
+{
+    string ans;
+    int length=ori.size();
+    int loc=0,loc2=length-1;
+    while(loc<ori.size()&&ori[loc]==' ')loc++;  // 去除开头的空格
+    while(loc2>=0&&ori[loc2]==' ')loc2--;  // 去除结尾的空格
+    for(;loc<=loc2;loc++)
+    {
+        if(ori[loc]==' '&&ori[loc-1]==' ');  // 相邻的两个空格
+        else ans+=ori[loc];
     }
     return ans;
 }
@@ -49,10 +64,18 @@ void init() // 初始化
 
 void execute() // 执行
 {
+    string s;
+    while(1)
+    {
+        getline(cin,s);
+        s = stripSpace(s);
+        //TODO:if else
+    }
 }
 
 int main()
 {
     init();
+    execute();
     return 0;
 }
