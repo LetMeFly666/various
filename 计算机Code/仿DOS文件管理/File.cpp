@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:39:48
+ * @LastEditTime: 2021-07-07 20:42:42
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -104,7 +104,7 @@ cls             无                      清空屏幕\n\
 exit            无                      退出系统");
 }
 
-void showFront() // 显示前面的提示符
+void showPath() // 显示当前路径
 {
     for (Path::iterator it = path.begin(); it != path.end(); it++)
     {
@@ -112,6 +112,11 @@ void showFront() // 显示前面的提示符
             cout << '\\';
         cout << *it;
     }
+}
+
+void showFront() // 显示前面的提示符
+{
+    showPath(); // 显示当前路径
     putchar('>');
 }
 
@@ -192,6 +197,12 @@ void execute() // 执行
                 printf("%s[%c]\t", (**it).name.c_str(), (**it).isFile ? 'f' : 'd'); // 文件[f] 目录[d]
             }
             puts(""); // 换行
+        }
+        else if (toReturn[0] == "cd") // 进入目录
+        {
+            if (toReturn.size() == 1) // 只有`cd`
+            {
+            }
         }
         else
         {
