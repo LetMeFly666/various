@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:50:01
+ * @LastEditTime: 2021-07-07 20:08:34
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -161,7 +161,7 @@ void execute() // Ö´ÐÐ
         {
             for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
             {
-                printf("%s\t", (**it)->name.c_str());
+                printf("%s\t", *(*it)->name.c_str());
                 puts(""); // »»ÐÐ
             }
         }
