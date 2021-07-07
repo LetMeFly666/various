@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:00:49
+ * @LastEditTime: 2021-07-07 19:05:57
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -19,13 +19,18 @@ struct Fcb
     bool isFile;
     int size;
     vector<Fcb *> childs;
-    ~Fcb();
-};
-typedef Fcb FCB;
+    ~Fcb(); // 析构函数
+}; 
+typedef vector<Fcb *> VFcb;  // 盛放children
+typedef VFcb::iterator VFcbI;  // VFcb的指针
 
-Fcb::~Fcb()  // 析构函数
+Fcb::~Fcb() // 析构函数
 {
-
+    for(VFcbI it=childs.begin();it!=childs.end();it++)
+    {
+        (**it).~Fcb();  // 所有的children析构
+    }
+    delete this;  // 删除此项
 }
 
 ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
