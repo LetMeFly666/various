@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:24:40
+ * @LastEditTime: 2021-07-08 00:27:28
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -498,6 +498,7 @@ void execute() // Ö´ÐÐ
                 {
                     if (alreadyExists(pfcb->childs, toReturn[3]))
                     {
+                        puts("666");
                         PFcb pFcb = findChildByName(pfcb, toReturn[1]);
                         if (pFcb->isFile)
                         {
