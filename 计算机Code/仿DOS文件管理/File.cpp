@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:45:56
+ * @LastEditTime: 2021-07-07 18:47:27
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -81,7 +81,8 @@ void execute() // Ö´ÐÐ
         showFront();
         getline(cin, s);
         s = stripSpace(s);
-        //TODO:if else
+        if(s=="");  // ¿ÕµÄ
+
     }
 }
 
