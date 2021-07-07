@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:05:57
+ * @LastEditTime: 2021-07-07 19:08:12
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -13,6 +13,8 @@ typedef vector<string> Path;     // 路径
 Path path;                       // 真正的路径
 typedef long long ll;            // long long
 
+bool debug = true;
+
 struct Fcb
 {
     string name;
@@ -20,17 +22,19 @@ struct Fcb
     int size;
     vector<Fcb *> childs;
     ~Fcb(); // 析构函数
-}; 
-typedef vector<Fcb *> VFcb;  // 盛放children
-typedef VFcb::iterator VFcbI;  // VFcb的指针
+};
+typedef vector<Fcb *> VFcb;   // 盛放children
+typedef VFcb::iterator VFcbI; // VFcb的指针
 
 Fcb::~Fcb() // 析构函数
 {
-    for(VFcbI it=childs.begin();it!=childs.end();it++)
+    for (VFcbI it = childs.begin(); it != childs.end(); it++)
     {
-        (**it).~Fcb();  // 所有的children析构
+        (**it).~Fcb(); // 所有的children析构
     }
-    delete this;  // 删除此项
+    delete this;                         // 删除此项
+    if(debug)
+        cout << "删除Fcb：" << name << endl; //**************
 }
 
 ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
