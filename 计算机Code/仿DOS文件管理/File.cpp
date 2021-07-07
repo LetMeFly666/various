@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:44:56
+ * @LastEditTime: 2021-07-07 19:50:01
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -37,7 +37,7 @@ Fcb::~Fcb() // 析构函数
     if (debug)
         cout << "删除Fcb：" << name << endl; //**************
     delete this;                             // 删除此项
-} 
+}
 
 ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
 {
@@ -87,10 +87,10 @@ void help() // 帮助
 命令名          命令参数                命令说明\
 \
 md              目录名                  在当前目录创建新目录\
+dir             无                      显示当前目录下的目录和文件\
 cd              目录名(路径名)          切换当前目录到指定目录\
 rd              目录名                  在当前目录删除指定目录\
 tree            无                      以图形显示目录的路径结构\
-dir             无                      显示当前目录下的目录和文件\
 touch           文件名                  在当前目录下创建指定文件\
 vi              文件名                  编辑文件\
 attr            文件名                  查询信息\
@@ -155,6 +155,14 @@ void execute() // 执行
                     thisPFcb->isFile = false;
                     pfcb->childs.push_back(thisPFcb);
                 }
+            }
+        }
+        else if (toReturn[0] == "dir") // dir
+        {
+            for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
+            {
+                printf("%s\t", (**it)->name.c_str());
+                puts(""); // 换行
             }
         }
         else
