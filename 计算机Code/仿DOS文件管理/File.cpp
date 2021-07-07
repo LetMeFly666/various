@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 21:37:41
+ * @LastEditTime: 2021-07-07 21:39:49
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -31,10 +31,11 @@ PFcb pfcb, root;                 // 正在使用的目录的指针
 
 Fcb::~Fcb() // 析构函数
 {
-    for (VFcbI it = childs.begin(); it != childs.end(); it++)
-    {
-        (**it).~Fcb(); // 所有的children析构
-    }
+    if (childs.size()) // 非空才有Begin!!!
+        for (VFcbI it = childs.begin(); it != childs.end(); it++)
+        {
+            (**it).~Fcb(); // 所有的children析构
+        }
     if (debug)
         cout << "删除Fcb：" << name << endl; //**************
     delete this;                             // 删除此项
