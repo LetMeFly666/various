@@ -2,9 +2,10 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:50:45
+ * @LastEditTime: 2021-07-07 18:52:23
  */
 #include <bits/stdc++.h>
+#include <windows.h>
 using namespace std;
 
 typedef vector<string> ToReturn; // 专门用来存放返回数据的一种数据类型
@@ -84,6 +85,12 @@ void execute() // 执行
         s = stripSpace(s);
         if (s == "") // 空的
             ;
+        else if (s == "exit") // 退出
+        {
+            puts("Bye~");
+            Sleep(500);
+            return;
+        }
         else
         {
             ToReturn toReturn = split(s, ' ');
