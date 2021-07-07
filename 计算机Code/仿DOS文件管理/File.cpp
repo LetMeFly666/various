@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:23:32
+ * @LastEditTime: 2021-07-07 19:29:33
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -84,8 +84,8 @@ void help() // 帮助
     puts("\
 命令名          命令参数                命令说明\
 \
-cd              目录名(路径名)          切换当前目录到指定目录\
 md              目录名                  在当前目录创建新目录\
+cd              目录名(路径名)          切换当前目录到指定目录\
 rd              目录名                  在当前目录删除指定目录\
 tree            无                      以图形显示目录的路径结构\
 dir             无                      显示当前目录下的目录和文件\
@@ -126,6 +126,7 @@ void execute() // 执行
         showFront();
         getline(cin, s);
         s = stripSpace(s);
+        ToReturn toReturn = split(s, ' ');
         if (s == "") // 空的
             ;
         else if (s == "exit") // 退出
@@ -134,9 +135,19 @@ void execute() // 执行
             Sleep(500);
             return;
         }
+        else if(toReturn[0] == "md")  // 创建新的目录
+        {
+            if(toReturn.size() == 1) // 只有md
+            {
+                puts("此命令不正确");
+            }
+            else
+            {
+                
+            }
+        }
         else
         {
-            ToReturn toReturn = split(s, ' ');
             cout << '\'' << toReturn[0] << '\'' << "不是内部或外部命令，也不是可运行的程序" << endl;
             cout << "或批处理文件。" << endl;
         }
