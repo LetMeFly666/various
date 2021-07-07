@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:47:42
+ * @LastEditTime: 2021-07-07 18:50:45
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -49,7 +49,8 @@ string stripSpace(string ori) // 去除指令中多余的空格
 void copyright() // 开局打印的版权?
 {
     puts("LetMeFly Microsoft Windows [版本 1.0]");
-    puts("(c) 2021 814114971@qq.com Individual。保留所有权利。\n");
+    puts("(c) 2021 814114971@qq.com Individual。");
+    puts("保留所有权利。\n");
 }
 
 void help() // 帮助
@@ -83,6 +84,12 @@ void execute() // 执行
         s = stripSpace(s);
         if (s == "") // 空的
             ;
+        else
+        {
+            ToReturn toReturn = split(s,' ');
+            cout<<'\''<<toReturn[0]<<'\''<<"不是内部或外部命令，也不是可运行的程序"<<endl;
+            cout<<"或批处理文件。"<<endl;
+        }
     }
 }
 
