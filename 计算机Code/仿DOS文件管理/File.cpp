@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:12:22
+ * @LastEditTime: 2021-07-08 00:16:09
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -451,7 +451,40 @@ void execute() // 执行
                     PFcb pFcb = findChildByName(pfcb, toReturn[1]);
                     if (pFcb->isFile)
                     {
-                        pFcb->content = toReturn[2];
+                        if(pFcb->readOnly)
+                        {
+                            puts("只读文件");
+                        }
+                        else
+                        {
+                            pFcb->content = toReturn[2];
+                        }
+                    }
+                    else
+                    {
+                        puts("不是文件");
+                    }
+                }
+            }
+        }
+        else if (toReturn[0] == "attr")
+        {
+            if (toReturn.size() != 2)
+            {
+                puts("参数错误");
+            }
+            else
+            {
+                if (!alreadyExists(pfcb->childs, toReturn[1]))
+                {
+                    puts("系统找不到指定文件");
+                }
+                else
+                {
+                    PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+                    if (pFcb->isFile)
+                    {
+                        puts(pFcb->readOnly ? "只读" : "读写");
                     }
                     else
                     {
