@@ -2,18 +2,11 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:37:28
+ * @LastEditTime: 2021-07-07 19:41:30
  */
 #include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
-
-typedef vector<string> ToReturn; // 专门用来存放返回数据的一种数据类型
-typedef vector<string> Path;     // 路径
-Path path;                       // 真正的路径
-typedef long long ll;            // long long
-typedef Fcb *PFcb;               // Fcb的指针
-Fcb * pfcb;                       // 正在使用的目录的指针
 
 bool debug = true;
 
@@ -26,8 +19,14 @@ struct Fcb
     vector<Fcb *> childs;
     ~Fcb(); // 析构函数
 };
-typedef vector<Fcb *> VFcb;   // 盛放children
-typedef VFcb::iterator VFcbI; // VFcb的指针
+typedef vector<Fcb *> VFcb;      // 盛放children
+typedef VFcb::iterator VFcbI;    // VFcb的指针
+typedef vector<string> ToReturn; // 专门用来存放返回数据的一种数据类型
+typedef vector<string> Path;     // 路径
+Path path;                       // 真正的路径
+typedef long long ll;            // long long
+typedef Fcb *PFcb;               // Fcb的指针
+PFcb pfcb;                       // 正在使用的目录的指针
 
 Fcb::~Fcb() // 析构函数
 {
@@ -35,9 +34,9 @@ Fcb::~Fcb() // 析构函数
     {
         (**it).~Fcb(); // 所有的children析构
     }
-    delete this; // 删除此项
     if (debug)
         cout << "删除Fcb：" << name << endl; //**************
+    delete this;                             // 删除此项
 }
 
 ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
@@ -119,8 +118,8 @@ void init() // 初始化
 {
     path.push_back("root");
     pfcb = new Fcb;
-    // pfcb->name = "root";
-    // pfcb->isFile = false;
+    pfcb->name = "root";
+    pfcb->isFile = false;
     copyright();
 }
 
@@ -151,9 +150,10 @@ void execute() // 执行
             {
                 for (int i = 1; i < toReturn.size(); i++)
                 {
-                    Fcb *thisFcb = new Fcb;
-                    thisFcb->name = toReturn[i];
-                    thisFcb->isFile = false;
+                    Fcb *thisPFcb = new Fcb;
+                    thisPFcb->name = toReturn[i];
+                    thisPFcb->isFile = false;
+                    pfcb->childs.push_back(thisPFcb);
                 }
             }
         }
