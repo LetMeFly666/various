@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:46:27
+ * @LastEditTime: 2021-07-08 00:49:11
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -605,6 +605,10 @@ void execute() // 执行
                     }
                 }
             }
+        }
+        else if(toReturn[0] == "cls") // 清屏，后面可跟参数，无效无报错
+        {
+            system("cls");
         }
         else
         {
