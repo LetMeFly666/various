@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:35:48
+ * @LastEditTime: 2021-07-08 00:36:42
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -531,7 +531,7 @@ void execute() // 执行
             }
             else
             {
-                if (!alreadyExists(pfcb->childs, toReturn[1]))
+                if (!alreadyExists(pfcb->childs, toReturn[2]))
                 {
                     puts("系统找不到指定文件");
                 }
