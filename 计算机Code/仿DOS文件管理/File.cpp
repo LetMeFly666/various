@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 23:59:23
+ * @LastEditTime: 2021-07-08 00:02:08
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -327,7 +327,13 @@ void execute() // 执行
                 {
                     if (alreadyExists(pfcb->childs, toReturn[1]))
                     {
-                        realCd(findChildByName(pfcb, toReturn[1]), 1);
+                        PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+                        if (pFcb->isFile)
+                        {
+                            puts("不能进入文件");
+                        }
+                        else
+                            realCd(pFcb, 1);
                     }
                     else
                     {
