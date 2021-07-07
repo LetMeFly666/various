@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:43:58
+ * @LastEditTime: 2021-07-07 18:45:56
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -48,8 +48,8 @@ string stripSpace(string ori) // 去除指令中多余的空格
 
 void copyright() // 开局打印的版权?
 {
-    puts("LetMeFly Microsoft Windows [版本 1.0] \n\
-    (c) 2021 814114971@qq.com Individual。保留所有权利。\n");
+    puts("LetMeFly Microsoft Windows [版本 1.0]");
+    puts("(c) 2021 814114971@qq.com Individual。保留所有权利。\n");
 }
 
 void help() // 帮助
