@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:51:00
+ * @LastEditTime: 2021-07-07 20:57:06
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -139,9 +139,34 @@ bool alreadyExists(VFcb &vFcb, string &name) // ºÍwindowsÒ»Ñù£¬ÓÐÁËÕâ¸öÃû×ÖµÄÄ¿Â
     return false;
 }
 
-void realCd(PFcb pFcb)  // ²»¼ì²â
+void realCd(PFcb pFcb) // ²»¼ì²â
 {
-    
+}
+
+bool allPoint(string name)
+{
+    for (int i = 0; i < name.size(); i++)
+    {
+        if (name[i] != '.')
+            return false;
+    }
+    return true;
+}
+
+bool vailiableName(string name)
+{
+    if (allPoint(name))  // ²»ÄÜÈ«ÊÇ.
+        return false;
+    string cannot = "./\\?*";
+    for(int i=0;i<name.size();i++)
+    {
+        for(int j=0;j<cannot.size();j++)
+        {
+            if(i==j)
+                return false;
+        }
+    }
+    return true;
 }
 
 void execute() // Ö´ÐÐ
@@ -182,7 +207,11 @@ void execute() // Ö´ÐÐ
             {
                 for (int i = 1; i < toReturn.size(); i++)
                 {
-                    if (!alreadyExists(pfcb->childs, toReturn[i])) // »¹²»´æÔÚ
+                    if (!vailiableName(toReturn[i]))
+                    {
+                        puts("ÃüÃû²»ºÏ·¨");
+                    }
+                    else if (!alreadyExists(pfcb->childs, toReturn[i])) // »¹²»´æÔÚ
                     {
                         Fcb *thisPFcb = new Fcb;
                         thisPFcb->name = toReturn[i];
@@ -224,9 +253,8 @@ void execute() // Ö´ÐÐ
                 {
                     realCd(pfcb->father);
                 }
-                else  // µ½ÆäËûµØ·½
+                else // µ½ÆäËûµØ·½
                 {
-                    
                 }
             }
         }
