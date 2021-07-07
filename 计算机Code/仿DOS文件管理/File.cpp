@@ -86,9 +86,9 @@ void execute() // 执行
             ;
         else
         {
-            ToReturn toReturn = split(s,' ');
-            cout<<'\''<<toReturn[0]<<'\''<<"不是内部或外部命令，也不是可运行的程序"<<endl;
-            cout<<"或批处理文件。"<<endl;
+            ToReturn toReturn = split(s, ' ');
+            cout << '\'' << toReturn[0] << '\'' << "不是内部或外部命令，也不是可运行的程序" << endl;
+            cout << "或批处理文件。" << endl;
         }
     }
 }
