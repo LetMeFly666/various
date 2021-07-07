@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:35:32
+ * @LastEditTime: 2021-07-07 20:38:50
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -143,11 +143,22 @@ void execute() // 执行
         ToReturn toReturn = split(s, ' ');
         if (s == "") // 空的
             ;
-        else if (s == "exit") // 退出
+        else if (toReturn[0] == "exit") // 退出
         {
             puts("Bye~");
             Sleep(500);
             return;
+        }
+        else if (toReturn[0] == "help") // 帮助
+        {
+            if (toReturn.size() != 1)
+            {
+                puts("参数错误");
+            }
+            else
+            {
+                help();
+            }
         }
         else if (toReturn[0] == "md") // 创建新的目录
         {
