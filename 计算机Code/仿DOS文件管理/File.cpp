@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:42:42
+ * @LastEditTime: 2021-07-07 20:51:00
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -17,7 +17,8 @@ struct Fcb
     int size;
     string content;
     vector<Fcb *> childs;
-    ~Fcb(); // Îö¹¹º¯Êý
+    Fcb *father; // ¸¸
+    ~Fcb();      // Îö¹¹º¯Êý
 };
 typedef vector<Fcb *> VFcb;      // Ê¢·Åchildren
 typedef VFcb::iterator VFcbI;    // VFcbµÄÖ¸Õë
@@ -126,6 +127,7 @@ void init() // ³õÊ¼»¯
     pfcb = new Fcb;
     pfcb->name = "root";
     pfcb->isFile = false;
+    pfcb->father = pfcb;
     copyright();
 }
 
@@ -135,6 +137,11 @@ bool alreadyExists(VFcb &vFcb, string &name) // ºÍwindowsÒ»Ñù£¬ÓÐÁËÕâ¸öÃû×ÖµÄÄ¿Â
         if ((**it).name == name)
             return true;
     return false;
+}
+
+void realCd(PFcb pFcb)  // ²»¼ì²â
+{
+    
 }
 
 void execute() // Ö´ÐÐ
@@ -180,6 +187,7 @@ void execute() // Ö´ÐÐ
                         Fcb *thisPFcb = new Fcb;
                         thisPFcb->name = toReturn[i];
                         thisPFcb->isFile = false;
+                        thisPFcb->father = pfcb;
                         pfcb->childs.push_back(thisPFcb);
                         cout << "`" << toReturn[i] << "`´´½¨³É¹¦" << endl;
                     }
@@ -202,6 +210,24 @@ void execute() // Ö´ÐÐ
         {
             if (toReturn.size() == 1) // Ö»ÓÐ`cd`
             {
+                showPath();
+            }
+            else if (toReturn.size() != 2) // ¶àÓà²ÎÊý
+            {
+                puts("²ÎÊý´íÎó");
+            }
+            else
+            {
+                if (toReturn[1] == ".") //×Ô¼º
+                    ;
+                else if (toReturn[2] == "..") // ¸¸£¨±¾À´¾ÍÊÇ¸ùµÄ»°»¹ÊÇ×Ô¼º£©
+                {
+                    realCd(pfcb->father);
+                }
+                else  // µ½ÆäËûµØ·½
+                {
+                    
+                }
             }
         }
         else
