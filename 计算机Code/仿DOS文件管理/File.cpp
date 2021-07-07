@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:37:13
+ * @LastEditTime: 2021-07-08 00:46:27
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -558,6 +558,45 @@ void execute() // 执行
                         else
                         {
                             realDel(pfcb, pFcb);
+                        }
+                    }
+                    else
+                    {
+                        puts("不是文件");
+                    }
+                }
+            }
+        }
+        else if (toReturn[0] == "copy") // 把文件拷贝到根目录下
+        {
+            if (toReturn.size() != 2)
+            {
+                puts("参数错误");
+            }
+            else
+            {
+                if (!alreadyExists(pfcb->childs, toReturn[1]))
+                {
+                    puts("系统找不到指定文件");
+                }
+                else
+                {
+                    PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+                    if (pFcb->isFile)
+                    {
+                        if (!alreadyExists(root->childs, toReturn[1])) // 还不存在
+                        {
+                            Fcb *thisPFcb = new Fcb;
+                            thisPFcb->name = toReturn[1];
+                            thisPFcb->isFile = true;
+                            thisPFcb->father = pfcb;
+                            thisPFcb->readOnly = false;
+                            root->childs.push_back(thisPFcb);
+                            cout << "`" << toReturn[1] << "`创建成功" << endl;
+                        }
+                        else
+                        {
+                            cout << "`root\\" << toReturn[1] << "`已存在" << endl;
                         }
                     }
                     else
