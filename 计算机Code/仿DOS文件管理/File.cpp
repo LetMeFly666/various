@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:57:06
+ * @LastEditTime: 2021-07-07 20:58:15
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -155,14 +155,15 @@ bool allPoint(string name)
 
 bool vailiableName(string name)
 {
-    if (allPoint(name))  // 不能全是.
+    if (allPoint(name)) // 不能全是.
         return false;
-    string cannot = "./\\?*";
-    for(int i=0;i<name.size();i++)
+    string cannot = "/\\?*";
+    puts("6666");
+    for (int i = 0; i < name.size(); i++)
     {
-        for(int j=0;j<cannot.size();j++)
+        for (int j = 0; j < cannot.size(); j++)
         {
-            if(i==j)
+            if (i == j)
                 return false;
         }
     }
