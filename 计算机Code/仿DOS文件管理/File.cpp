@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:22:54
+ * @LastEditTime: 2021-07-07 18:24:58
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -22,6 +22,11 @@ ToReturn split(string toSplit, char c)  // 将字符串以字符c为间隔分开
         }
     }
     return ans;
+}
+
+void help()
+{
+    
 }
 
 int main()
