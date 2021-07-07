@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:27:28
+ * @LastEditTime: 2021-07-08 00:30:05
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -498,11 +498,10 @@ void execute() // Ö´ÐÐ
                 {
                     if (alreadyExists(pfcb->childs, toReturn[3]))
                     {
-                        puts("666");
-                        PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+                        PFcb pFcb = findChildByName(pfcb, toReturn[3]);
                         if (pFcb->isFile)
                         {
-                            pFcb->readOnly = toReturn[1] == "-mov";
+                            pFcb->readOnly = (toReturn[1] == "-mov");
                         }
                         else
                         {
