@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 21:47:08
+ * @LastEditTime: 2021-07-07 21:57:21
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -28,6 +28,7 @@ Path path;                       // 真正的路径
 typedef long long ll;            // long long
 typedef Fcb *PFcb;               // Fcb的指针
 PFcb pfcb, root;                 // 正在使用的目录的指针
+#define treeSpaceNum 3           // tree命令每层有多少个空格
 
 Fcb::~Fcb() // 析构函数
 {
@@ -45,7 +46,7 @@ Fcb::~Fcb() // 析构函数
     // }
     // if (debug)
     //     cout << "删除Fcb：" << name << endl; //**************
-    delete this;                             // 删除此项
+    delete this; // 删除此项
 }
 
 ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
@@ -184,6 +185,26 @@ void realDel(PFcb FpFcb, PFcb CpFcb)
             // (**it).~Fcb();
             FpFcb->childs.erase(it);
             return;
+        }
+    }
+}
+
+void realTree(PFcb pFcb, int spaceTimes)
+{
+    for (int i = 0; i < spaceTimes; i++)
+    {
+        putchar('|');
+        for (int j = 0; j < treeSpaceNum; j++)
+        {
+            putchar(' ');
+        }
+    }
+    cout << "├─" << pFcb->name << endl;
+    if (pFcb->isFile && pFcb->childs.size() > 0)
+    {
+        for (VFcbI it = pFcb->childs.begin(); it != pFcb->childs.end(); it++)
+        {
+            realTree(*it, spaceTimes + 1);
         }
     }
 }
@@ -331,6 +352,17 @@ void execute() // 执行
                         realDel(pfcb, findChildByName(pfcb, toReturn[i]));
                     }
                 }
+            }
+        }
+        else if (toReturn[0] == "tree")
+        {
+            if (toReturn.size() != 1)
+            {
+                puts("命令错误");
+            }
+            else
+            {
+                realTree(pfcb, 0);
             }
         }
         else
