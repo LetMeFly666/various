@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 23:56:46
+ * @LastEditTime: 2021-07-07 23:59:23
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -367,6 +367,36 @@ void execute() // 执行
             {
                 vector<bool> temp;
                 realTree(pfcb, temp);
+            }
+        }
+        else if (toReturn[0] == "touch")
+        {
+            if (toReturn.size() == 1)
+            {
+                puts("命令错误");
+            }
+            else
+            {
+                for (int i = 1; i < toReturn.size(); i++)
+                {
+                    if (!vailiableName(toReturn[i]))
+                    {
+                        puts("命名不合法");
+                    }
+                    else if (!alreadyExists(pfcb->childs, toReturn[i])) // 还不存在
+                    {
+                        Fcb *thisPFcb = new Fcb;
+                        thisPFcb->name = toReturn[i];
+                        thisPFcb->isFile = true;
+                        thisPFcb->father = pfcb;
+                        pfcb->childs.push_back(thisPFcb);
+                        cout << "`" << toReturn[i] << "`创建成功" << endl;
+                    }
+                    else
+                    {
+                        cout << "`" << toReturn[i] << "`已存在" << endl;
+                    }
+                }
             }
         }
         else
