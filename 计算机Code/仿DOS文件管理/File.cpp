@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:36:08
+ * @LastEditTime: 2021-07-07 18:37:18
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -27,23 +27,27 @@ ToReturn split(string toSplit, char c) // 将字符串以字符c为间隔分开
     return ans;
 }
 
-void copyright()
+void copyright() // 开局打印的版权?
 {
     puts("LetMeFly Microsoft Windows [版本 1.0] \n\
     (c) 2021 814114971@qq.com Individual。保留所有权利。\n");
 }
 
-void help()
+void help() // 帮助
 {
 }
 
-void init()
+void showFront() // 显示前面的提示符
+{
+}
+
+void init() // 初始化
 {
     path.push_back("root");
     copyright();
 }
 
-void execute()
+void execute() // 执行
 {
 }
 
