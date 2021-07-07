@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 19:35:20
+ * @LastEditTime: 2021-07-07 19:37:28
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -13,7 +13,7 @@ typedef vector<string> Path;     // 路径
 Path path;                       // 真正的路径
 typedef long long ll;            // long long
 typedef Fcb *PFcb;               // Fcb的指针
-PFcb pfcb;                       // 正在使用的目录的指针
+Fcb * pfcb;                       // 正在使用的目录的指针
 
 bool debug = true;
 
@@ -119,8 +119,8 @@ void init() // 初始化
 {
     path.push_back("root");
     pfcb = new Fcb;
-    pfcb->name = "root";
-    pfcb->isFile = false;
+    // pfcb->name = "root";
+    // pfcb->isFile = false;
     copyright();
 }
 
