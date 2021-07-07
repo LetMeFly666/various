@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:28:06
+ * @LastEditTime: 2021-07-07 20:35:32
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -124,6 +124,14 @@ void init() // 初始化
     copyright();
 }
 
+bool alreadyExists(VFcb &vFcb, string &name) // 和windows一样，有了这个名字的目录就不能有这个名字的文件
+{
+    for (VFcbI it = vFcb.begin(); it != vFcb.end(); it++)
+        if ((**it).name == name)
+            return true;
+    return false;
+}
+
 void execute() // 执行
 {
     string s;
@@ -151,10 +159,18 @@ void execute() // 执行
             {
                 for (int i = 1; i < toReturn.size(); i++)
                 {
-                    Fcb *thisPFcb = new Fcb;
-                    thisPFcb->name = toReturn[i];
-                    thisPFcb->isFile = false;
-                    pfcb->childs.push_back(thisPFcb);
+                    if (!alreadyExists(pfcb->childs, toReturn[i])) // 还不存在
+                    {
+                        Fcb *thisPFcb = new Fcb;
+                        thisPFcb->name = toReturn[i];
+                        thisPFcb->isFile = false;
+                        pfcb->childs.push_back(thisPFcb);
+                        cout << "`" << toReturn[i] << "`创建成功" << endl;
+                    }
+                    else
+                    {
+                        cout << "`" << toReturn[i] << "`已存在" << endl;
+                    }
                 }
             }
         }
@@ -163,8 +179,8 @@ void execute() // 执行
             for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
             {
                 printf("%s[%c]\t", (**it).name.c_str(), (**it).isFile ? 'f' : 'd'); // 文件[f] 目录[d]
-                puts("");                                                           // 换行
             }
+            puts(""); // 换行
         }
         else
         {
