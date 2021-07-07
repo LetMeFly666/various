@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 20:58:53
+ * @LastEditTime: 2021-07-07 21:18:24
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -27,7 +27,7 @@ typedef vector<string> Path;     // Â·¾¶
 Path path;                       // ÕæÕýµÄÂ·¾¶
 typedef long long ll;            // long long
 typedef Fcb *PFcb;               // FcbµÄÖ¸Õë
-PFcb pfcb;                       // ÕýÔÚÊ¹ÓÃµÄÄ¿Â¼µÄÖ¸Õë
+PFcb pfcb, root;                 // ÕýÔÚÊ¹ÓÃµÄÄ¿Â¼µÄÖ¸Õë
 
 Fcb::~Fcb() // Îö¹¹º¯Êý
 {
@@ -128,6 +128,7 @@ void init() // ³õÊ¼»¯
     pfcb->name = "root";
     pfcb->isFile = false;
     pfcb->father = pfcb;
+    root = pfcb;
     copyright();
 }
 
@@ -139,8 +140,31 @@ bool alreadyExists(VFcb &vFcb, string &name) // ºÍwindowsÒ»Ñù£¬ÓÐÁËÕâ¸öÃû×ÖµÄÄ¿Â
     return false;
 }
 
-void realCd(PFcb pFcb) // ²»¼ì²â
+PFcb findChildByName(PFcb &father, string &name)
 {
+    for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
+    {
+        if ((**it).name == name)
+        {
+            return *it;
+        }
+    }
+}
+
+void realCd(PFcb pFcb, bool child)
+{
+    if (child)
+    {
+        path.push_back(pFcb->name);
+    }
+    else
+    {
+        if (path.size() > 1)
+        {
+            path.erase(--path.end());
+        }
+    }
+    pfcb = pFcb;
 }
 
 bool allPoint(string name)
@@ -240,6 +264,7 @@ void execute() // Ö´ÐÐ
             if (toReturn.size() == 1) // Ö»ÓÐ`cd`
             {
                 showPath();
+                puts("");
             }
             else if (toReturn.size() != 2) // ¶àÓà²ÎÊý
             {
@@ -249,12 +274,20 @@ void execute() // Ö´ÐÐ
             {
                 if (toReturn[1] == ".") //×Ô¼º
                     ;
-                else if (toReturn[2] == "..") // ¸¸£¨±¾À´¾ÍÊÇ¸ùµÄ»°»¹ÊÇ×Ô¼º£©
+                else if (toReturn[1] == "..") // ¸¸£¨±¾À´¾ÍÊÇ¸ùµÄ»°»¹ÊÇ×Ô¼º£©
                 {
-                    realCd(pfcb->father);
+                    realCd(pfcb->father, 0);
                 }
                 else // µ½ÆäËûµØ·½
                 {
+                    if (alreadyExists(pfcb->childs, toReturn[1]))
+                    {
+                        realCd(findChildByName(pfcb, toReturn[1]), 1);
+                    }
+                    else
+                    {
+                        puts("ÏµÍ³ÕÒ²»µ½Ö¸¶¨µÄÂ·¾¶¡£");
+                    }
                 }
             }
         }
