@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 21:57:21
+ * @LastEditTime: 2021-07-07 22:07:26
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -189,22 +189,25 @@ void realDel(PFcb FpFcb, PFcb CpFcb)
     }
 }
 
-void realTree(PFcb pFcb, int spaceTimes)
+void realTree(PFcb pFcb, vector<bool>spaceTimes)
 {
-    for (int i = 0; i < spaceTimes; i++)
+    for (int i = 0; i < spaceTimes.size(); i++)
     {
-        putchar('|');
+        putchar(spaceTimes[i] ? '|' : ' ');
         for (int j = 0; j < treeSpaceNum; j++)
         {
             putchar(' ');
         }
     }
     cout << "©À©¤" << pFcb->name << endl;
-    if (pFcb->isFile && pFcb->childs.size() > 0)
+    if (!pFcb->isFile && pFcb->childs.size() > 0)
     {
+        VFcbI end = --pFcb->childs.end();
         for (VFcbI it = pFcb->childs.begin(); it != pFcb->childs.end(); it++)
         {
-            realTree(*it, spaceTimes + 1);
+            vector<bool>temp = spaceTimes;
+            temp.push_back(it == end);
+            realTree(*it, temp);
         }
     }
 }
@@ -362,7 +365,8 @@ void execute() // Ö´ÐÐ
             }
             else
             {
-                realTree(pfcb, 0);
+                vector<bool>temp;
+                realTree(pfcb, temp);
             }
         }
         else
