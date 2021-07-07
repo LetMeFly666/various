@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:36:42
+ * @LastEditTime: 2021-07-08 00:37:13
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -540,7 +540,7 @@ void execute() // Ö´ÐÐ
                     PFcb pFcb = findChildByName(pfcb, toReturn[2]);
                     if (pFcb->isFile)
                     {
-                        if (toReturn[1] == "/y")
+                        if (toReturn[1] == "/t")
                         {
                             puts("È·ÈÏÉ¾³ýÂð£¿y/n");
                             string temp;
