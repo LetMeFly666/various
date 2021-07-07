@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:16:09
+ * @LastEditTime: 2021-07-08 00:24:40
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -451,7 +451,7 @@ void execute() // 执行
                     PFcb pFcb = findChildByName(pfcb, toReturn[1]);
                     if (pFcb->isFile)
                     {
-                        if(pFcb->readOnly)
+                        if (pFcb->readOnly)
                         {
                             puts("只读文件");
                         }
@@ -469,11 +469,7 @@ void execute() // 执行
         }
         else if (toReturn[0] == "attr")
         {
-            if (toReturn.size() != 2)
-            {
-                puts("参数错误");
-            }
-            else
+            if (toReturn.size() == 2) // 显示属性
             {
                 if (!alreadyExists(pfcb->childs, toReturn[1]))
                 {
@@ -491,6 +487,40 @@ void execute() // 执行
                         puts("不是文件");
                     }
                 }
+            }
+            else if (toReturn.size() == 4) // 设置属性
+            {
+                if (toReturn[2] != "-r")
+                {
+                    puts("参数错误");
+                }
+                else if (toReturn[1] == "-add" || toReturn[1] == "-mov") // 添加 或 取消
+                {
+                    if (alreadyExists(pfcb->childs, toReturn[3]))
+                    {
+                        PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+                        if (pFcb->isFile)
+                        {
+                            pFcb->readOnly = toReturn[1] == "-mov";
+                        }
+                        else
+                        {
+                            puts("不是文件");
+                        }
+                    }
+                    else
+                    {
+                        puts("系统找不到文件");
+                    }
+                }
+                else
+                {
+                    puts("参数错误");
+                }
+            }
+            else
+            {
+                puts("参数错误");
             }
         }
         else
