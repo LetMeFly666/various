@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-07 18:40:52
+ * @LastEditTime: 2021-07-07 18:43:51
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -54,6 +54,12 @@ void help() // 帮助
 
 void showFront() // 显示前面的提示符
 {
+    for(Path::iterator it=path.begin();it!=path.end();it++)
+    {
+        if(it!=path.begin())cout<<'\\';
+        cout<<*it;
+    }
+    putchar('>');
 }
 
 void init() // 初始化
@@ -67,6 +73,7 @@ void execute() // 执行
     string s;
     while(1)
     {
+        showFront();
         getline(cin,s);
         s = stripSpace(s);
         //TODO:if else
