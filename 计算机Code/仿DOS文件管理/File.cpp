@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:30:05
+ * @LastEditTime: 2021-07-08 00:35:48
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -109,7 +109,7 @@ set             文件名，内容            设置文件信息为内容\n\
 attr            文件名                  查询信息\n\
 attr -add -r    文件名                  加只读属性\n\
 attr -mov -r    文件名                  去只读属性\n\
-del             文件名                  尝试删除文件\n\
+del /t          文件名                  尝试删除文件\n\
 del /y          文件名                  删除文件（不需要确认）\n\
 copy            文件名                  文件复制\n\
 cls             无                      清空屏幕\n\
@@ -521,6 +521,50 @@ void execute() // 执行
             else
             {
                 puts("参数错误");
+            }
+        }
+        else if (toReturn[0] == "del")
+        {
+            if (toReturn.size() != 3 || (toReturn[1] != "/y" && toReturn[1] != "/t"))
+            {
+                puts("参数错误");
+            }
+            else
+            {
+                if (!alreadyExists(pfcb->childs, toReturn[1]))
+                {
+                    puts("系统找不到指定文件");
+                }
+                else
+                {
+                    PFcb pFcb = findChildByName(pfcb, toReturn[2]);
+                    if (pFcb->isFile)
+                    {
+                        if (toReturn[1] == "/y")
+                        {
+                            puts("确认删除吗？y/n");
+                            string temp;
+                            getline(cin, temp);
+                            temp = stripSpace(temp);
+                            if (temp != "y" && temp != "Y")
+                            {
+                                puts("取消删除");
+                            }
+                            else
+                            {
+                                realDel(pfcb, pFcb);
+                            }
+                        }
+                        else
+                        {
+                            realDel(pfcb, pFcb);
+                        }
+                    }
+                    else
+                    {
+                        puts("不是文件");
+                    }
+                }
             }
         }
         else
