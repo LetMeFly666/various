@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 20:34:48
+ * @LastEditTime: 2021-07-08 20:35:35
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -105,7 +105,7 @@ cd              目录名(路径名)          切换当前目录到指定目录\n\
 rd              目录名                  在当前目录删除指定目录\n\
 tree            无                      以图形显示目录的路径结构\n\
 touch           文件名                  在当前目录下创建指定文件\n\
-rename          文件名/目录名，新名    重命名文件或目录\n\
+rename          文件名/目录名，新名     重命名文件或目录为新名\n\
 show            文件名                  显示文件信息\n\
 set             文件名，内容            设置文件信息为内容\n\
 attr            文件名                  查询信息\n\
