@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 22:56:03
+ * @LastEditTime: 2021-07-08 23:31:02
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -652,10 +652,14 @@ void execute() // 执行
                         {
                             puts("002"); //***
                             PFcb toPutPath = returnResult.first;
+                            puts("003");
                             cout << (*toPutPath).name << endl;  // *******
+                            puts("004");
                             PFcb newFile = new Fcb;
                             *newFile = *pFcb;
+                            puts("005");
                             (*newFile).father = toPutPath;
+                            puts("006");
                             if (!alreadyExists(toPutPath->childs, toReturn[1])) // 还不存在
                             {
                                 toPutPath->childs.push_back(newFile);
