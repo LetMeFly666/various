@@ -44,9 +44,12 @@ for x in range(10):  # 10行
         this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", width=f"{int(frame_nums_width / 10)}",
                               height=f"{int(frame_nums_height / 10)}")
         this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
-        frame_text_up = tk.Label(this_frame, text=f"{x}{y}", font=('Arial', 14), fg="red", width=5, height=1)
-        frame_text_up.pack()
-        frame_dic[(x, y)] = (this_frame, frame_text_up)
+        label_text_up = tk.Label(this_frame, text=f"{x}{y}", font=('Arial', 14), fg="red", width=5, height=1)
+        label_text_up.pack()
+        this_value = 0
+        label_text_down = tk.Label(this_frame, text=f"{this_value}", font=('Arial', 14), fg="black", width=5, height=1)
+        label_text_down.pack(side=tk.BOTTOM)
+        frame_dic[(x, y)] = (this_frame, label_text_up, label_text_down, this_value)
 
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
 window.bind("<Key>", quit)
