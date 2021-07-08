@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 17:00:22
+ * @LastEditTime: 2021-07-08 19:59:05
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -12,7 +12,7 @@ bool debug = true;
 
 struct Fcb
 {
-    string name;
+    string name;//*
     bool isFile;
     int size;
     string content;
