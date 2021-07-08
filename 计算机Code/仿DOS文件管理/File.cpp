@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 11:42:01
+ * @LastEditTime: 2021-07-08 11:57:05
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -108,8 +108,10 @@ touch           文件名                  在当前目录下创建指定文件\n\
 show            文件名                  显示文件信息\n\
 set             文件名，内容            设置文件信息为内容\n\
 attr            文件名                  查询信息\n\
-attr -add -r    文件名                  加只读属性\n\
-attr -mov -r    文件名                  去只读属性\n\
+attr -add -w    文件名                  去只读属性（加可写属性）\n\
+attr -mov -w    文件名                  加只读属性（去可写属性）\n\
+hide -add       文件名                  \n\
+hide -add       文件名                  去只读属性\n\
 del /t          文件名                  尝试删除文件\n\
 del /y          文件名                  删除文件（不需要确认）\n\
 copy            文件名                  文件复制\n\
@@ -491,7 +493,7 @@ void execute() // 执行
             }
             else if (toReturn.size() == 4) // 设置属性
             {
-                if (toReturn[2] != "-r")
+                if (toReturn[2] != "-w")
                 {
                     puts("参数错误");
                 }
