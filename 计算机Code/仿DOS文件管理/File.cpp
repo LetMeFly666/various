@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 20:35:35
+ * @LastEditTime: 2021-07-08 20:42:55
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -636,6 +636,34 @@ void execute() // 执行
                 else
                 {
                     puts("参数错误");
+                }
+            }
+            else
+            {
+                puts("参数错误");
+            }
+        }
+        else if(toReturn[0] == "rename")
+        {
+            if (toReturn.size() == 3)
+            {
+                if (!alreadyExists(pfcb->childs, toReturn[1]))
+                {
+                    puts("系统找不到指定文件");
+                }
+                else
+                {
+                    PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+                    bool isFile = pFcb->isFile;
+                    realDel(pfcb, pFcb);
+                    
+                    Fcb *thisPFcb = new Fcb;
+                    thisPFcb->name = toReturn[2];
+                    thisPFcb->isFile = isFile;
+                    thisPFcb->father = pfcb;
+                    if (isFile)
+                        thisPFcb->readOnly = false;
+                    pfcb->childs.push_back(thisPFcb);
                 }
             }
             else
