@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 21:15:37
+ * @LastEditTime: 2021-07-08 21:22:06
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -644,15 +644,33 @@ void execute() // 执行
                 else
                 {
                     PFcb pFcb = findChildByName(pfcb, toReturn[1]);
-                    ReturnResult returnResult = findPathByName(toReturn[2]);
-                    if (returnResult.second)
+                    if (pFcb->isFile)
                     {
-                        PFcb toPut = returnResult.first;
-                        
+                        ReturnResult returnResult = findPathByName(toReturn[2]);
+                        if (returnResult.second)
+                        {
+                            PFcb toPutPath = returnResult.first;
+                            PFcb newFile = new Fcb;
+                            *newFile = *pFcb;
+                            (*newFile).father = toPutPath;
+                            if (!alreadyExists(toPutPath->childs, toReturn[1])) // 还不存在
+                            {
+                                toPutPath->childs.push_back(newFile);
+                                cout << "`" << toReturn[2] << "\\" << toReturn[1] << "`创建成功" << endl;
+                            }
+                            else
+                            {
+                                puts("文件已存在");
+                            }
+                        }
+                        else
+                        {
+                            puts("系统找不到指定路径");
+                        }
                     }
                     else
                     {
-                        puts("系统找不到指定路径");
+                        puts("不是文件");
                     }
                 }
             }
