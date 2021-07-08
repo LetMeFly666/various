@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 23:31:02
+ * @LastEditTime: 2021-07-08 23:56:09
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -158,17 +158,21 @@ bool alreadyExists(VFcb &vFcb, string &name) // ∫Õwindows“ª—˘£¨”–¡À’‚∏ˆ√˚◊÷µƒƒø¬
 
 PFcb findChildByName(PFcb &father, string &name)
 {
-    for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
+    // cout << "father.child.size: " << father->childs.size() << endl; //****
+    for (VFcbI it = father->childs.begin(); it != father->childs.end(); it++)  // ‘≠“Úæπ «’‚¿Ô£°£°£°
     {
+        // cout << "findChildByName, name: " << (**it).name << endl;
         if ((**it).name == name)
         {
+            // cout << "find :" << (**it).name << endl; //****
             return *it;
         }
     }
 }
 
-ReturnResult findPathByName(string &path) // ¥”∏˘ƒø¬º’“∆
+ReturnResult findPathByName(string path) // ¥”∏˘ƒø¬º’“∆
 {
+    // cout << "path: " << path << endl; //******
     ToReturn toReturn = split(path, '\\');
     PFcb pFcb = root;
     if (toReturn[0] != "root") // ≤ª «¥”rootø™ º
@@ -181,7 +185,13 @@ ReturnResult findPathByName(string &path) // ¥”∏˘ƒø¬º’“∆
         {
             return ReturnResult(pFcb, false);
         }
+        // cout << toReturn[i] <<endl; //***
+        // cout << pFcb << endl;
+        // cout << pFcb->name << endl; //****
+        // cout << "from " << pFcb->name << " to " << toReturn[i] << endl; //****
         pFcb = findChildByName(pFcb, toReturn[i]);
+        // cout << pFcb << endl;
+        // cout << pFcb->name << endl; //****
     }
     return ReturnResult(pFcb, true);
 }
