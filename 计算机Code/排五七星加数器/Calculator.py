@@ -43,7 +43,7 @@ for x in range(9):  # 9行
     for y in range(9):  # 9列
         this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", height=f"{frame_nums_height / 10}",
                               width=f"{frame_nums_width / 10}")
-        this_frame.place(x=frame_nums_x + frame_nums_width / 10 * x, y=frame_nums_y + frame_nums_height / 10 * y)
+        this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
         frame_dic[(x, y)] = this_frame
 
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
