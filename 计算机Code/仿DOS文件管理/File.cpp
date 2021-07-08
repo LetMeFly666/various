@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 21:22:06
+ * @LastEditTime: 2021-07-08 22:56:03
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -647,9 +647,12 @@ void execute() // Ö´ÐÐ
                     if (pFcb->isFile)
                     {
                         ReturnResult returnResult = findPathByName(toReturn[2]);
+                        puts("001");  //*******
                         if (returnResult.second)
                         {
+                            puts("002"); //***
                             PFcb toPutPath = returnResult.first;
+                            cout << (*toPutPath).name << endl;  // *******
                             PFcb newFile = new Fcb;
                             *newFile = *pFcb;
                             (*newFile).father = toPutPath;
