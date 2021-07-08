@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 12:02:16
+ * @LastEditTime: 2021-07-08 14:18:49
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -622,14 +622,7 @@ void execute() // 执行
                     if (alreadyExists(pfcb->childs, toReturn[2]))
                     {
                         PFcb pFcb = findChildByName(pfcb, toReturn[2]);
-                        if (pFcb->isFile)
-                        {
-                            puts("是文件");
-                        }
-                        else
-                        {
-                            pFcb->couldSee = (toReturn[1] == "-add");
-                        }
+                        pFcb->couldSee = (toReturn[1] == "-add");
                     }
                     else
                     {
