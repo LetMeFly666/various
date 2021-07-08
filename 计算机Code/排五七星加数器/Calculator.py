@@ -41,12 +41,14 @@ frame_nums.place(x=frame_nums_x, y=frame_nums_y)
 frame_dic = {}
 for x in range(10):  # 10行
     for y in range(10):  # 10列
-        this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", height=f"{frame_nums_height / 10}",
-                              width=f"{frame_nums_width / 10}")
+        this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", width=f"{int(frame_nums_width / 10)}",
+                              height=f"{int(frame_nums_height / 10)}")
         this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
-        text_up = tk.Text(this_frame, text=f"{x}{y}", color="red")
-        text_up.pack()
-        frame_dic[(x, y)] = this_frame
+        frame_text_up = tk.Label(this_frame, text=f"{x}{y}", width=f"{int(frame_nums_width / 10)}",
+                                 height=f"{int(frame_nums_height / 10 / 2)}", bg="red")
+        if not x+y:
+            frame_text_up.pack()
+        frame_dic[(x, y)] = (this_frame, frame_text_up)
 
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
 window.bind("<Key>", quit)
