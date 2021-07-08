@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 20:25:27
+ * @LastEditTime: 2021-07-08 20:29:56
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -625,7 +625,7 @@ void execute() // Ö´ÐÐ
                     if (alreadyExists(pfcb->childs, toReturn[2]))
                     {
                         PFcb pFcb = findChildByName(pfcb, toReturn[2]);
-                        pFcb->couldSee = (toReturn[1] == "-add");
+                        pFcb->couldSee = (toReturn[1] == "-mov");
                     }
                     else
                     {
