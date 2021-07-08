@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 20:46:19
+ * @LastEditTime: 2021-07-08 20:48:58
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -115,7 +115,7 @@ hide -add       目录名                  加隐藏属性\n\
 hide -mov       目录名                  去隐藏属性\n\
 del /t          文件名                  尝试删除文件\n\
 del /y          文件名                  删除文件（不需要确认）\n\
-copy            文件名                  文件复制\n\
+copy            文件名，目录名            文件复制\n\
 cls             无                      清空屏幕\n\
 exit            无                      退出系统");
 }
