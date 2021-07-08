@@ -1,0 +1,42 @@
+import tkinter as tk
+import CheckNetwork
+
+
+__exeName__ = "006_57LotteryCounter"
+__exeVersion__ = 1
+
+
+"""
+;下面的注释包含自解压脚本命令
+
+Setup=Calculator.exe
+Text
+{
+绿色安装，附加任务：创建桌面快捷方式。此外无其他盘符占用 
+}
+Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.ico
+
+"""
+
+# CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME: 取消注释
+
+window = tk.Tk()
+window.title("排五计数器")
+window.geometry("800x400")
+window.iconbitmap('Img/icon.ico')
+window.resizable(0, 0)
+
+
+img, img_label = '', ''
+
+
+def pack(img_name, tx, ty):
+    global img, img_label
+    img = tk.PhotoImage(file=img_name)
+    img_label = tk.Label(window, image=img)
+    img_label.place(x=tx, y=ty)
+
+
+quit = lambda event: window.quit() if event.keysym == "Escape" else ""
+window.bind("<Key>", quit)
+window.mainloop()
