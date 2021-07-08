@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 20:49:21
+ * @LastEditTime: 2021-07-08 21:15:37
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -12,7 +12,7 @@ bool debug = true;
 
 struct Fcb
 {
-    string name;//*
+    string name; //*
     bool isFile;
     int size;
     string content;
@@ -22,15 +22,16 @@ struct Fcb
     Fcb *father;   // 父
     ~Fcb();        // 析构函数
 };
-typedef vector<Fcb *> VFcb;      // 盛放children
-typedef VFcb::iterator VFcbI;    // VFcb的指针
-typedef vector<string> ToReturn; // 专门用来存放返回数据的一种数据类型
-typedef vector<string> Path;     // 路径
-Path path;                       // 真正的路径
-typedef long long ll;            // long long
-typedef Fcb *PFcb;               // Fcb的指针
-PFcb pfcb, root;                 // 正在使用的目录的指针
-#define treeSpaceNum 3           // tree命令每层有多少个空格
+typedef vector<Fcb *> VFcb;            // 盛放children
+typedef VFcb::iterator VFcbI;          // VFcb的指针
+typedef vector<string> ToReturn;       // 专门用来存放返回数据的一种数据类型
+typedef vector<string> Path;           // 路径
+Path path;                             // 真正的路径
+typedef long long ll;                  // long long
+typedef Fcb *PFcb;                     // Fcb的指针
+typedef pair<PFcb, bool> ReturnResult; // 专门用来存放返回数据的一种数据类型
+PFcb pfcb, root;                       // 正在使用的目录的指针
+#define treeSpaceNum 3                 // tree命令每层有多少个空格
 
 Fcb::~Fcb() // 析构函数
 {
@@ -164,6 +165,25 @@ PFcb findChildByName(PFcb &father, string &name)
             return *it;
         }
     }
+}
+
+ReturnResult findPathByName(string &path) // 从根目录找起
+{
+    ToReturn toReturn = split(path, '\\');
+    PFcb pFcb = root;
+    if (toReturn[0] != "root") // 不是从root开始
+    {
+        return ReturnResult(root, false);
+    }
+    for (int i = 1; i < toReturn.size(); i++)
+    {
+        if (!alreadyExists(pFcb->childs, toReturn[i]))
+        {
+            return ReturnResult(pFcb, false);
+        }
+        pFcb = findChildByName(pFcb, toReturn[i]);
+    }
+    return ReturnResult(pFcb, true);
 }
 
 void realCd(PFcb pFcb, bool child)
@@ -306,7 +326,7 @@ void execute() // 执行
         {
             for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
             {
-                if ((**it).couldSee)  // 可见了才显示
+                if ((**it).couldSee) // 可见了才显示
                 {
                     printf("%s[%c]\t", (**it).name.c_str(), (**it).isFile ? 'f' : 'd'); // 文件[f] 目录[d]
                 }
@@ -574,13 +594,48 @@ void execute() // 执行
                 }
             }
         }
-        else if (toReturn[0] == "copy") // 把文件拷贝到根目录下
+        // else if (toReturn[0] == "copy") // 把文件拷贝到根目录下
+        // {
+        //     if (toReturn.size() != 2)
+        //     {
+        //         puts("参数错误");
+        //     }
+        //     else
+        //     {
+        //         if (!alreadyExists(pfcb->childs, toReturn[1]))
+        //         {
+        //             puts("系统找不到指定文件");
+        //         }
+        //         else
+        //         {
+        //             PFcb pFcb = findChildByName(pfcb, toReturn[1]);
+        //             if (pFcb->isFile)
+        //             {
+        //                 if (!alreadyExists(root->childs, toReturn[1])) // 还不存在
+        //                 {
+        //                     Fcb *thisPFcb = new Fcb;
+        //                     thisPFcb->name = toReturn[1];
+        //                     thisPFcb->isFile = true;
+        //                     thisPFcb->father = pfcb;
+        //                     thisPFcb->readOnly = false;
+        //                     root->childs.push_back(thisPFcb);
+        //                     cout << "`" << toReturn[1] << "`创建成功" << endl;
+        //                 }
+        //                 else
+        //                 {
+        //                     cout << "`root\\" << toReturn[1] << "`已存在" << endl;
+        //                 }
+        //             }
+        //             else
+        //             {
+        //                 puts("不是文件");
+        //             }
+        //         }
+        //     }
+        // }
+        else if (toReturn[0] == "copy")
         {
-            if (toReturn.size() != 2)
-            {
-                puts("参数错误");
-            }
-            else
+            if (toReturn.size() == 3)
             {
                 if (!alreadyExists(pfcb->childs, toReturn[1]))
                 {
@@ -589,28 +644,21 @@ void execute() // 执行
                 else
                 {
                     PFcb pFcb = findChildByName(pfcb, toReturn[1]);
-                    if (pFcb->isFile)
+                    ReturnResult returnResult = findPathByName(toReturn[2]);
+                    if (returnResult.second)
                     {
-                        if (!alreadyExists(root->childs, toReturn[1])) // 还不存在
-                        {
-                            Fcb *thisPFcb = new Fcb;
-                            thisPFcb->name = toReturn[1];
-                            thisPFcb->isFile = true;
-                            thisPFcb->father = pfcb;
-                            thisPFcb->readOnly = false;
-                            root->childs.push_back(thisPFcb);
-                            cout << "`" << toReturn[1] << "`创建成功" << endl;
-                        }
-                        else
-                        {
-                            cout << "`root\\" << toReturn[1] << "`已存在" << endl;
-                        }
+                        PFcb toPut = returnResult.first;
+                        
                     }
                     else
                     {
-                        puts("不是文件");
+                        puts("系统找不到指定路径");
                     }
                 }
+            }
+            else
+            {
+                puts("参数错误");
             }
         }
         else if (toReturn[0] == "cls") // 清屏，后面可跟参数，无效无报错
@@ -643,7 +691,7 @@ void execute() // 执行
                 puts("参数错误");
             }
         }
-        else if(toReturn[0] == "rename")
+        else if (toReturn[0] == "rename")
         {
             if (toReturn.size() == 3)
             {
@@ -651,7 +699,7 @@ void execute() // 执行
                 {
                     puts("系统找不到指定文件");
                 }
-                else if(alreadyExists(pfcb->childs, toReturn[2]))
+                else if (alreadyExists(pfcb->childs, toReturn[2]))
                 {
                     puts("要命名的文件已存在");
                 }
@@ -660,7 +708,6 @@ void execute() // 执行
                     PFcb pFcb = findChildByName(pfcb, toReturn[1]);
                     bool isFile = pFcb->isFile;
                     realDel(pfcb, pFcb);
-                    
                     Fcb *thisPFcb = new Fcb;
                     thisPFcb->name = toReturn[2];
                     thisPFcb->isFile = isFile;
