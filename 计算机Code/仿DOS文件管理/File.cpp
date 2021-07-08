@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-09 00:04:15
+ * @LastEditTime: 2021-07-09 00:19:36
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -319,6 +319,7 @@ void execute() // 执行
                         thisPFcb->name = toReturn[i];
                         thisPFcb->isFile = false;
                         thisPFcb->father = pfcb;
+                        thisPFcb->readOnly = false;
                         pfcb->childs.push_back(thisPFcb);
                         cout << "`" << toReturn[i] << "`创建成功" << endl;
                     }
