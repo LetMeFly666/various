@@ -22,7 +22,7 @@ Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.i
 
 window = tk.Tk()
 window.title("排五计数器")
-window.geometry("800x400")
+window.geometry("720x540")
 window.iconbitmap('Img/icon.ico')
 window.resizable(0, 0)
 
