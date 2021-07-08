@@ -39,8 +39,8 @@ frame_nums_x, frame_nums_y = 50, 50
 frame_nums = tk.Frame(window, bg="pink", height=f"{frame_nums_height}", width=f"{frame_nums_width}")
 frame_nums.place(x=frame_nums_x, y=frame_nums_y)
 frame_dic = {}
-for x in range(9):  # 9行
-    for y in range(9):  # 9列
+for x in range(10):  # 10行
+    for y in range(10):  # 10列
         this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", height=f"{frame_nums_height / 10}",
                               width=f"{frame_nums_width / 10}")
         this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
