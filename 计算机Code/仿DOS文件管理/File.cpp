@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 23:56:09
+ * @LastEditTime: 2021-07-09 00:00:24
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -158,13 +158,10 @@ bool alreadyExists(VFcb &vFcb, string &name) // ºÍwindowsÒ»Ñù£¬ÓÐÁËÕâ¸öÃû×ÖµÄÄ¿Â
 
 PFcb findChildByName(PFcb &father, string &name)
 {
-    // cout << "father.child.size: " << father->childs.size() << endl; //****
     for (VFcbI it = father->childs.begin(); it != father->childs.end(); it++)  // Ô­Òò¾¹ÊÇÕâÀï£¡£¡£¡
     {
-        // cout << "findChildByName, name: " << (**it).name << endl;
         if ((**it).name == name)
         {
-            // cout << "find :" << (**it).name << endl; //****
             return *it;
         }
     }
@@ -172,7 +169,6 @@ PFcb findChildByName(PFcb &father, string &name)
 
 ReturnResult findPathByName(string path) // ´Ó¸ùÄ¿Â¼ÕÒÆð
 {
-    // cout << "path: " << path << endl; //******
     ToReturn toReturn = split(path, '\\');
     PFcb pFcb = root;
     if (toReturn[0] != "root") // ²»ÊÇ´Óroot¿ªÊ¼
@@ -185,13 +181,7 @@ ReturnResult findPathByName(string path) // ´Ó¸ùÄ¿Â¼ÕÒÆð
         {
             return ReturnResult(pFcb, false);
         }
-        // cout << toReturn[i] <<endl; //***
-        // cout << pFcb << endl;
-        // cout << pFcb->name << endl; //****
-        // cout << "from " << pFcb->name << " to " << toReturn[i] << endl; //****
         pFcb = findChildByName(pFcb, toReturn[i]);
-        // cout << pFcb << endl;
-        // cout << pFcb->name << endl; //****
     }
     return ReturnResult(pFcb, true);
 }
@@ -657,19 +647,13 @@ void execute() // Ö´ÐÐ
                     if (pFcb->isFile)
                     {
                         ReturnResult returnResult = findPathByName(toReturn[2]);
-                        puts("001");  //*******
                         if (returnResult.second)
                         {
-                            puts("002"); //***
                             PFcb toPutPath = returnResult.first;
-                            puts("003");
                             cout << (*toPutPath).name << endl;  // *******
-                            puts("004");
                             PFcb newFile = new Fcb;
                             *newFile = *pFcb;
-                            puts("005");
                             (*newFile).father = toPutPath;
-                            puts("006");
                             if (!alreadyExists(toPutPath->childs, toReturn[1])) // »¹²»´æÔÚ
                             {
                                 toPutPath->childs.push_back(newFile);
