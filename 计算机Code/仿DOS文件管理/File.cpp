@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 00:58:32
+ * @LastEditTime: 2021-07-08 11:42:01
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -17,6 +17,7 @@ struct Fcb
     int size;
     string content;
     vector<Fcb *> childs;
+    bool couldSee; //可见
     bool readOnly; // 只读
     Fcb *father;   // 父
     ~Fcb();        // 析构函数
