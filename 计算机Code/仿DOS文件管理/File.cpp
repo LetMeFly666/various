@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-09 00:00:24
+ * @LastEditTime: 2021-07-09 00:04:15
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -209,7 +209,14 @@ void realDel(PFcb FpFcb, PFcb CpFcb)
         if (*it == CpFcb) // ÕÒµ½ÁË
         {
             // (**it).~Fcb();
-            FpFcb->childs.erase(it);
+            if ((**it).readOnly)
+            {
+                puts("Ö»¶Á×´Ì¬");
+            }
+            else
+            {
+                FpFcb->childs.erase(it);
+            }
             return;
         }
     }
