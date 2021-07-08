@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 20:44:38
+ * @LastEditTime: 2021-07-08 20:46:19
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -665,6 +665,7 @@ void execute() // Ö´ÐÐ
                     thisPFcb->name = toReturn[2];
                     thisPFcb->isFile = isFile;
                     thisPFcb->father = pfcb;
+                    thisPFcb->couldSee = true;
                     if (isFile)
                         thisPFcb->readOnly = false;
                     pfcb->childs.push_back(thisPFcb);
