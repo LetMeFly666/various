@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 12:01:37
+ * @LastEditTime: 2021-07-08 12:02:16
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -301,7 +301,7 @@ void execute() // Ö´ÐÐ
                 }
             }
         }
-        else if (toReturn[0] == "dir") // dir
+        else if (toReturn[0] == "dir") // dir //FIXME: hide
         {
             for (VFcbI it = pfcb->childs.begin(); it != pfcb->childs.end(); it++)
             {
