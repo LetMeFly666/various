@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-07 17:05:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-08 11:57:05
+ * @LastEditTime: 2021-07-08 12:01:37
  */
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -110,8 +110,8 @@ set             文件名，内容            设置文件信息为内容\n\
 attr            文件名                  查询信息\n\
 attr -add -w    文件名                  去只读属性（加可写属性）\n\
 attr -mov -w    文件名                  加只读属性（去可写属性）\n\
-hide -add       文件名                  \n\
-hide -add       文件名                  去只读属性\n\
+hide -add       目录名                  加隐藏属性\n\
+hide -mov       目录名                  去隐藏属性\n\
 del /t          文件名                  尝试删除文件\n\
 del /y          文件名                  删除文件（不需要确认）\n\
 copy            文件名                  文件复制\n\
@@ -612,6 +612,39 @@ void execute() // 执行
         else if (toReturn[0] == "cls") // 清屏，后面可跟参数，无效无报错
         {
             system("cls");
+        }
+        else if (toReturn[0] == "hide")
+        {
+            if (toReturn.size() == 3) // 设置属性
+            {
+                if (toReturn[1] == "-add" || toReturn[1] == "-mov") // 添加 或 取消
+                {
+                    if (alreadyExists(pfcb->childs, toReturn[2]))
+                    {
+                        PFcb pFcb = findChildByName(pfcb, toReturn[2]);
+                        if (pFcb->isFile)
+                        {
+                            puts("是文件");
+                        }
+                        else
+                        {
+                            pFcb->couldSee = (toReturn[1] == "-add");
+                        }
+                    }
+                    else
+                    {
+                        puts("系统找不到文件");
+                    }
+                }
+                else
+                {
+                    puts("参数错误");
+                }
+            }
+            else
+            {
+                puts("参数错误");
+            }
         }
         else
         {
