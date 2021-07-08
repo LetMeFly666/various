@@ -44,9 +44,8 @@ for x in range(10):  # 10行
         this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", width=f"{int(frame_nums_width / 10)}",
                               height=f"{int(frame_nums_height / 10)}")
         this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
-        frame_text_up = tk.Label(this_frame, text=f"{x}{y}", fg="red", width=8, height=1)
-        if not x + y:
-            frame_text_up.pack()
+        frame_text_up = tk.Label(this_frame, text=f"{x}{y}", font=('Arial', 14), fg="red", width=5, height=1)
+        frame_text_up.pack()
         frame_dic[(x, y)] = (this_frame, frame_text_up)
 
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
