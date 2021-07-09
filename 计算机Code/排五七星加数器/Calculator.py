@@ -67,12 +67,24 @@ frame_operate_head_input.place(x=62, y=29)
 # 尾
 frame_operate_tail = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_tail.place(x=0, y=frame_operate_height/4)
+frame_operate_tail_text = tk.Label(frame_operate_tail, text="尾：", font=('Arial', 18), fg="black", width=7, height=3)
+frame_operate_tail_text.place(x=0, y=0)
+frame_operate_tail_input = tk.Entry(frame_operate_tail, font=('Arial', 14), width=9)
+frame_operate_tail_input.place(x=62, y=29)
 # 值输入框
 frame_operate_input = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_input.place(x=0, y=frame_operate_height/4*2)
+frame_operate_input_text = tk.Label(frame_operate_input, text="值：", font=('Arial', 18), fg="black", width=7, height=3)
+frame_operate_input_text.place(x=0, y=0)
+frame_operate_input_input = tk.Entry(frame_operate_input, font=('Arial', 14), width=9)
+frame_operate_input_input.place(x=62, y=29)
 # 确定按钮
 frame_operate_button = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_button.place(x=0, y=frame_operate_height/4*3)
+frame_operate_button_button = tk.Button(frame_operate_button, text="添加", font=('Arial', 18))
+print(dir(frame_operate_button_button))
+print(frame_operate_button_button.winfo_x())
+frame_operate_button_button.place()
 
 # 事件绑定
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
