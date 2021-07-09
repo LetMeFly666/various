@@ -34,6 +34,7 @@ def pack_img(img_name, tx, ty):
     img_label.place(x=tx, y=ty)
 
 
+# 左数字框架
 frame_nums_height, frame_nums_width = 575, 600
 frame_nums_x, frame_nums_y = 50, 50
 frame_nums = tk.Frame(window, bg="pink", height=f"{frame_nums_height}", width=f"{frame_nums_width}")
@@ -51,13 +52,13 @@ for x in range(10):  # 10行
         label_text_down.pack(side=tk.BOTTOM)
         frame_dic[(x, y)] = (this_frame, label_text_up, label_text_down, this_value)
 
+# 右操作框架
 frame_operate_height, frame_operate_width = 300, 175
 frame_operate_x, frame_operate_y = 685, 200
 frame_operate = tk.Frame(window, bg="pink", height=frame_operate_height, width=frame_operate_width)
 frame_operate.place(x=frame_operate_x, y=frame_operate_y)
 
-
-
+# 事件绑定
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
 window.bind("<Key>", quit)
 window.mainloop()
