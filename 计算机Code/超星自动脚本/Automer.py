@@ -1,4 +1,4 @@
-
+from selenium import webdriver
 import CheckNetwork
 
 __exeName__ = "007_auto_chaoxing"
