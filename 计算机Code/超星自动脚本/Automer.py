@@ -30,7 +30,9 @@ status, status_th = ['login', 'space', 'courseList', 'study'], 0
 
 while True:
     sleep(0.5)
-    current_url = browser.current_url()
+    print(browser.window_handles)
+    print(browser.current_window_handle)
+    current_url = browser.current_url
     if 'http://i.mooc.chaoxing.com/space/index' in current_url:
         status_th = 1
     elif 'http://mooc1.chaoxing.com/mycourse/studentcourse' in current_url:
