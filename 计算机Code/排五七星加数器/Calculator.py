@@ -33,17 +33,17 @@ def create_a_window(title_and_th):
     window.iconbitmap('Img/icon.ico')
     window.resizable(0, 0)
 
-    img, img_label = '', ''
-
-    def pack_img(img_name, tx, ty):
-        global img, img_label
-        img = tk.PhotoImage(file=img_name)
-        img_label = tk.Label(window, image=img)
-        img_label.place(x=tx, y=ty)
+    # img, img_label = '', ''
+    #
+    # def pack_img(img_name, tx, ty):
+    #     # global img, img_label
+    #     img = tk.PhotoImage(file=img_name)
+    #     img_label = tk.Label(window, image=img)
+    #     img_label.place(x=tx, y=ty)
 
     def calculate():
-        global frame_operate_head_input, frame_operate_tail_input, frame_operate_input_input
-        global frame_dic
+        # global frame_operate_head_input, frame_operate_tail_input, frame_operate_input_input
+        # global frame_dic
         head_data = frame_operate_head_input.get()
         tail_data = frame_operate_tail_input.get()
         input_data = int(frame_operate_input_input.get())
