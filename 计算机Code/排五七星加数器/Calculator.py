@@ -16,14 +16,20 @@ Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.i
 
 """
 
+
 # CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME: 取消注释
 
 
-def create_a_window(name):
-    name = name[0]
+def create_a_window(title_and_th):
     window = tk.Tk()
-    window.title(name)
-    window.geometry("900x675")
+    window.title(title_and_th[0])
+    window_width_this, window_height_this = 900, 675
+    window_width_computer = window.winfo_screenwidth()
+    window_height_computer = window.winfo_screenheight()
+    align = int((window_height_computer - window_height_this) / 2)
+    window.geometry(
+        f"{window_width_this}x{window_height_this}+"
+        f"{align if title_and_th[1] == 1 else window_width_computer - align - window_width_this}+{align}")
     window.iconbitmap('Img/icon.ico')
     window.resizable(0, 0)
 
@@ -107,9 +113,9 @@ def create_a_window(name):
 
 
 mission_list = []
-for name in ["排五计数器", "七星计数器"]:
-    mission = CheckNetwork.Thread(target=create_a_window, args=(name,))
+names = ["排五计数器", "七星计数器"]
+for name in names:
+    mission = CheckNetwork.Thread(target=create_a_window, args=((name, 1 if name == names[0] else 2),))
     mission.start()
 for mission in mission_list:
     mission.join()
-
