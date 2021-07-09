@@ -28,10 +28,11 @@ browser.get("http://ecjtucj.jxjy.chaoxing.com/login")
 status, status_th = ['login', 'space', 'courseList', 'study'], 0
 
 
+# 手动登录
 while True:
     sleep(0.5)
-    print(browser.window_handles)
-    print(browser.current_window_handle)
+    if len(browser.window_handles) == 2:
+        browser.switch_to.window(browser.window_handles[1])
     current_url = browser.current_url
     if 'http://i.mooc.chaoxing.com/space/index' in current_url:
         status_th = 1
@@ -43,5 +44,12 @@ while True:
     system("cls")
     print(status[status_th])
 
-
+# 开始播放
+sleep(2)
+js = """
+const video = document.querySelector('video');
+console.log(video);
+video.play()
+"""
+browser.execute_script(js)
 
