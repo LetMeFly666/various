@@ -30,7 +30,7 @@ def create_a_window(title_and_th):
     window.geometry(
         f"{window_width_this}x{window_height_this}+"
         f"{align if title_and_th[1] == 1 else window_width_computer - align - window_width_this}+{align}")
-    window.iconbitmap('Img/icon.ico')
+    window.iconbitmap('Img/icon.ico' if title_and_th[1] == 1 else 'Img/icon2.ico')
     window.resizable(0, 0)
 
     # img, img_label = '', ''
