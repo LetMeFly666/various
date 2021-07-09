@@ -44,17 +44,19 @@ for x in range(10):  # 10行
         this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow", width=f"{int(frame_nums_width / 10)}",
                               height=f"{int(frame_nums_height / 10)}")
         this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
-        label_text_up = tk.Label(this_frame, text=f"{x}{y}", font=('Arial', 14), fg="red", width=5, height=1)
+        label_text_up = tk.Label(this_frame, text=f"{y}{x}", font=('Arial', 14), fg="black", width=5, height=1)
         label_text_up.pack()
         this_value = 0
-        label_text_down = tk.Label(this_frame, text=f"{this_value}", font=('Arial', 14), fg="black", width=5, height=1)
+        label_text_down = tk.Label(this_frame, text=f"{this_value}", font=('Arial', 14), fg="red", width=5, height=1)
         label_text_down.pack(side=tk.BOTTOM)
         frame_dic[(x, y)] = (this_frame, label_text_up, label_text_down, this_value)
 
-frame_operate_height, frame_operate_width = 400, 175
-frame_operate_x, frame_operate_y = 680, 150
+frame_operate_height, frame_operate_width = 300, 175
+frame_operate_x, frame_operate_y = 685, 200
 frame_operate = tk.Frame(window, bg="pink", height=frame_operate_height, width=frame_operate_width)
 frame_operate.place(x=frame_operate_x, y=frame_operate_y)
+
+
 
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
 window.bind("<Key>", quit)
