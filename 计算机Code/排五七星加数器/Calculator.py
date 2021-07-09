@@ -63,6 +63,12 @@ frame_operate_head.place(x=0, y=0)
 # 尾
 frame_operate_tail = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_tail.place(x=0, y=frame_operate_height/4)
+# 值输入框
+frame_operate_input = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_tail.place(x=0, y=frame_operate_height/4*2)
+# 确定按钮
+frame_operate_button = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_tail.place(x=0, y=frame_operate_height/4*3)
 
 # 事件绑定
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
