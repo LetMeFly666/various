@@ -3,3 +3,4 @@ CheckNetwork.py
 Img
 __pycache__
 _pack
+*.exe

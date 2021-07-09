@@ -17,7 +17,7 @@ Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.i
 """
 
 
-# CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME:取消注释
+CheckNetwork.main(__exeName__, __exeVersion__)
 
 
 def create_a_window(title_and_th):
