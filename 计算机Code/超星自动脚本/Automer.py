@@ -18,7 +18,7 @@ Shortcut=D, Automer.exe, , 双击运行, 超星自动播放, Img/icon.ico
 
 # CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME: 取消注释
 
-webdriver.ChromeOptions().binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-browser = webdriver.Chrome("chromedriver.exe")
+# webdriver.ChromeOptions().binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+browser = webdriver.Chrome()
 browser.get("https://www.baidu.com/")
 
