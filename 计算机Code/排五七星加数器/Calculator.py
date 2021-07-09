@@ -58,8 +58,11 @@ frame_operate_x, frame_operate_y = 685, 200
 frame_operate = tk.Frame(window, bg="pink", height=frame_operate_height, width=frame_operate_width)
 frame_operate.place(x=frame_operate_x, y=frame_operate_y)
 # 头
-frame_operate_head = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4)
-frame_operate_head.pack()
+frame_operate_head = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_head.place(x=0, y=0)
+# 尾
+frame_operate_tail = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_tail.place(x=0, y=frame_operate_height/4)
 
 # 事件绑定
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
