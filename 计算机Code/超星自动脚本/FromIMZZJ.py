@@ -46,7 +46,7 @@ def login(browser):
 def main():
     browser = webdriver.Chrome()  # 驱动
     login(browser)
-    time.sleep(5)
+    # time.sleep(5)
     urls = course(browser)
     video(browser, urls)
 
