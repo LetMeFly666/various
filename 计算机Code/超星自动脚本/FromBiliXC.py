@@ -1,10 +1,8 @@
 from selenium import webdriver
-from time import sleep, time, strftime, localtime
+from time import sleep, strftime, localtime
 from threading import Thread
-from selenium.common.exceptions import NoAlertPresentException, NoSuchElementException
 from random import randint
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -38,13 +36,15 @@ class ChaoXing:
         self.t.start()
 
     def log_in(self):
-        self.driver.get("http://i.chaoxing.com")
-        phone = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '#phone')))
-        phone.send_keys(self.userName)
-        pwd = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '#pwd')))
-        pwd.send_keys(self.password)
-        submit = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#loginBtn')))
-        submit.click()
+        # self.driver.get("http://i.chaoxing.com")
+        # phone = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '#phone')))
+        # phone.send_keys(self.userName)
+        # pwd = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '#pwd')))
+        # pwd.send_keys(self.password)
+        # submit = self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#loginBtn')))
+        # submit.click()
+        self.driver.get('http://ecjtucj.jxjy.chaoxing.com/login')
+        input("登录好后回车")
 
     def clickFirstCourse(self):
         # print(driver.current_window_handle) #当前句柄
