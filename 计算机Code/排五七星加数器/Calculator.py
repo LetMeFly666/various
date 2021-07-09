@@ -60,10 +60,10 @@ frame_operate.place(x=frame_operate_x, y=frame_operate_y)
 # 头
 frame_operate_head = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_head.place(x=0, y=0)
-frame_operate_head_text = tk.Label(frame_operate_head, text="头：", font=('Arial', 14), fg="black", width=7, height=3, bg="red")
+frame_operate_head_text = tk.Label(frame_operate_head, text="头：", font=('Arial', 18), fg="black", width=7, height=3)
 frame_operate_head_text.place(x=0, y=0)
-frame_operate_head_input = tk.Entry(frame_operate_head, bg="gold", font=('Arial', 14), width=9)
-frame_operate_head_input.place(x=55, y=23)
+frame_operate_head_input = tk.Entry(frame_operate_head, font=('Arial', 14), width=9)
+frame_operate_head_input.place(x=62, y=29)
 # 尾
 frame_operate_tail = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_tail.place(x=0, y=frame_operate_height/4)
