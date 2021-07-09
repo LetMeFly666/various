@@ -60,15 +60,17 @@ frame_operate.place(x=frame_operate_x, y=frame_operate_y)
 # 头
 frame_operate_head = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_head.place(x=0, y=0)
+frame_operate_head_text = tk.Label(frame_operate_head, text="头", font=('Arial', 14), fg="black", width=5, height=3, bg="red")
+frame_operate_head_text.place(x=0, y=0)
 # 尾
 frame_operate_tail = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_tail.place(x=0, y=frame_operate_height/4)
 # 值输入框
 frame_operate_input = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
-frame_operate_tail.place(x=0, y=frame_operate_height/4*2)
+frame_operate_input.place(x=0, y=frame_operate_height/4*2)
 # 确定按钮
 frame_operate_button = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
-frame_operate_tail.place(x=0, y=frame_operate_height/4*3)
+frame_operate_button.place(x=0, y=frame_operate_height/4*3)
 
 # 事件绑定
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
