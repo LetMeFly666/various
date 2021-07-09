@@ -15,7 +15,7 @@ def video(browser, urls):
             if "100.00" == str(rate):
                 break
             else:
-                time.sleep(120)
+                time.sleep(2)  # FIXME:两个之间的休眠时间
 
 
 def course(browser):
