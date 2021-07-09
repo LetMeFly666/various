@@ -17,7 +17,7 @@ Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.i
 """
 
 
-CheckNetwork.main(__exeName__, __exeVersion__)
+# CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME:取消注释
 
 
 def create_a_window(title_and_th):
@@ -50,18 +50,20 @@ def create_a_window(title_and_th):
         head_data = frame_operate_head_input.get()
         tail_data = frame_operate_tail_input.get()
         input_data = int(frame_operate_input_input.get())
-        for ny in map(lambda char: int(char), head_data):
-            for nx in map(lambda char: int(char), tail_data):
+        for ny in set(map(lambda char: int(char), head_data)):
+            for nx in set(map(lambda char: int(char), tail_data)):
                 frame_dic[(nx, ny)][3] += input_data
+                total_num[0] += input_data
                 val = frame_dic[(nx, ny)][3]
                 frame_dic[(nx, ny)][2].config(text=f"{val}")
+                label_sum.config(text=f"合计：{total_num[0]}")
 
     # 左数字框架
     frame_nums_height, frame_nums_width = 575, 600
     frame_nums_x, frame_nums_y = 50, 50
     frame_nums = tk.Frame(window, height=f"{frame_nums_height}", width=f"{frame_nums_width}")
     frame_nums.place(x=frame_nums_x, y=frame_nums_y)
-    frame_dic = {}
+    frame_dic, total_num = {}, [0]
     for x in range(10):  # 10行
         for y in range(10):  # 10列
             this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow",
@@ -75,6 +77,10 @@ def create_a_window(title_and_th):
                                        height=1)
             label_text_down.pack(side=tk.BOTTOM)
             frame_dic[(x, y)] = [this_frame, label_text_up, label_text_down, this_value]
+
+    # 总和
+    label_sum = tk.Label(window, text=f"合计：{total_num[0]}", font=('Arial', 14))
+    label_sum.place(x=frame_nums_x+20, y=frame_nums_y+frame_nums_height)
 
     # 右操作框架
     frame_operate_height, frame_operate_width = 300, 175
@@ -109,6 +115,8 @@ def create_a_window(title_and_th):
     frame_operate_button_button = tk.Button(frame_operate_button, text="添加", font=('Arial', 18), command=calculate)
     frame_operate_button_button.place(x=52, y=17)
 
+    # 清除数据
+
     # 事件绑定
     quit = lambda event: window.quit() if event.keysym == "Escape" else ""
     window.bind("<Key>", quit)
@@ -120,5 +128,5 @@ names = ["排五计数器", "七星计数器"]
 for name in names:
     mission = CheckNetwork.Thread(target=create_a_window, args=((name, 1 if name == names[0] else 2),))
     mission.start()
-for mission in mission_list:
-    mission.join()
+# for mission in mission_list:  # 原来是join的锅，不能加join，才能多线程
+#     mission.join()
