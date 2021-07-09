@@ -52,8 +52,8 @@ def create_a_window(title_and_th):
         input_data = int(frame_operate_input_input.get())
         for ny in set(map(lambda char: int(char), head_data)):
             for nx in set(map(lambda char: int(char), tail_data)):
-                frame_dic[(nx, ny)][3] += input_data*add_or_dec
-                total_num[0] += input_data*add_or_dec
+                frame_dic[(nx, ny)][3] += input_data*add_or_dec[0]
+                total_num[0] += input_data*add_or_dec[0]
                 val = frame_dic[(nx, ny)][3]
                 frame_dic[(nx, ny)][2].config(text=f"{val}")
                 label_sum.config(text=f"合计：{total_num[0]}")
@@ -84,16 +84,16 @@ def create_a_window(title_and_th):
     def change_to_add():
         if add_or_dec[0] == 1:  # 本来就是增加
             return
-        button_add.config(fg="black")
-        button_dec.config(fg="red")
+        button_add.config(fg="red")
+        button_dec.config(fg="black")
         add_or_dec[0] *= -1
         # draw_left()
 
     def change_to_dec():
         if add_or_dec[0] == -1:  # 本来就是减少
             return
-        button_add.config(fg="red")
-        button_dec.config(fg="black")
+        button_add.config(fg="black")
+        button_dec.config(fg="red")
         add_or_dec[0] *= -1
         # draw_left()
 
@@ -112,7 +112,7 @@ def create_a_window(title_and_th):
     add_or_dec = [1]  # 1是加，-1是减，直接乘以add_or_dec就好
     button_add = tk.Button(window, text="头尾", fg="red", font=('Arial', 16), command=change_to_add)
     button_add.place(x=frame_nums_x+20, y=frame_nums_y-40)
-    button_dec = tk.Button(window, text="飞码", fg="black", font=('Arial', 16))
+    button_dec = tk.Button(window, text="飞码", fg="black", font=('Arial', 16), command=change_to_dec)
     button_dec.place(x=frame_nums_x+80, y=frame_nums_y-40)
 
     # 右操作框架
