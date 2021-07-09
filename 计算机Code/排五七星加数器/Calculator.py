@@ -58,6 +58,14 @@ def create_a_window(title_and_th):
                 frame_dic[(nx, ny)][2].config(text=f"{val}")
                 label_sum.config(text=f"合计：{total_num[0]}")
 
+    def clear():
+        total_num[0] = 0
+        label_sum.config(text=f"合计：{total_num[0]}")
+        for nx in range(10):
+            for ny in range(10):
+                frame_dic[(nx, ny)][3] = 0
+                frame_dic[(nx, ny)][2].config(text=f"{0}")
+
     # 左数字框架
     frame_nums_height, frame_nums_width = 575, 600
     frame_nums_x, frame_nums_y = 50, 50
@@ -83,39 +91,42 @@ def create_a_window(title_and_th):
     label_sum.place(x=frame_nums_x+20, y=frame_nums_y+frame_nums_height)
 
     # 右操作框架
-    frame_operate_height, frame_operate_width = 300, 175
-    frame_operate_x, frame_operate_y = 685, 200
+    frame_operate_height, frame_operate_width = 375, 175
+    frame_operate_x, frame_operate_y = 685, 150
     frame_operate = tk.Frame(window, height=frame_operate_height, width=frame_operate_width)
     frame_operate.place(x=frame_operate_x, y=frame_operate_y)
     # 头
-    frame_operate_head = tk.Frame(frame_operate, height=frame_operate_height / 4, width=frame_operate_width)
+    frame_operate_head = tk.Frame(frame_operate, height=frame_operate_height / 5, width=frame_operate_width)
     frame_operate_head.place(x=0, y=0)
     frame_operate_head_text = tk.Label(frame_operate_head, text="头：", font=('Arial', 18), fg="black", width=7, height=3)
     frame_operate_head_text.place(x=0, y=0)
     frame_operate_head_input = tk.Entry(frame_operate_head, font=('Arial', 14), width=9, textvariable=tk.IntVar)
     frame_operate_head_input.place(x=62, y=29)
     # 尾
-    frame_operate_tail = tk.Frame(frame_operate, height=frame_operate_height / 4, width=frame_operate_width)
-    frame_operate_tail.place(x=0, y=frame_operate_height / 4)
+    frame_operate_tail = tk.Frame(frame_operate, height=frame_operate_height / 5, width=frame_operate_width)
+    frame_operate_tail.place(x=0, y=frame_operate_height / 5)
     frame_operate_tail_text = tk.Label(frame_operate_tail, text="尾：", font=('Arial', 18), fg="black", width=7, height=3)
     frame_operate_tail_text.place(x=0, y=0)
     frame_operate_tail_input = tk.Entry(frame_operate_tail, font=('Arial', 14), width=9, textvariable=tk.IntVar)
     frame_operate_tail_input.place(x=62, y=29)
     # 值输入框
-    frame_operate_input = tk.Frame(frame_operate, height=frame_operate_height / 4, width=frame_operate_width)
-    frame_operate_input.place(x=0, y=frame_operate_height / 4 * 2)
+    frame_operate_input = tk.Frame(frame_operate, height=frame_operate_height / 5, width=frame_operate_width)
+    frame_operate_input.place(x=0, y=frame_operate_height / 5 * 2)
     frame_operate_input_text = tk.Label(frame_operate_input, text="值：", font=('Arial', 18), fg="black", width=7,
                                         height=3)
     frame_operate_input_text.place(x=0, y=0)
     frame_operate_input_input = tk.Entry(frame_operate_input, font=('Arial', 14), width=9, textvariable=tk.IntVar)
     frame_operate_input_input.place(x=62, y=29)
     # 确定按钮
-    frame_operate_button = tk.Frame(frame_operate, height=frame_operate_height / 4, width=frame_operate_width)
-    frame_operate_button.place(x=0, y=frame_operate_height / 4 * 3)
-    frame_operate_button_button = tk.Button(frame_operate_button, text="添加", font=('Arial', 18), command=calculate)
-    frame_operate_button_button.place(x=52, y=17)
-
+    frame_operate_button_ok = tk.Frame(frame_operate, height=frame_operate_height / 4, width=frame_operate_width)
+    frame_operate_button_ok.place(x=0, y=frame_operate_height / 5 * 3)
+    frame_operate_button_ok_button = tk.Button(frame_operate_button_ok, text="添加", font=('Arial', 18), command=calculate)
+    frame_operate_button_ok_button.place(x=52, y=17)
     # 清除数据
+    frame_operate_button_clear = tk.Frame(frame_operate, height=frame_operate_height / 4, width=frame_operate_width)
+    frame_operate_button_clear.place(x=0, y=frame_operate_height / 5 * 4)
+    frame_operate_button_clear_button = tk.Button(frame_operate_button_clear, text="清空", font=('Arial', 18), command=clear)
+    frame_operate_button_clear_button.place(x=52, y=17)
 
     # 事件绑定
     quit = lambda event: window.quit() if event.keysym == "Escape" else ""
@@ -128,5 +139,6 @@ names = ["排五计数器", "七星计数器"]
 for name in names:
     mission = CheckNetwork.Thread(target=create_a_window, args=((name, 1 if name == names[0] else 2),))
     mission.start()
+    CheckNetwork.sleep(0.25)
 # for mission in mission_list:  # 原来是join的锅，不能加join，才能多线程
 #     mission.join()
