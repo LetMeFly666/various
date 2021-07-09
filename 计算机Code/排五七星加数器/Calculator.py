@@ -17,7 +17,7 @@ Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.i
 """
 
 
-CheckNetwork.main(__exeName__, __exeVersion__)
+# CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME:取消注释
 
 
 def create_a_window(title_and_th):
@@ -52,8 +52,8 @@ def create_a_window(title_and_th):
         input_data = int(frame_operate_input_input.get())
         for ny in set(map(lambda char: int(char), head_data)):
             for nx in set(map(lambda char: int(char), tail_data)):
-                frame_dic[(nx, ny)][3] += input_data
-                total_num[0] += input_data
+                frame_dic[(nx, ny)][3] += input_data*add_or_dec
+                total_num[0] += input_data*add_or_dec
                 val = frame_dic[(nx, ny)][3]
                 frame_dic[(nx, ny)][2].config(text=f"{val}")
                 label_sum.config(text=f"合计：{total_num[0]}")
@@ -66,29 +66,54 @@ def create_a_window(title_and_th):
                 frame_dic[(nx, ny)][3] = 0
                 frame_dic[(nx, ny)][2].config(text=f"{0}")
 
+    def draw_left():
+        for x in range(10):  # 10行
+            for y in range(10):  # 10列
+                this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow",
+                                      width=f"{int(frame_nums_width / 10)}",
+                                      height=f"{int(frame_nums_height / 10)}")
+                this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
+                label_text_up = tk.Label(this_frame, text=f"{y}{x}", font=('Arial', 14), fg="black", width=5, height=1)
+                label_text_up.pack()
+                this_value = 0
+                label_text_down = tk.Label(this_frame, text=f"{this_value}", font=('Arial', 14), fg="red", width=5,
+                                           height=1)
+                label_text_down.pack(side=tk.BOTTOM)
+                frame_dic[(x, y)] = [this_frame, label_text_up, label_text_down, this_value]
+
+    def change_to_add():
+        if add_or_dec[0] == 1:  # 本来就是增加
+            return
+        button_add.config(fg="black")
+        button_dec.config(fg="red")
+        add_or_dec[0] *= -1
+        # draw_left()
+
+    def change_to_dec():
+        if add_or_dec[0] == -1:  # 本来就是减少
+            return
+        button_add.config(fg="red")
+        button_dec.config(fg="black")
+        add_or_dec[0] *= -1
+        # draw_left()
+
+
     # 左数字框架
     frame_nums_height, frame_nums_width = 575, 600
     frame_nums_x, frame_nums_y = 50, 50
     frame_nums = tk.Frame(window, height=f"{frame_nums_height}", width=f"{frame_nums_width}")
     frame_nums.place(x=frame_nums_x, y=frame_nums_y)
     frame_dic, total_num = {}, [0]
-    for x in range(10):  # 10行
-        for y in range(10):  # 10列
-            this_frame = tk.Frame(frame_nums, bg="blue" if (x + y) % 2 else "yellow",
-                                  width=f"{int(frame_nums_width / 10)}",
-                                  height=f"{int(frame_nums_height / 10)}")
-            this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
-            label_text_up = tk.Label(this_frame, text=f"{y}{x}", font=('Arial', 14), fg="black", width=5, height=1)
-            label_text_up.pack()
-            this_value = 0
-            label_text_down = tk.Label(this_frame, text=f"{this_value}", font=('Arial', 14), fg="red", width=5,
-                                       height=1)
-            label_text_down.pack(side=tk.BOTTOM)
-            frame_dic[(x, y)] = [this_frame, label_text_up, label_text_down, this_value]
-
+    draw_left()
     # 总和
     label_sum = tk.Label(window, text=f"合计：{total_num[0]}", font=('Arial', 14))
     label_sum.place(x=frame_nums_x+20, y=frame_nums_y+frame_nums_height)
+    # 头尾飞码(加减)
+    add_or_dec = [1]  # 1是加，-1是减，直接乘以add_or_dec就好
+    button_add = tk.Button(window, text="头尾", fg="red", font=('Arial', 16), command=change_to_add)
+    button_add.place(x=frame_nums_x+20, y=frame_nums_y-40)
+    button_dec = tk.Button(window, text="飞码", fg="black", font=('Arial', 16))
+    button_dec.place(x=frame_nums_x+80, y=frame_nums_y-40)
 
     # 右操作框架
     frame_operate_height, frame_operate_width = 375, 175
