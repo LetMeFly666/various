@@ -37,7 +37,7 @@ def pack_img(img_name, tx, ty):
 # 左数字框架
 frame_nums_height, frame_nums_width = 575, 600
 frame_nums_x, frame_nums_y = 50, 50
-frame_nums = tk.Frame(window, bg="pink", height=f"{frame_nums_height}", width=f"{frame_nums_width}")
+frame_nums = tk.Frame(window, height=f"{frame_nums_height}", width=f"{frame_nums_width}")
 frame_nums.place(x=frame_nums_x, y=frame_nums_y)
 frame_dic = {}
 for x in range(10):  # 10行
@@ -55,31 +55,31 @@ for x in range(10):  # 10行
 # 右操作框架
 frame_operate_height, frame_operate_width = 300, 175
 frame_operate_x, frame_operate_y = 685, 200
-frame_operate = tk.Frame(window, bg="pink", height=frame_operate_height, width=frame_operate_width)
+frame_operate = tk.Frame(window, height=frame_operate_height, width=frame_operate_width)
 frame_operate.place(x=frame_operate_x, y=frame_operate_y)
 # 头
-frame_operate_head = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_head = tk.Frame(frame_operate, height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_head.place(x=0, y=0)
 frame_operate_head_text = tk.Label(frame_operate_head, text="头：", font=('Arial', 18), fg="black", width=7, height=3)
 frame_operate_head_text.place(x=0, y=0)
 frame_operate_head_input = tk.Entry(frame_operate_head, font=('Arial', 14), width=9)
 frame_operate_head_input.place(x=62, y=29)
 # 尾
-frame_operate_tail = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_tail = tk.Frame(frame_operate, height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_tail.place(x=0, y=frame_operate_height/4)
 frame_operate_tail_text = tk.Label(frame_operate_tail, text="尾：", font=('Arial', 18), fg="black", width=7, height=3)
 frame_operate_tail_text.place(x=0, y=0)
 frame_operate_tail_input = tk.Entry(frame_operate_tail, font=('Arial', 14), width=9)
 frame_operate_tail_input.place(x=62, y=29)
 # 值输入框
-frame_operate_input = tk.Frame(frame_operate, bg="blue", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_input = tk.Frame(frame_operate, height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_input.place(x=0, y=frame_operate_height/4*2)
 frame_operate_input_text = tk.Label(frame_operate_input, text="值：", font=('Arial', 18), fg="black", width=7, height=3)
 frame_operate_input_text.place(x=0, y=0)
 frame_operate_input_input = tk.Entry(frame_operate_input, font=('Arial', 14), width=9)
 frame_operate_input_input.place(x=62, y=29)
 # 确定按钮
-frame_operate_button = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
+frame_operate_button = tk.Frame(frame_operate, height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_button.place(x=0, y=frame_operate_height/4*3)
 frame_operate_button_button = tk.Button(frame_operate_button, text="添加", font=('Arial', 18))
 frame_operate_button_button.place(x=52, y=17)
