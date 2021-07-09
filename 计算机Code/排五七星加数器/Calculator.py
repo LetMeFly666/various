@@ -82,9 +82,7 @@ frame_operate_input_input.place(x=62, y=29)
 frame_operate_button = tk.Frame(frame_operate, bg="yellow", height=frame_operate_height/4, width=frame_operate_width)
 frame_operate_button.place(x=0, y=frame_operate_height/4*3)
 frame_operate_button_button = tk.Button(frame_operate_button, text="添加", font=('Arial', 18))
-print(dir(frame_operate_button_button))
-print(frame_operate_button_button.winfo_x())
-frame_operate_button_button.place()
+frame_operate_button_button.place(x=52, y=17)
 
 # 事件绑定
 quit = lambda event: window.quit() if event.keysym == "Escape" else ""
