@@ -51,8 +51,8 @@ for x in range(10):  # 10行
         label_text_down.pack(side=tk.BOTTOM)
         frame_dic[(x, y)] = (this_frame, label_text_up, label_text_down, this_value)
 
-frame_operate_height, frame_operate_width = 400, 100
-frame_operate_x, frame_operate_y = 680, 100
+frame_operate_height, frame_operate_width = 400, 175
+frame_operate_x, frame_operate_y = 680, 150
 frame_operate = tk.Frame(window, bg="pink", height=frame_operate_height, width=frame_operate_width)
 frame_operate.place(x=frame_operate_x, y=frame_operate_y)
 
