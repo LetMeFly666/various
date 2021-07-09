@@ -35,11 +35,12 @@ def course(browser):
 
 def login(browser):
     browser.get("http://ecjtucj.jxjy.chaoxing.com/login")
-    time.sleep(5)
-    browser.find_element_by_class_name("ipt-tel").send_keys('20214711110101')  # 要登录的用户名
-    browser.find_element_by_class_name("ipt-pwd").send_keys('Hdjd102058')  # 要登录的密码
-    time.sleep(5)
-    browser.find_element_by_id("loginBtn").click()
+    # time.sleep(5)
+    # browser.find_element_by_class_name("ipt-tel").send_keys('20214711110101')  # 要登录的用户名
+    # browser.find_element_by_class_name("ipt-pwd").send_keys('Hdjd102058')  # 要登录的密码
+    # time.sleep(5)
+    # browser.find_element_by_id("loginBtn").click()
+    input("登录好后回车")
 
 
 def main():
