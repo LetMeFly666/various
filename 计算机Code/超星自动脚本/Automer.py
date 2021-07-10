@@ -132,10 +132,10 @@ print(tasks)
 for task in tasks:
     browser.get(task)
     browser.execute_script(js)
-    while True:
-        if_finished_js = "return document.querySelector('.ans-job-finished')"
-        result = browser.execute_script(if_finished_js)
-        if result:
-            break
-        sleep(0.5)
+    browser.find_element_by_id("lfsenior").click()
+    frame = browser.find_element_by_id('iframe')
+    finished_class = frame.find_element_by_class_name('ans-jbo-finished')
+    if finished_class:
+        break
+    sleep(0.5)
 
