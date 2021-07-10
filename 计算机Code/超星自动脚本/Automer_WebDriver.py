@@ -141,7 +141,8 @@ def real_main():
                 driver.switch_to.default_content()
                 break
             except:
-                sleep(0.5)
+                # sleep(0.5)
+                pass
 
 
 def main():
