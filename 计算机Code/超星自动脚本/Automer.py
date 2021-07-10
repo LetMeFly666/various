@@ -135,11 +135,12 @@ for task in tasks:
     driver.find_element_by_id("lfsenior").click()
     frame = driver.find_element_by_id('iframe')
     driver.switch_to.frame(frame)
-    try:
-        driver.find_element_by_class_name('ans-job-finished')
-        print("Finish 1")
-        driver.switch_to.default_content()
-        break
-    except:
-        sleep(0.5)
+    while True:
+        try:
+            driver.find_element_by_class_name('ans-job-finished')
+            print("Finish 1")
+            driver.switch_to.default_content()
+            break
+        except:
+            sleep(0.5)
 
