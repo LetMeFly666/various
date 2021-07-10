@@ -8,8 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class ChaoXing:
-    def __init__(self, userName, password, classRoon):
-        self.userName = userName
+    def __init__(self, username, password, classRoon):
+        self.t = Thread(target=self.monitor)
+        self.wait = WebDriverWait(self.driver, 10)
+        self.driver = webdriver.Chrome()  # chrome_options=option 隐藏浏览器
+        self.userName = username
         self.password = password
         self.classRoon = classRoon
         self.currentLesson = ""
@@ -20,19 +23,16 @@ class ChaoXing:
     def main(self):
         option = webdriver.ChromeOptions()
         option.add_argument('headless')
-        self.driver = webdriver.Chrome()  # chrome_options=option 隐藏浏览器
-        self.wait = WebDriverWait(self.driver, 10)
         self.log_in()
         self.clickFirstCourse()
         self.courseLink = self.getCoursesAtMyCourse()
         for i in self.courseLink:
             if i["title"] == "章节测验": continue
-            if (not i["complete"]):
+            if not i["complete"]:
                 self.driver.get(i["link"])
                 self.currentLesson = i["title"]
                 break
         self.getCoursesAtPlayerPage()
-        self.t = Thread(target=self.monitor)
         self.t.start()
 
     def log_in(self):
@@ -155,6 +155,7 @@ class ChaoXing:
             pass
         self.switchContent()
 
+    # noinspection PyPep8Naming
     def inCaseOfStop(self):
         self.switchFrame()
         try:
