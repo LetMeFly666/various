@@ -42,14 +42,14 @@ while True:
         status_th = 3
         break
     system("cls")
-    print(status[status_th])
+    # print(status[status_th])
 
 # 开始播放
 sleep(2)
-js = """
-const video = document.querySelector('video');
-console.log(video);
-video.play()
-"""
-browser.execute_script(js)
+tasks_class = browser.find_elements_by_class_name('clearfix')
+print(tasks_class)
+print(len(tasks_class))
+for task in tasks_class:
+    print(task)
+
 
