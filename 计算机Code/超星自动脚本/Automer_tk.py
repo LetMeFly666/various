@@ -13,7 +13,7 @@ def main():
         pass
     button = tk.Button(window, text="启动", font=('楷体', 30), fg="#%02x%02x%02x" % (0, 255, 225),
                        bg="#%02x%02x%02x" % (240, 255, 225), command=Automer_WebDriver.main)
-    button.place(x=55, y=5)
+    button.place(x=57, y=5)
     window.mainloop()
 
 
