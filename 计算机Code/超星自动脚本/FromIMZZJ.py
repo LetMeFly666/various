@@ -97,6 +97,8 @@ def course(browser):
                     urls.append(i.find_element_by_tag_name("a").get_attribute('href'))
         except Exception as e:
             pass
+    for url in urls:
+        print(url)
     return urls
 
 

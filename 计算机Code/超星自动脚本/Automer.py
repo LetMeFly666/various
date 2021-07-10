@@ -133,9 +133,9 @@ for task in tasks:
     browser.get(task)
     browser.execute_script(js)
     while True:
-        try:
-            finished_class = browser.find_element_by_class_name("ans-attach-ct.ans-job-finished")
+        if_finished_js = "return document.querySelector('.ans-job-finished')"
+        result = browser.execute_script(if_finished_js)
+        if result:
             break
-        except:
-            sleep(0.5)
+        sleep((0.5))
 
