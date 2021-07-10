@@ -1,4 +1,5 @@
 from selenium import webdriver
+from threading import Thread
 from time import sleep
 from os import system
 
@@ -90,7 +91,7 @@ btn.click(function () {
 
 
 # webdriver.ChromeOptions().binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-def main():
+def real_main():
     driver = webdriver.Chrome()
     driver.get("http://ecjtucj.jxjy.chaoxing.com/login")
     status, status_th = ['login', 'space', 'courseList', 'study'], 0
@@ -141,6 +142,11 @@ def main():
                 break
             except:
                 sleep(0.5)
+
+
+def main():
+    mission = Thread(target=real_main)
+    mission.start()
 
 
 if __name__ == "__main__":
