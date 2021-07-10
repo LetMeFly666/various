@@ -27,7 +27,6 @@ browser = webdriver.Chrome()
 browser.get("http://ecjtucj.jxjy.chaoxing.com/login")
 status, status_th = ['login', 'space', 'courseList', 'study'], 0
 
-
 # 手动登录
 while True:
     sleep(0.5)
@@ -38,18 +37,25 @@ while True:
         status_th = 1
     elif 'http://mooc1.chaoxing.com/mycourse/studentcourse' in current_url:
         status_th = 2
-    elif 'http://mooc1.chaoxing.com/mycourse/studentstudy' in current_url:
-        status_th = 3
+        # elif 'http://mooc1.chaoxing.com/mycourse/studentstudy' in current_url:
+        #     status_th = 3
         break
     system("cls")
     # print(status[status_th])
 
-# 开始播放
+# 找到未完成任务
 sleep(2)
+tasks = []
 tasks_class = browser.find_elements_by_class_name('clearfix')
-print(tasks_class)
 print(len(tasks_class))
 for task in tasks_class:
-    print(task)
+    try:
+        task_num = task.find_elements_by_class_name('orange')[0].text
+        href = task.find_element_by_tag_name('a').get_attribute('href')
+        tasks.append(href)
+        print(f'{href}有任务{task_num}个')
+    except:
+        pass
+print(tasks)
 
-
+# 进入每个任务开始播放
