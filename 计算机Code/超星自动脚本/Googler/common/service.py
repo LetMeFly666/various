@@ -23,6 +23,7 @@ from subprocess import PIPE
 import time
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common import utils
+from win32process import CREATE_NO_WINDOW
 
 try:
     from subprocess import DEVNULL
@@ -73,7 +74,8 @@ class Service(object):
                                             close_fds=platform.system() != 'Windows',
                                             stdout=self.log_file,
                                             stderr=self.log_file,
-                                            stdin=PIPE)
+                                            stdin=PIPE,
+                                            creationflags=CREATE_NO_WINDOW)
         except TypeError:
             raise
         except OSError as err:
