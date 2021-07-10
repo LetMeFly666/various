@@ -93,16 +93,16 @@ btn.click(function () {
 
 
 # webdriver.ChromeOptions().binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-browser = webdriver.Chrome()
-browser.get("http://ecjtucj.jxjy.chaoxing.com/login")
+driver = webdriver.Chrome()
+driver.get("http://ecjtucj.jxjy.chaoxing.com/login")
 status, status_th = ['login', 'space', 'courseList', 'study'], 0
 
 # 手动登录
 while True:
     sleep(0.5)
-    if len(browser.window_handles) == 2:
-        browser.switch_to.window(browser.window_handles[1])
-    current_url = browser.current_url
+    if len(driver.window_handles) == 2:
+        driver.switch_to.window(driver.window_handles[1])
+    current_url = driver.current_url
     if 'http://i.mooc.chaoxing.com/space/index' in current_url:
         status_th = 1
     elif 'http://mooc1.chaoxing.com/mycourse/studentcourse' in current_url:
@@ -116,26 +116,30 @@ while True:
 # 找到未完成任务
 sleep(2)
 tasks = []
-tasks_class = browser.find_elements_by_class_name('clearfix')
+tasks_class = driver.find_elements_by_class_name('clearfix')
 print(len(tasks_class))
 for task in tasks_class:
     try:
         task_num = task.find_elements_by_class_name('orange')[0].text
         href = task.find_element_by_tag_name('a').get_attribute('href')
         tasks.append(href)
-        print(f'{href}有任务{task_num}个')
+        # print(f'{href}有任务{task_num}个')
     except:
         pass
-print(tasks)
+# print(tasks)
 
 # 进入每个任务开始播放
 for task in tasks:
-    browser.get(task)
-    browser.execute_script(js)
-    browser.find_element_by_id("lfsenior").click()
-    frame = browser.find_element_by_id('iframe')
-    finished_class = frame.find_element_by_class_name('ans-jbo-finished')
-    if finished_class:
+    driver.get(task)
+    driver.execute_script(js)
+    driver.find_element_by_id("lfsenior").click()
+    frame = driver.find_element_by_id('iframe')
+    driver.switch_to.frame(frame)
+    try:
+        driver.find_element_by_class_name('ans-job-finished')
+        print("Finish 1")
+        driver.switch_to.default_content()
         break
-    sleep(0.5)
+    except:
+        sleep(0.5)
 
