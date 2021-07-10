@@ -1,4 +1,3 @@
-from threading import Thread
 import CheckNetwork
 import Automer_tk
 
