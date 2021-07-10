@@ -98,7 +98,7 @@ def real_main():
 
     # 手动登录
     while True:
-        # sleep(0.5)
+        sleep(0.5)
         if len(driver.window_handles) == 2:
             driver.switch_to.window(driver.window_handles[1])
         current_url = driver.current_url
@@ -113,7 +113,7 @@ def real_main():
         # print(status[status_th])
 
     # 找到未完成任务
-    # sleep(2)
+    sleep(2)
     tasks = []
     tasks_class = driver.find_elements_by_class_name('clearfix')
     print(len(tasks_class))
@@ -141,8 +141,7 @@ def real_main():
                 driver.switch_to.default_content()
                 break
             except:
-                # sleep(0.5)
-                pass
+                sleep(0.5)
 
 
 def main():
