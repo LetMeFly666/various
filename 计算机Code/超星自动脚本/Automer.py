@@ -137,5 +137,5 @@ for task in tasks:
         result = browser.execute_script(if_finished_js)
         if result:
             break
-        sleep((0.5))
+        sleep(0.5)
 
