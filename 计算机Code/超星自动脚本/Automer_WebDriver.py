@@ -1,7 +1,7 @@
 from selenium import webdriver
 from threading import Thread
 from time import sleep
-from os import system
+# from os import system
 
 username = "20214711110101"
 password = "Hdjd102058"
@@ -109,7 +109,7 @@ def real_main():
             # elif 'http://mooc1.chaoxing.com/mycourse/studentstudy' in current_url:
             #     status_th = 3
             break
-        system("cls")
+        # system("cls")
         # print(status[status_th])
 
     # 找到未完成任务
