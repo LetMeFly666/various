@@ -53,9 +53,9 @@ def create_a_window(title_and_th):
         for ny in set(map(lambda char: int(char), head_data)):
             for nx in set(map(lambda char: int(char), tail_data)):
                 frame_dic[(nx, ny)][3] += input_data*add_or_dec[0]
-                frame_dic[(nx, ny)][4] += input_data if add_or_dec == -1 else 0
+                frame_dic[(nx, ny)][4] += input_data if add_or_dec[0] == -1 else 0
                 total_num[0] += input_data*add_or_dec[0]
-                val = frame_dic[(nx, ny)][3 if add_or_dec == 1 else 4]
+                val = frame_dic[(nx, ny)][3 if add_or_dec[0] == 1 else 4]
                 frame_dic[(nx, ny)][2].config(text=f"{val}")
                 label_sum.config(text=f"合计：{total_num[0]}")
 
@@ -104,6 +104,17 @@ def create_a_window(title_and_th):
             for y in range(10):  # 10列
                 frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)][4]}")
         # draw_left()
+
+    def key_event(event):
+        key = event.keysym
+        if key == "Escape":
+            window.quit()
+        elif key == "Return":
+            calculate()
+
+    def ctrl_s_event(event):
+        print("55")
+        CheckNetwork.os_sys("start https://letmefly.blog.csdn.net/")
 
 
     # 左数字框架
@@ -162,8 +173,8 @@ def create_a_window(title_and_th):
     frame_operate_button_clear_button.place(x=52, y=17)
 
     # 事件绑定
-    quit = lambda event: window.quit() if event.keysym == "Escape" else ""
-    window.bind("<Key>", quit)
+    window.bind("<Key>", key_event)
+    window.bind("<Control-s>", ctrl_s_event)
     window.mainloop()
 
 
