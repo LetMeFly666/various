@@ -1,4 +1,4 @@
-import Googler
+from selenium import webdriver
 from threading import Thread
 from time import sleep
 from os import system
@@ -92,7 +92,7 @@ btn.click(function () {
 
 # webdriver.ChromeOptions().binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 def real_main():
-    driver = Googler.Chrome()
+    driver = webdriver.Chrome()
     driver.get("http://ecjtucj.jxjy.chaoxing.com/login")
     status, status_th = ['login', 'space', 'courseList', 'study'], 0
 
