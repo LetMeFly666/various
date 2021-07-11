@@ -53,8 +53,9 @@ def create_a_window(title_and_th):
         for ny in set(map(lambda char: int(char), head_data)):
             for nx in set(map(lambda char: int(char), tail_data)):
                 frame_dic[(nx, ny)][3] += input_data*add_or_dec[0]
+                frame_dic[(nx, ny)][4] += input_data if add_or_dec == -1 else 0
                 total_num[0] += input_data*add_or_dec[0]
-                val = frame_dic[(nx, ny)][3]
+                val = frame_dic[(nx, ny)][3 if add_or_dec == 1 else 4]
                 frame_dic[(nx, ny)][2].config(text=f"{val}")
                 label_sum.config(text=f"合计：{total_num[0]}")
 
@@ -63,6 +64,7 @@ def create_a_window(title_and_th):
         label_sum.config(text=f"合计：{total_num[0]}")
         for nx in range(10):
             for ny in range(10):
+                frame_dic[(nx, ny)][4] = 0
                 frame_dic[(nx, ny)][3] = 0
                 frame_dic[(nx, ny)][2].config(text=f"{0}")
 
@@ -89,7 +91,7 @@ def create_a_window(title_and_th):
         add_or_dec[0] *= -1
         for x in range(10):  # 10行
             for y in range(10):  # 10列
-                frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)[3]]}")
+                frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)][3]}")
         # draw_left()
 
     def change_to_dec():
@@ -100,7 +102,7 @@ def create_a_window(title_and_th):
         add_or_dec[0] *= -1
         for x in range(10):  # 10行
             for y in range(10):  # 10列
-                frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)[4]]}")
+                frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)][4]}")
         # draw_left()
 
 
