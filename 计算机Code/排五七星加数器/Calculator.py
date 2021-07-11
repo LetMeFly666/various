@@ -17,7 +17,7 @@ Shortcut=D, Calculator.exe, , 双击运行, 排列五七星计数器, Img/icon.i
 """
 
 
-CheckNetwork.main(__exeName__, __exeVersion__)
+# CheckNetwork.main(__exeName__, __exeVersion__)  # FIXME:change
 
 
 def create_a_window(title_and_th):
@@ -75,11 +75,11 @@ def create_a_window(title_and_th):
                 this_frame.place(x=frame_nums_width / 10 * x, y=frame_nums_height / 10 * y)
                 label_text_up = tk.Label(this_frame, text=f"{y}{x}", font=('Arial', 14), fg="black", width=5, height=1)
                 label_text_up.pack()
-                this_value = 0
+                this_value, fly_value = 0, 0
                 label_text_down = tk.Label(this_frame, text=f"{this_value}", font=('Arial', 14), fg="red", width=5,
                                            height=1)
                 label_text_down.pack(side=tk.BOTTOM)
-                frame_dic[(x, y)] = [this_frame, label_text_up, label_text_down, this_value]
+                frame_dic[(x, y)] = [this_frame, label_text_up, label_text_down, this_value, fly_value]
 
     def change_to_add():
         if add_or_dec[0] == 1:  # 本来就是增加
@@ -87,6 +87,9 @@ def create_a_window(title_and_th):
         button_add.config(fg="red")
         button_dec.config(fg="black")
         add_or_dec[0] *= -1
+        for x in range(10):  # 10行
+            for y in range(10):  # 10列
+                frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)[3]]}")
         # draw_left()
 
     def change_to_dec():
@@ -95,6 +98,9 @@ def create_a_window(title_and_th):
         button_add.config(fg="black")
         button_dec.config(fg="red")
         add_or_dec[0] *= -1
+        for x in range(10):  # 10行
+            for y in range(10):  # 10列
+                frame_dic[(x, y)][2].config(text=f"{frame_dic[(x,y)[4]]}")
         # draw_left()
 
 
