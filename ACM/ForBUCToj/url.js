@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-03 11:44:49
+ * @LastEditTime: 2021-07-15 19:51:34
  */
 
 //#region function
@@ -35,6 +35,7 @@ const couldSeeList = {
         5217: { "time": new Date("2021-05-30 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/117339731", "problemHref": "http://39.106.31.26/problem.php?id=5217" },
         5219: { "time": new Date("2021-05-30 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/117353291", "problemHref": "http://39.106.31.26/problem.php?id=5219" },
         5220: { "time": new Date("2021-06-03 16:25:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/117509460", "problemHref": "http://39.106.31.26/problem.php?id=5220" },
+        5250: { "time": new Date("2021-06-03 16:25:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/118766861", "problemHref": "http://39.106.31.26/problem.php?id=5250" },
     }
     //#endregion
 
