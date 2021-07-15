@@ -24,7 +24,7 @@ const end = '                </div><div data-report-view="{&quot;mod&quot;:&quot
                 <link href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/style-f1c5feb645.css" rel="stylesheet">\n\
         </div>'
 
-
+document.title="德才论";
 
 const problem_description_data = '\n\
 <p>宋代史学家司马光在《资治通鉴》中有一段著名的“德才论”&#xff1a;“是故才德全尽谓之圣人&#xff0c;才德兼亡谓之愚人&#xff0c;德胜才谓之君子&#xff0c;才胜德谓之小人。凡取人之术&#xff0c;苟不得圣人&#xff0c;君子而与之&#xff0c;与其得小人&#xff0c;不若得愚人。”</p> \n\
