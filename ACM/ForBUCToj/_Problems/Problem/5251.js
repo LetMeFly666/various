@@ -102,11 +102,7 @@ window.onload = function () {
     var newP = document.querySelector("div");
     // newP.style = "width: 100%; height: 100%; background-color: rgb(254, 254, 254); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
     
-    setTimeout(function () {
-        var author = document.querySelector("#creator > a");
-        author.href = "userinfo.php?user=2019040474";        
-        author.innerText="2019040474";
-    }, 3000);
+
 }
 
 function alert(word, hei = 50, Time = 1500) {
