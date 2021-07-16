@@ -24,28 +24,7 @@
     <a href="Links">跳转链接</a>
     <br />
     <hr />
-    <iframe src="https://letmefly666.github.io/LetMeFly666/" width="100%" onload="setIframeHeight(this)"></iframe>
-    <script>
-        function setIframeHeight(iframe) {
-            console.log(iframe);
-            if (iframe) {
-                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-                if (iframeWin.document.body) {
-                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-                }
-            }
-        };
-    </script>
-    <!-- <script>
-        function setFrameHeight(){
-            const frame = document.querySelector("iframe");
-            const nowHeight = frame.offsetHeight;
-            const nowFromY = frame.offsetHeight;
-            const wantTobe = window.innerHeight - nowFromY;
-            frame.height = Math.max(wantTobe, nowHeight);
-        }
-        setFrameHeight();
-    </script> -->
+    <iframe src="https://letmefly666.github.io/LetMeFly666/" id="Iframe_CrossFor_LetMeFly" frameborder="0" scrolling="no" style="border:0px;"></iframe>
 
     <!-- <script src="https://gist.github.com/LetMeFly666/cc4f4af05218b200c0b14c19c2b4d9ce.js">C++Template</script> -->
 
