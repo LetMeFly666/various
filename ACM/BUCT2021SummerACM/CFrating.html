@@ -1,0 +1,265 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2021-07-13 13:13:45
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2021-07-14 21:52:05
+-->
+<!DOCTYPE html>
+<html lang="zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUCT暑假集训2021</title>
+</head>
+
+<body>
+    <div class="forBeautifulTableCSSandJS">
+
+        <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+        <style type="text/css">
+            table.altrowstable {
+                font-family: verdana, arial, sans-serif;
+                font-size: 11px;
+                color: #333333;
+                border-width: 1px;
+                border-color: #a9c6c9;
+                border-collapse: collapse;
+            }
+
+            table.altrowstable th {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #a9c6c9;
+            }
+
+            table.altrowstable td {
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #a9c6c9;
+            }
+
+            .oddrowcolor {
+                background-color: #d4e3e5;
+            }
+
+            .evenrowcolor {
+                background-color: #c3dde0;
+            }
+
+            *{
+                font-size: large;
+            }
+        </style>
+        <!--  The table code can be found here: http://www.textfixer/tutorials/css-tables.php#css-table03 -->
+    </div>
+
+    <script id="userinfoScript">
+        const userList = {  // 姓名： id[codeforces, atcoder, nowcoder, 计蒜客]
+            "李腾飞": ["LetMeFly", "LetMeFly", "617345919", "361398"],
+            "张世东": ["dongdziz", "dongdziz", "658379642", ""],
+            "庄禹": ["Double_B", "DoubleB", "84483147", "Caaaaaaaake"],
+            "叶可": ["yyyyyyyk", "Yyyyyyyk", "", "450202"],
+            "姜晨": ["JJ_camus", "JCJCJCJCJC", "677626555", "JCJCJCJCJC"],
+            "于博": ["YeeBy", "Yeeby", "911787502", "YeeBy"],
+            "但啟涛": ["newbie_dqt", "newbie_dqt", "764036679", "448139"],
+            "梅雨婷": ["CandyLynch", "CandyLynch", "945870275", ""],
+            "谢文静": ["fairy-jing", "fairyjing", "365121898", ""],
+            "傅睿敏": ["kongran", "kongran", "449463057", ""],
+            "刘昊": ["LH_buct", "LH_buct", "238024151", "416044"],
+            "张烁": ["shuqingmei", "shuqingmei", "671960983", "483235"],
+            "郑韦诺": ["THE-Nuo", "The_NUO", "617529817", "491165"],
+            "袁凯": ["Nokismet", "Nokismet", "925944787", "467983"],
+            "熊伟": ["buct_xiong", "buct_xiong", "753556485", "489338"],
+            "江永卫": ["Jywsuperman", "Jywsuperman", "654090857", "486546"],
+            "洪枢适": ["Tlopex", "tlopex", "752348459", "426615"],
+            "曾梓勋": ["foreverSeven", "foreverseven", "563765840", ""],
+            "梁凯星": ["liangdaye", "liangkaixing", "546750518", ""],
+            "闫振华": ["BUCT-English2001-YZH", "BUCT_YZH", "855271708", "483051"],
+            "刘嘉楠": ["Gallium777", "Gallium777", "873872165", ""],
+            "王凯": ["VEGETABLE_CHICKEN___", "3283204184", "518902839", "363151"],
+            "朱立忠": ["zhudp", "", "", ""],
+            "冯宇强": ["podokoo", "podokoo", "760149996", "487571"],
+            "潘昊喆": ["Bust", "Bust", "304255543", "486489"],
+            "凡西平": ["Dream_er", "Dream_er", "593837253", "Dream_er"],
+            "闫阳旭": ["code__learner", "code__learner", "828688753", "486784"],
+            "王淇澳": ["wangqa", "wangqa", "396744007", "480000"],
+            "邹策": ["zouce", "zouce", "245074255", "483871"],
+            "许言锴": ["NEVERMORE_X", "NEVERMORE", "65465717", "489324"],
+            "黄彬彬": ["yellowbin", "yellowbin", "517423623", "489598"],
+            "邹旭": ["zouxu142857", "zouxu142857", "133774927", "zouxu142857"],
+            "巴衣地力达": ["empathy117", "empathy117", "767999196", "483303"],
+        };
+        const groupList = [
+            ["张世东", "庄禹", "叶可"],
+            ["闫振华", "巴衣地力达", "刘嘉楠"],
+            ["姜晨", "但啟涛", "李腾飞"],
+            ["王凯", "朱立忠", "于博"],
+            ["曾梓勋", "洪枢适", "梁凯星"],
+            ["梅雨婷", "谢文静", "傅睿敏"],
+            ["熊伟", "袁凯", "江永卫"],
+            ["冯宇强", "潘昊喆", "凡西平"],
+            ["邹策", "王淇澳", "闫阳旭"],
+            ["黄彬彬", "邹旭", "许言锴"],
+            ["刘昊", "张烁", "郑韦诺"],
+        ]
+    </script>
+    <script id="getCodeforcesScoreScript">
+        function getCodeforcesScorelogByUsername(username) {
+            const request = new XMLHttpRequest();
+            request.open("GET", "https://codeforces.com/api/user.rating?handle=" + username, false);
+            request.send();
+            const response = request.response;
+            return JSON.parse(response);
+        }
+        // const scoreLog = getCodeforcesScorelogByUsername("LetMeFly");
+        function getCodeforcesLastRatingByScoreLog(scoreLog) {
+            const scoreArray = scoreLog['result'];
+            const lastContest = scoreArray[scoreArray["length"] - 1];
+            var lastRating;
+            try{lastRating = lastContest["newRating"];}
+            catch{lastRating = 0;}
+            return lastRating;
+        }
+        function getCodeforcesLastRatingByUsername(username) {
+            const scoreLog = getCodeforcesScorelogByUsername(username);
+            const lastRating = getCodeforcesLastRatingByScoreLog(scoreLog);
+            return lastRating;
+        }
+        var nameAndScore = {};
+        function getOneScoreByName(name){
+            if(!nameAndScore[name]){
+                try{nameAndScore[name] = getCodeforcesLastRatingByUsername(name)}
+                catch(err){}
+            }
+            return nameAndScore[name];
+        }
+        function getAllScoresQuietly() {
+            var nameList = [];
+            for (var name in userList){
+                nameList.push(name);
+            }
+            const allNum = nameList.length;  // 所有人员的数量
+            const dealyTime = 600, changeTime = 400;
+            var failedList = [];
+            function getOne(nowNum, nameList){
+                if(nowNum >= allNum && nameList.length == 0) return getSumScore();
+                const name = (nowNum < allNum) ? (nameList[nowNum]) : (nameList.pop());
+                const username = userList[name][0];
+                const request = new XMLHttpRequest();
+                try{
+                    request.open("GET", "https://codeforces.com/api/user.rating?handle=" + username, false);
+                    request.send();
+                }catch{
+                    failedList.push(name);
+                }
+                const scoreArray = JSON.parse(request.response);
+                const rating = getCodeforcesLastRatingByScoreLog(scoreArray);
+                nameAndScore[name] = rating;
+                const td = table.querySelector("#score_" + name);
+                td.innerHTML = rating;
+                const color = td.color;
+                td.style = "color: red";
+                setTimeout(() => {
+                    td.style = "color: "+color;
+                }, changeTime);
+                nowNum++;
+                if(nowNum < allNum){
+                    setTimeout(() => {
+                        getOne(nowNum, nameList);
+                    }, dealyTime);
+                }
+                else{
+                    setTimeout(() => {
+                        getOne(nowNum, failedList);
+                    }, dealyTime);
+                }
+            }
+            getOne(0, nameList);
+            // for (var name in userList) {
+            //     setTimeout(() => {
+            //         const username = userList[name][0];
+            //         const request = new XMLHttpRequest();
+            //         request.open("GET", "https://codeforces.com/api/user.rating?handle=" + username, false);
+            //         // request.open("GET", "https://codeforces.com/api/user.rating?handle=" + username, true);
+            //         request.send();
+            //         // request.onreadystatechange = () => {
+            //             // setTimeout(() => {
+            //                 const scoreArray = JSON.parse(request.response);
+            //                 const rating = getCodeforcesLastRatingByScoreLog(scoreArray);
+            //                 nameAndScore[name] = rating;
+            //                 const td = table.querySelector("#score_" + name);
+            //                 td.innerHTML = rating;
+            //             // }, 200);
+            //         // }
+            //     }, 200);
+            // }
+        }
+        function sort(a, b){
+            getSum = tr => eval(tr.querySelector(".sum").innerHTML);
+            return getSum(b) - getSum(a); // 降序
+        }
+        function realSort(){
+            const trs = table.querySelectorAll("tr");
+            const arr = [].slice.call(trs);
+            arr.sort(sort);
+            table.innerHTML = '';
+            arr.forEach(tr=>table.appendChild(tr));
+        }
+        function getSumScore(){
+            const trs = table.querySelectorAll("tr");
+            trs.forEach(tr=>{
+                const tds = tr.querySelectorAll("td");
+                var sum = 0;
+                for(var i = 0; i < 3; i++){
+                    sum += eval(tds[i * 2 + 1].innerHTML);
+                }
+                tds[6].innerHTML = sum;
+            });
+            realSort();
+        }
+    </script>
+    <!-- Table goes in the document BODY -->
+    <div style="text-align: center;">
+        <table class="altrowstable" id="tableForGroup" align="center"></table>
+    </div>
+    <script id="getAllCodeforcesScoresScript">
+
+        const table = document.querySelector("#tableForGroup");
+        // table.innerHTML = "<tr><td>成员1</td><td>成员2</td><td>成员3</td></tr>\n"
+        // for(let i=0;i<groupList.length;i++){
+        //     const thisGroup = groupList[i];
+        //     table.innerHTML += "<tr><td>"+thisGroup[0]+"</td><td id='score_"+thisGroup[0]+"'>Getting</td><td>"+thisGroup[1]+"</td><td id='"+thisGroup[1]+"'>Getting</td><td>"+thisGroup[2]+"</td><td id='"+thisGroup[2]+"'>Getting</td></tr>\n";
+        // }
+        groupList.forEach(thisGroup => {
+            table.innerHTML += "<tr><td>" + thisGroup[0] + "</td><td id='score_" + thisGroup[0] + "'>Getting...</td><td>" + thisGroup[1] + "</td><td id='score_" + thisGroup[1] + "''>Getting...</td><td>" + thisGroup[2] + "</td><td id='score_" + thisGroup[2] + "''>Getting...</td><td class='sum'>总计</td></tr>\n";
+        });
+        setTimeout(() => {
+            getAllScoresQuietly();
+        }, 10);
+    </script>
+    <!-- Javascript goes in the document HEAD -->
+    <script type="text/javascript">
+        function altRows(table) {
+            if (document.getElementsByTagName) {
+
+                var rows = table.getElementsByTagName("tr");
+
+                for (i = 0; i < rows.length; i++) {
+                    if (i % 2 == 0) {
+                        rows[i].className = "evenrowcolor";
+                    } else {
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+        const tables = document.querySelectorAll(".altrowstable");
+        tables.forEach(thisTable => altRows(thisTable));
+    </script>
+</body>
+
+</html>
