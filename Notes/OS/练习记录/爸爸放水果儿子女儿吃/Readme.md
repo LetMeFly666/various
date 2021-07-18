@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 20:15:38
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 20:25:29
+ * @LastEditTime: 2021-07-18 20:33:38
 -->
 
 # 爸爸放水果儿子女儿吃
@@ -56,3 +56,45 @@ void main()
 ```
 
 <large><font color="red">100分√</font></large>
+
+参考答案：PPT老师代码：(semaphore拼错啦)
+```cpp
+semphore S＝1;
+semphore Sa＝0;
+semphore So＝0;
+main()
+{cobegin
+    father();      /*父亲进程*/
+    son();        /*儿子进程*/
+    daughter();    /*女儿进程*/
+coend
+｝ 
+
+son( )
+{   while(True)
+    { P(So);
+        从盘中取出桔子;
+        V(S);
+        吃桔子;
+    ｝
+}
+
+father( )
+{   while(True)
+    {   P(S);
+        将水果放入盘中;
+        if（放入的是桔子）V(So);
+        else  V(Sa);
+    }
+}
+
+daughter( )
+{   while(True)
+    {  P(Sa);
+        从盘中取出苹果;
+        V(S);
+        吃苹果;
+    ｝
+｝
+```
+自己写的时候完全没有看PPT哦，基本上完全一样👍,加油！
