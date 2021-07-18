@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 18:58:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 19:08:59
+ * @LastEditTime: 2021-07-18 19:11:13
 -->
 # 四区域传递问题
 > 有3个进程：get, copy和put，它们对4个存储区域f、s、t和g进行操作：
@@ -35,6 +35,12 @@ void copy()
         // P(emptyT);
         // put it into t;
         // V(fullT);
+
+        P(fullS);
+        P(emptyT);
+        from s to t;
+        V(fullT);
+        V(emptyS);
     }
 }
 
