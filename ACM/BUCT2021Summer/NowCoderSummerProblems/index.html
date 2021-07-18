@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 14:00:59
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 16:20:47
+ * @LastEditTime: 2021-07-18 18:48:45
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -27,4 +27,18 @@
     <!-- <a href="10"> -->第十场<!-- </a> --><br /><hr />
     
 </body>
+    <script> // 其实是应该在题目界面使用的
+        function getSelectedLanguageName(){
+            const language = document.querySelector(".language-list");
+            const lis = language.querySelectorAll("li");
+            const len = lis.length;
+            for(var i = 0; i < len; i++){
+            
+                if(lis[i].className == 'el-select-dropdown__item flex-row selected hover'){
+                    const span = lis[i].querySelector('span');
+                    return span.innerText;
+                }
+            }
+        }
+    </script>
 </html>
