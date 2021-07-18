@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 18:58:17
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 19:07:36
+ * @LastEditTime: 2021-07-18 19:08:59
 -->
 # 四区域传递问题
 > 有3个进程：get, copy和put，它们对4个存储区域f、s、t和g进行操作：
@@ -27,13 +27,14 @@ void copy()
 {
     while(true)
     {
-        P(fullS);
-        get one from s;
-        V(emptyS);
+        // 答案上是两个条件都满足的时候，一下子从s就到t了
+        // P(fullS);
+        // get one from s;
+        // V(emptyS);
 
-        P(emptyT);
-        put it into t;
-        V(fullT);
+        // P(emptyT);
+        // put it into t;
+        // V(fullT);
     }
 }
 
