@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 20:38:49
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 20:52:27
+ * @LastEditTime: 2021-07-18 21:01:40
 -->
 
 # 录像厅放映
@@ -19,10 +19,26 @@
 > 用一个进程代表观众，试实现观众进程的观看录像函数VideoShow(vid:integer)，以遵守放映规则。其中vid表示观众选择的录像片编号。要求：用信号量方法，并给出定义及初值。
 
 ```cpp
-semaphore showing[3]={0, 0, 0}, change=1;
+// semaphore showing[3]={0, 0, 0}, change=1;
+int count[3] = {0, 0, 0}; // 每个vid的目前人数
+semaphore mutex=1; // 切换权
+semaphore m[3] = {1, 1, 1}; // 修改该vid人数的权力
 
 void VideoShow(int vid)
 {
-    
+    P(m[vid])
+    if(count[vid]==0)
+    {
+        P(mutex);
+        change video to vid;
+    }
+    count[vid]++;
+    V(m[vid]);
+    enjoy the movie;
+    P(m[vid]);
+    count[vid]--;
+    if(count[vid]==0)
+        V(mutex);
+    V(m[vid]);
 }
 ```
