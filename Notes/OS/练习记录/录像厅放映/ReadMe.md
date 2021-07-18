@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 20:38:49
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 21:01:40
+ * @LastEditTime: 2021-07-18 22:12:01
 -->
 
 # 录像厅放映
@@ -35,6 +35,29 @@ void VideoShow(int vid)
     count[vid]++;
     V(m[vid]);
     enjoy the movie;
+    P(m[vid]);
+    count[vid]--;
+    if(count[vid]==0)
+        V(mutex);
+    V(m[vid]);
+}
+```
+
+### 大约1h后重写：
+```cpp
+semaphore mutex=1, m[3]={1, 1, 1};
+int count[3]={0, 0, 0};
+
+void VideoShow(int vid)
+{
+    P(m[vid]);
+    if(count[vid]==0)
+    {
+        P(mutex);
+        Change vodeo to vid;
+    }
+    V(m[vid]);
+    Enjoy the video;
     P(m[vid]);
     count[vid]--;
     if(count[vid]==0)
