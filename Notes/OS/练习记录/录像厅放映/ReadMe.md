@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-18 20:38:49
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-18 22:12:01
+ * @LastEditTime: 2021-07-18 22:13:29
 -->
 
 # 录像厅放映
@@ -56,6 +56,7 @@ void VideoShow(int vid)
         P(mutex);
         Change vodeo to vid;
     }
+    count[vid]++; // 刚刚忘记count[vid]++啦！！！
     V(m[vid]);
     Enjoy the video;
     P(m[vid]);
