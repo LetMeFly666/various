@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-20 11:51:14
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-20 13:51:46
+ * @LastEditTime: 2021-07-20 16:06:07
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -12,32 +12,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://LetMeFly666.github.io/various/Links/MyIP.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
     <title>作业提交</title>
 </head>
 
 <body>
-    <script>console.log(MyIP);</script>
-    <input type="file" name="file" id="file_upload">
+    <input type="file" name="file" id="file_upload" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
     <input type="button" value="上传" onclick="FileUpload()">
     <script>
-        var form_data = new FormData();
-        var file_info = $('#file_upload')[0].files[0];
-        form_data.append('file', file_info);
-        //if(file_info==undefined)暂且不许要判断是否有附件
-        //alert('你没有选择任何文件');
-        //return false
-        $.ajax({
-            url: '/upload_ajax/',
-            type: 'POST',
-            data: form_data,
-            processData: false,  // tell jquery not to process the data
-            contentType: false, // tell jquery not to set contentType
-            success: function (callback) {
+        // var form_data = new FormData();
+        // var file_info = $('#file_upload')[0].files[0];
+        // form_data.append('file', file_info);
+        // //if(file_info==undefined)暂且不许要判断是否有附件
+        // //alert('你没有选择任何文件');
+        // //return false
+        // $.ajax({
+        //     url: MyIP+'homeworkSubmit/',
+        //     type: 'POST',
+        //     data: form_data,
+        //     processData: false,  // tell jquery not to process the data
+        //     contentType: false, // tell jquery not to set contentType
+        //     success: function (callback) {
 
-                console.log('ok')
-            }
-        });
+        //         console.log('ok')
+        //     }
+        // });
+    </script>
+    <script>
+        const file_tag = document.querySelector('#file_upload');
+        const file_list = file_tag.files;
+        if(file_list.length == 0){
+            // TODO: 未上传
+        }
+        const file = file_list[0];
+        
     </script>
 </body>
 
