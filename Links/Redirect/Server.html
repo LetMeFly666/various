@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>我的服务器</title>
-	<script>location.href="http://8.140.30.66/"</script>
+    <script>
+        const nowHref = location.href;
+        const parameter = nowHref.split('?');
+        var toAdd = '';
+        if (parameter.length > 1) {
+            toAdd = parameter[1];
+        }
+        location.href = "http://8.140.30.66/" + toAdd;
+    </script>
 </head>
+
 <body>
 
     <p>啊哈，没有跳转吗</p>
-	<p>可以等一会儿</p>
-	<p>也可Ctrl+F5刷新试试</p>
+    <p>可以等一会儿</p>
+    <p>也可Ctrl+F5刷新试试</p>
 
 </body>
+
 </html>
