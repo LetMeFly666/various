@@ -1,0 +1,8 @@
+
+F:\OtherApps\Program\Git\Store\Store2_Web_Various\various>git add .   & git commit -m "ht-"   & git checkout master   & git merge dev   & git push  & git checkout dev 
+[dev af92403] ht-
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 hr
+Already up to date.
+M	hr
+Your branch is up to date with 'original/dev'.
