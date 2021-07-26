@@ -8,6 +8,7 @@ int power(int a, int b, int mod)
         if (b & 1)
             ans = (ll)ans * a % mod;
         a = (ll)a * a % mod;
+        b >>= 1;
     }
     return ans;
 }

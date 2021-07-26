@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-26 17:29:09
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-26 17:31:48
+ * @LastEditTime: 2021-07-26 17:33:08
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,6 +20,7 @@ int power(int a, int b, int mod)
         if (b & 1)
             ans = (ll)ans * a % mod;
         a = (ll)a * a % mod;
+        b >>= 1;
     }
     return ans;
 }
