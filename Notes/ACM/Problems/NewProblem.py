@@ -35,7 +35,7 @@ if not os.path.exists(fullName):
     os.mkdir(fullName)
     os.mkdir(f'{fullName}\\Description')
     with open(f"{fullName}\\Description\\Readme.md", 'w', encoding='utf-8')as f:
-        f.write(f'# {fullName}')
+        f.write(f'# {name}')
     with open(f"{fullName}\\index.html", 'w', encoding='utf-8')as f:
         f.write(index_qian)
     with open(f"{fullName}\\main.cpp", 'w', encoding='utf-8')as f:
