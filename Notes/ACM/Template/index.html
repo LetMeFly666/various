@@ -2,29 +2,32 @@
  * @Author: LetMeFly
  * @Date: 2021-07-26 17:37:09
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-27 10:16:47
+ * @LastEditTime: 2021-07-27 10:26:56
 -->
 <a href="快速幂.cpp">快速幂</a><br />
 <a href="64位整数乘法.cpp">64位整数乘法</a><br />
 
 <a id="a_669f42471887293021ce767f3e64fd1b" class="off" onclick="showAndHide(this)">点击测试</a>
 <script>
-    function showAndHide(a)
-    {
+    function Request(src){
+        const request = new XMLHttpRequest();
+        request.open("GET", src, false);
+        response = request.send()
+        console.log(response);
+    }
+    function showAndHide(a){
         const Class = a.className;
         const id = a.id.split('a_')[1];
-        if(Class=="off")
-        {
+        if(Class=="off"){
             a.className = "on";
-            const frame = document.createElement('frame');
-            frame.id = 'frame_'+id;
-            const jsNode = document.createElement('script');
-            jsNode.id='js_'+id;
-            jsNode.src="https://gist.github.com/LetMeFly666/"+id+".js";
-            a.appendChild(frame);
-
-            console.log(jsNode);
-            frame.appendChild(jsNode);
+            const div = document.createElement('div');
+            div.id="div_"+id;
+            const src="https://gist.github.com/LetMeFly666/"+id+".js";
+            Request(src);
+            a.appendChild(div);
+        }
+        else{
+            a.Class = "off";
         }
     }
 </script>
