@@ -41,6 +41,6 @@ if not os.path.exists(fullName):
     with open(f"{fullName}\\main.cpp", 'w', encoding='utf-8')as f:
         f.write('')
     with open(f"{basePath}index.html", "a+", encoding='utf-8')as f:
-        f.write(f'\n<a href="{name}/">{name}</a> <small><a href="{online_address}">{online_name}</a></small><br /><hr />\n')
+        f.write(f'\n    <a href="{name}/">{name}</a> <small><a href="{online_address}">{online_name}</a></small>\n    <br /><hr />\n')
 else:
     print("此文件夹已存在")
