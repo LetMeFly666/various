@@ -25,14 +25,15 @@ index_qian = '''<iframe id="frame1" src="Description" frameborder="0" scrolling=
 '''
 
 import os
-name = input("新问题的名称[64位整数乘法]：")
+basePath='f:\\OtherApps\\Program\\Git\\Store\\Store2_Web_Various\\various\\Notes\\ACM\\Problems\\'
+name = basePath+input("新问题的名称[64位整数乘法]：")
 online_name = input("在线题目名称[AcWing90]：")
 online_address = input("题目地址[https://www.acwing.com/problem/content/92/]：")
 
 if not os.path.exists(name):
     os.mkdir(name)
     os.mkdir(f'{name}\\Description')
-    with open("{name}\\Description\\Readme.md", 'w', encoding='utf-8')as f:
+    with open(f"{name}\\Description\\Readme.md", 'w', encoding='utf-8')as f:
         f.write(f'# {name}')
     with open(f"{name}\\index.html", 'w', encoding='utf-8')as f:
         f.write(index_qian)
