@@ -2,23 +2,27 @@
  * @Author: LetMeFly
  * @Date: 2021-07-27 11:21:12
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-27 11:32:25
+ * @LastEditTime: 2021-07-27 11:34:22
 -->
 64位整数乘法
 
+
+<iframe id="frame1" src="Description" frameborder="0" scrolling="no" width="100%"></iframe>
+
 <script>
-    function changeFrameHeight(){
-        var iframe= document.getElementById("frame1");
-        console.log(iframe);
-        iframe.height = iframe.contentDocument.body.clientHeight;
-    }
-    window.οnresize=function(){
-        changeFrameHeight();
-    }
+    function setIframeHeight(iframe) {
+			if (iframe) {
+				var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+				if (iframeWin.document.body) {
+					iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+				}
+			}
+		};
+
+		window.onload = function () {
+			setIframeHeight(document.getElementById('frame1'));
+		};
 </script>
-
-<iframe id="frame1" src="Description" frameborder="0" scrolling="no" width="100%" οnlοad="changeFrameHeight()"></iframe>
-
 
 <div id="codes">
     <script>
