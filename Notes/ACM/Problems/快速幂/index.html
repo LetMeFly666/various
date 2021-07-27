@@ -2,9 +2,25 @@
  * @Author: LetMeFly
  * @Date: 2021-07-27 09:42:26
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-27 12:19:10
+ * @LastEditTime: 2021-07-27 16:02:33
 -->
 <iframe id="frame1" src="Description" frameborder="0" scrolling="no" width="100%"></iframe>
+
+<script>
+    function setIframeHeight(iframe) {
+			if (iframe) {
+				var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+				if (iframeWin.document.body) {
+					iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+				}
+			}
+		};
+
+		window.onload = function () {
+			setIframeHeight(document.getElementById('frame1'));
+		};
+</script>
+
 
 <!-- <script src="https://gist.github.com/LetMeFly666/669f42471887293021ce767f3e64fd1b.js"></script> -->
 
