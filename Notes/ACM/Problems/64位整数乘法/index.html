@@ -2,11 +2,20 @@
  * @Author: LetMeFly
  * @Date: 2021-07-27 11:21:12
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-07-27 11:23:28
+ * @LastEditTime: 2021-07-27 11:26:57
 -->
 64位整数乘法
 
-<iframe src="Description" frameborder="0"></iframe>
+<iframe src="Description" frameborder="0" scrolling="no" width="100%" οnlοad="changeFrameHeight()"></iframe>
+<script>
+        function changeFrameHeight(){
+            var iframe= document.getElementById("myiframe");
+            iframe.height = iframe.contentDocument.body.clientHeight;
+        }
+        window.οnresize=function(){
+            changeFrameHeight();
+        }
+</script>
 
 <div id="codes">
     <script>
