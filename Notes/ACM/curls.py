@@ -6,6 +6,7 @@ LastEditTime: 2021-07-27 09:31:17
 '''
 from os import environ, system
 from sys import argv
+import pyperclip
 import requests
 import json
 
@@ -39,6 +40,11 @@ response = requests.post(
 try:
     gistId = response.json()['id']
     print(gistId)
-    print(f'<script src="https://gist.github.com/LetMeFly666/{gistId}.js"></script>')
+    src = f'https://gist.github.com/LetMeFly666/{gistId}.js'
+    print(f'<script src="{src}"></script>')
+    script = requests.get(src).text
+    toWrite = '<div id="codes"><script>'+script+'</script></div>'
+    pyperclip.copy(toWrite)
+    print("已复制到剪贴板")
 except:
     print(response.text)
