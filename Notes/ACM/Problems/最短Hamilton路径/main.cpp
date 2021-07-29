@@ -20,7 +20,7 @@ int main()
         for(int j=0;j<n;j++) // 现在到了j
             if(i>>j&1) // j这一位必须是1
                 for(int k=0;k<n;k++) // 枚举上一位
-                    if((i-(1<<j))>>k&1==0) // 上一位还没走过
+                    if((i-(1<<j))>>k&1) // 上一位走过了
                         f[i][j]=min(f[i][j], f[i-(1<<j)][k]+weight[k][j]);
     cout<<f[(1<<n)-1][n-1]<<endl;
     return 0;
