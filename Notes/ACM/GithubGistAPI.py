@@ -18,7 +18,7 @@ if len(argv) < 2:
 
 api = environ.get("GithubGistApi")
 filename = argv[1].split('\\')[-1] if len(argv) == 2 else argv[2]
-content = open(argv[1]).read()
+content = open(argv[1], 'r', encoding='utf-8').read()
 
 response = requests.post(
     url="https://api.github.com/gists",
