@@ -39,3 +39,13 @@
   > + | 加减  |  位移  | 大小比较 | 位与 | 异或 | 位或 |
   >   | :--: | :--: | :--: | :--: | :--: | ---- |
   >   | +,-   | <<,>>  | <,>,==,!= | & | xor(C++^) | \| |
+
++ lowbit
+  > GCC编译器提供了一些内置函数可以高效计算lowbit以及二进制数中1的个数。但并非C语言标准，有的函数更是与极其或编译器版本相关的。另外，部分竞赛禁止使用下划线开头的库函数，故这些内置函数尽量不要随便使用。
+  > + ```int __builtin_ctz(unsigned int x)```
+  >   ```int __builtin_ctzll(unsigned long long x)```
+  >   返回二进制最后一个1后面有多少个0
+  >  
+  > + ```int __builtin_popcount(unsigned int x)```
+  >   ```int __builtin_popcountll(unsigned long long x)```
+  >   返回二进制下有多少位1
