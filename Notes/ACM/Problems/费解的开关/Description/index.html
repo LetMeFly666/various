@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Readme</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ''><h1><a name="费解的开关" class="md-header-anchor"></a><span>费解的开关</span></h1><h2><a name="问题描述" class="md-header-anchor"></a><span>问题描述</span></h2><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.162ex" height="1.994ex" viewBox="0 -755.9 2222.4 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E1-MJMAIN-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path stroke-width="0" id="E1-MJMAIN-D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMAIN-35" x="0" y="0"></use><use xlink:href="#E1-MJMAIN-D7" x="722" y="0"></use><use xlink:href="#E1-MJMAIN-35" x="1722" y="0"></use></g></svg></span><script type="math/tex">5\times5</script><span>的</span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.323ex" height="1.994ex" viewBox="0 -755.9 1000 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E2-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path stroke-width="0" id="E2-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJMAIN-30"></use><use xlink:href="#E2-MJMAIN-31" x="500" y="0"></use></g></svg></span><script type="math/tex">01</script><span>地图，</span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.161ex" height="1.994ex" viewBox="0 -755.9 500 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E3-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMAIN-30" x="0" y="0"></use></g></svg></span><script type="math/tex">0</script><span>代表这个灯是关着的，</span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.161ex" height="1.877ex" viewBox="0 -755.9 500 808.1" role="img" focusable="false" style="vertical-align: -0.121ex;"><defs><path stroke-width="0" id="E4-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E4-MJMAIN-31" x="0" y="0"></use></g></svg></span><script type="math/tex">1</script><span>代表是开着的。</span></p><p><span>每次点击一盏灯，它及它的上下左右共</span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.161ex" height="1.994ex" viewBox="0 -755.9 500 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E5-MJMAIN-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E5-MJMAIN-35" x="0" y="0"></use></g></svg></span><script type="math/tex">5</script><span>盏灯的开关状态都会发生置换。</span></p><p><span>问你能不能在</span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.161ex" height="1.994ex" viewBox="0 -755.9 500 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E6-MJMAIN-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMAIN-36" x="0" y="0"></use></g></svg></span><script type="math/tex">6</script><span>步之内把所有的灯点亮。</span></p><h2><a name="解题思路" class="md-header-anchor"></a><span>解题思路</span></h2><p><span>不如先枚举第一行的每个灯的点与不点(</span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.635ex" height="2.461ex" viewBox="0 -956.9 3287.1 1059.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E7-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path stroke-width="0" id="E7-MJMAIN-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path stroke-width="0" id="E7-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E7-MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E7-MJMAIN-32" x="0" y="0"></use><use transform="scale(0.707)" xlink:href="#E7-MJMAIN-35" x="707" y="555"></use><use xlink:href="#E7-MJMAIN-3D" x="1231" y="0"></use><g transform="translate(2287,0)"><use xlink:href="#E7-MJMAIN-33"></use><use xlink:href="#E7-MJMAIN-32" x="500" y="0"></use></g></g></svg></span><script type="math/tex">2^5=32</script><span>种情况)，之后第一行就不再动了，第一行没亮的灯由第二行对应的那盏灯点亮。</span></p><p><span>最后看最后一行是否都是亮着的。</span></p><p><strong><span>剪枝</span></strong><span>：中途一旦遇到步数已经大于6就退出。</span></p>
+<!-- ****************** --><div id="codes"><script>document.write('<link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-fec3781cf7686b910dd55b110aa63edf.css">')
+document.write('<div id=\"gist111010725\" class=\"gist\">\n    <div class=\"gist-file\" translate=\"no\">\n      <div class=\"gist-data\">\n        <div class=\"js-gist-file-update-container js-task-list-container file-box\">\n  <div id=\"file-cpp\" class=\"file my-2\">\n    \n  <div itemprop=\"text\" class=\"Box-body p-0 blob-wrapper data type-c  \">\n\n      \n<table class=\"highlight tab-size js-file-line-container\" data-tab-size=\"8\" data-paste-markdown-skip>\n      <tr>\n        <td id=\"file-cpp-L1\" class=\"blob-num js-line-number\" data-line-number=\"1\"><\/td>\n        <td id=\"file-cpp-LC1\" class=\"blob-code blob-code-inner js-file-line\">#<span class=\"pl-k\">include<\/span> <span class=\"pl-s\"><span class=\"pl-pds\">&lt;<\/span>bits/stdc++.h<span class=\"pl-pds\">&gt;<\/span><\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L2\" class=\"blob-num js-line-number\" data-line-number=\"2\"><\/td>\n        <td id=\"file-cpp-LC2\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">using<\/span> <span class=\"pl-k\">namespace<\/span> <span class=\"pl-en\">std<\/span><span class=\"pl-k\">;<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L3\" class=\"blob-num js-line-number\" data-line-number=\"3\"><\/td>\n        <td id=\"file-cpp-LC3\" class=\"blob-code blob-code-inner js-file-line\">#<span class=\"pl-k\">define<\/span> <span class=\"pl-en\">mem<\/span>(<span class=\"pl-v\">a<\/span>) memset(a, <span class=\"pl-c1\">0<\/span>, <span class=\"pl-k\">sizeof<\/span>(a))<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L4\" class=\"blob-num js-line-number\" data-line-number=\"4\"><\/td>\n        <td id=\"file-cpp-LC4\" class=\"blob-code blob-code-inner js-file-line\">#<span class=\"pl-k\">define<\/span> <span class=\"pl-en\">dbg<\/span>(<span class=\"pl-v\">x<\/span>) cout &lt;&lt; #x &lt;&lt; <span class=\"pl-s\"><span class=\"pl-pds\">&quot;<\/span> = <span class=\"pl-pds\">&quot;<\/span><\/span> &lt;&lt; x &lt;&lt; endl<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L5\" class=\"blob-num js-line-number\" data-line-number=\"5\"><\/td>\n        <td id=\"file-cpp-LC5\" class=\"blob-code blob-code-inner js-file-line\">#<span class=\"pl-k\">define<\/span> <span class=\"pl-en\">fi<\/span>(<span class=\"pl-v\">i, l, r<\/span>) <span class=\"pl-k\">for<\/span> (<span class=\"pl-k\">int<\/span> i = l; i &lt; r; i++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L6\" class=\"blob-num js-line-number\" data-line-number=\"6\"><\/td>\n        <td id=\"file-cpp-LC6\" class=\"blob-code blob-code-inner js-file-line\">#<span class=\"pl-k\">define<\/span> <span class=\"pl-en\">cd<\/span>(<span class=\"pl-v\">a<\/span>) scanf(<span class=\"pl-s\"><span class=\"pl-pds\">&quot;<\/span>%d<span class=\"pl-pds\">&quot;<\/span><\/span>, &amp;a)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L7\" class=\"blob-num js-line-number\" data-line-number=\"7\"><\/td>\n        <td id=\"file-cpp-LC7\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">typedef<\/span> <span class=\"pl-k\">long<\/span> <span class=\"pl-k\">long<\/span> ll;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L8\" class=\"blob-num js-line-number\" data-line-number=\"8\"><\/td>\n        <td id=\"file-cpp-LC8\" class=\"blob-code blob-code-inner js-file-line\">#<span class=\"pl-k\">define<\/span> <span class=\"pl-en\">size<\/span> <span class=\"pl-c1\">5<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L9\" class=\"blob-num js-line-number\" data-line-number=\"9\"><\/td>\n        <td id=\"file-cpp-LC9\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">bool<\/span> mp[size][size]; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 这个用来保存输入<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L10\" class=\"blob-num js-line-number\" data-line-number=\"10\"><\/td>\n        <td id=\"file-cpp-LC10\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">bool<\/span> test[size][size]; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 这个是用来尝试的数组，每次copy自mp，之后随便改<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L11\" class=\"blob-num js-line-number\" data-line-number=\"11\"><\/td>\n        <td id=\"file-cpp-LC11\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">void<\/span> <span class=\"pl-en\">debug<\/span>(<span class=\"pl-k\">bool<\/span> mp[size][size]) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> debug用，打印当前数组<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L12\" class=\"blob-num js-line-number\" data-line-number=\"12\"><\/td>\n        <td id=\"file-cpp-LC12\" class=\"blob-code blob-code-inner js-file-line\">{<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L13\" class=\"blob-num js-line-number\" data-line-number=\"13\"><\/td>\n        <td id=\"file-cpp-LC13\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> i=<span class=\"pl-c1\">0<\/span>;i&lt;size;i++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L14\" class=\"blob-num js-line-number\" data-line-number=\"14\"><\/td>\n        <td id=\"file-cpp-LC14\" class=\"blob-code blob-code-inner js-file-line\">    {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L15\" class=\"blob-num js-line-number\" data-line-number=\"15\"><\/td>\n        <td id=\"file-cpp-LC15\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> j=<span class=\"pl-c1\">0<\/span>;j&lt;size;j++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L16\" class=\"blob-num js-line-number\" data-line-number=\"16\"><\/td>\n        <td id=\"file-cpp-LC16\" class=\"blob-code blob-code-inner js-file-line\">            cout&lt;&lt;mp[i][j];<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L17\" class=\"blob-num js-line-number\" data-line-number=\"17\"><\/td>\n        <td id=\"file-cpp-LC17\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-c1\">puts<\/span>(<span class=\"pl-s\"><span class=\"pl-pds\">&quot;<\/span><span class=\"pl-pds\">&quot;<\/span><\/span>);<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L18\" class=\"blob-num js-line-number\" data-line-number=\"18\"><\/td>\n        <td id=\"file-cpp-LC18\" class=\"blob-code blob-code-inner js-file-line\">    }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L19\" class=\"blob-num js-line-number\" data-line-number=\"19\"><\/td>\n        <td id=\"file-cpp-LC19\" class=\"blob-code blob-code-inner js-file-line\">}<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L20\" class=\"blob-num js-line-number\" data-line-number=\"20\"><\/td>\n        <td id=\"file-cpp-LC20\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">void<\/span> <span class=\"pl-en\">scan<\/span>() <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 输入用<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L21\" class=\"blob-num js-line-number\" data-line-number=\"21\"><\/td>\n        <td id=\"file-cpp-LC21\" class=\"blob-code blob-code-inner js-file-line\">{<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L22\" class=\"blob-num js-line-number\" data-line-number=\"22\"><\/td>\n        <td id=\"file-cpp-LC22\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">for<\/span> (<span class=\"pl-k\">int<\/span> i = <span class=\"pl-c1\">0<\/span>; i &lt; size; i++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L23\" class=\"blob-num js-line-number\" data-line-number=\"23\"><\/td>\n        <td id=\"file-cpp-LC23\" class=\"blob-code blob-code-inner js-file-line\">    {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L24\" class=\"blob-num js-line-number\" data-line-number=\"24\"><\/td>\n        <td id=\"file-cpp-LC24\" class=\"blob-code blob-code-inner js-file-line\">        string s;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L25\" class=\"blob-num js-line-number\" data-line-number=\"25\"><\/td>\n        <td id=\"file-cpp-LC25\" class=\"blob-code blob-code-inner js-file-line\">        cin&gt;&gt;s;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L26\" class=\"blob-num js-line-number\" data-line-number=\"26\"><\/td>\n        <td id=\"file-cpp-LC26\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> j=<span class=\"pl-c1\">0<\/span>;j&lt;size;j++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L27\" class=\"blob-num js-line-number\" data-line-number=\"27\"><\/td>\n        <td id=\"file-cpp-LC27\" class=\"blob-code blob-code-inner js-file-line\">            mp[i][j]=s[j]==<span class=\"pl-s\"><span class=\"pl-pds\">&#39;<\/span>1<span class=\"pl-pds\">&#39;<\/span><\/span>;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L28\" class=\"blob-num js-line-number\" data-line-number=\"28\"><\/td>\n        <td id=\"file-cpp-LC28\" class=\"blob-code blob-code-inner js-file-line\">    }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L29\" class=\"blob-num js-line-number\" data-line-number=\"29\"><\/td>\n        <td id=\"file-cpp-LC29\" class=\"blob-code blob-code-inner js-file-line\">}<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L30\" class=\"blob-num js-line-number\" data-line-number=\"30\"><\/td>\n        <td id=\"file-cpp-LC30\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">int<\/span> dir[<span class=\"pl-c1\">5<\/span>][<span class=\"pl-c1\">2<\/span>]={{-<span class=\"pl-c1\">1<\/span>,<span class=\"pl-c1\">0<\/span>},{<span class=\"pl-c1\">1<\/span>,<span class=\"pl-c1\">0<\/span>},{<span class=\"pl-c1\">0<\/span>,-<span class=\"pl-c1\">1<\/span>},{<span class=\"pl-c1\">0<\/span>,<span class=\"pl-c1\">1<\/span>},{<span class=\"pl-c1\">0<\/span>,<span class=\"pl-c1\">0<\/span>}}; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 这个点开始，上下左右中，共影响5个点<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L31\" class=\"blob-num js-line-number\" data-line-number=\"31\"><\/td>\n        <td id=\"file-cpp-LC31\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">void<\/span> <span class=\"pl-en\">click<\/span>(<span class=\"pl-k\">int<\/span> x, <span class=\"pl-k\">int<\/span> y)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L32\" class=\"blob-num js-line-number\" data-line-number=\"32\"><\/td>\n        <td id=\"file-cpp-LC32\" class=\"blob-code blob-code-inner js-file-line\">{<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L33\" class=\"blob-num js-line-number\" data-line-number=\"33\"><\/td>\n        <td id=\"file-cpp-LC33\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> puts(&quot;Before click:&quot;);<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L34\" class=\"blob-num js-line-number\" data-line-number=\"34\"><\/td>\n        <td id=\"file-cpp-LC34\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> debug(test);<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L35\" class=\"blob-num js-line-number\" data-line-number=\"35\"><\/td>\n        <td id=\"file-cpp-LC35\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> i=<span class=\"pl-c1\">0<\/span>;i&lt;<span class=\"pl-c1\">5<\/span>;i++) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 遍历这5个点<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L36\" class=\"blob-num js-line-number\" data-line-number=\"36\"><\/td>\n        <td id=\"file-cpp-LC36\" class=\"blob-code blob-code-inner js-file-line\">    {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L37\" class=\"blob-num js-line-number\" data-line-number=\"37\"><\/td>\n        <td id=\"file-cpp-LC37\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">int<\/span> tx=x+dir[i][<span class=\"pl-c1\">0<\/span>]; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> toX：要到的x是当前的x加上步长<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L38\" class=\"blob-num js-line-number\" data-line-number=\"38\"><\/td>\n        <td id=\"file-cpp-LC38\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">int<\/span> ty=y+dir[i][<span class=\"pl-c1\">1<\/span>];<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L39\" class=\"blob-num js-line-number\" data-line-number=\"39\"><\/td>\n        <td id=\"file-cpp-LC39\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">if<\/span>(tx&gt;=<span class=\"pl-c1\">0<\/span>&amp;&amp;tx&lt;size&amp;&amp;ty&gt;=<span class=\"pl-c1\">0<\/span>&amp;&amp;ty&lt;size) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 如果没有出界<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L40\" class=\"blob-num js-line-number\" data-line-number=\"40\"><\/td>\n        <td id=\"file-cpp-LC40\" class=\"blob-code blob-code-inner js-file-line\">            test[tx][ty]^=<span class=\"pl-c1\">1<\/span>; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 开变成关，关变成开<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L41\" class=\"blob-num js-line-number\" data-line-number=\"41\"><\/td>\n        <td id=\"file-cpp-LC41\" class=\"blob-code blob-code-inner js-file-line\">            <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> test[tx][ty]=~test[tx][ty]; // 不可以！<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L42\" class=\"blob-num js-line-number\" data-line-number=\"42\"><\/td>\n        <td id=\"file-cpp-LC42\" class=\"blob-code blob-code-inner js-file-line\">    }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L43\" class=\"blob-num js-line-number\" data-line-number=\"43\"><\/td>\n        <td id=\"file-cpp-LC43\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> printf(&quot;After clicked (%d, %d):\\n&quot;,x,y);<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L44\" class=\"blob-num js-line-number\" data-line-number=\"44\"><\/td>\n        <td id=\"file-cpp-LC44\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> debug(test);<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L45\" class=\"blob-num js-line-number\" data-line-number=\"45\"><\/td>\n        <td id=\"file-cpp-LC45\" class=\"blob-code blob-code-inner js-file-line\">}<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L46\" class=\"blob-num js-line-number\" data-line-number=\"46\"><\/td>\n        <td id=\"file-cpp-LC46\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">void<\/span> <span class=\"pl-en\">copy<\/span>() <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 把mp赋值给test<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L47\" class=\"blob-num js-line-number\" data-line-number=\"47\"><\/td>\n        <td id=\"file-cpp-LC47\" class=\"blob-code blob-code-inner js-file-line\">{<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L48\" class=\"blob-num js-line-number\" data-line-number=\"48\"><\/td>\n        <td id=\"file-cpp-LC48\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> i=<span class=\"pl-c1\">0<\/span>;i&lt;size;i++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L49\" class=\"blob-num js-line-number\" data-line-number=\"49\"><\/td>\n        <td id=\"file-cpp-LC49\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> j=<span class=\"pl-c1\">0<\/span>;j&lt;size;j++)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L50\" class=\"blob-num js-line-number\" data-line-number=\"50\"><\/td>\n        <td id=\"file-cpp-LC50\" class=\"blob-code blob-code-inner js-file-line\">            test[i][j]=mp[i][j];<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L51\" class=\"blob-num js-line-number\" data-line-number=\"51\"><\/td>\n        <td id=\"file-cpp-LC51\" class=\"blob-code blob-code-inner js-file-line\">}<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L52\" class=\"blob-num js-line-number\" data-line-number=\"52\"><\/td>\n        <td id=\"file-cpp-LC52\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">int<\/span> <span class=\"pl-en\">execute<\/span>(<span class=\"pl-k\">int<\/span> step) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 执行函数<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L53\" class=\"blob-num js-line-number\" data-line-number=\"53\"><\/td>\n        <td id=\"file-cpp-LC53\" class=\"blob-code blob-code-inner js-file-line\">{<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L54\" class=\"blob-num js-line-number\" data-line-number=\"54\"><\/td>\n        <td id=\"file-cpp-LC54\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> debug(test);//*******<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L55\" class=\"blob-num js-line-number\" data-line-number=\"55\"><\/td>\n        <td id=\"file-cpp-LC55\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> i=<span class=\"pl-c1\">1<\/span>;i&lt;size;i++) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 第2~5行<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L56\" class=\"blob-num js-line-number\" data-line-number=\"56\"><\/td>\n        <td id=\"file-cpp-LC56\" class=\"blob-code blob-code-inner js-file-line\">    {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L57\" class=\"blob-num js-line-number\" data-line-number=\"57\"><\/td>\n        <td id=\"file-cpp-LC57\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> j=<span class=\"pl-c1\">0<\/span>;j&lt;size;j++) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 第1~5个<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L58\" class=\"blob-num js-line-number\" data-line-number=\"58\"><\/td>\n        <td id=\"file-cpp-LC58\" class=\"blob-code blob-code-inner js-file-line\">        {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L59\" class=\"blob-num js-line-number\" data-line-number=\"59\"><\/td>\n        <td id=\"file-cpp-LC59\" class=\"blob-code blob-code-inner js-file-line\">            <span class=\"pl-k\">if<\/span>(!test[i-<span class=\"pl-c1\">1<\/span>][j]) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 如果是关着的<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L60\" class=\"blob-num js-line-number\" data-line-number=\"60\"><\/td>\n        <td id=\"file-cpp-LC60\" class=\"blob-code blob-code-inner js-file-line\">            {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L61\" class=\"blob-num js-line-number\" data-line-number=\"61\"><\/td>\n        <td id=\"file-cpp-LC61\" class=\"blob-code blob-code-inner js-file-line\">                <span class=\"pl-c1\">click<\/span>(i,j); <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 点击<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L62\" class=\"blob-num js-line-number\" data-line-number=\"62\"><\/td>\n        <td id=\"file-cpp-LC62\" class=\"blob-code blob-code-inner js-file-line\">                step++; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 步数+1<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L63\" class=\"blob-num js-line-number\" data-line-number=\"63\"><\/td>\n        <td id=\"file-cpp-LC63\" class=\"blob-code blob-code-inner js-file-line\">                <span class=\"pl-k\">if<\/span>(step&gt;<span class=\"pl-c1\">6<\/span>)<span class=\"pl-k\">return<\/span> step; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 剪枝<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L64\" class=\"blob-num js-line-number\" data-line-number=\"64\"><\/td>\n        <td id=\"file-cpp-LC64\" class=\"blob-code blob-code-inner js-file-line\">            }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L65\" class=\"blob-num js-line-number\" data-line-number=\"65\"><\/td>\n        <td id=\"file-cpp-LC65\" class=\"blob-code blob-code-inner js-file-line\">        }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L66\" class=\"blob-num js-line-number\" data-line-number=\"66\"><\/td>\n        <td id=\"file-cpp-LC66\" class=\"blob-code blob-code-inner js-file-line\">    }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L67\" class=\"blob-num js-line-number\" data-line-number=\"67\"><\/td>\n        <td id=\"file-cpp-LC67\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> debug(test);//*******<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L68\" class=\"blob-num js-line-number\" data-line-number=\"68\"><\/td>\n        <td id=\"file-cpp-LC68\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> j=<span class=\"pl-c1\">0<\/span>;j&lt;size;j++) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 遍历最后一行的每一盏灯<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L69\" class=\"blob-num js-line-number\" data-line-number=\"69\"><\/td>\n        <td id=\"file-cpp-LC69\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">if<\/span>(!test[size-<span class=\"pl-c1\">1<\/span>][j]) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 如果是关着的<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L70\" class=\"blob-num js-line-number\" data-line-number=\"70\"><\/td>\n        <td id=\"file-cpp-LC70\" class=\"blob-code blob-code-inner js-file-line\">            <span class=\"pl-k\">return<\/span> <span class=\"pl-c1\">7<\/span>; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 不可以<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L71\" class=\"blob-num js-line-number\" data-line-number=\"71\"><\/td>\n        <td id=\"file-cpp-LC71\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">return<\/span> step;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L72\" class=\"blob-num js-line-number\" data-line-number=\"72\"><\/td>\n        <td id=\"file-cpp-LC72\" class=\"blob-code blob-code-inner js-file-line\">}<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L73\" class=\"blob-num js-line-number\" data-line-number=\"73\"><\/td>\n        <td id=\"file-cpp-LC73\" class=\"blob-code blob-code-inner js-file-line\"><span class=\"pl-k\">int<\/span> <span class=\"pl-en\">main<\/span>()<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L74\" class=\"blob-num js-line-number\" data-line-number=\"74\"><\/td>\n        <td id=\"file-cpp-LC74\" class=\"blob-code blob-code-inner js-file-line\">{<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L75\" class=\"blob-num js-line-number\" data-line-number=\"75\"><\/td>\n        <td id=\"file-cpp-LC75\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">int<\/span> N;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L76\" class=\"blob-num js-line-number\" data-line-number=\"76\"><\/td>\n        <td id=\"file-cpp-LC76\" class=\"blob-code blob-code-inner js-file-line\">    cin &gt;&gt; N;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L77\" class=\"blob-num js-line-number\" data-line-number=\"77\"><\/td>\n        <td id=\"file-cpp-LC77\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">while<\/span> (N--)<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L78\" class=\"blob-num js-line-number\" data-line-number=\"78\"><\/td>\n        <td id=\"file-cpp-LC78\" class=\"blob-code blob-code-inner js-file-line\">    {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L79\" class=\"blob-num js-line-number\" data-line-number=\"79\"><\/td>\n        <td id=\"file-cpp-LC79\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-c1\">scan<\/span>(); <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 读入<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L80\" class=\"blob-num js-line-number\" data-line-number=\"80\"><\/td>\n        <td id=\"file-cpp-LC80\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">int<\/span> m_step=<span class=\"pl-c1\">7<\/span>; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 最小步数（7已经代表不行了）<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L81\" class=\"blob-num js-line-number\" data-line-number=\"81\"><\/td>\n        <td id=\"file-cpp-LC81\" class=\"blob-code blob-code-inner js-file-line\">        <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> i=<span class=\"pl-c1\">0<\/span>;i&lt;<span class=\"pl-c1\">1<\/span>&lt;&lt;size;i++) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 枚举第一行的所有状态<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L82\" class=\"blob-num js-line-number\" data-line-number=\"82\"><\/td>\n        <td id=\"file-cpp-LC82\" class=\"blob-code blob-code-inner js-file-line\">        {<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L83\" class=\"blob-num js-line-number\" data-line-number=\"83\"><\/td>\n        <td id=\"file-cpp-LC83\" class=\"blob-code blob-code-inner js-file-line\">            <span class=\"pl-c1\">copy<\/span>(); <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 复制给test<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L84\" class=\"blob-num js-line-number\" data-line-number=\"84\"><\/td>\n        <td id=\"file-cpp-LC84\" class=\"blob-code blob-code-inner js-file-line\">            <span class=\"pl-k\">int<\/span> step=<span class=\"pl-c1\">0<\/span>;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L85\" class=\"blob-num js-line-number\" data-line-number=\"85\"><\/td>\n        <td id=\"file-cpp-LC85\" class=\"blob-code blob-code-inner js-file-line\">            <span class=\"pl-k\">for<\/span>(<span class=\"pl-k\">int<\/span> j=<span class=\"pl-c1\">0<\/span>;j&lt;size;j++) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 遍历这个状态数的每一位<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L86\" class=\"blob-num js-line-number\" data-line-number=\"86\"><\/td>\n        <td id=\"file-cpp-LC86\" class=\"blob-code blob-code-inner js-file-line\">                <span class=\"pl-k\">if<\/span>(i&gt;&gt;j&amp;<span class=\"pl-c1\">1<\/span>) <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 如果这一位是1<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L87\" class=\"blob-num js-line-number\" data-line-number=\"87\"><\/td>\n        <td id=\"file-cpp-LC87\" class=\"blob-code blob-code-inner js-file-line\">                    <span class=\"pl-c1\">click<\/span>(<span class=\"pl-c1\">0<\/span>,j),step++; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 点击这个点（其实j反了也无所谓，因为枚举了每一种状态）<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L88\" class=\"blob-num js-line-number\" data-line-number=\"88\"><\/td>\n        <td id=\"file-cpp-LC88\" class=\"blob-code blob-code-inner js-file-line\">            step=<span class=\"pl-c1\">execute<\/span>(step); <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 执行<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L89\" class=\"blob-num js-line-number\" data-line-number=\"89\"><\/td>\n        <td id=\"file-cpp-LC89\" class=\"blob-code blob-code-inner js-file-line\">            m_step=<span class=\"pl-c1\">min<\/span>(m_step,step); <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 取最优<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L90\" class=\"blob-num js-line-number\" data-line-number=\"90\"><\/td>\n        <td id=\"file-cpp-LC90\" class=\"blob-code blob-code-inner js-file-line\">        }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L91\" class=\"blob-num js-line-number\" data-line-number=\"91\"><\/td>\n        <td id=\"file-cpp-LC91\" class=\"blob-code blob-code-inner js-file-line\">        cout&lt;&lt;(m_step&lt;=<span class=\"pl-c1\">6<\/span>?m_step:-<span class=\"pl-c1\">1<\/span>)&lt;&lt;endl; <span class=\"pl-c\"><span class=\"pl-c\">//<\/span> 输出<\/span><\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L92\" class=\"blob-num js-line-number\" data-line-number=\"92\"><\/td>\n        <td id=\"file-cpp-LC92\" class=\"blob-code blob-code-inner js-file-line\">    }<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L93\" class=\"blob-num js-line-number\" data-line-number=\"93\"><\/td>\n        <td id=\"file-cpp-LC93\" class=\"blob-code blob-code-inner js-file-line\">    <span class=\"pl-k\">return<\/span> <span class=\"pl-c1\">0<\/span>;<\/td>\n      <\/tr>\n      <tr>\n        <td id=\"file-cpp-L94\" class=\"blob-num js-line-number\" data-line-number=\"94\"><\/td>\n        <td id=\"file-cpp-LC94\" class=\"blob-code blob-code-inner js-file-line\">}<\/td>\n      <\/tr>\n<\/table>\n\n\n  <\/div>\n\n  <\/div>\n<\/div>\n\n      <\/div>\n      <div class=\"gist-meta\">\n        <a href=\"https://gist.github.com/LetMeFly666/760c34191ceef7bfc6ee0f5564a224a9/raw/5831c138763225409cb7f583e900c80fa10102a2/%E8%B4%B9%E8%A7%A3%E7%9A%84%E5%BC%80%E5%85%B3.cpp\" style=\"float:right\">view raw<\/a>\n        <a href=\"https://gist.github.com/LetMeFly666/760c34191ceef7bfc6ee0f5564a224a9#file-cpp\">费解的开关.cpp<\/a>\n        hosted with &#10084; by <a href=\"https://github.com\">GitHub<\/a>\n      <\/div>\n    <\/div>\n<\/div>\n')
+</script></div>
+</div>
+</body>
+</html>
