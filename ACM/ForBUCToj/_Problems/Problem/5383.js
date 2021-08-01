@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-01 11:47:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-01 12:13:12
+ * @LastEditTime: 2021-08-01 12:22:29
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -289,6 +289,8 @@ window.onload = function () {
     }
     change();
     // Colorful End
+
+    if(isProblem) document.title="单身狗";
 }
 
 function alert(word, hei = 50, Time = 1500) {
