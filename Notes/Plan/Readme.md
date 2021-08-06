@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-06 16:20:32
+ * @LastEditTime: 2021-08-06 17:10:51
 -->
 # 每日任务与计划
 
@@ -23,7 +23,7 @@
 
 - [x] Leetcode每日一题打卡 <font color="red">小难，看着题解打的</font>
 - [x] BUCToj个人排位赛第一场 <font color="red">First blood</font>
-- [ ] 英语单词推荐部分+新词部分 <font color="red"></font>
+- [x] 英语单词推荐部分+新词部分 <font color="red">今日无复习，新学20已完成</font>
 - [ ] 练字 <font color="red"></font>
 - [ ] 背一页毛概 <font color="red"></font>
 - [ ] 运动量达标，早点运动 <font color="red"></font>
