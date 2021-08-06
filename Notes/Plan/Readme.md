@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-06 15:06:44
+ * @LastEditTime: 2021-08-06 16:20:32
 -->
 # 每日任务与计划
 
@@ -23,6 +23,20 @@
 
 - [x] Leetcode每日一题打卡 <font color="red">小难，看着题解打的</font>
 - [x] BUCToj个人排位赛第一场 <font color="red">First blood</font>
+- [ ] 英语单词推荐部分+新词部分 <font color="red"></font>
+- [ ] 练字 <font color="red"></font>
+- [ ] 背一页毛概 <font color="red"></font>
+- [ ] 运动量达标，早点运动 <font color="red"></font>
+- [ ] 操作系统复习，把“OS11（调度）.ppt”看完 <font color="red"></font>
+- [ ] 概率论复习，要做一些题 <font color="red"></font>
+- [ ] 离散复习，继续往前复习总结 <font color="red"></font>
+- [ ] 数论复习，继续往前复习总结 <font color="red"></font>
+- [ ] 读书数页，摘抄好文 <font color="red"></font>
+
+# 2021-8-7
+
+- [ ] Fiddler 打卡抓包
+- [ ] Leetcode每日一题打卡 <font color="red"></font>
 - [ ] 英语单词推荐部分+新词部分 <font color="red"></font>
 - [ ] 练字 <font color="red"></font>
 - [ ] 背一页毛概 <font color="red"></font>
