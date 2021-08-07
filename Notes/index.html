@@ -15,7 +15,7 @@
 
     <a href="ACM/">ACM</a> <br /><hr />
 
-    <a href="Plan/">每日计划与完成情况</a> <br /><hr />
+    <a href="#" id="quinticClickForPlan">每日计划与完成情况</a> <br /><hr />
 
     <a href="Politics/">政治</a> <small><a href="Politics/MaoZeDong/">毛概</a></small><br /><hr />
 
@@ -27,33 +27,38 @@
 
     <a href="English/">英语单词</a> <br /><hr />
 
-    <a href="#" id="quinticClick">For Girl</a> <br /><hr />
+    <a href="#" id="quinticClickToGirl">For Girl</a> <br /><hr />
 
     <script>
         var timer = null;
         var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
         var lastTime = new Date().getTime(); // 上次点击时间
         var count = 0; // 连续点击次数
-        // 获取对象
-        var oBtn = document.getElementById('quinticClick');
-        oBtn.onclick = function(event) {
-            var currentTime = new Date().getTime();
-            // 计算两次相连的点击时间间隔
-            count = (currentTime-lastTime) < waitTime ? count + 1 : 1;
-            lastTime = new Date().getTime();
-            clearTimeout(timer);
-            timer = setTimeout(function() {
+        const addClick=function(object, href){
+            object.onclick = function(event) {
+                var currentTime = new Date().getTime();
+                // 计算两次相连的点击时间间隔
+                count = (currentTime-lastTime) < waitTime ? count + 1 : 1;
+                lastTime = new Date().getTime();
                 clearTimeout(timer);
-                // 处理点击事件
-                console.log(count);
+                timer = setTimeout(function() {
+                    clearTimeout(timer);
+                    // 处理点击事件
+                    console.log(count);
 
-                if (count == 5) {
-                    // 连续点击五次
-                    console.log('连续点击了5次');
-                    location.href="./ToGirl";
-                }
-            }, waitTime + 10)
-        };
+                    if (count == 5) {
+                        // 连续点击五次
+                        console.log('连续点击了5次');
+                        location.href=href;
+                    }
+                }, waitTime + 10)
+            };
+        }
+        // 获取对象
+        const forGirl = document.getElementById('quinticClickToGirl');
+        addClick(forGirl, "ToGirl");
+        const forPlan = document.querySelector("#quinticClickForPlan");
+        addClick(forPlan, "Plan");
     </script>
 
 </body>
