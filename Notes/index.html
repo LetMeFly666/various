@@ -27,6 +27,35 @@
 
     <a href="English/">英语单词</a> <br /><hr />
 
+    <a href="#" id="quinticClick">For Girl</a> <br /><hr />
+
+    <script>
+        var timer = null;
+        var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
+        var lastTime = new Date().getTime(); // 上次点击时间
+        var count = 0; // 连续点击次数
+        // 获取对象
+        var oBtn = document.getElementById('quinticClick');
+        oBtn.onclick = function(event) {
+            var currentTime = new Date().getTime();
+            // 计算两次相连的点击时间间隔
+            count = (currentTime-lastTime) < waitTime ? count + 1 : 1;
+            lastTime = new Date().getTime();
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                clearTimeout(timer);
+                // 处理点击事件
+                console.log(count);
+
+                if (count == 5) {
+                    // 连续点击五次
+                    console.log('连续点击了5次');
+                    location.href="./ToGirl";
+                }
+            }, waitTime + 10)
+        };
+    </script>
+
 </body>
 
 </html>
