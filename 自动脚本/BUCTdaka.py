@@ -83,13 +83,13 @@ if __name__ == '__main__':
         'sfcxzysx': '0',
         'sfyyjc': '0',
         'jcjgqr': '0',
-        'remark': '返校后继续发扬打卡习惯，现在已经 ' + getTh(),
+        'remark': f'六点起床第{getTh()}天，早睡早起增强抵抗力',
         'address': ADDRESS_BUCTDAKA,
         'geo_api_info': GEOAPIINFO_BUCTDAKA,
         'area': AREA_BUCTDAKA,
         'province': PROVINCE_BUCTDAKA,
         'city': CITY_BUCTDAKA,
-        'sfzx' : '0',
+        'sfzx' : '1',
         'sfjcwhry': '0',
         'sfjchbry': '0',
         'sfcyglq': '0',
@@ -121,6 +121,7 @@ if __name__ == '__main__':
         'sfsqhzjkk': '',
         'sqhzjkkys': '',
         'qksm': '',
+        'fxyy': '一直在校集训未回家',
             
         }
 
