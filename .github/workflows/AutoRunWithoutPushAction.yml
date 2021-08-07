@@ -3,6 +3,8 @@ name: 'Auto Run At 21:00UTC'
 on:
   schedule:
     - cron: '0 22 * * *'
+  push:
+    branches: [ master ]
 
 
 jobs:
