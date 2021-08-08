@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 12:58:24
+ * @LastEditTime: 2021-08-08 15:32:48
 -->
 # 每日任务与计划
 
@@ -52,8 +52,8 @@
 - [x] **做好今天的觉悟了吗** <font color="red">~~刷完力扣来此回复~~，完成在先娱乐在后</font>
 - [x] Leetcode每日一题打卡 <font color="red">简单题</font>
 - [x] 英语单词推荐部分+新词部分 <font color="red">背完</font>
-- [ ] 练字 <font color="red"></font>
-- [ ] **准备好今天完成所有了吗**  <font color="red"></font>
+- [x] 练字 <font color="red">描摹了一页左右</font>
+- [x] **准备好今天完成所有了吗**  <font color="red">要迅速了</font>
 - [ ] 背一页毛概 <font color="red"></font>
 - [ ] 运动量达标，早点运动 <font color="red"></font>
 - [ ] 操作系统复习，把“OS11（调度）.ppt”看完 <font color="red"></font>

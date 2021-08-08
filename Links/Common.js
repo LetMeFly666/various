@@ -2,8 +2,9 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 13:35:43
+ * @LastEditTime: 2021-08-08 15:31:39
  */
+//#region 多次点击后跳转
 var timer = null;
 var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
 var lastTime = new Date().getTime(); // 上次点击时间
@@ -28,3 +29,4 @@ const addClick = function (object, href, clickTimes=5) {
         }, waitTime + 10)
     };
 }
+//#endregion
