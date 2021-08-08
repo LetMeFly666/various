@@ -7,7 +7,7 @@ def getdate():
 
 
 def getTh():
-    a = str(datetime.datetime.utcnow() - datetime.datetime(2021,3,26))
+    a = str(datetime.datetime.utcnow() - datetime.datetime(2021,8,6))
     try:
         a = a.split(',')[0]
     except:

@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-07 23:25:42
+ * @LastEditTime: 2021-08-08 10:56:19
 -->
 # 每日任务与计划
 
@@ -49,7 +49,7 @@
 
 ## 2021-8-8
 
-- [ ] **做好今天的觉悟了吗** <font color="red"></font>
+- [ ] **做好今天的觉悟了吗** <font color="red">刷完力扣来此回复</font>
 - [ ] Leetcode每日一题打卡 <font color="red"></font>
 - [ ] 英语单词推荐部分+新词部分 <font color="red"></font>
 - [ ] 练字 <font color="red"></font>
@@ -58,7 +58,7 @@
 - [ ] 运动量达标，早点运动 <font color="red"></font>
 - [ ] 操作系统复习，把“OS11（调度）.ppt”看完 <font color="red"></font>
 - [ ] 概率论复习，要做一些题 <font color="red"></font>
-- [ ] 打字练习，**不重在多，重在积累** <font color="red"></font>
+- [ ] 打字练习，**不重在多，重在积累**，享受打字的快感 <font color="red"></font>
 - [ ] 离散复习，继续往前复习总结 <font color="red"></font>
 - [ ] 数论复习，继续往前复习总结 <font color="red"></font>
 - [ ] 读书数页，摘抄好文 <font color="red"></font>
