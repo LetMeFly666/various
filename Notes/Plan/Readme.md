@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 18:23:04
+ * @LastEditTime: 2021-08-08 21:03:46
 -->
 # 每日任务与计划
 
@@ -56,8 +56,8 @@
 - [x] **准备好今天完成所有了吗**  <font color="red">要迅速了</font>
 - [x] 背一页毛概 <font color="red">花费时间有点长</font>
 - [ ] 运动量达标，早点运动 <font color="red"></font>
-- [ ] 操作系统复习，把“OS11（调度）.ppt”看完 <font color="red"></font>
-- [ ] 概率论复习，要做一些题 <font color="red"></font>
+- [x] 操作系统复习，把“OS11（调度）.ppt”看完 <font color="red">明天记得总结总结</font>
+- [x] 概率论复习，要做一些题 <font color="red">做了学解上第一章的题</font>
 - [x] 打字练习，**不重在多，重在积累**，享受打字的快感 <font color="red">尤其是自己在宿舍那大概十来分钟，老爽了。但是现在没用机械键盘；又打了谈美的片段摘抄</font>
 - [ ] 离散复习，继续往前复习总结 <font color="red"></font>
 - [ ] 数论复习，继续往前复习总结 <font color="red"></font>
