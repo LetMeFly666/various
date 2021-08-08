@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 10:56:19
+ * @LastEditTime: 2021-08-08 11:12:51
 -->
 # 每日任务与计划
 
@@ -49,8 +49,8 @@
 
 ## 2021-8-8
 
-- [ ] **做好今天的觉悟了吗** <font color="red">刷完力扣来此回复</font>
-- [ ] Leetcode每日一题打卡 <font color="red"></font>
+- [x] **做好今天的觉悟了吗** <font color="red">~~刷完力扣来此回复~~，完成在先娱乐在后</font>
+- [x] Leetcode每日一题打卡 <font color="red"></font>
 - [ ] 英语单词推荐部分+新词部分 <font color="red"></font>
 - [ ] 练字 <font color="red"></font>
 - [ ] **准备好今天完成所有了吗**  <font color="red"></font>
