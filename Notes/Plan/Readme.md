@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 15:32:48
+ * @LastEditTime: 2021-08-08 17:15:14
 -->
 # 每日任务与计划
 
@@ -54,11 +54,11 @@
 - [x] 英语单词推荐部分+新词部分 <font color="red">背完</font>
 - [x] 练字 <font color="red">描摹了一页左右</font>
 - [x] **准备好今天完成所有了吗**  <font color="red">要迅速了</font>
-- [ ] 背一页毛概 <font color="red"></font>
+- [x] 背一页毛概 <font color="red">花费时间有点长</font>
 - [ ] 运动量达标，早点运动 <font color="red"></font>
 - [ ] 操作系统复习，把“OS11（调度）.ppt”看完 <font color="red"></font>
 - [ ] 概率论复习，要做一些题 <font color="red"></font>
-- [ ] 打字练习，**不重在多，重在积累**，享受打字的快感 <font color="red"></font>
+- [x] 打字练习，**不重在多，重在积累**，享受打字的快感 <font color="red">尤其是自己在宿舍那大概十来分钟，老爽了。但是现在没用机械键盘</font>
 - [ ] 离散复习，继续往前复习总结 <font color="red"></font>
 - [ ] 数论复习，继续往前复习总结 <font color="red"></font>
 - [ ] 读书数页，摘抄好文 <font color="red"></font>
