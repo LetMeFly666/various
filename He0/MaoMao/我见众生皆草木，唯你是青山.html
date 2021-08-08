@@ -20,11 +20,89 @@ div.btnbg {
     position:fixed;
     left:0;
     top:0;
+    width: 900px;
+}
+#svgBox{
+	width:100%;
+	margin:100px auto;
+}
+.text{
+	font-size: 64px;
+	font-weight: bold;
+	text-transform: uppercase;
+	fill: none;
+	stroke-width: 2px;
+	stroke-dasharray: 90 310;
+	animation: stroke 6s infinite linear;
+}
+.text-1{
+	stroke: #3498db;
+	text-shadow: 0 0 5px #3498db;
+	animation-delay: -1.5s;
+}
+.text-2{
+	stroke: #f39c12;
+	text-shadow: 0 0 5px #f39c12;
+	animation-delay: -3s;
+}
+.text-3{
+	stroke: #e74c3c;
+	text-shadow: 0 0 5px #e74c3c;
+	animation-delay: -4.5s;
+}
+.text-4{
+	stroke: #9b59b6;
+	text-shadow: 0 0 5px #9b59b6;
+	animation-delay: -6s;
+}
+@keyframes stroke {
+	100% {
+		stroke-dashoffset: -400;
+	}
+}
+.svgText{
+	width:600px;
+	margin:0 auto;
+}
+.svgText h3{
+	font-size:18px;
+	color:#333;
+	line-height:2;
+}
+.svgText p{
+	font-size:16px;
+	color:#888;
+	line-height:2;
+}
+.svgText p a,.svgText p a:hover{
+	color:#01a6fc;
+	font-weight:600;
+}
+.svgText ul li{
+	font-size:16px;
+	color:#888;
+	line-height:2;
 }
 </style>
 <body>
 <canvas id="sakura"></canvas>
-<div class="btnbg">
+<div class="btnbg" align="center">
+    <div id="svgBox">
+        <svg width="100%" height="100">
+            <text text-anchor="middle" x="50%" y="50%" class="text text-1">
+                我见众生皆草木，唯你是青山
+            </text>
+            <text text-anchor="middle" x="50%" y="50%" class="text text-2">
+                我见众生皆草木，唯你是青山
+            </text>
+            <text text-anchor="middle" x="50%" y="50%" class="text text-3">
+                我见众生皆草木，唯你是青山
+            </text>
+            <text text-anchor="middle" x="50%" y="50%" class="text text-4">
+                我见众生皆草木，唯你是青山
+            </text>
+        </svg>
+    </div>
 </div>
 
 <!-- sakura shader -->
