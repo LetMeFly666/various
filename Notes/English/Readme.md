@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-06 16:22:47
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-07 14:07:14
+ * @LastEditTime: 2021-08-08 11:51:34
 -->
 # 单词
 
@@ -12,3 +12,4 @@
 + eclipse n./vt. 食；(使)消失/黯然失色
 + deserve vt.应受，值得 [例]You deserve the honor.你应该得到这份荣誉。
 + revenge n./vt. (为..)复仇
++ subscribe v. 订阅；同意，赞成；捐助
