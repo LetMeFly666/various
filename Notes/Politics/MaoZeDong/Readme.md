@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:25:37
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-10 11:40:23
+ * @LastEditTime: 2021-08-10 11:41:16
 -->
 # 毛概笔记
 
@@ -71,7 +71,7 @@
 ### 什么是中国共产党领导中国革命胜利的法宝？它们之间是什么关系？
 毛泽东在《<共产党人>发刊词》一文中，<font color="warning">总结了</font>中国革命两次胜利和两次失败的经验。揭示了中国革命发展的客观规律，把**统一战线**、**武装斗争**、**党的建设**比做党在中国革命战胜敌人的<font color="warning">三个主要的法宝</font>。
 
-毛泽东在《<共产党人>发刊词》一文中，<font color="warning">总结了</font>中国革命两次胜利和两次失败的经验。揭示了中国革命发展的客观规律，把<strong>统一战线</strong>、<strong>武装斗争</strong>、<strong>党的建设</strong>比做党在中国革命战胜敌人的<font color="warning">三个主要的法宝</font>。
+毛泽东在《<共产党人>发刊词》一文中，<font color="warning">总结了</font>中国革命两次胜利和两次失败的经验。揭示了中国革命发展的客观规律，把**统一战线**、**武装斗争**、**党的建设**比做党在中国革命战胜敌人的<font color="warning">三个主要的法宝</font>。456
 
 毛泽东在《<共产党人>发刊词》一文中，<font color="warning">总结了</font>中国革命两次胜利和两次失败的经验。揭示了中国革命发展的客观规律，把<strong>统一战线</strong>、<strong>武装斗争</strong>、<strong>党的建设</strong>比做党在中国革命战胜敌人的<font color="warning">三个主要的法宝</font>。
 1. **统一战线**是无产阶级政党策略思想的<font color="warning">重要内容</font>。建立最广泛的统一战线，首先是由中国半殖民地半封建社会的<font color="warning">阶级状况</font>所决定的。建立最广泛的统一战线，也是由中国革命的长期性、残酷性极其<font color="warning">发展的不平衡性</font>所决定的。
