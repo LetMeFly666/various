@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-09 23:35:44
+ * @LastEditTime: 2021-08-10 11:20:42
 -->
 # 每日任务与计划
 
@@ -71,20 +71,20 @@
 - [x] 英语单词推荐部分+新词部分 <font color="red"></font>
 - [ ] 练字 <font color="red"></font>
 - [ ] **准备好今天完成所有了吗** <font color="red"></font>
-- [ ] 背一页毛概 <font color="red"></font>
-- [ ] 运动量达标，早点运动 <font color="red"></font>
+- [x] 背一页毛概 <font color="red">背到0：30，算9号的</font>
+- [x] 运动量达标，早点运动 <font color="red">1w步+专门做了个运动</font>
 - [ ] 操作系统复习 <font color="red"></font>
 - [ ] 概率论复习 <font color="red"></font>
-- [ ] 打字练习，**不重在多，重在积累** <font color="red"></font>
+- [x] 打字练习，**不重在多，重在积累** <font color="red">毛概打字，爽！</font>
 - [ ] 离散复习 <font color="red"></font>
 - [ ] 数论复习 <font color="red"></font>
 - [ ] 读书数页 <font color="red"></font>
 
 ## 2021-8-10
 
-- [ ] 早起（不用多早，8点按时起来即可，顶多懒个十来分钟），**是一项错过了便无法再完成的任务** <font color="red"></font>
-- [ ] Leetcode每日一题打卡 <font color="red"></font>
-- [ ] 英语单词推荐部分+新词部分 <font color="red"></font>
+- [ ] 早起（不用多早，8点按时起来即可，顶多懒个十来分钟），**是一项错过了便无法再完成的任务** <font color="red">9点多起来的，比昨天有进步</font>
+- [x] Leetcode每日一题打卡 <font color="red">100%,98.21%</font>
+- [x] 英语单词推荐部分+新词部分 <font color="red">早上背完了</font>
 - [ ] 练字 <font color="red"></font>
 - [ ] 背一页毛概 <font color="red"></font>
 - [ ] 运动量达标，早点运动 <font color="red"></font>
