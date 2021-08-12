@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-05 18:02:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-11 00:00:29
+ * @LastEditTime: 2021-08-11 12:59:04
 -->
 # 每日任务与计划
 
@@ -97,15 +97,15 @@
 
 ## 2021-8-11
 
-- [ ] 早起（不用多早，8点按时起来即可，顶多懒个十来分钟），**是一项错过了便无法再完成的任务** <font color="red"></font>
-- [] Leetcode每日一题打卡 <font color="red"></font>
-- [] 英语单词推荐部分+新词部分 <font color="red"></font>
+- [x] 早起（不用多早，8点按时起来即可，顶多懒个十来分钟），**是一项错过了便无法再完成的任务** <font color="red">终于完成了，晚上早点睡吧</font>
+- [ ] Leetcode每日一题打卡 <font color="red"></font>
+- [x] 英语单词推荐部分+新词部分 <font color="red"></font>
 - [ ] 练字 <font color="red"></font>
-- [ ] 背一页毛概 <font color="red"></font>
+- [x] 背一页毛概 <font color="red"></font>
 - [] 运动量达标，早点运动 <font color="red"></font>
 - [ ] 操作系统复习 <font color="red"></font>
 - [ ] 概率论复习 <font color="red"></font>
 - [ ] 打字练习，**不重在多，重在积累** <font color="red"></font>
 - [ ] 离散复习 <font color="red"></font>
 - [ ] 数论复习 <font color="red"></font>
-- [ ] 读书数页 <font color="red"></font>
+- [x] 读书数页 <font color="red">子涵的《亲密关系》，争取暑假能看完</font>
