@@ -2,8 +2,23 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 15:31:39
+ * @LastEditTime: 2021-08-12 22:52:04
  */
+
+//#region Title.ico
+(function() {
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = '/Links/Title.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
+}());
+//#endregion
+
+//#region 百度统计
+var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?bfecd9dd681e05b42e4a227c42453c15";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();
+//#endregion
+
 //#region 多次点击后跳转
 var timer = null;
 var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
