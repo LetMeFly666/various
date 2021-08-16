@@ -1,1 +1,1 @@
-const MyIP = 'http://8.140.30.66/'
+const MyIP = 'http://81.70.195.250/'
