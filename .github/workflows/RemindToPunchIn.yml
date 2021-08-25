@@ -3,9 +3,6 @@ name: 'RemindToPunchIn'
 on:
   schedule:
     - cron: '0 8 * * *'  # UTC+8 16:00
-  push:
-    branches:
-      - master
 
 jobs:
   build:
