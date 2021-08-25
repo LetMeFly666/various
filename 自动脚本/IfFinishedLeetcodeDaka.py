@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2021-08-25 12:13:59
 LastEditors: LetMeFly
-LastEditTime: 2021-08-25 12:56:14
+LastEditTime: 2021-08-25 13:14:40
 '''
 from bs4 import BeautifulSoup
 from SendAMail import send_email
@@ -16,11 +16,9 @@ def alreadyDaka() -> bool:
     soup = BeautifulSoup(open("ACM/LeetCode/index.html", "r", encoding="utf-8"))
     allA = soup.findAll('a')
     dateToday = getdate()
-    print(dateToday)
     for a in allA:
         try:
-            thisString = str(a.string)
-            print(thisString)
+            thisString = str(a.string).strip(' ')
             if thisString == dateToday:
                 return True
         except:
