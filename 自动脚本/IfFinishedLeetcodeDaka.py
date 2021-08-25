@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2021-08-25 12:13:59
 LastEditors: LetMeFly
-LastEditTime: 2021-08-25 12:50:11
+LastEditTime: 2021-08-25 12:54:23
 '''
 from bs4 import BeautifulSoup
 from SendAMail import send_email
@@ -16,9 +16,12 @@ def alreadyDaka() -> bool:
     soup = BeautifulSoup(open("ACM/LeetCode/index.html", "r", encoding="utf-8"))
     allA = soup.findAll('a')
     dateToday = getdate()
+    print(dateToday)
+    print(len(allA))
     for a in allA:
         try:
             thisString = a.string
+            print(thisString)
             if thisString == dateToday:
                 return True
         except:
@@ -26,10 +29,6 @@ def alreadyDaka() -> bool:
     return False
 
 
-import os
-print(os.path)
-print(os.getcwd())
-print(os.listdir(os.getcwd()))
 if alreadyDaka():
     print("今日LeetCode打卡已完成！")
 else:

@@ -23,5 +23,5 @@ jobs:
           python -m pip install --upgrade bs4
       - name: 'run Reminder'
         env:
-          ADDRESS_BUCTDAKA: ${{ secrets.ADDRESS_BUCTDAKA }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         run: python 自动脚本/IfFinishedLeetcodeDaka.py
