@@ -2,10 +2,10 @@
 Author: LetMeFly
 Date: 2021-08-25 12:13:59
 LastEditors: LetMeFly
-LastEditTime: 2021-08-25 12:34:38
+LastEditTime: 2021-08-25 12:50:11
 '''
 from bs4 import BeautifulSoup
-from 自动脚本.SendAMail import send_email
+from SendAMail import send_email
 import datetime
 
 def getdate() -> str:
@@ -26,9 +26,12 @@ def alreadyDaka() -> bool:
     return False
 
 
+import os
+print(os.path)
+print(os.getcwd())
+print(os.listdir(os.getcwd()))
 if alreadyDaka():
     print("今日LeetCode打卡已完成！")
 else:
     print("今日打卡未完成")
     send_email(to_who='814114971@qq.com', title="力扣打卡提醒", text="今日力扣还未打卡，快来打卡吧")
-    
