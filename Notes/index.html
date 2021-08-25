@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:54:33
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-12 23:03:38
+ * @LastEditTime: 2021-08-23 20:18:48
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -28,9 +28,9 @@
 
     <a href="ProbabilityTheory/">概率论笔记</a> <br /><hr />
 
-    <a href="DiscreteMathematics/">离散笔记</a> <br /><hr />
+    <a href="#" id="quinticClickForDiscreteMathematics">离散笔记</a> <br /><hr />
 
-    <a href="NumberTheory/">数论笔记</a> <br /><hr />
+    <a href="#" id="quinticClickForNumberTheory">数论笔记</a> <br /><hr />
 
     <a href="English/">英语单词</a> <br /><hr />
 
@@ -41,9 +41,13 @@
     <script src="../Links/Common.js"></script>
     <script>
         const forGirl = document.getElementById('quinticClickToGirl');
-        addClick(forGirl, "ToGirl");
+        addClick(forGirl, "ToGirl/");
         const forPlan = document.querySelector("#quinticClickForPlan");
-        addClick(forPlan, "Plan");
+        addClick(forPlan, "Plan/");
+        const forDiscreteMathematics = document.querySelector("#quinticClickForDiscreteMathematics");
+        addClick(forDiscreteMathematics, "DiscreteMathematics");
+        const forNumberTheory = document.querySelector("#quinticClickForNumberTheory");
+        addClick(forNumberTheory, "NumberTheory/");
     </script>
 
 </body>
