@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-06 16:22:47
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-08 11:51:34
+ * @LastEditTime: 2021-08-26 20:44:12
 -->
 # 单词
 
@@ -13,3 +13,4 @@
 + deserve vt.应受，值得 [例]You deserve the honor.你应该得到这份荣誉。
 + revenge n./vt. (为..)复仇
 + subscribe v. 订阅；同意，赞成；捐助
++ conjugate vi./vt. 使结合 adj. 共轭的，成对的，结合的
