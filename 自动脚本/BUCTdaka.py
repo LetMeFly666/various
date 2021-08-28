@@ -127,7 +127,15 @@ if __name__ == '__main__':
 
     url = 'https://eai.buct.edu.cn/ncov/wap/default/save'
     
-    result = requests.post(url=url, headers=headers, data = datas)
+    alreadyTriedTimes, allNeedToTry = 0, 5
+    while alreadyTriedTimes < allNeedToTry:
+        alreadyTriedTimes += 1
+        try:
+            result = requests.post(url=url, headers=headers, data = datas)
+            break
+        except requests.exceptions.ConnectionError:
+            from time import sleep
+            sleep(60)
     print(result.text)
     # print(getdate())
 
