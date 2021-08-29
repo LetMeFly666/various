@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-29 15:35:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-29 16:11:51
+ * @LastEditTime: 2021-08-29 16:17:00
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -316,7 +316,8 @@ window.onload = function () {
 
     function typing() {
         if (stopTime == 0) { // 已经显示过了
-            i = str.length + 5;
+            back.removeChild(newP);
+            return ;
         }
         if (i <= str.length) {
             newP.innerHTML = str.slice(0, i++) + '_';
