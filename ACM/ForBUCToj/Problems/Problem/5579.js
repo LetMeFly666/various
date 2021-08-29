@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-29 15:35:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-29 15:40:40
+ * @LastEditTime: 2021-08-29 15:56:41
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -265,12 +265,12 @@ window.onload = function () {
         }
     }
 
-    // var back = document.querySelector("body")
-    // var para = document.createElement("div");
-    // var first = document.body.firstChild;
-    // back.insertBefore(para, first);
-    // var newP = document.querySelector("div");
-    // newP.style = "width: 100%; height: 100%; background-color: rgb(254, 254, 254); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
+    var back = document.querySelector("body")
+    var para = document.createElement("div");
+    var first = document.body.firstChild;
+    back.insertBefore(para, first);
+    var newP = document.querySelector("div");
+    newP.style = "width: 100%; height: 100%; background-color: rgb(254, 254, 254); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
     // function show(){
     //     newP.innerHTML = '后天就是五一假期了，小L约好了女生一起出去玩。他还剩下最后一道数论作业，写完就可以去嗨了。';
@@ -280,22 +280,24 @@ window.onload = function () {
     // }
     // show();
 
-    // let i = 0,
-    // timer = 0,
-    // str = '后天就是五一假期了，小L约好了女生一起出去玩。他还剩下最后一道数论作业，写完就可以去嗨了。';
+    let i = 0,
+    timer = 0,
+    str = '这是BUCToj上浙大版《数据结构学习与实验指导（第2版）》的最后一道题了(目前是)，坚持就是胜利，奥里给！';
 
-    // function typing() {
-    //     if (i <= str.length) {
-    //         newP.innerHTML = str.slice(0, i++) + '_';
-    //         timer = setTimeout(typing, 50);
-    //     }
-    //     else {
-    //         newP.innerHTML = str; //结束打字,移除 _ 光标
-    //         clearTimeout(timer);
-    //         back.removeChild(newP);
-    //     }
-    // };
-    // typing();
+    function typing() {
+        if (i <= str.length) {
+            newP.innerHTML = str.slice(0, i++) + '_';
+            timer = setTimeout(typing, 5);
+        }
+        else {
+            newP.innerHTML = str; //结束打字,移除 _ 光标
+            clearTimeout(timer);
+            setTimeout(() => {
+                back.removeChild(newP);
+            }, 450);
+        }
+    };
+    typing();
 
     setTimeout(function () {
         var author = document.querySelector("#creator > a");
