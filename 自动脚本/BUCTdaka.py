@@ -127,16 +127,21 @@ if __name__ == '__main__':
 
     url = 'https://eai.buct.edu.cn/ncov/wap/default/save'
     
-    alreadyTriedTimes, allNeedToTry = 0, 5
+    alreadyTriedTimes, allNeedToTry, succeed = 0, 5, False
     while alreadyTriedTimes < allNeedToTry:
         alreadyTriedTimes += 1
         try:
             result = requests.post(url=url, headers=headers, data = datas)
+            succeed = True
             break
         except requests.exceptions.ConnectionError:
             from time import sleep
             sleep(60)
-    print(result.text)
-    # print(getdate())
+    if succeed:
+        print(result.text)
+        # print(getdate())
+    else:
+        from SendAMail import send_email
+        send_email("814114971@qq.com", "打卡失败提醒", f"尝试了{allNeedToTry}次打卡均未成功，手动打一下叭~")
 
 
