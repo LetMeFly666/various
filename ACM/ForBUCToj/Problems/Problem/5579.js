@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-29 15:35:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-29 15:56:41
+ * @LastEditTime: 2021-08-29 16:09:58
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -282,9 +282,42 @@ window.onload = function () {
 
     let i = 0,
     timer = 0,
-    str = '这是BUCToj上浙大版《数据结构学习与实验指导（第2版）》的最后一道题了(目前是)，坚持就是胜利，奥里给！';
+    str = '这是BUCToj上浙大版《数据结构学习与实验指导（第2版）》的最后一道题了(目前是)，坚持就是胜利，奥里给！',
+    stopTime = 1000;
+
+    function setDealyTime(){
+        function setCookie(cname,cvalue,exdays){
+            var d = new Date();
+            d.setTime(d.getTime()+(exdays*24*60*60*1000));
+            var expires = "expires="+d.toGMTString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+        function getCookie(cname){
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i].trim();
+                if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+            }
+            return "";
+        }
+        function checkCookie(){
+            var thisProblemCookie=getCookie("LetMeFlyProblem5579");
+            if (thisProblemCookie=="LetMeFlyYYDS!5579") {
+                stopTime = 0;
+            }
+            else {
+                setCookie("LetMeFlyProblem5579","LetMeFlyYYDS!5579",3);
+            }
+        }
+        checkCookie();
+    }
+    setDealyTime();
 
     function typing() {
+        if (stopTime == 0) { // 已经显示过了
+            return ;
+        }
         if (i <= str.length) {
             newP.innerHTML = str.slice(0, i++) + '_';
             timer = setTimeout(typing, 5);
@@ -294,7 +327,7 @@ window.onload = function () {
             clearTimeout(timer);
             setTimeout(() => {
                 back.removeChild(newP);
-            }, 450);
+            }, stopTime);
         }
     };
     typing();
