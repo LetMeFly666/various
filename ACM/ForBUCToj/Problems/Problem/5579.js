@@ -265,6 +265,7 @@ window.onload = function () {
         }
     }
 
+    if(isProblem){
     var back = document.querySelector("body")
     var para = document.createElement("div");
     var first = document.body.firstChild;
@@ -337,7 +338,7 @@ window.onload = function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
         author.innerText="2019040474";
-    }, 3000);
+    }, 3000);}
 }
 
 function alert(word, hei = 50, Time = 1500) {
