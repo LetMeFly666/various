@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-10 18:50:33
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-10 19:08:00
+ * @LastEditTime: 2021-09-10 19:26:24
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -40,9 +40,9 @@ window.onload = function () {
     catch(TypeError){
         console.log("Not at Original page");
         try {
-            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div");
-            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(3) > div > div");
-            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(4) > div > div");
+            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(2) > div > div");
+            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(3) > div > div");
+            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(4) > div > div");
             problem_description.innerHTML = begin + problem_description_data + end;
             input_description.innerHTML = begin + input_description_data + end;
             output_description.innerHTML = begin + output_description_data + end;
