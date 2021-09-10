@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-06-04 11:26:56
+ * @LastEditTime: 2021-09-10 19:24:16
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -143,9 +143,9 @@ window.onload = function () {
     catch (TypeError) {
         console.log("Not at Original page");
         try {
-            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(2) > div > div");
-            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(3) > div > div");
-            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(5) > div:nth-child(4) > div > div");
+            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(2) > div > div");
+            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(3) > div > div");
+            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(4) > div > div");
             problem_description.innerHTML = begin + problem_description_data + end;
             input_description.innerHTML = begin + input_description_data + end;
             output_description.innerHTML = begin + output_description_data + end;
