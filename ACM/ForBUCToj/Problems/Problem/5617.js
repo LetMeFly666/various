@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-23 18:26:35
+ * @LastEditTime: 2021-09-23 20:37:53
  */
 /*
  * @Author: LetMeFly
@@ -62,9 +62,21 @@ window.onload = function () {
         }
         catch(TypeError)
         {
-            console.log(TypeError);
-            console.log("Not at second version page");
-            isProblem=0;
+            console.log("May 竞赛状态");
+            try {
+                problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(7) > div:nth-child(2) > div > div");
+                input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(7) > div:nth-child(3) > div > div");
+                output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(7) > div:nth-child(4) > div > div");
+                problem_description.innerHTML = begin + problem_description_data + end;
+                input_description.innerHTML = begin + input_description_data + end;
+                output_description.innerHTML = begin + output_description_data + end;
+                isProblem=3; // 竞赛状态
+            }
+            catch(TypeError) {
+                console.log(TypeError);
+                console.log("Not at second version page");
+                isProblem=0;
+            }
         }
     }
 
@@ -116,6 +128,11 @@ window.onload = function () {
         }
         catch(TypeError) {}
 
+        try {
+            function getStudentNum(){} //FIXME:
+        }
+        catch(TypeError) {}
+        
         document.title = "游戏的彩蛋";
     }
 
