@@ -2,13 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-23 20:37:53
- */
-/*
- * @Author: LetMeFly
- * @Date: 2021-04-28 09:51:41
- * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-10 19:23:41
+ * @LastEditTime: 2021-09-23 21:01:13
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -129,7 +123,53 @@ window.onload = function () {
         catch(TypeError) {}
 
         try {
-            function getStudentNum(){} //FIXME:
+            function getStudentNum() {
+                const numA = document.querySelector("body > div.ui.fixed.borderless.menu > div > div > div > a");
+                const oriNum = numA.innerText;
+                var realNum = 0;
+                for(let i=0;i<oriNum.length;i++) {
+                    if(oriNum[i]>='0'&&oriNum[i]<='9') {
+                        realNum *= 10;
+                        realNum += oriNum[i]-'0';
+                    }
+                }
+                return realNum;
+            }
+            const realNum = getStudentNum();
+            console.log('学号：'+realNum);
+            function welcomeCS1906(realNum) {
+                // 其实可以不用这么if else，但是算了
+                if(realNum==2019040475) {
+                    alert("啟涛加油");
+                    return 2;
+                }
+                if (realNum==2019040471) {
+                    alert("Spln加油");
+                    return 3;
+                }
+                if (realNum==2019040473) {
+                    alert("柯舟加油");
+                    return 4;
+                }
+                if (realNum==2019040472) {
+                    alert("wwwo! 子涵");
+                    return 5;
+                }
+                if (realNum==2019040474) {
+                    alert("Welcome Legendary LetMeFly");
+                    return 0;
+                }
+                if (realNum==2019040450) {
+                    alert("沈大佬加油");
+                    return 6;
+                }
+                if(realNum>=2019040460&&realNum<=2019040483) {
+                    alert("勇敢的计科1906，冲！");
+                    return 1;
+                }
+                return -1;
+            }
+            welcomeCS1906(realNum);
         }
         catch(TypeError) {}
         
