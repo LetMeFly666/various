@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-23 00:02:01
+ * @LastEditTime: 2021-09-23 13:41:35
  */
 /*
  * @Author: LetMeFly
@@ -113,6 +113,8 @@ window.onload = function () {
             addClick(colorEgg, " KMP ");
         }
         catch(TypeError) {}
+
+        document.title = "游戏的彩蛋";
     }
 
     // setTimeout(function () {
