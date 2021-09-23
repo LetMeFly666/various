@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-23 20:12:23
+ * @LastEditTime: 2021-09-23 20:23:40
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -20,9 +20,9 @@ const end = '                </div><div data-report-view="{&quot;mod&quot;:&quot
 
 
 const problem_description_data = '<h3><a id="_31"></a>题目描述</h3> \
-<p>小T找完了男神游戏的彩蛋后自己做了一款找彩蛋的游戏&#xff0c;游戏十分简单&#xff1a;</p> \
+<p><a title="Tisfy">小T</a>找完了<a title="LetMeFly">男神</a>游戏的彩蛋后自己做了一款找彩蛋的游戏&#xff0c;游戏十分简单&#xff1a;</p> \
 <blockquote> \
- <p>和<big><font color="blue">上题</font></big>类似&#xff0c;用序列表示程序。彩蛋的序列<span class="katex--inline"><span class="katex"><span class="katex-mathml">\
+ <p>和<big><a title="游戏的彩蛋">上题</a></big>类似&#xff0c;用序列表示程序。彩蛋的序列<span class="katex--inline"><span class="katex"><span class="katex-mathml">\
      \
       \
        \
