@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-23 20:23:40
+ * @LastEditTime: 2021-09-24 19:02:43
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -432,11 +432,11 @@ window.onload = function () {
         document.title = "彩蛋的游戏";
     }
 
-    // setTimeout(function () {
-    //     var author = document.querySelector("#creator > a");
-    //     author.href = "userinfo.php?user=2019040474";
-    //     author.innerText="2019040474";
-    // }, 3000);
+    setTimeout(function () {
+        var author = document.querySelector("#creator > a");
+        author.href = "userinfo.php?user=2019040474";
+        author.innerText="2019040474";
+    }, 3000);
 }
 
 function alert(word, hei = 50, Time = 1500) {
