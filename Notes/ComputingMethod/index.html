@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-07 16:53:17
+ * @LastEditTime: 2021-10-07 17:22:25
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <title>计算方法</title>
-    <!-- <script src="/Links/Common.js"></script> -->
+    <script src="../../Links/Common.js"></script>
     <style>
         .chapter {
             display: block;
@@ -59,14 +59,14 @@
             iframe.width = '100%';
             theDiv.appendChild(iframe);
             setIframeHeight(iframe);
-            const iframeContent = (iframe.contentWindow || iframe.contentDocument);
-            del = iframeContent;
         }
 
         function setIframeHeight(iframe) {
-            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
             if (iframeWin.document.body) {
-                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                const body = iframeWin.document.body;
+                iframe.height = body.offsetHeight;
+                console.log(iframe.height);
             } else {
                 console.log('iframeWin.document.body 为空');
             }
