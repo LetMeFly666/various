@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-07 17:26:31
+ * @LastEditTime: 2021-10-07 17:31:36
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -48,7 +48,7 @@
     </div>
 
     <script id="expandTheAlgorithm">
-        var del; // 为了调试的全局变量
+        var Iframe; // 为了调试的全局变量
         function expand(theLink, thisElement) {
             const theDiv = thisElement.parentNode;
             console.log(theDiv);
@@ -62,15 +62,18 @@
         }
 
         function setIframeHeight(iframe) {
-            const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-            if (iframeWin.document.body) {
-                const body = iframeWin.document.body;
-                del = body;
-                console.log(body);
-                iframe.height = body.offsetHeight;
-                console.log(iframe.height);
-            } else {
-                console.log('iframeWin.document.body 为空');
+            Iframe = iframe;
+            iframe.onload = () => {
+                const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    const body = iframeWin.document.body;
+                    del = body;
+                    console.log(body);
+                    iframe.height = body.offsetHeight;
+                    console.log(iframe.height);
+                } else {
+                    console.log('iframeWin.document.body 为空');
+                }
             }
         }
     </script>
