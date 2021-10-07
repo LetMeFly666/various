@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-05 23:24:56
+ * @LastEditTime: 2021-10-07 16:53:17
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -10,18 +10,68 @@
 <head>
     <meta charset="UTF-8">
     <title>计算方法</title>
-    <script src="/Links/Common.js"></script>
+    <!-- <script src="/Links/Common.js"></script> -->
+    <style>
+        .chapter {
+            display: block;
+            font-size: 1.3em;
+            font-weight: 549;
+            margin-left: 2em;
+            margin-top: 1.2em;
+        }
+        .algorithm {
+            margin-left: 4em;
+            margin-right: 4em;
+            margin-top: 0.4em;
+        }
+        .algorithm a {
+            cursor: pointer;
+        }
+    </style>
 </head>
 
-<body>
+<body background="../../Links/Picture/PinkAli.jfif">
 
     <h1 style="text-align:center">计算方法</h1><br /><hr />
-<!--     
-    <a href="计算方法笔记">计算方法笔记</a>
-    <br /><hr /> -->
     
     <a href="Codes">计算方法代码</a>
     <br /><hr />
+
+    <div id="LetMeFly_Notes">
+        <h2 style="font-size: 1.8em;">笔记</h2>
+            <a class="chapter">Ch01</a>
+                <div class="algorithm"><a onclick="expand('Codes/Ch01_KaiGenHao/index.html', this)">开根号</a></div>
+                <div class="algorithm"><a>开根号2</a></div>
+            <a class="chapter">Ch01</a>
+                <div class="algorithm"><a>开根号</a></div>
+                <div class="algorithm"><a>开根号</a></div>
+    </div>
+
+    <script id="expandTheAlgorithm">
+        var del; // 为了调试的全局变量
+        function expand(theLink, thisElement) {
+            const theDiv = thisElement.parentNode;
+            console.log(theDiv);
+            const br = document.createElement('br');
+            theDiv.appendChild(br);
+            const iframe = document.createElement('iframe');
+            iframe.src = theLink;
+            iframe.width = '100%';
+            theDiv.appendChild(iframe);
+            setIframeHeight(iframe);
+            const iframeContent = (iframe.contentWindow || iframe.contentDocument);
+            del = iframeContent;
+        }
+
+        function setIframeHeight(iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            } else {
+                console.log('iframeWin.document.body 为空');
+            }
+        }
+    </script>
 
 </body>
 
