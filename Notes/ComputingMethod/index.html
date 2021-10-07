@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-07 17:31:36
+ * @LastEditTime: 2021-10-07 19:21:49
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -27,10 +27,15 @@
         .algorithm a {
             cursor: pointer;
         }
+        body {
+            background-image: url("../../Links/Picture/PinkAli.jfif");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
     </style>
 </head>
 
-<body background="../../Links/Picture/PinkAli.jfif">
+<body>
 
     <h1 style="text-align:center">计算方法</h1><br /><hr />
     
@@ -51,28 +56,107 @@
         var Iframe; // 为了调试的全局变量
         function expand(theLink, thisElement) {
             const theDiv = thisElement.parentNode;
-            console.log(theDiv);
-            const br = document.createElement('br');
-            theDiv.appendChild(br);
-            const iframe = document.createElement('iframe');
-            iframe.src = theLink;
-            iframe.width = '100%';
-            theDiv.appendChild(iframe);
-            setIframeHeight(iframe);
+            const iframe = theDiv.querySelector('iframe');
+            if (iframe) {
+                if (iframe.style.display == 'none') {
+                    iframe.style.display = 'block';
+                    expandSmoothly(iframe, eval(iframe.getAttribute('shouldHeight')))
+                }
+                else {
+                    expandSmoothly(iframe, 0, 0.8, callBackFunction = ()=>{iframe.style.display='none';});
+                }
+            } else {
+                const iframe = document.createElement('iframe');
+                iframe.src = theLink;
+                iframe.width = '100%';
+                theDiv.appendChild(iframe);
+                setIframeHeight(iframe);
+            }
+        }
+
+        /* 将元素平滑展开（高度变成height） */
+        /*      v
+                ↑
+                |   ________________
+                |  /                \
+                | /                  \
+                |/                    \
+            ----+--+---------------+---+-----> t
+               0| 0.2             0.8  1
+                |
+            
+            0.8 * V0 = diff  ==>  V0 = diff / 0.8
+        */
+        function expandSmoothly(element, height, time = 0.8, callBackFunction = null) {
+            const nowHeight = element.offsetHeight;
+            const diff = height - nowHeight;
+            const beginSlowTime = time * 0.2;
+            const endSlowTime = time * 0.2;
+            const evenlyTime = time * 0.6;
+            const V0 = diff / (time * 0.8);
+            const a = V0 / (time * 0.2);
+            var totalTime = 0;
+
+            function begin() {
+                element.height = nowHeight + 0.5 * a * totalTime * totalTime;
+                totalTime += 0.01;
+                if (totalTime <= beginSlowTime) {
+                    setTimeout(() => {
+                        begin();
+                    }, 0.01);
+                } else {
+                    // console.log('After the first expand, the height is:', element.height);
+                    // console.log('Should: ', nowHeight + diff / 8);
+                    middle();
+                }
+            }
+
+            function middle() {
+                element.height = nowHeight + 0.5 * a * beginSlowTime * beginSlowTime + V0 * (totalTime - beginSlowTime);
+                totalTime += 0.01;
+                if (totalTime <= beginSlowTime + evenlyTime) {
+                    setTimeout(() => {
+                        middle();
+                    }, 0.01);
+                } else {
+                    end();
+                }
+            }
+
+            function end() {
+                const thisTime = totalTime - beginSlowTime - evenlyTime;
+                element.height = nowHeight + 0.5 * a * beginSlowTime * beginSlowTime + V0 * evenlyTime + V0 * thisTime - 0.5 * a * thisTime * thisTime;
+                totalTime += 0.01;
+                if (totalTime <= time) {
+                    setTimeout(() => {
+                        end();
+                    }, 0.01);
+                } else {
+                    // console.log("Expanded");
+                    if (callBackFunction) {
+                        callBackFunction();
+                    }
+                }
+            }
+
+            begin();
         }
 
         function setIframeHeight(iframe) {
             Iframe = iframe;
             iframe.onload = () => {
-                const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-                if (iframeWin.document.body) {
-                    const body = iframeWin.document.body;
-                    del = body;
-                    console.log(body);
-                    iframe.height = body.offsetHeight;
-                    console.log(iframe.height);
-                } else {
-                    console.log('iframeWin.document.body 为空');
+                try {
+                    const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                    if (iframeWin.document.body) {
+                        const body = iframeWin.document.body;
+                        iframe.setAttribute('shouldHeight', body.offsetHeight);
+                        expandSmoothly(iframe, body.offsetHeight);
+                    } else {
+                        console.log('iframeWin.document.body 为空');
+                    }
+                } catch(error) {
+                    expandSmoothly(Iframe, 200);
+                    iframe.setAttribute('shouldHeight', 200);
                 }
             }
         }
