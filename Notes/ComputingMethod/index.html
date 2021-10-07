@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-07 19:21:49
+ * @LastEditTime: 2021-10-07 20:33:24
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -24,8 +24,20 @@
             margin-right: 4em;
             margin-top: 0.4em;
         }
-        .algorithm a {
+        .algorithm .unexpand {
             cursor: pointer;
+        }
+        .algorithm .expand {
+            cursor: pointer;
+            color: darkorange;
+            font-size: 1.8em;
+            font-weight: 550;
+        }
+        .algorithm .packUp {
+            cursor: pointer;
+            /* margin-bottom: 0.7em; */ /* 必须设置display: block才能体现 */
+            font-size: 2em;
+            color: #4cae78;
         }
         body {
             background-image: url("../../Links/Picture/PinkAli.jfif");
@@ -45,11 +57,11 @@
     <div id="LetMeFly_Notes">
         <h2 style="font-size: 1.8em;">笔记</h2>
             <a class="chapter">Ch01</a>
-                <div class="algorithm"><a onclick="expand('Codes/Ch01_KaiGenHao/index.html', this)">开根号</a></div>
-                <div class="algorithm"><a>开根号2</a></div>
+                <div class="algorithm"><a class="unexpand" onclick="expand('Codes/Ch01_KaiGenHao/index.html', this)">开根号</a></div>
+                <div class="algorithm"><a class="unexpand">开根号2</a></div>
             <a class="chapter">Ch01</a>
-                <div class="algorithm"><a>开根号</a></div>
-                <div class="algorithm"><a>开根号</a></div>
+                <div class="algorithm"><a class="unexpand">开根号</a></div>
+                <div class="algorithm"><a class="unexpand">开根号</a></div>
     </div>
 
     <script id="expandTheAlgorithm">
@@ -60,10 +72,14 @@
             if (iframe) {
                 if (iframe.style.display == 'none') {
                     iframe.style.display = 'block';
-                    expandSmoothly(iframe, eval(iframe.getAttribute('shouldHeight')))
+                    thisElement.setAttribute('class', 'expand')
+                    expandSmoothly(iframe, eval(iframe.getAttribute('shouldHeight')));
+                    theDiv.querySelector('.packUp').style.display = 'block';
                 }
                 else {
                     expandSmoothly(iframe, 0, 0.8, callBackFunction = ()=>{iframe.style.display='none';});
+                    thisElement.setAttribute('class', 'unexpand');
+                    theDiv.querySelector('.packUp').style.display = 'none';
                 }
             } else {
                 const iframe = document.createElement('iframe');
@@ -71,6 +87,13 @@
                 iframe.width = '100%';
                 theDiv.appendChild(iframe);
                 setIframeHeight(iframe);
+                thisElement.setAttribute('class', 'expand')
+                const packUp = document.createElement('a');
+                packUp.innerText = '▲ 收起';
+                packUp.setAttribute('class', 'packUp');
+                packUp.setAttribute('onclick', "this.parentNode.querySelector('.expand').click();");
+                packUp.style.display = 'block';
+                theDiv.appendChild(packUp);
             }
         }
 
@@ -150,13 +173,14 @@
                     if (iframeWin.document.body) {
                         const body = iframeWin.document.body;
                         iframe.setAttribute('shouldHeight', body.offsetHeight);
+                        iframe.setAttribute('scrolling', 'no');
                         expandSmoothly(iframe, body.offsetHeight);
                     } else {
                         console.log('iframeWin.document.body 为空');
                     }
                 } catch(error) {
-                    expandSmoothly(Iframe, 200);
-                    iframe.setAttribute('shouldHeight', 200);
+                    expandSmoothly(Iframe, 500);
+                    iframe.setAttribute('shouldHeight', 500);
                 }
             }
         }
