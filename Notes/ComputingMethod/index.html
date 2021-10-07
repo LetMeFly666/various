@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-07 17:22:25
+ * @LastEditTime: 2021-10-07 17:26:31
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -65,6 +65,8 @@
             const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
             if (iframeWin.document.body) {
                 const body = iframeWin.document.body;
+                del = body;
+                console.log(body);
                 iframe.height = body.offsetHeight;
                 console.log(iframe.height);
             } else {
