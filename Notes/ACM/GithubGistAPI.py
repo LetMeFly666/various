@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2021-07-26 19:42:18
 LastEditors: LetMeFly
-LastEditTime: 2021-10-05 23:16:07
+LastEditTime: 2021-10-08 08:59:39
 '''
 from os import environ, system
 from sys import argv
@@ -11,7 +11,7 @@ import requests
 import json
 
 if len(argv) < 2:
-    print("请传递文件参数\naa.bat bb.cpp\naa.bat bb.cpp ccname")
+    print("请传递文件参数\naa.bat bb.cpp\naa.bat bb.cpp ccname.cpp")
     system("pause")
     exit(-1)
 
