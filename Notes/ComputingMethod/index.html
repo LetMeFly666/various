@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-05 22:24:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-07 21:53:11
+ * @LastEditTime: 2021-10-08 08:24:17
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -85,6 +85,7 @@
                 const iframe = document.createElement('iframe');
                 iframe.src = theLink;
                 iframe.width = '100%';
+                iframe.height = 0;
                 theDiv.appendChild(iframe);
                 setIframeHeight(iframe);
                 thisElement.setAttribute('class', 'expand')
