@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-22 03:08:30
+ * @LastEditTime: 2021-10-22 03:13:05
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -66,7 +66,7 @@ window.onload = function () {
         }
         catch(TypeError) {}
 
-        document.title = "彩蛋的游戏";
+        document.title = "逃离";
     }
 
     setTimeout(function () {
