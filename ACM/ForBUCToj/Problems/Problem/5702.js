@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-22 14:39:04
+ * @LastEditTime: 2021-10-22 14:49:37
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -77,6 +77,12 @@ window.onload = function () {
             link.rel = 'shortcut icon';
             link.href = 'http://letmefly666.github.io/various/Links/Title.ico';
             document.getElementsByTagName('head')[0].appendChild(link);
+
+            setTimeout(function () {
+                var author = document.querySelector("#creator > a");
+                author.href = "userinfo.php?user=2019040474";
+                author.innerText="2019040474";
+            }, 3000);
         }
         catch(TypeError) {}
 
@@ -115,12 +121,6 @@ window.onload = function () {
             }, 2000);
         }
     }
-
-    setTimeout(function () {
-        var author = document.querySelector("#creator > a");
-        author.href = "userinfo.php?user=2019040474";
-        author.innerText="2019040474";
-    }, 3000);
 
     alertTheThirdProblemsError();
 }
