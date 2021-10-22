@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-22 03:23:14
+ * @LastEditTime: 2021-10-22 14:39:04
  */
 const begin = '<div id="article_content" class="article_content clearfix">\n\
         <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
@@ -83,11 +83,46 @@ window.onload = function () {
         document.title = "剪切";
     }
 
+    function setCookie(cname,cvalue,exmins){
+        console.log(cvalue);
+        var d = new Date();
+        d.setTime(d.getTime()+(exmins*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname+"="+cvalue+"; "+expires;
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+    
+    function deleteCookie(cname, path='') {
+        var toSet = cname+"=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        if (path) toSet += ";path="+path;
+        document.cookie = toSet;
+    }
+
+    function alertTheThirdProblemsError() {
+        const already = getCookie("LetThirdProblem");
+        if (!already) {
+            alert("C题样例已更正，十分抱歉", hei=50, Time=3000);
+            setTimeout(() => {
+                setCookie("LetThirdProblem", "HadSeen", 60*24*10); // 3天
+            }, 2000);
+        }
+    }
+
     setTimeout(function () {
         var author = document.querySelector("#creator > a");
         author.href = "userinfo.php?user=2019040474";
         author.innerText="2019040474";
     }, 3000);
+
+    alertTheThirdProblemsError();
 }
 
 function alert(word, hei = 50, Time = 1500) {
