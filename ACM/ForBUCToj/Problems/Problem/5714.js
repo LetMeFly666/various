@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:42:57
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-29 12:15:40
+ * @LastEditTime: 2021-10-29 12:23:20
  */
 // import 'http://letmefly666.github.io/various/ACM/ForBUCToj/Common.js'
 
@@ -22,9 +22,9 @@ const problemName = '内卷还是躺平';
 var script1=document.createElement('script');//创建script标签节点
 script1.setAttribute('type','text/javascript');//设置script类型
 script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js');//设置js地址
-document.body.appendChild(script1);//将js追加为body的子标签
+document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemName, inputDescriptionData, outputDescriptionData, problemName);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName);
 }
