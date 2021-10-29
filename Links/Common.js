@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-08-12 22:52:04
+ * @LastEditTime: 2021-10-29 11:31:31
  */
 
 //#region Title.ico
@@ -45,3 +45,36 @@ const addClick = function (object, href, clickTimes=5) {
     };
 }
 //#endregion
+
+function alert(word, hei = 50, Time = 1500) {
+    var length = 0;
+    for (var i = 0; i < word.length; i++) {
+        if (word[i] > 255) {
+            length += 2;
+        } else {
+            length++;
+        }
+    }
+    var rwid = length;
+    var line = 1;
+    while (rwid > 40) {
+        length = 40;
+        hei += hei;
+        rwid -= 40;
+        line++;
+    }
+    var reminder = document.createElement('div');
+    document.body.appendChild(reminder);
+    reminder.style.cssText = "width: " + length * 24 + "px;height: " + hei + "px;position: fixed;display: block;border-radius: 5px;background-color: rgba(0, 0, 0, 0.3);text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;word-break:break-all;";
+    var left__ = 0.5 * document.body.offsetWidth - 0.5 * reminder.offsetWidth;
+    var top__ = 0.5 * window.innerHeight - 0.5 * reminder.offsetHeight;
+    reminder.id = "alert";
+    reminder.style.color = "#fff";
+    reminder.style.left = left__ + 'px';
+    reminder.style.top = top__ + 'px';
+    reminder.style.lineHeight = reminder.offsetHeight / line + 'px';
+    reminder.innerHTML = word;
+    setTimeout(function () {
+        reminder.style.display = "none";
+    }, Time);
+}
