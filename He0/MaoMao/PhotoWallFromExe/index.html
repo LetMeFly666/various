@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+	<meta charset="UTF-8">
+	<title>再推荐一款js实现的立体图片相册动画效果</title>
+	<link rel="stylesheet" href="Include/css/style.css">
+</head>
+<body>
+	<!-- <?php -->
+		<!-- require_once('../../demo/ads0.php'); -->
+	<!-- ?> -->
+	<!-- 代码部分begin -->
+	<div id="screen"></div>
+	<div id="bankImages">
+	<!--这里为了演示速度多，只调用了两张图片，用时候你可以加上你的图片-->
+	<img alt="" src="Include/Img/0.jpg">
+	<img alt="" src="Include/Img/1.jpg">
+	<img alt="" src="Include/Img/2.jpg">
+	<img alt="" src="Include/Img/3.jpg">
+	</div>
+	<script src='Include/js/lanren.js'></script>
+	<script>
+		window.onload = function(){
+			onresize = tv.resize;
+			tv.init();
+		}
+	</script>
+	<!-- 代码部分end -->
+</body>
+</html>
