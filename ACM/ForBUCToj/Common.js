@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-29 12:20:34
+ * @LastEditTime: 2021-12-04 09:13:47
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -51,9 +51,20 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
                 isProblem=3; // 竞赛状态
             }
             catch(TypeError) {
-                console.log(TypeError);
-                console.log("Not at second version page");
-                isProblem=0;
+                try {
+                    problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(8) > div:nth-child(2) > div > div");
+                    input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(8) > div:nth-child(3) > div > div");
+                    output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(8) > div:nth-child(4) > div > div");
+                    problem_description.innerHTML = begin + problemDescriptionData + end;
+                    input_description.innerHTML = begin + inputDescriptionData + end;
+                    output_description.innerHTML = begin + outputDescriptionData + end;
+                    isProblem=4; // 竞赛状态
+                }
+                catch(TypeError) {
+                    console.log(TypeError);
+                    console.log("Not at second version page");
+                    isProblem=0;
+                }
             }
         }
     }
