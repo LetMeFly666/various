@@ -6,8 +6,8 @@ def getdate():
     return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y%m%d")
 
 
-def getTh():
-    a = str(datetime.datetime.utcnow() - datetime.datetime(2021,8,6))
+def getTh(lastTime=datetime.datetime(2021,8,6)):
+    a = str(datetime.datetime.utcnow() - lastTime)
     try:
         a = a.split(',')[0]
     except:
@@ -23,6 +23,7 @@ if __name__ == '__main__':
     AREA_BUCTDAKA = os.environ["AREA_BUCTDAKA"]
     CITY_BUCTDAKA = os.environ["CITY_BUCTDAKA"]
     COOKIE_BUCTDAKA = os.environ["COOKIE_BUCTDAKA"]
+    COOKIE_BUCTDAKA_MAOMAO = os.environ["COOKIE_BUCTDAKA_MAOMAO"]
     CREATED_BUCTDAKA = os.environ["CREATED_BUCTDAKA"]
     DATAS_BUCTDAKA = os.environ["DATAS_BUCTDAKA"]
     GEOAPIINFO_BUCTDAKA = os.environ["GEOAPIINFO_BUCTDAKA"]
@@ -127,6 +128,8 @@ if __name__ == '__main__':
 
     url = 'https://eai.buct.edu.cn/ncov/wap/default/save'
     
+
+def tryOnce(url, headers, datas):
     alreadyTriedTimes, allNeedToTry, succeed = 0, 5, False
     while alreadyTriedTimes < allNeedToTry:
         alreadyTriedTimes += 1
@@ -144,4 +147,7 @@ if __name__ == '__main__':
         from SendAMail import send_email
         send_email("814114971@qq.com", "打卡失败提醒", f"尝试了{allNeedToTry}次打卡均未成功，手动打一下叭~")
 
-
+tryOnce(url, headers, datas)
+headers['Cookie'] = COOKIE_BUCTDAKA_MAOMAO
+datas['remark'] = f'六点起床第{getTh(datetime.datetime(2021,12,9))}天，早睡早起增强抵抗力'
+tryOnce(url, headers, datas)
