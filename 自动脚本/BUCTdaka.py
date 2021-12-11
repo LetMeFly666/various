@@ -25,7 +25,7 @@ if __name__ == '__main__':
     COOKIE_BUCTDAKA = os.environ["COOKIE_BUCTDAKA"]
     for key in os.environ:
         print(key)
-    COOKIE_BUCTDAKA_MAOMAO = os.environ["COOKIE_BUCTDAKA_MAOMAO"]
+    COOKIE_BUCTDAKAMaoMao = os.environ["COOKIE_BUCTDAKAMaoMao"]
     # COOKIE_BUCTDAKA_MAOMAO = '5'
     CREATED_BUCTDAKA = os.environ["CREATED_BUCTDAKA"]
     DATAS_BUCTDAKA = os.environ["DATAS_BUCTDAKA"]
@@ -151,6 +151,6 @@ def tryOnce(url, headers, datas):
         send_email("814114971@qq.com", "打卡失败提醒", f"尝试了{allNeedToTry}次打卡均未成功，手动打一下叭~")
 
 tryOnce(url, headers, datas)
-headers['Cookie'] = COOKIE_BUCTDAKA_MAOMAO
+headers['Cookie'] = COOKIE_BUCTDAKAMaoMao
 datas['remark'] = f'六点起床第{getTh(datetime.datetime(2021,12,9))}天，早睡早起增强抵抗力'
 tryOnce(url, headers, datas)
