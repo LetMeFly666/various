@@ -23,6 +23,7 @@ if __name__ == '__main__':
     AREA_BUCTDAKA = os.environ["AREA_BUCTDAKA"]
     CITY_BUCTDAKA = os.environ["CITY_BUCTDAKA"]
     COOKIE_BUCTDAKA = os.environ["COOKIE_BUCTDAKA"]
+    print(os.environ)
     COOKIE_BUCTDAKA_MAOMAO = os.environ["COOKIE_BUCTDAKA_MAOMAO"]
     # COOKIE_BUCTDAKA_MAOMAO = '5'
     CREATED_BUCTDAKA = os.environ["CREATED_BUCTDAKA"]
