@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-10-29 11:31:31
+ * @LastEditTime: 2021-12-19 12:36:39
  */
 
 //#region Title.ico
@@ -46,6 +46,7 @@ const addClick = function (object, href, clickTimes=5) {
 }
 //#endregion
 
+//#region alert
 function alert(word, hei = 50, Time = 1500) {
     var length = 0;
     for (var i = 0; i < word.length; i++) {
@@ -78,3 +79,131 @@ function alert(word, hei = 50, Time = 1500) {
         reminder.style.display = "none";
     }, Time);
 }
+//#endregion
+
+//#region 平滑展开
+/*
+    function: 平滑展开一个“按钮”，并用iframe显示按钮点击后要在下方显示的页面
+    para: 
+        theLink: 要显示的页面
+        thisElement: 被点击的元素
+*/
+function expand(theLink, thisElement) {
+    const theDiv = thisElement.parentNode;
+    const iframe = theDiv.querySelector('iframe');
+    if (iframe) {
+        if (iframe.style.display == 'none') {
+            iframe.style.display = 'block';
+            thisElement.setAttribute('class', 'expand')
+            expandSmoothly(iframe, eval(iframe.getAttribute('shouldHeight')));
+            theDiv.querySelector('.packUp').style.display = 'block';
+        }
+        else {
+            expandSmoothly(iframe, 0, 0.8, callBackFunction = ()=>{iframe.style.display='none';});
+            thisElement.setAttribute('class', 'unexpand');
+            theDiv.querySelector('.packUp').style.display = 'none';
+        }
+    } else {
+        const iframe = document.createElement('iframe');
+        iframe.src = theLink;
+        iframe.width = '100%';
+        iframe.height = 0;
+        theDiv.appendChild(iframe);
+        setIframeHeight(iframe);
+        thisElement.setAttribute('class', 'expand')
+        const packUp = document.createElement('a');
+        packUp.innerText = '▲ 收起';
+        packUp.setAttribute('class', 'packUp');
+        packUp.setAttribute('onclick', "this.parentNode.querySelector('.expand').click();");
+        packUp.style.display = 'block';
+        theDiv.appendChild(packUp);
+    }
+}
+
+/* 将元素平滑展开（高度变成height） */
+/*      v
+        ↑
+        |   ________________
+        |  /                \
+        | /                  \
+        |/                    \
+    ----+--+---------------+---+-----> t
+       0| 0.2             0.8  1
+        |
+    
+    0.8 * V0 = diff  ==>  V0 = diff / 0.8
+*/
+function expandSmoothly(element, height, time = 0.8, callBackFunction = null) {
+    const nowHeight = element.offsetHeight;
+    const diff = height - nowHeight;
+    const beginSlowTime = time * 0.2;
+    const endSlowTime = time * 0.2;
+    const evenlyTime = time * 0.6;
+    const V0 = diff / (time * 0.8);
+    const a = V0 / (time * 0.2);
+    var totalTime = 0;
+
+    function begin() {
+        element.height = nowHeight + 0.5 * a * totalTime * totalTime;
+        totalTime += 0.01;
+        if (totalTime <= beginSlowTime) {
+            setTimeout(() => {
+                begin();
+            }, 0.01);
+        } else {
+            // console.log('After the first expand, the height is:', element.height);
+            // console.log('Should: ', nowHeight + diff / 8);
+            middle();
+        }
+    }
+
+    function middle() {
+        element.height = nowHeight + 0.5 * a * beginSlowTime * beginSlowTime + V0 * (totalTime - beginSlowTime);
+        totalTime += 0.01;
+        if (totalTime <= beginSlowTime + evenlyTime) {
+            setTimeout(() => {
+                middle();
+            }, 0.01);
+        } else {
+            end();
+        }
+    }
+
+    function end() {
+        const thisTime = totalTime - beginSlowTime - evenlyTime;
+        element.height = nowHeight + 0.5 * a * beginSlowTime * beginSlowTime + V0 * evenlyTime + V0 * thisTime - 0.5 * a * thisTime * thisTime;
+        totalTime += 0.01;
+        if (totalTime <= time) {
+            setTimeout(() => {
+                end();
+            }, 0.01);
+        } else {
+            // console.log("Expanded");
+            if (callBackFunction) {
+                callBackFunction();
+            }
+        }
+    }
+
+    begin();
+}
+
+function setIframeHeight(iframe) {
+    iframe.onload = () => {
+        try {
+            const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                const body = iframeWin.document.body;
+                iframe.setAttribute('shouldHeight', body.offsetHeight);
+                iframe.setAttribute('scrolling', 'no');
+                expandSmoothly(iframe, body.offsetHeight);
+            } else {
+                console.log('iframeWin.document.body 为空');
+            }
+        } catch(error) {
+            expandSmoothly(iframe, 500);
+            iframe.setAttribute('shouldHeight', 500);
+        }
+    }
+}
+//#endregion
