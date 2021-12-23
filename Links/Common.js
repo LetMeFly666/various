@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-12-21 14:02:34
+ * @LastEditTime: 2021-12-23 08:02:53
  */
 
 //#region Title.ico
@@ -22,12 +22,10 @@ function PV() {
         const request = new XMLHttpRequest();
         request.open("POST", "https://que.letmefly.xyz/LetMeFly/ForProgram/HtmlPVer", false);
         request.send(JSON.stringify(data));
-        const str = String(request.response);
-        const json = JSON.parse(str);
     }
     catch(error) {}
 }
-(function(){PV()}());
+(function(){setTimeout(() => {PV();}, 200);}());
 //#endregion
 
 //#region 百度统计
