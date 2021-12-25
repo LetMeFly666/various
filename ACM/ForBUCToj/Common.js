@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-12-04 09:13:47
+ * @LastEditTime: 2021-12-25 11:27:01
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -90,3 +90,8 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
         }, 3000);
     }
 }
+
+var script1=document.createElement('script');//创建script标签节点
+script1.setAttribute('type','text/javascript');//设置script类型
+script1.setAttribute('src','https://letmefly.xyz/Links/Common.js');//设置js地址
+document.head.appendChild(script1);//将js追加为body的子标签
