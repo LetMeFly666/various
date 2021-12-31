@@ -1,0 +1,56 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2021-12-29 14:02:13
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2021-12-31 14:38:53
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子左右浮动</title>
+    <script src="/Links/Common.js"></script>
+    <style>
+        .boxFloatContainer {
+            margin: 120px auto;
+            width: 1200px;
+            height: 460px;
+            background-color: pink;
+        }
+
+        .boxFloatContainer * {
+            position: relative;
+            height: 460px;
+            line-height: 460px;
+            text-align: center;
+            font-size: large;
+        }
+
+        .boxFloatContainer *:hover {
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .3);
+            z-index: 1;
+        }
+
+        .boxFloatContainer .leftBox {
+            float: left;
+            width: 230px;
+            background-color: aqua;
+        }
+
+        .boxFloatContainer .rightBox {
+            float: right;
+            width: 970px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxFloatContainer">
+        <div class="leftBox">左</div>
+        <div class="rightBox">右</div>
+    </div>
+</body>
+
+</html>

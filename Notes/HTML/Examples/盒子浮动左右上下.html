@@ -1,0 +1,85 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2021-12-29 14:02:13
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2021-12-31 15:21:46
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子左右上下</title>
+    <script src="/Links/Common.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .boxFloatContainer {
+            width: 1226px;
+            height: 615px;
+            margin: 50px auto;
+            background-color: pink;
+        }
+
+        .boxFloatContainer>div {
+            float: left;
+            height: 615px;
+            font-size: large;
+            position: relative;
+        }
+        
+        .boxLeft {
+            width: 234px;
+            line-height: 615px;
+            text-align: center;
+            background-color: aqua;
+        }
+
+        .boxLeft:hover {
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .boxRight {
+            width: 992px;
+            background-color: powderblue;
+        }
+
+        .boxRight div {
+            float: left;
+            width: 234px;
+            height: 300px;
+            background-color: aquamarine;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            line-height: 300px;
+            text-align: center;
+        }
+
+        .boxRight div:hover {
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxFloatContainer">
+        <div class="boxLeft">左大手机</div>
+        <div class="boxRight">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 
 ##### 基础语法
 
-<textarea rows="4" cols="43"><html> 与 </html> 之间的文本描述网页
+<textarea rows="4" cols="47"><html> 与 </html> 之间的文本描述网页
 <body> 与 </body> 之间的文本是可见的页面内容
 <h1> 与 </h1> 之间的文本被显示为标题
 <p> 与 </p> 之间的文本被显示为段落</textarea>
@@ -117,12 +117,14 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 
 ```html
 <del>删除线</del>
+<s>删除线</s>
 ```
 
 ###### 下划线
 
 ```html
 <ins>下划线</ins>
+<u>下划线</u>
 ```
 
 ##### 属性
@@ -180,55 +182,55 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 <th style="width:70%">描述</th>
 </tr>
 <tr>
-<td><a href="/tags/tag_font_style.asp">&lt;b&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_font_style.asp">&lt;b&gt;</a></td>
 <td>定义粗体文本。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_font_style.asp">&lt;big&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_font_style.asp">&lt;big&gt;</a></td>
 <td>定义大号字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;em&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;em&gt;</a></td>
 <td>定义着重文字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_font_style.asp">&lt;i&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_font_style.asp">&lt;i&gt;</a></td>
 <td>定义斜体字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_font_style.asp">&lt;small&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_font_style.asp">&lt;small&gt;</a></td>
 <td>定义小号字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;strong&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;strong&gt;</a></td>
 <td>定义加重语气。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_sup.asp">&lt;sub&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_sup.asp">&lt;sub&gt;</a></td>
 <td>定义下标字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_sup.asp">&lt;sup&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_sup.asp">&lt;sup&gt;</a></td>
 <td>定义上标字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_ins.asp">&lt;ins&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_ins.asp">&lt;ins&gt;</a></td>
 <td>定义插入字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_del.asp">&lt;del&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_del.asp">&lt;del&gt;</a></td>
 <td>定义删除字。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_strike.asp">&lt;s&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_strike.asp">&lt;s&gt;</a></td>
 <td class="deprecated"><em>不赞成使用。</em>使用 &lt;del&gt; 代替。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_strike.asp">&lt;strike&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_strike.asp">&lt;strike&gt;</a></td>
 <td class="deprecated"><em>不赞成使用。</em>使用 &lt;del&gt; 代替。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_u.asp">&lt;u&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_u.asp">&lt;u&gt;</a></td>
 <td class="deprecated"><em>不赞成使用。</em>使用样式（style）代替。</td>
 </tr>
 </table>
@@ -241,27 +243,27 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 <th style="width:70%">描述</th>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;code&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;code&gt;</a></td>
 <td>定义计算机代码。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;kbd&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;kbd&gt;</a></td>
 <td>定义键盘码。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;samp&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;samp&gt;</a></td>
 <td>定义计算机代码样本。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_font_style.asp">&lt;tt&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_font_style.asp">&lt;tt&gt;</a></td>
 <td>定义打字机代码。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;var&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;var&gt;</a></td>
 <td>定义变量。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_pre.asp">&lt;pre&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_pre.asp">&lt;pre&gt;</a></td>
 <td>定义预格式文本。</td>
 </tr>
 <tr>
@@ -285,35 +287,35 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 <th style="width:70%">描述</th>
 </tr>
 <tr>
-<td><a href="/tags/tag_abbr.asp">&lt;abbr&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_abbr.asp">&lt;abbr&gt;</a></td>
 <td>定义缩写。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_acronym.asp">&lt;acronym&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_acronym.asp">&lt;acronym&gt;</a></td>
 <td>定义首字母缩写。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_address.asp">&lt;address&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_address.asp">&lt;address&gt;</a></td>
 <td>定义地址。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_bdo.asp">&lt;bdo&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_bdo.asp">&lt;bdo&gt;</a></td>
 <td>定义文字方向。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_blockquote.asp">&lt;blockquote&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_blockquote.asp">&lt;blockquote&gt;</a></td>
 <td>定义长的引用。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_q.asp">&lt;q&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_q.asp">&lt;q&gt;</a></td>
 <td>定义短的引用语。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;cite&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;cite&gt;</a></td>
 <td>定义引用、引证。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_phrase_elements.asp">&lt;dfn&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_phrase_elements.asp">&lt;dfn&gt;</a></td>
 <td>定义一个定义项目。</td>
 </tr>
 <tr>
@@ -338,31 +340,31 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 
 > + **viewport**
 >
->   <code><meta name="viewport" content="width=device-width, initial-scale=1.0"> </code>网页自适应浏览器大小。
+>   ```<meta name="viewport" content="width=device-width, initial-scale=1.0"> ```网页自适应浏览器大小。
 >   
 > + **keywords**
 >
->   <code><meta name="keywords" content="这是关键字"></code>
+>   ```<meta name="keywords" content="这是关键字">```
 >
 > + **description**
 >
->   <code><meta name="descripthin" content="这是描述"></code>
+>   ```<meta name="descripthin" content="这是描述">```
 >
 >   有了这个description，在被百度搜索引擎收录的时候，浏览器上显示的简介就是这个啦
 >
 > + **author**
 >
->   <code><meta name="author" content="LetMeFly"></code>
+>   ```<meta name="author" content="LetMeFly">```
 >
 > + ***charset***
 >
->   <code><meta charset="utf-8"></code>
+>   ```<meta charset="utf-8">```
 >
 >   这是编码
 >
 > + **http-equiv**
 >
->   <code><meta http-equiv="refresh" content="5; https://www.5s后**自动跳转**.com"</code>
+>   ```<meta http-equiv="refresh" content="5; https://www.5s后**自动跳转**.com"```
 
 ##### CSS
 
@@ -376,17 +378,15 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 假如浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。不会有错误发生。
 ```
 
-##### 表格
-```html
-<h4>两行三列：</h4><table border="1"><tr><td>100</td><td>200</td><td>300</td></tr><tr><td>400</td><td>500</td><td>600</td></tr></table>表格由table标签开始；每行由tr标签开始；每个数据由td标签开始；border是表格外围宽度
-```
+
 ##### 表格
 ```html
 <h4>两行三列：</h4><table border="1"><tr><td>100</td><td>200</td><td>300</td></tr><tr><td>400</td><td>500</td><td>600</td></tr></table>表格由table标签开始；每行由tr标签开始；每个数据由td标签开始；border是表格外围宽度；tr - table row；td - table data；th - table head（表头）
 如果某格是空的，为防止浏览器不显示该格的边框，可以加上一个空格占位符&nbsp;（No Breaking SPace）<td>&nbsp;</td>
 <caption>表格标题</caption>（caption - 说明）
 表格分列<td colspan="2">11</td>表格分行<td rowspan="2">22</td>：<table border="1"><tr><td colspan="2"align="center">姓名</td><td align="center">电话</td></tr><tr><th colspan="2"style="color:red">表格分列</th><td rowspan="2" style="color:red">表格分行</td></tr><tr><th style="color:red">00</th><th style="color:red">11</th></tr></table>
-单元格间距<table ... cellspace="10">...</table>；单元格边距<table ... cellpadding="10">...</table>
+单元格间距<table ... cellspace="10">...</table>；
+单元格边距<table ... cellpadding="10">...</table>
 表格背景图片<table background="https://www.w3school.com.cn/i/eg_bg_07.gif">...</table>；背景颜色 bgcolor="red"；
 框架<table frame="*"></table>其中*：box:一周；above:上面；below:下面；hsides:上下；vsides:左右
 ```
@@ -398,43 +398,43 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 <th>描述</th>
 </tr>
 <tr>
-<td><a href="/tags/tag_table.asp">&lt;table&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_table.asp">&lt;table&gt;</a></td>
 <td>定义表格</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_caption.asp">&lt;caption&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_caption.asp">&lt;caption&gt;</a></td>
 <td>定义表格标题。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_th.asp">&lt;th&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_th.asp">&lt;th&gt;</a></td>
 <td>定义表格的表头。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_tr.asp">&lt;tr&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_tr.asp">&lt;tr&gt;</a></td>
 <td>定义表格的行。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_td.asp">&lt;td&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_td.asp">&lt;td&gt;</a></td>
 <td>定义表格单元。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_thead.asp">&lt;thead&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_thead.asp">&lt;thead&gt;</a></td>
 <td>定义表格的页眉。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_tbody.asp">&lt;tbody&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_tbody.asp">&lt;tbody&gt;</a></td>
 <td>定义表格的主体。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_tfoot.asp">&lt;tfoot&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_tfoot.asp">&lt;tfoot&gt;</a></td>
 <td>定义表格的页脚。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_col.asp">&lt;col&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_col.asp">&lt;col&gt;</a></td>
 <td>定义用于表格列的属性。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_colgroup.asp">&lt;colgroup&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_colgroup.asp">&lt;colgroup&gt;</a></td>
 <td>定义表格列的组。</td>
 </tr>
 </table>
@@ -453,40 +453,40 @@ align="center"  如： <h1 align="center">This is heading 1</h1>
 <th width="70%">描述</th>
 </tr>
 <tr>
-<td><a href="/tags/tag_ol.asp">&lt;ol&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_ol.asp">&lt;ol&gt;</a></td>
 <td>定义有序列表。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_ul.asp">&lt;ul&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_ul.asp">&lt;ul&gt;</a></td>
 <td>定义无序列表。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_li.asp">&lt;li&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_li.asp">&lt;li&gt;</a></td>
 <td>定义列表项。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_dl.asp">&lt;dl&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_dl.asp">&lt;dl&gt;</a></td>
 <td>定义定义列表。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_dt.asp">&lt;dt&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_dt.asp">&lt;dt&gt;</a></td>
 <td>定义定义项目。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_dd.asp">&lt;dd&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_dd.asp">&lt;dd&gt;</a></td>
 <td>定义定义的描述。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_dir.asp">&lt;dir&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_dir.asp">&lt;dir&gt;</a></td>
 <td class="deprecated">已废弃。使用 &lt;ul&gt; 代替它。</td>
 </tr>
 <tr>
-<td><a href="/tags/tag_menu.asp">&lt;menu&gt;</a></td>
+<td><a href="https://www.w3school.com.cn/tags/tag_menu.asp">&lt;menu&gt;</a></td>
 <td class="deprecated">已废弃。使用 &lt;ul&gt; 代替它。</td>
 </tr>
 </table>
 
 ##### noscript
 
-在浏览器不支持javascript的时候，会执行<code><noscript></noscript></code>中的内容
+在浏览器不支持javascript的时候，会执行```<noscript></noscript>```中的内容
 

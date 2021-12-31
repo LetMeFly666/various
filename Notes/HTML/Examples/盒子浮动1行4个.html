@@ -1,0 +1,63 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2021-12-29 14:02:13
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2021-12-31 15:01:28
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子浮动1行4个</title>
+    <script src="/Links/Common.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .boxFloatContainer {
+            width: 1226px;
+            height: 285px;
+            margin: 150px auto;
+            background-color: pink;
+        }
+
+        ul li {
+            float: left;
+            width: 296px;
+            height: 285px;
+            line-height: 285px;
+            text-align: center;
+            font-size: large;
+            background-color: purple;
+            margin-right: 14px;
+        }
+
+        ul .lastLi {
+            margin-right: 0;
+        }
+
+        ul li:hover {
+            box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxFloatContainer">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="lastLi">4</li>
+        </ul>
+    </div>
+</body>
+
+</html>
