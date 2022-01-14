@@ -54,6 +54,7 @@ const couldSeeList = {
         5774: { "time": new Date("2021-12-04 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/121551485", "problemHref": "http://182.92.175.181/problem.php?id=5774" },
         5775: { "time": new Date("2021-12-04 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/121551511", "problemHref": "http://182.92.175.181/problem.php?id=5775" },
         5776: { "time": new Date("2021-12-04 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/121551528", "problemHref": "http://182.92.175.181/problem.php?id=5776" },
+        5892: { "time": new Date("2021-12-04 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/122498795", "problemHref": "http://182.92.175.181/problem.php?id=5892" },
     }
     //#endregion
 
