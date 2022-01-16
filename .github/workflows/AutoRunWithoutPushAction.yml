@@ -1,11 +1,11 @@
 name: 'Auto Run At 21:00UTC'
 
 on:
-  # schedule:
-  #   - cron: '0 22 * * *'
-  # push:
-  #   branches: 
-  #     - master
+  schedule:
+    - cron: '0 22 * * *'
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
@@ -37,5 +37,15 @@ jobs:
           USERAGENT_BUCTDAKA: ${{ secrets.USERAGENT_BUCTDAKA }}
           TEST: ${{ secrets.TEST }}
           COOKIE_BUCTDAKA_MAOMAO: ${{ secrets.COOKIE_BUCTDAKA_MAOMAO }}
+          ADDRESS_BUCTDAKA_HOME: ${{ ADDRESS_BUCTDAKA_HOME }}
+          ADDRESS_BUCTDAKA_HOME_MAOMAO: ${{ ADDRESS_BUCTDAKA_HOME_MAOMAO }}
+          GEOAPIINFO_BUCTDAKA_HOME: ${{ GEOAPIINFO_BUCTDAKA_HOME }}
+          GEOAPIINFO_BUCTDAKA_HOME_MAOMAO: ${{ GEOAPIINFO_BUCTDAKA_HOME_MAOMAO }}
+          AREA_BUCTDAKA_HOME: ${{ AREA_BUCTDAKA_HOME }}
+          AREA_BUCTDAKA_HOME_MAOMAO: ${{ AREA_BUCTDAKA_HOME_MAOMAO }}
+          PROVINCE_BUCTDAKA_HOME: ${{ PROVINCE_BUCTDAKA_HOME }}
+          PROVINCE_BUCTDAKA_HOME_MAOMAO: ${{ PROVINCE_BUCTDAKA_HOME_MAOMAO }}
+          CITY_BUCTDAKA_HOME: ${{ CITY_BUCTDAKA_HOME }}
+          CITY_BUCTDAKA_HOME_MAOMAO: ${{ CITY_BUCTDAKA_HOME_MAOMAO }}
           # TEST_EMPTY: ${{ secrets.TEST_EMPTY }}  这里加上空的没事，但是python执行就不行了
         run: python 自动脚本/BUCTdaka.py

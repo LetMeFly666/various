@@ -2,6 +2,8 @@ import requests
 import datetime
 import os
 
+ISHOME = True
+
 def getdate():
     return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y%m%d")
 
@@ -32,6 +34,16 @@ if __name__ == '__main__':
     PROVINCE_BUCTDAKA = os.environ["PROVINCE_BUCTDAKA"]
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
+    ADDRESS_BUCTDAKA_HOME = os.environ["ADDRESS_BUCTDAKA_HOME"]
+    ADDRESS_BUCTDAKA_HOME_MAOMAO = os.environ["ADDRESS_BUCTDAKA_HOME_MAOMAO"]
+    GEOAPIINFO_BUCTDAKA_HOME = os.environ["GEOAPIINFO_BUCTDAKA_HOME"]
+    GEOAPIINFO_BUCTDAKA_HOME_MAOMAO = os.environ["GEOAPIINFO_BUCTDAKA_HOME_MAOMAO"]
+    AREA_BUCTDAKA_HOME = os.environ["AREA_BUCTDAKA_HOME"]
+    AREA_BUCTDAKA_HOME_MAOMAO = os.environ["AREA_BUCTDAKA_HOME_MAOMAO"]
+    PROVINCE_BUCTDAKA_HOME = os.environ["PROVINCE_BUCTDAKA_HOME"]
+    PROVINCE_BUCTDAKA_HOME_MAOMAO = os.environ["PROVINCE_BUCTDAKA_HOME_MAOMAO"]
+    CITY_BUCTDAKA_HOME = os.environ["CITY_BUCTDAKA_HOME"]
+    CITY_BUCTDAKA_HOME_MAOMAO = os.environ["CITY_BUCTDAKA_HOME_MAOMAO"]
     TEST = os.environ["TEST"]  # 不能加上‘secrets.’吗
 
     print("Begin")
@@ -85,12 +97,12 @@ if __name__ == '__main__':
         'sfyyjc': '0',
         'jcjgqr': '0',
         'remark': f'六点起床第{getTh()}天，早睡早起增强抵抗力',
-        'address': ADDRESS_BUCTDAKA,
-        'geo_api_info': GEOAPIINFO_BUCTDAKA,
-        'area': AREA_BUCTDAKA,
-        'province': PROVINCE_BUCTDAKA,
-        'city': CITY_BUCTDAKA,
-        'sfzx' : '1',
+        'address': ADDRESS_BUCTDAKA_HOME if ISHOME else ADDRESS_BUCTDAKA,
+        'geo_api_info': GEOAPIINFO_BUCTDAKA_HOME if ISHOME else GEOAPIINFO_BUCTDAKA,
+        'area': AREA_BUCTDAKA_HOME if ISHOME else AREA_BUCTDAKA,
+        'province': PROVINCE_BUCTDAKA_HOME if ISHOME else PROVINCE_BUCTDAKA,
+        'city': CITY_BUCTDAKA_HOME if ISHOME else CITY_BUCTDAKA,
+        'sfzx' : '0' if ISHOME else '1',
         'sfjcwhry': '0',
         'sfjchbry': '0',
         'sfcyglq': '0',
@@ -150,4 +162,10 @@ def tryOnce(url, headers, datas):
 tryOnce(url, headers, datas)
 headers['Cookie'] = COOKIE_BUCTDAKA_MAOMAO
 datas['remark'] = f'六点起床第{getTh(datetime.datetime(2021,12,9))}天，早睡早起增强抵抗力'
+if ISHOME:
+    datas['address'] = ADDRESS_BUCTDAKA_HOME_MAOMAO
+    datas['geo_api_info'] = GEOAPIINFO_BUCTDAKA_HOME_MAOMAO
+    datas['area'] = AREA_BUCTDAKA_HOME_MAOMAO
+    datas['province'] = PROVINCE_BUCTDAKA_HOME_MAOMAO
+    datas['city'] = CITY_BUCTDAKA_HOME_MAOMAO
 tryOnce(url, headers, datas)
