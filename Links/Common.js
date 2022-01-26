@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-12-23 08:02:53
+ * @LastEditTime: 2022-01-26 21:57:28
  */
 
 //#region Title.ico
@@ -201,8 +201,13 @@ function expandSmoothly(element, height, time = 0.8, callBackFunction = null) {
     begin();
 }
 
-function setIframeHeight(iframe) {
-    iframe.onload = () => {
+function setIframeHeight(iframe, onload=true) {
+    if (onload) {
+        iframe.onload = () => {main();}
+    } else {
+        main();
+    }
+    function main() {
         try {
             const iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
             if (iframeWin.document.body) {

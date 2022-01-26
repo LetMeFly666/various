@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-26 21:28:43
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-26 21:45:40
+ * @LastEditTime: 2022-01-26 21:58:05
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -14,9 +14,18 @@
 </head>
 
 <body>
-    <iframe src="Markdown/" width="100%"></iframe>
+    <iframe src="Markdown/" width="100%" height="1000px"></iframe>
     <script id="setIframeToAutoHeight">
         const iframe = document.querySelector('iframe');
         setIframeHeight(iframe);
+        function setOnce(settime) {
+            setTimeout(() => {
+                setIframeHeight(iframe, onload=false);
+            }, settime);
+        }
+        setOnce(500);
+        setOnce(2000);
+        setOnce(5000);
+        setOnce(10000);
     </script>
 </body>
