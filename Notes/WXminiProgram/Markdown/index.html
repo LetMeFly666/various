@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Readme</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ''><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n21504"><a class="md-toc-inner" href="#微信小程序笔记">微信小程序笔记</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n21509"><a class="md-toc-inner" href="#安装">安装</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n21512"><a class="md-toc-inner" href="#项目目录a-idxiangmumuluㅤa">项目目录ㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21514"><a class="md-toc-inner" href="#appjson">app.json</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21517"><a class="md-toc-inner" href="#entrypagepatha-identrypagepathㅤa">entryPagePathㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21520"><a class="md-toc-inner" href="#pagesa-idpagesㅤa">pagesㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21524"><a class="md-toc-inner" href="#windowa-idwindowㅤa">windowㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n21528"><a class="md-toc-inner" href="#restartstrategya-idrestartstrategyㅤa">restartStrategyㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21545"><a class="md-toc-inner" href="#tabbara-idtabbarㅤa">tabBarㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n21549"><a class="md-toc-inner" href="#list-a-idlistmyㅤa">list ㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21553"><a class="md-toc-inner" href="#networktimeouta-idnetworktimeoutㅤa">networkTimeoutㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21557"><a class="md-toc-inner" href="#debuga-iddebugㅤa">debugㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21559"><a class="md-toc-inner" href="#functionalpagesa-idfunctionalpagesㅤa">functionalPagesㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21565"><a class="md-toc-inner" href="#subpackagesa-idsubpackagesㅤa">subpackagesㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21571"><a class="md-toc-inner" href="#workersa-idworkersㅤa">workersㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21574"><a class="md-toc-inner" href="#requiredbackgroundmodesa-idrequiredbackgroundmodesㅤa">requiredBackgroundModesㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21587"><a class="md-toc-inner" href="#pluginsa-idpluginsㅤa">pluginsㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21591"><a class="md-toc-inner" href="#preloadrulea-idpreloadruleㅤa">preloadRuleㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21595"><a class="md-toc-inner" href="#resizablea-idresizableㅤa">resizableㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21600"><a class="md-toc-inner" href="#usingcomponentsa-idusingcomponentsㅤa">usingComponentsㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21605"><a class="md-toc-inner" href="#permissiona-idpermissionㅤa">permissionㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n21623"><a class="md-toc-inner" href="#permissionobject-结构-a-idpermissionobjectㅤa">PermissionObject 结构 ㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21639"><a class="md-toc-inner" href="#sitemaplocationa-idsitemaplocationㅤa">sitemapLocationㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21641"><a class="md-toc-inner" href="#stylea-idstyleㅤa">styleㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21646"><a class="md-toc-inner" href="#useextendedliba-iduseextendedlibㅤa">useExtendedLibㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21660"><a class="md-toc-inner" href="#entrancedeclarea-identrancedeclareㅤa">entranceDeclareㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21665"><a class="md-toc-inner" href="#darkmodea-iddarkmodeㅤa">darkmodeㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21671"><a class="md-toc-inner" href="#themelocationa-idthemelocationㅤa">themeLocationㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21674"><a class="md-toc-inner" href="#lazycodeloadinga-idlazycodeloadingㅤa">lazyCodeLoadingㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21677"><a class="md-toc-inner" href="#singlepagea-idsinglepageㅤa">singlePageㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21694"><a class="md-toc-inner" href="#embeddedappidlista-idembeddedappidlistㅤa">embeddedAppIdListㅤ</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n21697"><a class="md-toc-inner" href="#halfpagea-idhalfpageㅤa">halfPageㅤ</a></span></p></div><p>&nbsp;</p><h1><a name="微信小程序笔记" class="md-header-anchor"></a><span>微信小程序笔记</span></h1><p><span>微信小程序的一些笔记，很多在</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/"><span>官方文档</span></a><span>中都可找到</span></p><p><span>但是与官网</span><strong><span>有所不同</span></strong><span>，一些是从实际的角度出发而记录的</span></p><p><span>本笔记在线版本：</span><a href='https://letmefly.xyz/Notes/WXminiProgram/'><span>https://letmefly.xyz/Notes/WXminiProgram/</span></a></p><h2><a name="安装" class="md-header-anchor"></a><span>安装</span></h2><p><a href='https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html'><span>下载页面</span></a></p><h2><a name="项目目录a-idxiangmumuluㅤa" class="md-header-anchor"></a><span>项目目录</span><a id="XiangMuMuLu"><span>ㅤ</span></a></h2><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">.</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  app.js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ 项目的全局文件</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  app.json &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ 项目的全局文件</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  app.wxss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ 项目的全局文件</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  project.config.json &nbsp; &nbsp; ------------------------ 项目的配置信息</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  sitemap.json &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ 哪些页面可以被索引</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">├─pages &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ 存放页面的文件夹</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  ├─index &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ------------------------ 页面index(下面有4个文件)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  │ &nbsp; &nbsp;  index.js &nbsp; &nbsp; &nbsp; &nbsp; ------------------------ index页面的函数脚本</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  │ &nbsp; &nbsp;  index.json &nbsp; &nbsp; &nbsp; ------------------------ index页面的配置信息</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  │ &nbsp; &nbsp;  index.wxml &nbsp; &nbsp; &nbsp; ------------------------ index页面的页面代码</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  │ &nbsp; &nbsp;  index.wxss &nbsp; &nbsp; &nbsp; ------------------------ index页面的样式</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  │</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│  └─logs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ logs页面</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; &nbsp; &nbsp; &nbsp;  logs.js &nbsp; &nbsp; &nbsp; &nbsp; ------------------------ (同index页面下的4个文件)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; &nbsp; &nbsp; &nbsp;  logs.json</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; &nbsp; &nbsp; &nbsp;  logs.wxml</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; &nbsp; &nbsp; &nbsp;  logs.wxss</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">└─utils &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ------------------------ 其他的包</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  util.js</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 493px;"></div><div class="CodeMirror-gutters" style="display: none; height: 493px;"></div></div></div></pre><h3><a name="appjson" class="md-header-anchor"></a><span>app.json</span></h3><table>
+<thead><tr><th>属性</th> <th>类型</th> <th>必填</th> <th>描述</th> <th>最低版本</th></tr></thead> 
+<tbody><tr><td><a href="#entryPagePath">entryPagePath</a></td> <td>string</td> <td>否</td> <td>小程序默认启动首页</td> <td></td></tr> 
+<tr><td><a href="#pages">pages</a></td> <td>string[]</td> <td>是</td> <td>页面路径列表</td> <td></td></tr> 
+<tr><td><a href="#window">window</a></td> <td>Object</td> <td>否</td> <td>全局的默认窗口表现</td> <td></td></tr> 
+<tr><td><a href="#tabBar">tabBar</a></td> <td>Object</td> <td>否</td> <td>底部 <code>tab</code> 栏的表现</td> <td></td></tr> 
+<tr><td><a href="#networkTimeout">networkTimeout</a></td> <td>Object</td> <td>否</td> <td>网络超时时间</td> <td></td></tr> 
+<tr><td><a href="#debug">debug</a></td> <td>boolean</td> <td>否</td> <td>是否开启 debug 模式，默认关闭</td> <td></td></tr> 
+<tr><td><a href="#functionalPages">functionalPages</a></td> <td>boolean</td> <td>否</td> <td>是否启用插件功能页，默认关闭</td> <td>2.1.0</td></tr> 
+<tr><td><a href="#subpackages">subpackages</a></td> <td>Object[]</td> <td>否</td> <td>分包结构配置</td> <td>1.7.3</td></tr> 
+<tr><td><a href="#workers">workers</a></td> <td>string</td> <td>否</td> <td><code>Worker</code> 代码放置的目录</td> <td>1.9.90</td></tr> 
+<tr><td><a href="#requiredBackgroundModes">requiredBackgroundModes</a></td> <td>string[]</td> <td>否</td> <td>需要在后台使用的能力，如「音乐播放」</td> <td></td></tr> 
+<tr><td><a href="#plugins">plugins</a></td> <td>Object</td> <td>否</td> <td>使用到的插件</td> <td>1.9.6</td></tr> 
+<tr><td><a href="#preloadRule">preloadRule</a></td> <td>Object</td> <td>否</td> <td>分包预下载规则</td> <td>2.3.0</td></tr> 
+<tr><td><a href="#resizable">resizable</a></td> <td>boolean</td> <td>否</td> <td>PC 小程序是否支持用户任意改变窗口大小（包括最大化窗口）；iPad 小程序是否支持屏幕旋转。默认关闭</td> <td>2.3.0</td></tr> 
+<tr><td><a href="#usingComponents">usingComponents</a></td> <td>Object</td> <td>否</td> <td>全局<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/" class="FIXME:">自定义组件</a>配置</td> <td>开发者工具 1.02.1810190</td></tr> 
+<tr><td><a href="#permission">permission</a></td> <td>Object</td> <td>否</td> <td>小程序接口权限相关设置</td> <td>微信客户端 7.0.0</td></tr> 
+<tr><td><a href="#sitemapLocation">sitemapLocation</a></td> <td>string</td> <td>是</td> <td>指明 sitemap.json 的位置</td> <td></td></tr> 
+<tr><td><a href="#style">style</a></td> <td>string</td> <td>否</td> <td>指定使用升级后的weui样式</td> <td>2.8.0</td></tr> 
+<tr><td><a href="#useExtendedLib"><b class="LetMeFly" title="前面href中大小写不一致"><font color="warning">useExtendedLib</font></b></a></td> <td>Object</td> <td>否</td> <td>指定需要引用的扩展库</td> <td>2.2.1</td></tr> 
+<tr><td><a href="#entranceDeclare">entranceDeclare</a></td> <td>Object</td> <td>否</td> <td>微信消息用小程序打开</td> <td>微信客户端 7.0.9</td></tr> 
+<tr><td><a href="#darkmode">darkmode</a></td> <td>boolean</td> <td>否</td> <td>小程序支持 DarkMode</td> <td>2.11.0</td></tr> 
+<tr><td><a href="#themeLocation">themeLocation</a></td> <td>string</td> <td>否</td> <td>指明 theme.json 的位置，darkmode为true为必填</td> <td>开发者工具 1.03.2004271</td></tr> 
+<tr><td><a href="#lazyCodeLoading">lazyCodeLoading</a></td> <td>string</td> <td>否</td> <td>配置自定义组件代码按需注入</td> <td>2.11.1</td></tr> 
+<tr><td><a href="#singlePage">singlePage</a></td> <td>Object</td> <td>否</td> <td>单页模式相关配置</td> <td>2.12.0</td></tr> 
+<tr><td>supportedMaterials</td> <td>Object</td> <td>否</td> <td><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/material/support_material.html" class="FIXME:">聊天素材小程序打开</a>相关配置</td> <td>2.14.3</td></tr> 
+<tr><td>serviceProviderTicket</td> <td>string</td> <td>否</td> <td><a href="https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/2.0/operation/thirdparty/customized_service_platform_guidelines.html" target="_blank" rel="noopener noreferrer">定制化型服务商<span></span></a>票据</td> <td></td></tr> 
+<tr><td><a href="#embeddedAppIdList">embeddedAppIdList</a></td> <td>string[]</td> <td>否</td> <td>半屏小程序 appId</td> <td>2.20.1</td></tr> 
+<tr><td><a href="#halfPage">halfPage</a></td> <td>Object</td> <td>否</td> <td>视频号直播半屏场景设置</td> <td>2.18.0</td></tr></tbody>
+</table><p>&nbsp;</p><h4><a name="entrypagepatha-identrypagepathㅤa" class="md-header-anchor"></a><span>entryPagePath</span><a id="entryPagePath"><span>ㅤ</span></a></h4><p><span>微信小程序的主页(启动的页面)。</span></p><p><span>若无此项，则会以</span><code>&quot;pages&quot;</code><span>中的第一个为准。</span></p><h4><a name="pagesa-idpagesㅤa" class="md-header-anchor"></a><span>pages</span><a id="pages"><span>ㅤ</span></a></h4><p><span>如</span><a href="#XiangMuMuLu"><span>项目目录</span></a><span>中共有两个页面，则pages应写为：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"pages"</span>: [</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string">"pages/index/index"</span>, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string">"pages/logs/logs"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">]</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 90px;"></div><div class="CodeMirror-gutters" style="display: none; height: 90px;"></div></div></div></pre><h4><a name="windowa-idwindowㅤa" class="md-header-anchor"></a><span>window</span><a id="window"><span>ㅤ</span></a></h4><p><span>用于设置小程序的状态栏、导航条、标题、窗口背景色</span></p><table><thead>
+<tr><th>属性</th> <th>类型</th> <th>默认值</th> <th>描述</th> <th>最低版本</th></tr></thead> <tbody>
+<tr><td>navigationBarBackgroundColor</td> <td>HexColor</td> <td>#000000</td> <td>导航栏背景颜色，如 <code>#000000</code></td> <td></td></tr> 
+<tr><td>navigationBarTextStyle</td> <td>string</td> <td>white</td> <td>导航栏标题颜色，仅支持 <code>black</code> / <code>white</code></td> <td></td></tr> 
+<tr><td>navigationBarTitleText</td> <td>string</td> <td></td> <td>导航栏标题文字内容</td> <td></td></tr> 
+<tr><td>navigationStyle</td> <td>string</td> <td>default</td> <td>导航栏样式，仅支持以下值：<br><code>default</code> 默认样式<br> <code>custom</code> 自定义导航栏，只保留右上角胶囊按钮。参见注 2。</td> <td>iOS/Android 微信客户端 6.6.0，Windows 微信客户端不支持</td></tr> 
+<tr><td>backgroundColor</td> <td>HexColor</td> <td>#ffffff</td> <td>窗口的背景色</td> <td></td></tr> 
+<tr><td>backgroundTextStyle</td> <td>string</td> <td>dark</td> <td>下拉 loading 的样式，仅支持 <code>dark</code> / <code>light</code></td> <td></td></tr> 
+<tr><td>backgroundColorTop</td> <td>string</td> <td>#ffffff</td> <td>顶部窗口的背景色，仅 iOS 支持</td> <td>微信客户端 6.5.16</td></tr> 
+<tr><td>backgroundColorBottom</td> <td>string</td> <td>#ffffff</td> <td>底部窗口的背景色，仅 iOS 支持</td> <td>微信客户端 6.5.16</td></tr> 
+<tr><td>enablePullDownRefresh</td> <td>boolean</td> <td>false</td> <td>是否开启全局的下拉刷新。<br>详见 <a href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onpulldownrefresh" class="FIXME:">Page.onPullDownRefresh</a></td> <td></td></tr> 
+<tr><td>onReachBottomDistance</td> <td>number</td> <td>50</td> <td>页面上拉触底事件触发时距页面底部距离，单位为 px。<br>详见 <a href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onreachbottom" class="FIXME:">Page.onReachBottom</a></td> <td></td></tr> 
+<tr><td>pageOrientation</td> <td>string</td> <td>portrait</td> <td>屏幕旋转设置，支持 <code>auto</code> / <code>portrait</code> / <code>landscape</code> <br>详见 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/resizable.html" class="FIXME:">响应显示区域变化</a></td> <td>2.4.0 (auto) / 2.5.0 (landscape)</td></tr> 
+<tr><td><a href="#restartStrategy" class="FIXME:">restartStrategy</a></td> <td>string</td> <td>homePage</td> <td>重新启动策略配置</td> <td>2.8.0</td></tr>
+<tr><td>initialRenderingCache</td> <td>string</td> <td></td> <td>页面<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/initial-rendering-cache.html" class="FIXME:">初始渲染缓存</a>配置，支持 <code>static</code> / <code>dynamic</code></td> <td>2.11.1</td></tr> 
+<tr><td>visualEffectInBackground</td> <td>string</td> <td>none</td> <td>切入系统后台时，隐藏页面内容，保护用户隐私。支持 <code>hidden</code> / <code>none</code></td> <td>2.15.0</td></tr></tbody></table><h5><a name="restartstrategya-idrestartstrategyㅤa" class="md-header-anchor"></a><span>restartStrategy</span><a id="restartStrategy"><span>ㅤ</span></a></h5><blockquote><p><span>基础库 2.8.0 开始支持，低版本需做兼容处理。</span></p></blockquote><p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/runtime/operating-mechanism.html#_2-1-重新启动策略" class="FIXME:"><span>重新启动策略配置</span></a></p><figure><table><thead><tr><th><span>可选值</span></th><th><span>含义</span></th></tr></thead><tbody><tr><td><span>homePage</span></td><td><span>（默认值）如果从这个页面退出小程序，下次将从首页冷启动</span></td></tr><tr><td><span>homePageAndLatestPage</span></td><td><span>如果从这个页面退出小程序，下次冷启动后立刻加载这个页面，页面的参数保持不变（不可用于 tab 页）</span></td></tr></tbody></table></figure><p><span>例：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"window"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"navigationBarBackgroundColor"</span>: <span class="cm-string">"#ffffff"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"navigationBarTextStyle"</span>: <span class="cm-string">"black"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"navigationBarTitleText"</span>: <span class="cm-string">"微信接口功能演示"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"backgroundColor"</span>: <span class="cm-string">"#eeeeee"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"backgroundTextStyle"</span>: <span class="cm-string">"light"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 202px;"></div><div class="CodeMirror-gutters" style="display: none; height: 202px;"></div></div></div></pre><h4><a name="tabbara-idtabbarㅤa" class="md-header-anchor"></a><span>tabBar</span><a id="tabBar"><span>ㅤ</span></a></h4><p><span>小程序底部或顶部可以有tab栏指定切换页面</span></p><table><thead>
+<tr><th>属性</th> <th>类型</th> <th>必填</th> <th>默认值</th> <th>描述</th> <th>最低版本</th></tr></thead> <tbody>
+<tr><td>color</td> <td>HexColor</td> <td><a class="LetMeFly"><font color="warning">否</font></a></td> <td><a class="LetMeFly"><font color="warning">black</font></a></td> <td>tab 上的文字默认颜色，仅支持十六进制颜色</td> <td></td></tr> 
+<tr><td>selectedColor</td> <td>HexColor</td> <td><a class="LetMeFly"><font color="warning">否</font></a></td> <td><a class="LetMeFly"><font color="warning">#1aad19</font></a></td> <td>tab 上的文字选中时的颜色，仅支持十六进制颜色</td> <td></td></tr> 
+<tr><td>backgroundColor</td> <td>HexColor</td> <td><a class="LetMeFly"><font color="warning">否</font></a></td> <td><a class="LetMeFly"><font color="warning">white</font></a></td> <td>tab 的背景色，仅支持十六进制颜色</td> <td></td></tr> 
+<tr><td>borderStyle</td> <td>string</td> <td>否</td> <td>black</td> <td>tabbar 上边框的颜色， 仅支持 <code>black</code> / <code>white</code></td> <td></td></tr> 
+<tr><td><a class="LetMeFly" href="#list_my"><font color="warning">list</font></a></td> <td>Array</td> <td>是</td> <td></td> <td>tab 的列表，详见 <code>list</code> 属性说明，最少 2 个、最多 5 个 tab</td> <td></td></tr> 
+<tr><td>position</td> <td>string</td> <td>否</td> <td>bottom</td> <td>tabBar 的位置，仅支持 <code>bottom</code> / <code>top</code></td> <td></td></tr> 
+<tr><td>custom</td> <td>boolean</td> <td>否</td> <td>false</td> <td>自定义 tabBar，见<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html" class="FIXME:">详情</a></td> <td>2.5.0</td></tr></tbody></table><h5><a name="list-a-idlistmyㅤa" class="md-header-anchor"></a><span>list </span><a id="list_my"><span>ㅤ</span></a></h5><p><span>数组。能配置[2, 5]个tab，每个tab都是一个对象，其值如下：</span></p><table><thead>
+<tr><th>属性</th> <th>类型</th> <th>必填</th> <th>说明</th></tr></thead> <tbody>
+<tr><td>pagePath</td> <td>string</td> <td>是</td> <td>页面路径，必须在 pages 中先定义</td></tr> 
+<tr><td>text</td> <td>string</td> <td>是</td> <td>tab 上按钮文字</td></tr> 
+<tr><td>iconPath</td> <td>string</td> <td>否</td> <td>图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。<br><strong>当 <code>position</code> 为 <code>top</code> 时，不显示 icon。</strong></td></tr> 
+<tr><td>selectedIconPath</td> <td>string</td> <td>否</td> <td>选中时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。<br><strong>当 <code>position</code> 为 <code>top</code> 时，不显示 icon。</strong></td></tr></tbody></table><p>&nbsp;</p><h4><a name="networktimeouta-idnetworktimeoutㅤa" class="md-header-anchor"></a><span>networkTimeout</span><a id="networkTimeout"><span>ㅤ</span></a></h4><p><span>网络请求的Timeout(超时时间)，单位ms</span></p><table><thead>
+<tr><th>属性</th> <th>类型</th> <th>必填</th> <th>默认值</th> <th>说明</th></tr></thead> <tbody>
+<tr><td>request</td> <td>number</td> <td>否</td> <td>60000</td> <td><a href="https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html" class="FIXME:">wx.request</a> 的超时时间，单位：毫秒。</td></tr> 
+<tr><td>connectSocket</td> <td>number</td> <td>否</td> <td>60000</td> <td><a href="https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.connectSocket.html" class="FIXME:">wx.connectSocket</a> 的超时时间，单位：毫秒。</td></tr> 
+<tr><td>uploadFile</td> <td>number</td> <td>否</td> <td>60000</td> <td><a href="https://developers.weixin.qq.com/miniprogram/dev/api/network/upload/wx.uploadFile.html" class="FIXME:">wx.uploadFile</a> 的超时时间，单位：毫秒。</td></tr> 
+<tr><td>downloadFile</td> <td>number</td> <td>否</td> <td>60000</td> <td><a href="https://developers.weixin.qq.com/miniprogram/dev/api/network/download/wx.downloadFile.html" class="FIXME:">wx.downloadFile</a> 的超时时间，单位：毫秒。</td></tr></tbody></table><h4><a name="debuga-iddebugㅤa" class="md-header-anchor"></a><span>debug</span><a id="debug"><span>ㅤ</span></a></h4><p><span>可以在开发者工具中开启 debug 模式，在开发者工具的控制台面板，调试信息以 info 的形式给出，其信息有 Page 的注册，页面路由，数据更新，事件触发等。可以帮助开发者快速定位一些常见的问题。</span></p><h4><a name="functionalpagesa-idfunctionalpagesㅤa" class="md-header-anchor"></a><span>functionalPages</span><a id="functionalPages"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 2.1.0 开始支持，低版本需做兼容处理</span></p></blockquote><p><span>插件所有者小程序需要设置这一项来启用</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages.html" class="FIXME:"><span>插件功能页</span></a></p><p>&nbsp;</p><h4><a name="subpackagesa-idsubpackagesㅤa" class="md-header-anchor"></a><span>subpackages</span><a id="subpackages"><span>ㅤ</span></a></h4><blockquote><p><span>微信客户端 6.6.0 ，基础库 1.7.3 及以上版本支持</span></p></blockquote><p><span>启用</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages.html" class="FIXME:"><span>分包加载</span></a><span>时，声明项目分包结构。</span></p><blockquote><p><span>写成 subPackages 也支持。</span></p></blockquote><h4><a name="workersa-idworkersㅤa" class="md-header-anchor"></a><span>workers</span><a id="workers"><span>ㅤ</span></a></h4><p><span>基础库 1.9.90 开始支持，低版本需做兼容处理。</span></p><p><span>使用 </span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/workers.html" class="FIXME:"><span>Worker</span></a><span> 处理多线程任务时，设置 </span><code><span>Worker</span></code><span> 代码放置的目录</span></p><h4><a name="requiredbackgroundmodesa-idrequiredbackgroundmodesㅤa" class="md-header-anchor"></a><span>requiredBackgroundModes</span><a id="requiredBackgroundModes"><span>ㅤ</span></a></h4><blockquote><p><span>微信客户端 6.7.2 及以上版本支持</span></p></blockquote><p><span>申明需要后台运行的能力，类型为数组。目前支持以下项目：</span></p><blockquote><ul><li><span>audio: 后台音乐播放</span></li><li><span>location: 后台定位</span></li></ul></blockquote><p><span>如：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"requiredBackgroundModes"</span>: {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"pages"</span>: [<span class="cm-string">"pages/index/index"</span>],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"requiredBackgroundModes"</span>: [<span class="cm-string">"audio"</span>, <span class="cm-string">"location"</span>]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 90px;"></div><div class="CodeMirror-gutters" style="display: none; height: 90px;"></div></div></div></pre><p><strong><span>注</span></strong><span>：在此处申明了后台运行的接口，开发版和体验版上可以直接生效，正式版还需通过审核。</span></p><h4><a name="pluginsa-idpluginsㅤa" class="md-header-anchor"></a><span>plugins</span><a id="plugins"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 1.9.6 开始支持，低版本需做兼容处理。</span></p></blockquote><p><span>声明小程序需要使用的</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html" class="FIXME:"><span>插件</span></a><span>。</span></p><h4><a name="preloadrulea-idpreloadruleㅤa" class="md-header-anchor"></a><span>preloadRule</span><a id="preloadRule"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 2.3.0 开始支持，低版本需做兼容处理。</span></p></blockquote><p><span>声明</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/subpackages/preload.html" class="FIXME:"><span>分包预下载</span></a><span>的规则。</span></p><h4><a name="resizablea-idresizableㅤa" class="md-header-anchor"></a><span>resizable</span><a id="resizable"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 2.3.0 开始支持，低版本需做兼容处理。</span></p></blockquote><p><span>在 iPad 上运行的小程序可以设置支持</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/resizable.html" class="FIXME:"><span>屏幕旋转</span></a><span>。</span></p><p><span>在 PC 上运行的小程序，用户可以按照任意比例拖动窗口大小，也可以在小程序菜单中最大化窗口</span></p><h4><a name="usingcomponentsa-idusingcomponentsㅤa" class="md-header-anchor"></a><span>usingComponents</span><a id="usingComponents"><span>ㅤ</span></a></h4><blockquote><p><span>开发者工具 1.02.1810190 及以上版本支持</span></p></blockquote><p><span>在 app.json 中声明的自定义组件视为全局自定义组件，在小程序内的页面或自定义组件中可以直接使用而无需再声明。</span></p><p><strong><span>注意</span></strong><span>：全局声明的自定义组件会视为被所有页面依赖，会在所有页面启动时进行初始化，且会占用主包大小。只被个别页面或分包引用的自定义组件应尽量在页面配置中声明。</span></p><h4><a name="permissiona-idpermissionㅤa" class="md-header-anchor"></a><span>permission</span><a id="permission"><span>ㅤ</span></a></h4><blockquote><p><span>微信客户端 7.0.0 及以上版本支持</span></p></blockquote><p><span>小程序接口权限相关设置。字段类型为 </span><code><span>Object</span></code><span>，结构为：</span></p><figure><table><thead><tr><th><span>属性</span></th><th><span>类型</span></th><th><span>必填</span></th><th><span>默认值</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>scope.userLocation</span></td><td><a href="#PermissionObject"><span>PermissionObject</span></a></td><td><span>否</span></td><td>&nbsp;</td><td><span>位置相关权限声明</span></td></tr></tbody></table></figure><h5><a name="permissionobject-结构-a-idpermissionobjectㅤa" class="md-header-anchor"></a><span>PermissionObject 结构 </span><a id="PermissionObject"><span>ㅤ</span></a></h5><figure><table><thead><tr><th><span>属性</span></th><th><span>类型</span></th><th><span>必填</span></th><th><span>默认值</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>desc</span></td><td><span>string</span></td><td><span>是</span></td><td>&nbsp;</td><td><span>小程序获取权限时展示的接口用途说明。最长 30 个字符</span></td></tr></tbody></table></figure><p><span>例：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"pages"</span>: [<span class="cm-string">"pages/index/index"</span>],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"permission"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"scope.userLocation"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"desc"</span>: <span class="cm-string">"你的位置信息将用于小程序位置接口的效果展示"</span> <span class="cm-comment">// 高速公路行驶持续后台定位</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 179px;"></div><div class="CodeMirror-gutters" style="display: none; height: 179px;"></div></div></div></pre><h4><a name="sitemaplocationa-idsitemaplocationㅤa" class="md-header-anchor"></a><span>sitemapLocation</span><a id="sitemapLocation"><span>ㅤ</span></a></h4><p><span>指明 sitemap.json 的位置；默认为 &#39;sitemap.json&#39; 即在 app.json 同级目录下名字的 </span><code><span>sitemap.json</span></code><span> 文件</span></p><h4><a name="stylea-idstyleㅤa" class="md-header-anchor"></a><span>style</span><a id="style"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 2.8.0 开始支持，低版本需做兼容处理。</span></p></blockquote><p><span>微信客户端 7.0 开始，UI 界面进行了大改版。小程序也进行了基础组件的样式升级。app.json 中配置 </span><code><span>&quot;style&quot;: &quot;v2&quot;</span></code><span>可表明启用新版的组件样式。</span></p><p><span>本次改动涉及的组件有 </span><code><span>button icon radio checkbox switch slider</span></code><span>。可前往小程序示例进行体验。</span></p><h4><a name="useextendedliba-iduseextendedlibㅤa" class="md-header-anchor"></a><span>useExtendedLib</span><a id="useExtendedLib"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 2.2.1 开始支持，低版本需做兼容处理。</span></p></blockquote><blockquote><p><span>最新的 nightly 版开发者工具开始支持，同时基础库从支持 npm 的版本（2.2.1）起支持</span></p></blockquote><p><span>指定需要引用的扩展库。目前支持以下项目：</span></p><blockquote><ul><li><span>kbone: </span><a href="https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/extended/kbone/" class="FIXME:"><span>多端开发框架</span></a></li><li><span>weui: </span><a href="https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/extended/weui/" class="FIXME:"><span>WeUI 组件库</span></a></li></ul></blockquote><p><span>指定后，相当于引入了对应扩展库相关的最新版本的 npm 包，同时也不占用小程序的包体积。rc工具版本支持分包引用。用法如下：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-string cm-property">"useExtendedLib"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"kbone"</span>: <span class="cm-atom">true</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"weui"</span>: <span class="cm-atom">true</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 134px;"></div><div class="CodeMirror-gutters" style="display: none; height: 134px;"></div></div></div></pre><h4><a name="entrancedeclarea-identrancedeclareㅤa" class="md-header-anchor"></a><span>entranceDeclare</span><a id="entranceDeclare"><span>ㅤ</span></a></h4><blockquote><p><span>微信客户端 7.0.9 及以上版本支持，iOS 暂不支持</span></p></blockquote><p><span>聊天位置消息用打车类小程序打开，</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/location-message.html" class="FIXME:"><span>详情参考</span></a><span>。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"entranceDeclare"</span>: {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"locationMessage"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"path"</span>: <span class="cm-string">"pages/index/index"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"query"</span>: <span class="cm-string">"foo=bar"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 134px;"></div><div class="CodeMirror-gutters" style="display: none; height: 134px;"></div></div></div></pre><h4><a name="darkmodea-iddarkmodeㅤa" class="md-header-anchor"></a><span>darkmode</span><a id="darkmode"><span>ㅤ</span></a></h4><blockquote><p><span>开发者工具 1.03.2004271 及以上版本支持，基础库 2.11.0 及以上版本支持</span></p></blockquote><p><span>微信iOS客户端 7.0.12 版本、Android客户端 7.0.13 版本正式支持 DarkMode，可通过配置&quot;darkmode&quot;: true表示当前小程序可适配 DarkMode，所有基础组件均会根据系统主题展示不同的默认样式，navigation bar 和 tab bar 也会根据开发者的配置自动切换。</span></p><p><span>配置后，请根据</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html" class="FIXME:"><span>DarkMode 适配指南</span></a><span>自行完成基础样式以外的适配工作。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"darkmode"</span>: <span class="cm-atom">true</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><h4><a name="themelocationa-idthemelocationㅤa" class="md-header-anchor"></a><span>themeLocation</span><a id="themeLocation"><span>ㅤ</span></a></h4><p><span>自定义 </span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html#变量配置文件-theme-json" class="FIXME:"><span>theme.json</span></a><span> 的路径，当配置</span><code><span>&quot;darkmode&quot;:true</span></code><span>时，当前配置文件为必填项。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"themeLocation"</span>: <span class="cm-string">"/path/to/theme.json"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><h4><a name="lazycodeloadinga-idlazycodeloadingㅤa" class="md-header-anchor"></a><span>lazyCodeLoading</span><a id="lazyCodeLoading"><span>ㅤ</span></a></h4><p><span>目前仅支持值 </span><code><span>requiredComponents</span></code><span>，代表开启小程序</span><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/lazyload.html#按需注入" class="FIXME:"><span>「按需注入」</span></a><span>特性。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"lazyCodeLoading"</span>: <span class="cm-string">"requiredComponents"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><h4><a name="singlepagea-idsinglepageㅤa" class="md-header-anchor"></a><span>singlePage</span><a id="singlePage"><span>ㅤ</span></a></h4><blockquote><p><span>基础库 2.11.3 及以上版本支持，目前分享到朋友圈 (Beta) 后打开会进入单页模式</span></p></blockquote><p><span>单页模式相关配置</span></p><figure><table><thead><tr><th><span>属性</span></th><th><span>类型</span></th><th><span>必填</span></th><th><span>默认值</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>navigationBarFit</span></td><td><span>String</span></td><td><span>否</span></td><td><span>默认自动调整，若原页面是自定义导航栏，则为 float，否则为 squeezed</span></td><td><span>导航栏与页面的相交状态，值为 float 时表示导航栏浮在页面上，与页面相交；值为 squeezed 时表示页面被导航栏挤压，与页面不相交</span></td></tr></tbody></table></figure><h4><a name="embeddedappidlista-idembeddedappidlistㅤa" class="md-header-anchor"></a><span>embeddedAppIdList</span><a id="embeddedAppIdList"><span>ㅤ</span></a></h4><p><span>指定小程序可通过</span><a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.openEmbeddedMiniProgram.html" class="FIXME:"><span>wx.openEmbeddedMiniProgram</span></a><span>打开的小程序名单。</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string">"embeddedAppIdList"</span>: [<span class="cm-string">"wxe5f52902cf4de896"</span>]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><h4><a name="halfpagea-idhalfpageㅤa" class="md-header-anchor"></a><span>halfPage</span><a id="halfPage"><span>ㅤ</span></a></h4><figure><table><thead><tr><th><span>属性</span></th><th><span>类型</span></th><th><span>必填</span></th><th><span>默认值</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>firstPageNavigationStyle</span></td><td><span>string</span></td><td><span>否</span></td><td><span>视频号直播打开的第一个页面的全屏状态使用自定义顶部，支持 default / custom</span></td><td>&nbsp;</td></tr></tbody></table></figure><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="json"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"halfPage"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"firstPageNavigationStyle"</span>: <span class="cm-string">"custom"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 112px;"></div><div class="CodeMirror-gutters" style="display: none; height: 112px;"></div></div></div></pre></div>
+</body>
+</html>
