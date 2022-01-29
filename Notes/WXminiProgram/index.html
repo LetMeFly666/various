@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-26 21:28:43
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-29 12:21:54
+ * @LastEditTime: 2022-01-29 12:23:28
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -57,9 +57,9 @@
             setTimeout(() => {setAIframe(iframe);}, 5000);
             iframe.onload = function() {setAIframe(iframe);}
         }
-        const iframes = document.querySelectorAll('iframe');
-        for (let i_frame = 0; i_frame < iframes.length; i_frame++) {
-            setManyTimes(iframes[i_frame]);            
+        const iframes2 = document.querySelectorAll('iframe');
+        for (let i_frame = 0; i_frame < iframes2.length; i_frame++) {
+            setManyTimes(iframes2[i_frame]);            
         }
     </script>
 </body>
