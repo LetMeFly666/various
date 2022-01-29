@@ -393,7 +393,7 @@
 
 |属性|	类型|	必填|	默认值|	描述|
 |--|--|--|--|--|
-|firstPageNavigationStyle|	string|	否	|	视频号直播打开的第一个页面的全屏状态使用自定义顶部，支持 default / custom|
+|firstPageNavigationStyle|	string|	否	|	|视频号直播打开的第一个页面的全屏状态使用自定义顶部，支持 default / custom|
 
 ```json
 {
