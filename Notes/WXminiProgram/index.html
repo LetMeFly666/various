@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-26 21:28:43
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-29 12:23:28
+ * @LastEditTime: 2022-01-29 12:32:16
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -46,7 +46,7 @@
             const as_ = doc.querySelectorAll('a');
             for (let i = 0; i < as_.length; i++) {
                 const href = as_[i].getAttribute('href');
-                if (href[0] == '#') continue;
+                if (href && href[0] == '#') continue;
                 as_[i].setAttribute('target', '_blank');
             }
         }
