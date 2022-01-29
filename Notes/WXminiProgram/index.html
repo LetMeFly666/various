@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-26 21:28:43
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-29 11:26:29
+ * @LastEditTime: 2022-01-29 12:16:37
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -14,18 +14,52 @@
 </head>
 
 <body>
+    <h1>我的笔记</h1>
+    <iframe src="RealMyNotes/"></iframe>
+    <br />
+
+    <h1>官方文档的二次总结</h1>
     <iframe src="SummaryFromOfficial/" width="100%" height="1000px"></iframe>
     <script id="setIframeToAutoHeight">
-        const iframe = document.querySelector('iframe');
-        setIframeHeight(iframe);
-        function setOnce(settime) {
-            setTimeout(() => {
-                setIframeHeight(iframe, onload=false);
-            }, settime);
+        
+        function setOneIframe(iframe) {
+            setIframeHeight(iframe);
+            function setOnce(settime) {
+                setTimeout(() => {
+                    setIframeHeight(iframe, onload=false);
+                }, settime);
+            }
+            setOnce(500);
+            setOnce(2000);
+            setOnce(5000);
+            setOnce(10000);
         }
-        setOnce(500);
-        setOnce(2000);
-        setOnce(5000);
-        setOnce(10000);
+        const iframes = document.querySelectorAll('iframe');
+        for (let i = 0; i < iframes.length; i++) {
+            setOneIframe(iframes[i]);
+        }
+        
+    </script>
+    <script id="setIframeHrefAsBlank">
+        function setAIframe(iframe) {
+            const doc = iframe.contentDocument;
+            const as_ = doc.querySelectorAll('a');
+            for (let i = 0; i < as_.length; i++) {
+                const href = as_[i].getAttribute('href');
+                if (href[0] == '#') continue;
+                as_[i].setAttribute('target', '_blank');
+            }
+        }
+        function setManyTimes(iframe) {
+            setTimeout(() => {setAIframe(iframe);}, 500);
+            setTimeout(() => {setAIframe(iframe);}, 1500);
+            setTimeout(() => {setAIframe(iframe);}, 2500);
+            setTimeout(() => {setAIframe(iframe);}, 5000);
+            iframe.onload = function() {setAIframe(iframe);}
+        }
+        const iframes = document.querySelectorAll('iframe');
+        for (let i_frame = 0; i_frame < iframes.length; i_frame++) {
+            setManyTimes(iframes[i_frame]);            
+        }
     </script>
 </body>
