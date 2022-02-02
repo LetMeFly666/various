@@ -1,3 +1,5 @@
+[TOC]
+
 # 我的小程序笔记
 
 在做学习并制作微信小程序的时候，记录了一些笔记，同时也遇到了一些BUG。
@@ -240,4 +242,61 @@ Page({
         // 什么功能都没有
     }
 })
+```
+
+### button的事件绑定
+
+假设想要实现：两个按钮，一个加一个减，点击加号数字加一，点击减号数字减一。
+
+若要通过一个函数实现，则函数必须知道点击的是哪个按钮。
+
+但是若<code>bindtap="f(1)"</code>，则微信小程序会傻傻地把<code>f(1)</code>当成函数名，然后说没有函数“f(1)”，而不是去调用f(1)(e)。
+
+#### 通过data-属性传递参数
+
+因此可以在按钮上设置属性<code>data-operation</code>来实现。
+
+```html
+<view>{{num}}</view>
+<button bindtap="f" data-operation="{{1}}">+</button>
+<button bindtap="f" data-operation="{{-1}}">-</button> 
+```
+
+```javascript
+Page({
+    data: {
+        num: 0
+    },
+    f(e) {
+        /* 这个就是data-operation中的值 */
+        const operation = e.currentTarget.dataset.operation;
+        this.setData({
+            num: this.data.num + operation
+        });
+    }
+})
+```
+
+这样就实现了点击<code>+</code>时num+1，点击<code>-</code>时num+(-1)。
+
+<code>button</button>上的属性<code>data-operation</code>的值会被传递到函数的<code>e.currentTarget.dataset.operation</code>
+
+同理，若
+
+```html
+<button bindtap="f" data-num="{{1}}" data-name="+">+</button>
+```
+
+```javascript
+Page({
+    f(e) {
+        console.log(e.currentTarget.dataset);
+    }
+})
+```
+
+则每次点击加号按钮，控制台都会输出
+
+```javascript
+{name: "+", num: 1}
 ```
