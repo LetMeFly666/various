@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-02-13 14:22:06
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-13 14:43:02
+ * @LastEditTime: 2022-02-13 14:48:47
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -14,20 +14,26 @@
 </head>
 
 <body>
-<script>
-    const jumpUrl = {
-        "1": "/He0/MaoMao/樱花爱心诗.html" // https://letmefly.xyz/He0/MaoMao/%E6%A8%B1%E8%8A%B1%E7%88%B1%E5%BF%83%E8%AF%97.html 给毛毛的樱花爱心诗
-    };
+    <script>
+        const jumpUrl = {
+            "1": "/He0/MaoMao/樱花爱心诗.html" // https://letmefly.xyz/He0/MaoMao/%E6%A8%B1%E8%8A%B1%E7%88%B1%E5%BF%83%E8%AF%97.html 给毛毛的樱花爱心诗
+        };
 
-    const id_list = location.href.split('?');
-    if (id_list.length != 2) {
-        alert("不合法参数！")
-    }
-    const id = id_list[1];
-    if (id in jumpUrl) {
-        location.href = jumpUrl[id];
-    } else {
-        alert("id“" + id + "”不存在");
-    }
-</script>
+        function jump() {
+            const id_list = location.href.split('?');
+            if (id_list.length != 2) {
+                alert("不合法参数！");
+                return ;
+            }
+            const id = id_list[1];
+            if (id in jumpUrl) {
+                location.href = jumpUrl[id];
+            } else {
+                alert("id“" + id + "”不存在");
+                return ;
+            }
+        }
+
+        jump();
+    </script>
 </body>
