@@ -47,5 +47,6 @@ jobs:
           PROVINCE_BUCTDAKA_HOME_MAOMAO: ${{ secrets.PROVINCE_BUCTDAKA_HOME_MAOMAO }}
           CITY_BUCTDAKA_HOME: ${{ secrets.CITY_BUCTDAKA_HOME }}
           CITY_BUCTDAKA_HOME_MAOMAO: ${{ secrets.CITY_BUCTDAKA_HOME_MAOMAO }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           # TEST_EMPTY: ${{ secrets.TEST_EMPTY }}  这里加上空的没事，但是python执行就不行了
         run: python 自动脚本/BUCTdaka.py
