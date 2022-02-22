@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-22 13:03:53
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-22 14:27:52
+ * @LastEditTime: 2022-02-22 11:14:21
  */
 
 
@@ -16,7 +16,7 @@ const problemName = '进阶1.2.4 丛林探险';
 
 var script1=document.createElement('script');//创建script标签节点
 script1.setAttribute('type','text/javascript');//设置script类型
-script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js');//设置js地址
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());//设置js地址
 document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功

@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-22 16:08:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-22 16:08:41
+ * @LastEditTime: 2022-02-22 11:12:51
  */
 const problemDescriptionData = '<p><a href="https://baike.baidu.com/item/%E4%B8%89%E7%AC%A0%C2%B7%E9%98%BF%E5%85%8B%E6%9B%BC/3584478?fromtitle&#61;%E4%B8%89%E7%AC%A0%E9%98%BF%E5%85%8B%E6%9B%BC&amp;fromid&#61;11350756&amp;fr&#61;aladdin">三笠阿卡曼</a>决定参观 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        n\n       \n      \n      \n       n\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">n</span></span></span></span></span> 个城市&#xff0c;它要参观所有城市&#xff0c;不介意哪座册城市作为她的起点。</p> \n<p>有 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        m\n       \n      \n      \n       m\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">m</span></span></span></span></span> 条道路照常收费&#xff0c;但她不想去一座城市<font color="#33a3dc">超过</font> <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        2\n       \n      \n      \n       2\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">2</span></span></span></span></span> 次&#xff0c;想把费用降到最低。</p> '
 
@@ -14,7 +14,7 @@ const problemName = '进阶7.7.3 旅行商变形-2';
 
 var script1=document.createElement('script');//创建script标签节点
 script1.setAttribute('type','text/javascript');//设置script类型
-script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js');//设置js地址
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());//设置js地址
 document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功

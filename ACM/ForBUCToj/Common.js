@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 10:57:18
+ * @LastEditTime: 2022-02-22 11:11:42
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -62,9 +62,26 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
                     isProblem=4; // 竞赛状态
                 }
                 catch(TypeError) {
-                    console.log(TypeError);
-                    console.log("Not at second version page");
-                    isProblem=0;
+                    try {
+                        for (let i = 1; i <= 50; i++) {
+                            if (document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ")")) {
+                                problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div");
+                                input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(3) > div > div");
+                                output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(4) > div > div");
+                                problem_description.innerHTML = begin + problemDescriptionData + end;
+                                input_description.innerHTML = begin + inputDescriptionData + end;
+                                output_description.innerHTML = begin + outputDescriptionData + end;
+                                isProblem=5; // 竞赛状态
+                                console.log("now: body > div:nth-child(2) > div > div:nth-child(" + i + ")");
+                                break;
+                            }
+                        }
+                    }
+                    catch (TypeError) {
+                        console.log(TypeError);
+                        console.log("Not at second version page");
+                        isProblem=0;
+                    }
                 }
             }
         }
@@ -95,5 +112,6 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
 
 var script1=document.createElement('script');//创建script标签节点
 script1.setAttribute('type','text/javascript');//设置script类型
-script1.setAttribute('src','https://letmefly.xyz/Links/Common.js');//设置js地址
+script1.setAttribute('src','https://letmefly.xyz/Links/Common.js?v=' + Math.random()
+);//设置js地址
 document.head.appendChild(script1);//将js追加为body的子标签

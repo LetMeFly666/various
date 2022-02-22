@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-22 15:43:52
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-22 15:43:53
+ * @LastEditTime: 2022-02-22 11:14:31
  */
 const problemDescriptionData = '<p>存钱罐有个大问题&#xff0c;不打碎存钱罐就无法确定里面有多少钱。</p> \n<p>所以可能互出现把存钱罐打碎后发现钱不够的情况。唯一的可能是&#xff0c;称一下存钱罐的重量&#xff0c;试着猜里面有多少钱。</p> \n<p>已知存钱罐的重量和每种面值的硬币的重量&#xff0c;请确定存钱罐内的最小金额。</p> '
 
@@ -14,7 +14,7 @@ const problemName = '进阶7.2.2 存钱罐';
 
 var script1=document.createElement('script');//创建script标签节点
 script1.setAttribute('type','text/javascript');//设置script类型
-script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js');//设置js地址
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());//设置js地址
 document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
