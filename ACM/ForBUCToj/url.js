@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-22 16:15:49
+ * @LastEditTime: 2022-02-22 13:34:13
  */
 
 //#region function
@@ -66,12 +66,18 @@ const couldSeeList = {
     //#endregion
 
 //#region main
-const problemId = location.href.split('?')[1].split('=')[1]
-const could = ifCouldSee(problemId)
-var outTime = could ? 1 : 3
-document.body.style.background = could ? couldPicUrl() : couldnotPicUrl()
-document.body.style.backgroundPosition = "center"
-document.body.style.backgroundRepeat = "no-repeat"
-document.body.style.backgroundAttachment = "fixed";
-jump()
-//#endregion
+try {
+    const problemId = location.href.split('?')[1].split('=')[1]
+    const could = ifCouldSee(problemId)
+    var outTime = could ? 1 : 3
+    document.body.style.background = could ? couldPicUrl() : couldnotPicUrl()
+    document.body.style.backgroundPosition = "center"
+    document.body.style.backgroundRepeat = "no-repeat"
+    document.body.style.backgroundAttachment = "fixed";
+    jump()
+}
+catch (Error) {
+    console.log(Error);
+    document.querySelector("#h1Title").innerHTML = "诶呦呦，暂无此题~_~";
+}
+//#endregion main
