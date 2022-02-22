@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 11:21:49
+ * @LastEditTime: 2022-02-22 13:17:58
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -63,6 +63,7 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
                 }
                 catch(TypeError) {
                     try {
+                        var find_ok = false;
                         for (let i = 1; i <= 50; i++) {
                             if (document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div")) {
                                 problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div");
@@ -73,8 +74,13 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
                                 output_description.innerHTML = begin + outputDescriptionData + end;
                                 isProblem=5; // 竞赛状态
                                 console.log("now: body > div:nth-child(2) > div > div:nth-child(" + i + ")");
+
+                                find_ok = true;
                                 break;
                             }
+                        }
+                        if (!find_ok) {
+                            throw("All Not Found, 判断为题目列表");
                         }
                     }
                     catch (TypeError) {
