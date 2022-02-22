@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 10:41:50
+ * @LastEditTime: 2022-02-22 10:57:18
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -14,6 +14,7 @@
         ifChangeUploaderName: 是否修改上传者名称(boolean)
 */
 function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, ifChangeUploaderName=true) {
+    window.onload = () => { // regin window.onload
     const begin = '<div id="article_content" class="article_content clearfix">\n<link rel="stylesheet" href="https://letmefly.xyz/ACM/ForBUCToj/Problems/ck_htmledit_views-b5506197d8.css">\n<div id="content_views" class="markdown_views prism-atom-one-light">\n<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">\n<path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>\n</svg>\n<p></p>'
     const end = '</div><div data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;dest&quot;:&quot;https://letmefly.blog.csdn.net/article/details/116211565&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}"><div></div></div>\n<link href="https://letmefly.xyz/ACM/ForBUCToj/Problems/markdown_views-d7a94ec6ab.css" rel="stylesheet">\n<link href="https://letmefly.xyz/ACM/ForBUCToj/Problems/style-f1c5feb645.css" rel="stylesheet">\n</div>'
 
@@ -89,6 +90,7 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
             author.innerText="2019040474";
         }, 3000);
     }
+    } // endregin window.onload
 }
 
 var script1=document.createElement('script');//创建script标签节点
