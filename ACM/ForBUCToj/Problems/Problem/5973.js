@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-22 15:53:55
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 11:14:33
+ * @LastEditTime: 2022-02-22 21:48:40
  */
 const problemDescriptionData = '<p>鲍勃喜欢完战略游戏&#xff0c;但他有时候找不到够快的解决方案。</p> \n<p>限制他必须保卫一座中世纪城市&#xff0c;城市的道路形成一棵树。</p> \n<p>他必须把最小数量的士兵放在节点上&#xff0c;这样才可以观察到所有道路。</p> \n<p>请帮鲍勃找到放置的最小士兵数。</p> \n<p>例如下图所示的树&#xff0c;解决方案是放置1个士兵(放置在节点1处)。</p> \n<center>\n <img src="data:image/jpeg;base64,R0lGODlhmgCSAJEAAH9/fwAAAP///wAAACH5BAAAAAAALAAAAACaAJIAAAL/lI&#43;py&#43;0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fy7AH2Ted0wCt8oAuygA&#43;i8EgyFpFMkBLybEorUej0SqlGtNiugbv1ihPcngM8bmqJYHT6WP4u3924AO2m5&#43;x4PZY/5ycFeCY4RdiQZwiDyKC46NLm9gjZQulTqaZxmanCifDZiRIaKjpqUWp6OpGqumrleggbe2gGakv794ObKwbQ6/cLTCc8nFZs7Jt8vDyG3Hz1DC0lPc1UbX2EnR20zZ3j/T0TLh5DXv5yjt6ivr7S7p4CH38yT19ifz&#43;Srx/C3//hH8AOAgduKGgwA8KEFxYyrODw4YSIEhPt4lWxww8E/8I2ZtyAcUHIj2GykKRyoZXBUir7tWp5r82skyIb2MgDc90kCTnL7SxJE9TMQkGFBjpa9OfQoEqRMl3qqKhRjVKnbqpqNUNPnSCxkunqNavJsF9Rka059qzQkWS2xlTisS0Qt/HKXHzC9ilYrHnTJg3RdyXdOycHHwhc13DZhIrRDmzsCLIgxCUk07HslBvlFJtzYfY77TMV0UJIm02Go0tqz3pMr&#43;iMxPWryaZki7A9&#43;u4tUbAtjdwVa83dz4pwn4D7u/dpnrSAbzHMybgJ2HRJubLu5Cpv7VQjN12kEuaaw5lbe2g5Xg5RSJP6hgeaiP2sPtzjQ31Dib7W8pjAg2buv5998PlR3HfLATigeazwx1xUC/r3oIAY2BWXhAT&#43;t1iA9dEWiH4afmhIex6CmFIm4p23IYQprpigfCRyEF1wEyaBYScxVtagZwWOkpx0r/Xom27WDOejWkYeiWSSSi7JZJMKFAAAOw&#61;&#61;" />\n</center> '
 
@@ -19,5 +19,5 @@ document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true);
 }

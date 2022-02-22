@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-11-26 02:04:28
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 11:13:58
+ * @LastEditTime: 2022-02-22 21:49:01
  */
 
 
@@ -27,5 +27,5 @@ document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true);
 }

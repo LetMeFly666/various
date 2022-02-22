@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-01-22 15:43:52
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 11:14:31
+ * @LastEditTime: 2022-02-22 21:48:43
  */
 const problemDescriptionData = '<p>存钱罐有个大问题&#xff0c;不打碎存钱罐就无法确定里面有多少钱。</p> \n<p>所以可能互出现把存钱罐打碎后发现钱不够的情况。唯一的可能是&#xff0c;称一下存钱罐的重量&#xff0c;试着猜里面有多少钱。</p> \n<p>已知存钱罐的重量和每种面值的硬币的重量&#xff0c;请确定存钱罐内的最小金额。</p> '
 
@@ -19,5 +19,5 @@ document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true);
 }

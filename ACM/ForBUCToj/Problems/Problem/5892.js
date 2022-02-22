@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-11-26 03:10:49
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 11:14:19
+ * @LastEditTime: 2022-02-22 21:48:53
  */
 
 const problemDescriptionData = '<p>电话公司正在创建一个新的电话网络&#xff0c;每个地方都有一个电话交换机&#xff08;编号为1~N&#xff09;。线路是双向的&#xff0c;并且总是将两个地方连接在一起&#xff0c;在灭个地方&#xff0c;线路都终止与电话交换机。从每个地方都可以通过线路达到其他地方&#xff0c;但不需要直接相连&#xff0c;可以进行多次交换。有时候在某个地方发生故障&#xff0c;会导致交换机无法运行。在这种情况下&#xff0c;除了无法到达失败的地方&#xff0c;还可能导致其他地方无法连接。这个地方&#xff08;发生故障的地方&#xff09;是至关重要的。请写程序来查找所有关键位置的数量。</p> '
@@ -20,5 +20,5 @@ document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true);
 }
