@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 11:11:42
+ * @LastEditTime: 2022-02-22 11:21:49
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -64,7 +64,7 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
                 catch(TypeError) {
                     try {
                         for (let i = 1; i <= 50; i++) {
-                            if (document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ")")) {
+                            if (document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div")) {
                                 problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div");
                                 input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(3) > div > div");
                                 output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(4) > div > div");
