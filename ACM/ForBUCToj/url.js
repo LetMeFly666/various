@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 21:46:35
+ * @LastEditTime: 2022-02-22 22:10:11
  */
 
 //#region function
@@ -11,7 +11,7 @@ ifCouldSee = problemId => new Date().getTime() > couldSeeList[problemId]["time"]
 couldPicUrl = () => `url('./Could/${Math.floor(Math.random() * 1000000) % couldPic + 1}.jpg')`
 couldnotPicUrl = () => `url('./Couldnot/${Math.floor(Math.random() * 1000000) % couldnotPic + 1}.jpg')`
 
-function jump() {
+function jump(could, problemId) {
     outTime -= 1
     if (outTime <= 0) {
         if (could) { location.href = couldSeeList[problemId]["explanationHref"] }
@@ -68,6 +68,7 @@ const couldSeeList = {
     //#endregion
 
 //#region main
+
 try {
     const problemId = location.href.split('?')[1].split('=')[1]
     const could = ifCouldSee(problemId)
@@ -76,7 +77,7 @@ try {
     document.body.style.backgroundPosition = "center"
     document.body.style.backgroundRepeat = "no-repeat"
     document.body.style.backgroundAttachment = "fixed";
-    jump()
+    jump(could, problemId);
 }
 catch (Error) {
     console.log(Error);
