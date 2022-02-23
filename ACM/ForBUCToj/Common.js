@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 13:17:58
+ * @LastEditTime: 2022-02-23 13:30:13
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -20,6 +20,10 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
 
     var isProblem = 1;
     var problem_description,input_description,output_description;
+    if (location.href.split("problem.php").length == 1) { // 不存在problem.php
+        isProblem = 0;
+        return;
+    }
     try {
         problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
         input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
@@ -65,7 +69,7 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
                     try {
                         var find_ok = false;
                         for (let i = 1; i <= 50; i++) {
-                            if (document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div")) {
+                            if (document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(4) > div > div")) {
                                 problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(2) > div > div");
                                 input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(3) > div > div");
                                 output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(" + i + ") > div:nth-child(4) > div > div");
