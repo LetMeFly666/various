@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-03-11 00:55:36
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-03-11 01:29:06
+ * @LastEditTime: 2022-03-11 01:39:49
  */
 const problemDescriptionData = '<p>某日某楼<font color="gray" title="BUCT7#363">3某3</font>宿舍群名改成了“&#x1f46b;&#x1f436;&#x1f436;&#x1f436;”</p> \n<p>之后<font color="gray" title="ckz">某舟</font>就对“一对”这个词很敏感。</p> \n<p>他从此开始讨厌偶数&#xff0c;同时他想知道&#xff1a;对于一个正整数 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        N\n       \n      \n      \n       N\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.10903em;">N</span></span></span></span></span> &#xff0c;不大于 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        N\n       \n      \n      \n       N\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.10903em;">N</span></span></span></span></span> 的正整数中奇数的概率是多少。</p> \n'
 
@@ -12,9 +12,9 @@ const outputDescriptionData = '<p><small>他喜欢奇数&#xff0c;</small>请输�
 
 const problemName = '👫🐶🐶🐶';
 
-var script1=document.createElement('script');//创建script标签节点
-script1.setAttribute('type','text/javascript');//设置script类型
-script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js');//设置js地址
+var script1=document.createElement('script');  // 创建script标签节点
+script1.setAttribute('type','text/javascript');  // 设置script类型
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());  // 设置js地址
 document.head.appendChild(script1);//将js追加为body的子标签
 
 function after() {

@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 22:10:11
+ * @LastEditTime: 2022-03-11 03:17:10
  */
 
 //#region function
@@ -64,6 +64,12 @@ const couldSeeList = {
         5975: { "time": new Date("2021-12-04 12:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/122635904", "problemHref": "http://182.92.175.181/problem.php?id=5975" },
         6065: { "time": new Date("2022-02-23 14:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123068245", "problemHref": "https://buctcoder.com/problem.php?id=6065" },
         6069: { "time": new Date("2022-02-23 14:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123077124", "problemHref": "https://buctcoder.com/problem.php?id=6069" },
+        6080: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123410282", "problemHref": "https://buctcoder.com/problem.php?id=6080" },
+        6081: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415414", "problemHref": "https://buctcoder.com/problem.php?id=6081" },
+        6082: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415431", "problemHref": "https://buctcoder.com/problem.php?id=6082" },
+        6083: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415455", "problemHref": "https://buctcoder.com/problem.php?id=6083" },
+        6084: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415471", "problemHref": "https://buctcoder.com/problem.php?id=6084" },
+        6085: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415480", "problemHref": "https://buctcoder.com/problem.php?id=6085" },
     }
     //#endregion
 

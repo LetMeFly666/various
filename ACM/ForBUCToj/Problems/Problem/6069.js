@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-02-22 21:47:15
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-02-22 21:52:48
+ * @LastEditTime: 2022-03-11 01:38:17
  */
 const problemDescriptionData = '<p><font face="楷体" title="Tisfy">小T</font>喜欢收集图片。</p> \n<p>有次她阅读英语短文的时候&#xff0c;突发奇想&#xff0c;想要统计一下短文中字母“<code>img</code>”出现的次数。</p> \n<p><font face="楷体" title="Tisfy">AI小T</font>当然不会手动统计“<code>img</code>”的出现次数&#xff0c;而是写了一段程序来统计。</p> '
 
@@ -14,7 +14,8 @@ const problemName = '图片收集者';
 
 var script1=document.createElement('script');//创建script标签节点
 script1.setAttribute('type','text/javascript');//设置script类型
-script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js');//设置js地址
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random()
+);//设置js地址
 document.head.appendChild(script1);//将js追加为body的子标签
 
 //判断script1是否加载成功
