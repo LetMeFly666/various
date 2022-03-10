@@ -19,7 +19,19 @@ script1.setAttribute('type','text/javascript');  // 设置script类型
 script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());  // 设置js地址
 document.head.appendChild(script1);  // 将js追加为body的子标签
 
+function changeToNeq() {
+    const span = document.querySelectorAll('span');
+    for (var i = 0; i < span.length; i++) {
+        if (span[i].innerText == '') {
+            span[i].innerText = ' ≠ ';
+        }
+        else if (span[i].innerText == '=') {  // FIXME: 这样就不能有=了
+            span[i].innerText = '';
+        }
+    }
+}
+
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false, changeToNeq);
 }
