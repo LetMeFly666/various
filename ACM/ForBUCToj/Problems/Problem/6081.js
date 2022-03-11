@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-03-11 01:41:09
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-03-11 01:59:06
+ * @LastEditTime: 2022-03-11 15:13:12
  */
 const problemDescriptionData = '<p>“<font color="gray" title="Let&amp;Mao">某对</font>”准备去海边玩。</p> \n<p>景区门票对身高小于xx的小朋友免费。景区管理人员想请<font color="gary" title="LetMeFly">程序员先生</font>写一个程序&#xff0c;来统计<font color="#00a3f5" title="身高 ≥ xx">收费游客</font>的个数。</p> \n'
 
@@ -19,5 +19,5 @@ document.head.appendChild(script1);  // 将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true);
 }

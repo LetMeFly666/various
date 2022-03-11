@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-03-11 02:50:18
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-03-11 02:52:38
+ * @LastEditTime: 2022-03-11 15:13:04
  */
 const problemDescriptionData = '<p>同学们都进入了教室后&#xff0c;<font color="gary" title="lh老师|Letせんせい">李老师</font>上起了数论课。</p> \n<p>给你两个正整数 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        A\n       \n      \n      \n       A\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.6\n33em; vertical-align: 0em;"></span><span class="mord mathdefault">A</span></span></span></span></span> 和 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        B\n       \n      \n      \n       B\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.6\n33em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.05017em;">B</span></span></span></span></span>&#xff0c;从中选择一些 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        A\n       \n      \n      \n       A\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.6\n33em; vertical-align: 0em;"></span><span class="mord mathdefault">A</span></span></span></span></span> 、 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        B\n       \n      \n      \n       B\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.6\n33em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.05017em;">B</span></span></span></span></span> 的公共因数&#xff0c;并且要保证选取的这些因数是互质的。</p> \n<p>请问最多选择多少个公共因数。</p> \n<details><summary><b>因数解释</b> </summary>如果 a % b &#61; 0 &#xff0c;那么 b 就是 a 的因数。</details> \n'
 // 最后 detail>summary是手动恢复添加上去的
@@ -20,5 +20,5 @@ document.head.appendChild(script1);  // 将js追加为body的子标签
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true);
 }

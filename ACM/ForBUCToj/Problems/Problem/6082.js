@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-03-11 02:17:46
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-03-11 03:46:03
+ * @LastEditTime: 2022-03-11 15:12:41
  */
 const problemDescriptionData = '<p>愉快的假期总是那么的短暂。</p> \n<p>回到学校后&#xff0c;<font color="gray" title="Tisfy">小T</font>监测了教室的进出情况。</p> \n<p>假设班级里有 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        N\n       \n      \n      \n       N\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.10903em;">N</span></span></span></span></span> 个同学&#xff0c;学号分别是 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        1\n       \n       \n        ∼\n       \n       \n        N\n       \n      \n      \n       1\sim N\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.10903em;">N</span></span></span></span></span>&#xff0c;<font color="gray" title="Tisfy">小T</font>记录了每位同学分别是第几个进入的教室。</p> \n<p>你可以通过上述记录&#xff0c;按进入教室的先后顺序输出同学的学号吗&#xff1f;</p> \n'
 
@@ -33,5 +33,5 @@ function changeToNeq() {
 
 //判断script1是否加载成功
 script1.onload = script1.onreadystatechange = function() {
-    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, false, changeToNeq);
+    __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, true, changeToNeq);
 }
