@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-03-11 00:58:40
+ * @LastEditTime: 2022-04-13 21:48:52
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -13,7 +13,7 @@
         problemName: 问题名称(string)
         ifChangeUploaderName: 是否修改上传者名称(boolean)
 */
-function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, ifChangeUploaderName=true, callBack=null) {
+function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescriptionData, outputDescriptionData, problemName, ifChangeUploaderName=true, callBack=null, tips=null) {
     window.onload = () => { // regin window.onload
     const begin = '<div id="article_content" class="article_content clearfix">\n<link rel="stylesheet" href="https://letmefly.xyz/ACM/ForBUCToj/Problems/ck_htmledit_views-b5506197d8.css">\n<div id="content_views" class="markdown_views prism-atom-one-light">\n<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">\n<path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>\n</svg>\n<p></p>'
     const end = '</div><div data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;dest&quot;:&quot;https://letmefly.blog.csdn.net/article/details/116211565&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}"><div></div></div>\n<link href="https://letmefly.xyz/ACM/ForBUCToj/Problems/markdown_views-d7a94ec6ab.css" rel="stylesheet">\n<link href="https://letmefly.xyz/ACM/ForBUCToj/Problems/style-f1c5feb645.css" rel="stylesheet">\n</div>'
@@ -112,6 +112,39 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
         if (callBack)
             callBack();
     }
+
+    //#region SetTips
+
+    if (isProblem) {
+        try {
+            if (tips) {
+                const setTips = function() {
+                    try {
+                        const columns = document.querySelectorAll(".column");
+                        for (var i = 0; i < columns.length; i++) {
+                            try {
+                                const h4 = columns[i].querySelector("h4");
+                                const innerText = h4.innerText;
+                                if (ifIn("提示", innerText)) {
+                                    const div = columns[i].querySelector("div");
+                                    div.innerHTML = begin + tips + end;
+                                }
+                            }
+                            catch (cannotSetOrDonnotExist) {}
+                        }
+                        if ("4" in "45") {
+                            console.log("566");
+                        }
+                    }
+                    catch(ErrorType) {}
+                }
+                setTips();
+            }
+        }
+        catch(Error) {}
+    }
+
+    //#endregion SetTips
 
     if (ifChangeUploaderName) {
         setTimeout(function () {

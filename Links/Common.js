@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-26 21:57:28
+ * @LastEditTime: 2022-04-13 21:45:31
  */
 
 //#region Title.ico
@@ -223,5 +223,25 @@ function setIframeHeight(iframe, onload=true) {
             iframe.setAttribute('shouldHeight', 500);
         }
     }
+}
+//#endregion
+
+//#region in
+/* Return if a in b */
+const ifIn = function(a, b) {
+    if (a.length > b.length)
+        return false;
+    for (let i = 0; i + a.length - 1 < b.length; i++) {
+        var ifOk = true;
+        for (let j = 0; j < a.length; j++) {
+            if (a[j] != b[i + j]) {
+                ifOk = false;
+                break;
+            }
+        }
+        if (ifOk)
+            return true;
+    }
+    return false;
 }
 //#endregion

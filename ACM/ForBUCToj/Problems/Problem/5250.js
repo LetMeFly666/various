@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-10 19:26:05
+ * @LastEditTime: 2022-04-13 22:07:51
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -181,37 +181,7 @@ const input_description_data = '<p>一行一个字符串&#xff0c;代表小朋友�
 
 const output_description_data = '<p>输出一行一个数&#xff0c;表示这位小朋友的书包编号。</p> '
 
-window.onload = function () {
-    var isProblem = 1;
-    var problem_description,input_description,output_description;
-    try {
-        problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-        input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
-        output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
-
-        problem_description.innerHTML = begin + problem_description_data + end;
-        input_description.innerHTML = begin + input_description_data + end;
-        output_description.innerHTML = begin + output_description_data + end;
-    }
-    catch(TypeError){
-        console.log("Not at Original page");
-        try {
-            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(2) > div > div");
-            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(3) > div > div");
-            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(4) > div > div");
-            problem_description.innerHTML = begin + problem_description_data + end;
-            input_description.innerHTML = begin + input_description_data + end;
-            output_description.innerHTML = begin + output_description_data + end;
-            isProblem=2;
-        }
-        catch(TypeError)
-        {
-            console.log(TypeError);
-            console.log("Not at second version page");
-            isProblem=0;
-        }
-    }
-
+const change__ = function() {
     const numOfProblem = 6;
     const OnceColorAdd = isProblem? 500 : 5000;
     const changeTime = isProblem ? 50 : 500;
@@ -236,7 +206,7 @@ window.onload = function () {
         }
         change();
 
-        if(isProblem) {
+        try {
             var author, submitButton1, submitButton2;
             author = document.querySelector("#creator > a");
             submitButton1 = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(1) > div > div > a.small.ui.primary.button");
@@ -257,39 +227,19 @@ window.onload = function () {
                 submitButton1.href = submitButton2.href = d;
             }
         }
+        catch(ErrorType) {}
 
     }, 500);
 }
 
-function alert(word, hei = 50, Time = 1500) {
-    var length = 0;
-    for (var i = 0; i < word.length; i++) {
-        if (word[i] > 255) {
-            length += 2;
-        } else {
-            length++;
-        }
-    }
-    var rwid = length;
-    var line = 1;
-    while (rwid > 40) {
-        length = 40;
-        hei += hei;
-        rwid -= 40;
-        line++;
-    }
-    var reminder = document.createElement('div');
-    document.body.appendChild(reminder);
-    reminder.style.cssText = "width: " + length * 24 + "px;height: " + hei + "px;position: fixed;display: block;border-radius: 5px;background-color: rgba(0, 0, 0, 0.3);text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;word-break:break-all;";
-    var left__ = 0.5 * document.body.offsetWidth - 0.5 * reminder.offsetWidth;
-    var top__ = 0.5 * window.innerHeight - 0.5 * reminder.offsetHeight;
-    reminder.id = "alert";
-    reminder.style.color = "#fff";
-    reminder.style.left = left__ + 'px';
-    reminder.style.top = top__ + 'px';
-    reminder.style.lineHeight = reminder.offsetHeight / line + 'px';
-    reminder.innerHTML = word;
-    setTimeout(function () {
-        reminder.style.display = "none";
-    }, Time);
+const problemName = '调皮的摩尔';
+
+var script1=document.createElement('script');  // 创建script标签节点
+script1.setAttribute('type','text/javascript');  // 设置script类型
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());  // 设置js地址
+document.head.appendChild(script1);  // 将js追加为body的子标签
+
+//判断script1是否加载成功
+script1.onload = script1.onreadystatechange = function() {
+    __LetMeFly_BUCTOJ_ProblemPrinter(problem_description_data, input_description_data, output_description_data, problemName, true, change__);
 }

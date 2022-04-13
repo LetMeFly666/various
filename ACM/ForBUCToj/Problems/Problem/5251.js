@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-07-15 19:51:43
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-10 19:26:08
+ * @LastEditTime: 2022-04-13 22:01:28
  */
 /*
  * @Author: LetMeFly
@@ -10,22 +10,6 @@
  * @LastEditors: LetMeFly
  * @LastEditTime: 2021-06-04 11:30:18
  */
-
-const begin = '<div id="article_content" class="article_content clearfix">\n\
-        <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
-                <div id="content_views" class="markdown_views prism-atom-one-light">\n\
-                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">\n\
-                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>\n\
-                    </svg>\n\
-                    <p></p>'
-
-const end = '                </div><div data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;dest&quot;:&quot;https://letmefly.blog.csdn.net/article/details/116211565&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}"><div></div></div>\n\
-                <link href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/markdown_views-d7a94ec6ab.css" rel="stylesheet">\n\
-                <link href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/style-f1c5feb645.css" rel="stylesheet">\n\
-        </div>'
-
-document.title="德才论";
-
 const problem_description_data = '\n\
 <p>宋代史学家司马光在《资治通鉴》中有一段著名的“德才论”&#xff1a;“是故才德全尽谓之圣人&#xff0c;才德兼亡谓之愚人&#xff0c;德胜才谓之君子&#xff0c;才胜德谓之小人。凡取人之术&#xff0c;苟不得圣人&#xff0c;君子而与之&#xff0c;与其得小人&#xff0c;不若得愚人。”</p> \n\
 <p>现给出一批考生的德才分数&#xff0c;请根据司马光的理论给出录取排名。</p>  \n\
@@ -64,76 +48,24 @@ const input_description_data = '\n\
 const output_description_data = '<p>输出第一行首先给出达到最低分数线的考生人数 M&#xff0c;随后 M 行&#xff0c;每行按照输入格式输出一位考生的信息&#xff0c;考生按输入中说明的规则从高到低排序。当某类考生中有多人总分相同时&#xff0c;按其德分降序排列&#xff1b;若德分也并列&#xff0c;则按准考证号的升序输出。</p> \n\
 <hr /> \n'
 
-window.onload = function () {
-    var isProblem = 1;
-    var problem_description,input_description,output_description;
-    try {
-        problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-        input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
-        output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
 
-        problem_description.innerHTML = begin + problem_description_data + end;
-        input_description.innerHTML = begin + input_description_data + end;
-        output_description.innerHTML = begin + output_description_data + end;
-    }
-    catch(TypeError){
-        console.log("Not at Original page");
-        try {
-            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(2) > div > div");
-            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(3) > div > div");
-            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(4) > div > div");
-            problem_description.innerHTML = begin + problem_description_data + end;
-            input_description.innerHTML = begin + input_description_data + end;
-            output_description.innerHTML = begin + output_description_data + end;
-            isProblem=2;
-        }
-        catch(TypeError)
-        {
-            console.log(TypeError);
-            console.log("Not at second version page");
-            isProblem=0;
-        }
-    }
-
+const keeped = function() {
     var back = document.querySelector("body")
     var para = document.createElement("div");
     var first = document.body.firstChild;
     back.insertBefore(para, first);
     var newP = document.querySelector("div");
     // newP.style = "width: 100%; height: 100%; background-color: rgb(254, 254, 254); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
-    
-
 }
 
-function alert(word, hei = 50, Time = 1500) {
-    var length = 0;
-    for (var i = 0; i < word.length; i++) {
-        if (word[i] > 255) {
-            length += 2;
-        } else {
-            length++;
-        }
-    }
-    var rwid = length;
-    var line = 1;
-    while (rwid > 40) {
-        length = 40;
-        hei += hei;
-        rwid -= 40;
-        line++;
-    }
-    var reminder = document.createElement('div');
-    document.body.appendChild(reminder);
-    reminder.style.cssText = "width: " + length * 24 + "px;height: " + hei + "px;position: fixed;display: block;border-radius: 5px;background-color: rgba(0, 0, 0, 0.3);text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;word-break:break-all;";
-    var left__ = 0.5 * document.body.offsetWidth - 0.5 * reminder.offsetWidth;
-    var top__ = 0.5 * window.innerHeight - 0.5 * reminder.offsetHeight;
-    reminder.id = "alert";
-    reminder.style.color = "#fff";
-    reminder.style.left = left__ + 'px';
-    reminder.style.top = top__ + 'px';
-    reminder.style.lineHeight = reminder.offsetHeight / line + 'px';
-    reminder.innerHTML = word;
-    setTimeout(function () {
-        reminder.style.display = "none";
-    }, Time);
+const problemName = '德才论';
+
+var script1=document.createElement('script');  // 创建script标签节点
+script1.setAttribute('type','text/javascript');  // 设置script类型
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());  // 设置js地址
+document.head.appendChild(script1);  // 将js追加为body的子标签
+
+//判断script1是否加载成功
+script1.onload = script1.onreadystatechange = function() {
+    __LetMeFly_BUCTOJ_ProblemPrinter(problem_description_data, input_description_data, output_description_data, problemName, true, keeped);
 }

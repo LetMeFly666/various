@@ -2,24 +2,8 @@
  * @Author: LetMeFly
  * @Date: 2021-08-29 15:35:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2021-09-10 19:26:18
+ * @LastEditTime: 2022-04-13 21:54:27
  */
-
-const begin = '<div id="article_content" class="article_content clearfix">\n\
-        <link rel="stylesheet" href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/ck_htmledit_views-b5506197d8.css">\n\
-                <div id="content_views" class="markdown_views prism-atom-one-light">\n\
-                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">\n\
-                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>\n\
-                    </svg>\n\
-                    <p></p>'
-
-const end = '                </div><div data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;dest&quot;:&quot;https://letmefly.blog.csdn.net/article/details/116211565&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}"><div></div></div>\n\
-                <link href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/markdown_views-d7a94ec6ab.css" rel="stylesheet">\n\
-                <link href="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/style-f1c5feb645.css" rel="stylesheet">\n\
-        </div>'
-
-
-
 const problem_description_data = '<p>给定一棵二叉搜索树的先序遍历序列&#xff0c;要求你找出任意两结点的最近公共祖先结点&#xff08;简称 LCA&#xff09;。</p> \n\
 <hr /> '
 
@@ -234,38 +218,7 @@ V\n\
 </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathdefault" style="margin-right: 0.22222em;">V</span></span></span></span></span> 为键值的结点&#xff0c;则输出 <code>ERROR: U is not found.</code>或者 <code>ERROR: V is not found.</code>&#xff0c;或者 <code>ERROR: U and V are not found.</code>。</p> \n\
 <hr /> '
 
-window.onload = function () {
-    var isProblem = 1;
-    var problem_description,input_description,output_description;
-    try {
-        problem_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(1) > div.panel-body.content");
-        input_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(2) > div.panel-body.content");
-        output_description = document.querySelector("body > div.container > div.panel.panel-default > div.panel.panel-body > div:nth-child(3) > div.panel-body.content");
-
-        problem_description.innerHTML = begin + problem_description_data + end;
-        input_description.innerHTML = begin + input_description_data + end;
-        output_description.innerHTML = begin + output_description_data + end;
-    }
-    catch(TypeError){
-        console.log("Not at Original page");
-        try {
-            problem_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(2) > div > div");
-            input_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(3) > div > div");
-            output_description = document.querySelector("body > div:nth-child(2) > div > div:nth-child(6) > div:nth-child(4) > div > div");
-            problem_description.innerHTML = begin + problem_description_data + end;
-            input_description.innerHTML = begin + input_description_data + end;
-            output_description.innerHTML = begin + output_description_data + end;
-            isProblem=2;
-        }
-        catch(TypeError)
-        {
-            console.log(TypeError);
-            console.log("Not at second version page");
-            isProblem=0;
-        }
-    }
-
-    if(isProblem){
+const changes = function() {
     var back = document.querySelector("body")
     var para = document.createElement("div");
     var first = document.body.firstChild;
@@ -333,43 +286,16 @@ window.onload = function () {
         }
     };
     typing();
-
-    setTimeout(function () {
-        var author = document.querySelector("#creator > a");
-        author.href = "userinfo.php?user=2019040474";
-        author.innerText="2019040474";
-    }, 3000);}
 }
 
-function alert(word, hei = 50, Time = 1500) {
-    var length = 0;
-    for (var i = 0; i < word.length; i++) {
-        if (word[i] > 255) {
-            length += 2;
-        } else {
-            length++;
-        }
-    }
-    var rwid = length;
-    var line = 1;
-    while (rwid > 40) {
-        length = 40;
-        hei += hei;
-        rwid -= 40;
-        line++;
-    }
-    var reminder = document.createElement('div');
-    document.body.appendChild(reminder);
-    reminder.style.cssText = "width: " + length * 24 + "px;height: " + hei + "px;position: fixed;display: block;border-radius: 5px;background-color: rgba(0, 0, 0, 0.3);text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 24px;word-break:break-all;";
-    var left__ = 0.5 * document.body.offsetWidth - 0.5 * reminder.offsetWidth;
-    var top__ = 0.5 * window.innerHeight - 0.5 * reminder.offsetHeight;
-    reminder.id = "alert";
-    reminder.style.color = "#fff";
-    reminder.style.left = left__ + 'px';
-    reminder.style.top = top__ + 'px';
-    reminder.style.lineHeight = reminder.offsetHeight / line + 'px';
-    reminder.innerHTML = word;
-    setTimeout(function () {
-        reminder.style.display = "none";
-    }, Time);
+const problemName = '二叉搜索树的最近公共祖先';
+
+var script1=document.createElement('script');  // 创建script标签节点
+script1.setAttribute('type','text/javascript');  // 设置script类型
+script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + Math.random());  // 设置js地址
+document.head.appendChild(script1);  // 将js追加为body的子标签
+
+//判断script1是否加载成功
+script1.onload = script1.onreadystatechange = function() {
+    __LetMeFly_BUCTOJ_ProblemPrinter(problem_description_data, input_description_data, output_description_data, problemName, true, changes);
 }
