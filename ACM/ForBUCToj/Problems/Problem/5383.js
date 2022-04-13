@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-01 11:47:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-04-13 21:58:37
+ * @LastEditTime: 2022-04-13 22:30:56
  */
 const problem_description_data = '<p>“<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n\
     \n\
@@ -220,23 +220,27 @@ ID\n\
 
 // Colorful Begin
 const colorFul__ = function() {
-    const OnceColorAdd = isProblem? 500 : 5000;
-    const changeTime = isProblem ? 50 : 500;
-    const toBeColorful = [document.querySelector("#Dan"), document.querySelector("#Shen"), document.querySelector("#Gou")]
-    const string = "单身狗";
-    console.log(toBeColorful);
-    var firstColor = 0;
-    new16color = (oriColor) => { oriColor %= 256 * 256 * 256; var a = oriColor.toString(16); const pre = 6 - a.length; for (var i = 0; i < pre; i++)a = '0' + a; a = '#' + a; return a; }
-    change = () => {
-        for(var i=0;i<3;i++){
-            toBeColorful[i].innerHTML='<font color="' + new16color(firstColor + i * OnceColorAdd) + '">' +string[i] + '</font>'
+    try {
+        const isProblem = true;
+        const OnceColorAdd = isProblem? 500 : 5000;
+        const changeTime = isProblem ? 50 : 500;
+        const toBeColorful = [document.querySelector("#Dan"), document.querySelector("#Shen"), document.querySelector("#Gou")]
+        const string = "单身狗";
+        console.log(toBeColorful);
+        var firstColor = 0;
+        new16color = (oriColor) => { oriColor %= 256 * 256 * 256; var a = oriColor.toString(16); const pre = 6 - a.length; for (var i = 0; i < pre; i++)a = '0' + a; a = '#' + a; return a; }
+        change = () => {
+            for(var i=0;i<3;i++){
+                toBeColorful[i].innerHTML='<font color="' + new16color(firstColor + i * OnceColorAdd) + '">' +string[i] + '</font>'
+            }
+            firstColor += OnceColorAdd;
+            setTimeout(() => {
+                change();
+            }, changeTime);
         }
-        firstColor += OnceColorAdd;
-        setTimeout(() => {
-            change();
-        }, changeTime);
+        change();
     }
-    change();
+    catch (e) {}
 }
 
 const problemName = '单身狗';
