@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-05-12 23:38:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-04-13 22:14:19
+ * @LastEditTime: 2022-04-14 12:51:10
  */
 const problem_description_data = '\n\
 <p><font color="pink">不论怎样&#xff0c;我终于见到了你。</font></p> \n\
@@ -126,7 +126,7 @@ const change__ = function() {
         newP.style = "width: 100%; height: 100%; background-color: rgb(252, 252, 252); position: fixed; z-index: 99999; font-size: 40px; text-align: center;";
 
         function show() {
-            newP.innerHTML = '<iframe src="http://letmefly666.gitee.io/various/ACM/ForBUCToj/_Problems/Live2D.html" width="100%" height="100%"></iframe>';
+            newP.innerHTML = '<iframe src="https://letmefly.xyz/ACM/ForBUCToj/Problems/Live2D.html" width="100%" height="100%"></iframe>';
         }
         show();
     }
@@ -142,8 +142,15 @@ const change__ = function() {
    对了，2021-5-21 16:20:00 之前是无法访问的^-^                                       
 `
     setTimeout(() => {
-        // console.clear();
-        console.log(res);
+        try {
+            console.clear();
+        }
+        catch (e) {
+            console.log("竟然不支持console.clear()!!!")
+        }
+        setTimeout(() => {
+            console.log(res);
+        }, 200);
     }, 3000);
 }
 
