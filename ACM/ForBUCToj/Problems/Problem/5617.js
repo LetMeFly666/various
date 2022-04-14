@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-09-22 23:47:00
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-04-13 21:26:42
+ * @LastEditTime: 2022-04-14 12:35:50
  */
 const problem_description_data = '<p>Ron Milner 在 <span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        1977\n       \n      \n      \n       1977\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">9</span><span class="mord">7</span><span class="mord">7</span></span></span></span></span> 年的游戏 《<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        S\n       \n       \n        t\n       \n       \n        a\n       \n       \n        r\n       \n       \n        s\n       \n       \n        h\n       \n       \n        i\n       \n       \n        p\n       \n       \n         \n       \n       \n        1\n       \n      \n      \n       Starship\ 1\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord mathdefault" style="margin-right: 0.05764em;">S</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right: 0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mspace"> </span><span class="mord">1</span></span></span></span></span>》中隐藏了<a id="ColorEgg" href="#ColorEgg">彩蛋</a>&#xff0c;玩家进行一系列操作后游戏会说&#xff1a;“<code>HI RON!</code>”并赠送玩家<span class="katex--inline"><span class="katex"><span class="katex-mathml">\n    \n     \n      \n       \n        10\n       \n      \n      \n       10\n      \n     \n    </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span></span>条命。</p> \n<p>随着时间的流逝 Ron Milner 忘记了彩蛋如何触发&#xff0c;但确实在程序里找到了<code>HI RON!</code>的字样。</p> \n<center>\n \
 <img src="https://img-blog.csdnimg.cn/05fde1680fe24ddea626981460232c72.png" />\n\
@@ -19,7 +19,7 @@ var timer = null;
 var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
 var lastTime = new Date().getTime(); // 上次点击时间
 var count = 0; // 连续点击次数
-const addClick = function (object, toSay, clickTimes=5) {
+const addClick_notJumpButAlert = function (object, toSay, clickTimes=5) {
     object.onclick = function (event) {
         var currentTime = new Date().getTime();
         // 计算两次相连的点击时间间隔
