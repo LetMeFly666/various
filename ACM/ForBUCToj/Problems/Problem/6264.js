@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 12:46:26
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 12:48:55
+ * @LastEditTime: 2022-05-01 12:52:28
  */
 const problemDescriptionData = '<p>坏坏的小F递给了MM一张纸条&#xff0c;上面写着&#xff1a;</p> \
 <p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml">\
@@ -55,7 +55,7 @@ const problemDescriptionData = '<p>坏坏的小F递给了MM一张纸条&#xff0c;�
  <p>最后剩下的一段纸条也会扔到碎纸盒中</p> \
 </blockquote> \
 <p>如果不能理解&#xff0c;请参考视频版描述&#xff1a;</p> \
-<iframe src="//player.bilibili.com/player.html?aid=596169980&bvid=BV1VB4y117vL&cid=589022887&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="500px"> <a href="https://www.bilibili.com/video/BV1VB4y117vL">BiliBili视频地址：https://www.bilibili.com/video/BV1VB4y117vL</a> </iframe> \
+<iframe src="//player.bilibili.com/player.html?aid=596169980&bvid=BV1VB4y117vL&cid=589022887&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="500px" width="100%"> <a href="https://www.bilibili.com/video/BV1VB4y117vL">BiliBili视频地址：https://www.bilibili.com/video/BV1VB4y117vL</a> </iframe> \
 <p>或者播放题目描述PPT&#xff1a;<a href="https://letmefly.xyz/Links/Redirect/id.html?10">https://letmefly.xyz/Links/Redirect/id.html?10</a></p> \
 <p><strong>视频的意思是&#xff1a;</strong></p> \
 <ol><li> <p>原始纸条是“只有不聪明的人才能看到”</p> </li><li> <p>MM在左边剪了一刀&#xff0c;变成了“只有不聪”和“明的人才能看到”</p> </li><li> <p>MM把左边的纸条扔进了碎纸盒&#xff0c;碎纸盒中的纸条为“只有不聪”&#xff0c;MM手中的纸条为“明的人才能看到”</p> </li><li> <p>MM在左边剪了一刀&#xff0c;变成了“明的人才”和“能看到”</p> </li><li> <p>MM把左边的纸条扔进了碎纸盒&#xff0c;碎纸盒中的纸条从上到下依次为“明的人才”和“只有不聪”&#xff0c;MM手中的纸条为“能看到”</p> </li><li> <p>MM把手中剩下的纸条“能看到”也扔入了碎纸盒&#xff0c;<strong>最终碎纸盒中的纸条从上到下一次是&#xff1a;</strong> “能看到”&#xff0c;“明的人才”和“只有不聪”</p> </li></ol> \
