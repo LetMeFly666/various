@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-04-13 21:48:52
+ * @LastEditTime: 2022-05-01 22:21:32
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -20,7 +20,7 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
 
     var isProblem = 1;
     var problem_description,input_description,output_description;
-    if (location.href.split("problem.php").length == 1) { // 不存在problem.php
+    if (location.href.split("problem").length == 1) { // 不存在problem
         isProblem = 0;
         return;
     }
