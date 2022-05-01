@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-04-13 21:45:31
+ * @LastEditTime: 2022-05-01 22:05:22
  */
 
 //#region Title.ico
@@ -37,7 +37,7 @@ var timer = null;
 var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
 var lastTime = new Date().getTime(); // 上次点击时间
 var count = 0; // 连续点击次数
-const addClick = function (object, href, clickTimes=5) {
+function addClick(object, href, clickTimes=5) {
     object.onclick = function (event) {
         var currentTime = new Date().getTime();
         // 计算两次相连的点击时间间隔
@@ -228,7 +228,7 @@ function setIframeHeight(iframe, onload=true) {
 
 //#region in
 /* Return if a in b */
-const ifIn = function(a, b) {
+function ifIn(a, b) {
     if (a.length > b.length)
         return false;
     for (let i = 0; i + a.length - 1 < b.length; i++) {

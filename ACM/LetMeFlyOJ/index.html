@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 13:47:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 14:25:38
+ * @LastEditTime: 2022-05-01 19:32:15
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -13,7 +13,27 @@
     <style>
         a {
             text-decoration: none;
-            
+        }
+        table {
+            /* margin-top: 25px; */
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-text-size-adjust: 100%;
+            font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+            line-height: 1.4285em;
+            box-sizing: inherit;
+            max-width: 100%;
+            width: 80%;
+            margin: auto;
+            margin-top: 1em;
+            border-radius: .28571429rem;
+            color: rgba(0,0,0,.87);
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 1em;
+            text-align: center;
+            background: 0 0;
+            box-shadow: none;
+            border: none;
         }
     </style>
 </head>
@@ -21,6 +41,23 @@
     <center><font size="7px">测试运行基于<a href="https://buctcoder.com">BUCTOJ</a>的OJ题目提交平台</font></center>
     <center><font size="5px">此平台的题目全部是由<a href="https://letmefly.xyz">LetMeFly</a>出的，发布于<a href="https://buctcoder.com">BUCTOJ</a>上并且在<a href="https://letmefly.blog.csdn.net">CSDN</a>上写有相应的题解。</font></center>
     <center><font size="5px">但是收到很多留言反馈有些题目在BUCTOJ上已不能提交，因此制作了<a href="https://letmefly.xyz/ACM/LetMeFlyOJ" nochangetarget="true">这个简陋的页面</a>供看完题解的同学提交测试。</font></center>
+
+    <div id="tableDiv">
+        <table class="ui very basic center aligned table" id="ProblemTable">
+            <thead>
+            <tr>
+                <th class="one wide">题目编号</th>
+                <th class="left aligned">标题</th>
+                <th class="one wide">解决</th>
+                <th class="one wide">提交</th>
+                <th class="one wide">通过率</th>
+            </tr>
+            </thead>
+            <tbody id="ProblemTableBody">
+                <tr><td><b>6264</b></td><td class="left aligned"><a style="vertical-align: middle; " href="problem/6264.html" nochangetarget="true">还原撕碎的字条，哄笑生气的毛毛</a><div class="show_tag_controled" style="float: right; "><span class="ui header"></span></div></td><td>未知</td><td>未知</td><td>待开发</td></tr>
+            </tbody>
+        </table>
+    </div>
 
     <script>
         /* 此函数将会把所有的a标签添加一个target="_blank"属性，除非此标签已有“nochangetarget”属性 */
@@ -32,11 +69,45 @@
                 }
             }
         }
+
+        /* 此网站的所有问题 */
+        const problems = [
+            {id: 6264, title: "还原撕碎的字条，哄笑生气的毛毛"},
+        ];
+
+        /* 将问题显示到表格中 */
+        function problemRender() {
+            const tableData = document.querySelector("#ProblemTableBody");
+            let innerHTML = '';
+            for (var i = 0; i < problems.length; i++) {
+                const id = problems[i]["id"];
+                const title = problems[i]["title"];
+                innerHTML += '<tr><td><b>' + id + '</b></td><td class="left aligned"><a style="vertical-align: middle; " href="problem/' + id + '.html" nochangetarget="true">' + title + '</a><div class="show_tag_controled" style="float: right; "><span class="ui header"></span></div></td><td>未知</td><td>未知</td><td>待开发</td></tr>';
+            }
+            tableData.innerHTML = innerHTML;
+        }
+
+        // /* 获取OJ题目的提交状态（提交总数、通过率等） */
+        // function getPassStates(id="1001") {  // 会被跨域阻止
+        //     const httprequest = new XMLHttpRequest();
+        //     httprequest.open("GET", "https://buctoj.com/problemstatus.php?id=" + id, false);
+        //     // httprequest.setRequestHeader('Origin', 'https://buctcoder.com/');
+        //     try {
+        //         httprequest.send();
+        //         const result = httprequest.response;  // {"total": 43367}
+        //         console.log(result);
+        //     }
+        //     catch (error) {
+        //         alert("Error");
+        //     }
+        // }
     </script>
 
     <script>
         window.onload = function () {
             changeLabelA2_blank();
+            problemRender();
+            changeLabelA2_blank();  // 这个应该往后面放一点
         }
     </script>
 </body>

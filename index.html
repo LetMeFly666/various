@@ -42,9 +42,14 @@
             const visitorNum = document.querySelector("#VisitorNum");
             const httprequest = new XMLHttpRequest();
             httprequest.open("GET", "https://que.letmefly.xyz/LetMeFly/ForProgram/getAllVisitorNum/", false);
-            httprequest.send();
-            const result = JSON.parse(httprequest.response);  // {"total": 43367}
-            visitorNum.innerHTML = result["total"]
+            try {
+                httprequest.send();
+                const result = JSON.parse(httprequest.response);  // {"total": 43367}
+                visitorNum.innerHTML = result["total"];
+            }
+            catch (error) {
+                visitorNum.innerHTML = "获取失败！";
+            }
         }
     </script>
 

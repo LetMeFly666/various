@@ -1,0 +1,170 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2022-05-01 19:33:34
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2022-05-01 21:36:15
+-->
+<html style="position: fixed; width: 100%; overflow: hidden; "
+    class="os-windows screen-desktop device-desktop" lang="	zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>问题 A: 败者食尘 - BUCTOJ</title>
+    <script src="/Links/Common.js"></script>
+    <link rel="stylesheet" href="../static/css/_LetMeFlyAbstract.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/tomorrow.css">
+    <link rel="stylesheet" href="../static/css/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/katex.min.css">
+    <link href="../static/css/morris.min.css" rel="stylesheet">
+    <link href="../static/css/FiraMono.css" rel="stylesheet">
+    <link href="../static/css/latin.css" rel="stylesheet">
+    <link href="../static/css/Exo.css" rel="stylesheet">
+    <script src="/Links/jquery.min.js"></script>
+    <script src="../static/js/zui.min.js"></script>
+    <script src="../static/js/ResizeSensor.min.js"></script>
+    <script src="../static/js/semantic.min.js"></script>
+    <script src="../static/js/Chart.min.js"></script>
+    <script src="/Links/clipboard.min.js"></script>
+    <script src="../static/js/_LetMeFly_abstract.js"></script>
+    <script id="MathJax-script" async="" src="../static/js/tex-chtml.js"></script>
+</head>
+
+<body style="position: relative; margin-top: 10px; height: calc(100% - 49px); overflow-y: overlay; ">
+    <div style="margin-top: 28px; ">
+        <div id="main" class="ui main container">            
+            <div class="ui center aligned grid">
+                <div class="row">
+                    <h1 class="ui header"> 6264: 还原撕碎的字条，哄笑生气的毛毛<script src="https://letmefly666.github.io/various/ACM/ForBUCToj/Problems/Problem/6264.js"></script> </h1>
+                </div>
+                <div class="row" style="margin-top: -15px">
+                    <span class="ui label">内存限制：128 MB</span>
+                    <span class="ui label">时间限制：1.000 S</span>
+                </div>
+                <div class="row" style="margin-top: -23px">
+                    <span class="ui label">评测方式：文本比较</span>
+                    <span class="ui label">命题人：
+                        <span id="creator">
+                            <a href="https://letmefly.xyz" target="_blank">LetMeFly</a>
+                        </span>
+                    </span>
+                </div>
+                <!-- <div class="row" style="margin-top: -23px">
+                    <span class="ui label">提交：70</span>
+                    <span class="ui label">解决：61</span>
+                </div> -->
+            </div>
+            <div class="ui grid">
+                <div class="row">
+                    <div class="column">
+                        <div class="ui buttons">
+                            <a id="submit" class="small ui primary button" href="submitpage.php?cid=2540&amp;pid=0&amp;langmask=0">提交</a>
+                            <!-- <a class="small ui positive button" href="status.php?problem_id=A&amp;cid=2540">提交记录</a> -->
+                            <a class="small ui positive button" href="#" onclick="transform()" role="button">侧边提交</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h4 class="ui top attached block header">题目描述</h4>
+                        <div class="ui bottom attached segment font-content">
+                            题目正在加载中
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h4 class="ui top attached block header">输入</h4>
+                        <div class="ui bottom attached segment font-content">
+                            <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0"
+                                ctxtmenu_counter="0" style="font-size: 122.3%; position: relative;">
+                                <mjx-math class="MJX-TEX" aria-hidden="true">
+                                    <mjx-mn class="mjx-n">
+                                        <mjx-c class="mjx-c31"></mjx-c>
+                                    </mjx-mn>
+                                    <mjx-mo class="mjx-n" space="4">
+                                        <mjx-c class="mjx-c2264"></mjx-c>
+                                    </mjx-mo>
+                                    <mjx-mi class="mjx-i" space="4">
+                                        <mjx-c class="mjx-c1D434 TEX-I"></mjx-c>
+                                    </mjx-mi>
+                                    <mjx-mo class="mjx-n">
+                                        <mjx-c class="mjx-c2C"></mjx-c>
+                                    </mjx-mo>
+                                    <mjx-mi class="mjx-i" space="2">
+                                        <mjx-c class="mjx-c1D435 TEX-I"></mjx-c>
+                                    </mjx-mi>
+                                    <mjx-mo class="mjx-n" space="4">
+                                        <mjx-c class="mjx-c2264"></mjx-c>
+                                    </mjx-mo>
+                                    <mjx-mn class="mjx-n" space="4">
+                                        <mjx-c class="mjx-c33"></mjx-c>
+                                    </mjx-mn>
+                                </mjx-math>
+                                <mjx-assistive-mml unselectable="on" display="inline"><math
+                                        xmlns="http://www.w3.org/1998/Math/MathML">
+                                        <mn>1</mn>
+                                        <mo>≤</mo>
+                                        <mi>A</mi>
+                                        <mo>,</mo>
+                                        <mi>B</mi>
+                                        <mo>≤</mo>
+                                        <mn>3</mn>
+                                    </math></mjx-assistive-mml>
+                            </mjx-container>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h4 class="ui top attached block header">输出</h4>
+                        <div class="ui bottom attached segment font-content">
+                        .
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <h4 class="ui top attached block header">样例输入
+                            <span class="copy" id="copyin" data-clipboard-text="LetMeFly
+YYDS">复制</span>
+                        </h4>
+                        <div class="ui bottom attached segment font-content">
+                            <pre style="margin-top: 0; margin-bottom: 0; "><code class="lang-plain">LetMeFly
+YYDS</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h4 class="ui top attached block header">样例输出 <span class="copy" id="copyout"
+                                data-clipboard-text=".">复制</span>
+                        </h4>
+                        <div class="ui bottom attached segment font-content">
+                            <pre style="margin-top: 0; margin-bottom: 0; "><code class="lang-plain">.</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script>
+            console.log("To enable mathjax in hustoj, check line 15 in /home/judge/src/web/template/bs3/js.php");
+        </script>
+        <div class="footer">
+            <div class="ui center aligned container">
+                <div>BUCTOJ is powered by <a style="color: inherit !important;" class=" " title="GitHub" target="_blank"
+                        rel="noreferrer noopener" href="https://github.com/zhblue/hustoj">HUSTOJ</a>, Theme
+                    by <a style="color: inherit !important;" href="https://github.com/syzoj">SYZOJ</a></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 剪贴板
+        setCopyAble(copyin, copyout);
+    </script>
+</body>
+
+</html>
