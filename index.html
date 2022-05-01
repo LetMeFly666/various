@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <title>LetMeFly</title>
     <script src="/Links/Common.js"></script>
+    <style>
+        #Visitor {
+            position: absolute;
+            top: 2.5px;
+            border: 2px solid rgb(164, 74, 74);
+            font-family: 楷体;
+        }
+    </style>
 </head>
 
 <body>
     <a href="https://github.com/LetMeFly666">  
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
     </a>
+
+    <div id="Visitor">总访问量：<a id="VisitorNum">正在计算...</a></div>
 
     <h1 style="text-align:center">HTML新手的牛刀小试</h1><br /><hr />
 
@@ -26,6 +36,23 @@
     <!-- <script src="https://gist.github.com/LetMeFly666/cc4f4af05218b200c0b14c19c2b4d9ce.js">C++Template</script> -->
 
     <script src="https://utteranc.es/client.js" repo="LetMeFly666/various" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+
+    <script>
+        function getVisitorNum() {
+            const visitorNum = document.querySelector("#VisitorNum");
+            const httprequest = new XMLHttpRequest();
+            httprequest.open("GET", "https://que.letmefly.xyz/LetMeFly/ForProgram/getAllVisitorNum/", false);
+            httprequest.send();
+            const result = JSON.parse(httprequest.response);  // {"total": 43367}
+            visitorNum.innerHTML = result["total"]
+        }
+    </script>
+
+    <script>
+        setTimeout(() => {
+            getVisitorNum();
+        }, 20);
+    </script>
 
 </body>
 
