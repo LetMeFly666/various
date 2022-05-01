@@ -1,0 +1,42 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2022-05-01 13:47:50
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2022-05-01 14:25:38
+-->
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <title>LetMeFlyOJ</title>
+    <script src="/Links/Common.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <center><font size="7px">测试运行基于<a href="https://buctcoder.com">BUCTOJ</a>的OJ题目提交平台</font></center>
+    <center><font size="5px">此平台的题目全部是由<a href="https://letmefly.xyz">LetMeFly</a>出的，发布于<a href="https://buctcoder.com">BUCTOJ</a>上并且在<a href="https://letmefly.blog.csdn.net">CSDN</a>上写有相应的题解。</font></center>
+    <center><font size="5px">但是收到很多留言反馈有些题目在BUCTOJ上已不能提交，因此制作了<a href="https://letmefly.xyz/ACM/LetMeFlyOJ">这个简陋的页面</a>供看完题解的同学提交测试。</font></center>
+
+    <script>
+        /* 此函数将会把所有的a标签添加一个target="_blank"属性，除非此标签已有“nochangetarget”属性 */
+        function changeLabelA2_blank() {
+            const allAs = document.querySelectorAll("a");
+            for (var i = 0; i < allAs.length; i++) {
+                if (!allAs[i].getAttribute("nochangetarget")) {
+                    allAs[i].setAttribute("target", "_blank");
+                }
+            }
+        }
+    </script>
+
+    <script>
+        window.onload = function () {
+            changeLabelA2_blank();
+        }
+    </script>
+</body>
