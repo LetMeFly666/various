@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 12:46:26
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 12:52:28
+ * @LastEditTime: 2022-05-01 12:58:48
  */
 const problemDescriptionData = '<p>坏坏的小F递给了MM一张纸条&#xff0c;上面写着&#xff1a;</p> \
 <p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml">\
@@ -54,7 +54,7 @@ const problemDescriptionData = '<p>坏坏的小F递给了MM一张纸条&#xff0c;�
  <p>MM每次都会从纸条的左边撕掉一段&#xff08;假设不会撕坏上面的字&#xff09;&#xff0c;然后放入碎纸盒里&#xff08;的最上面&#xff09;。</p> \
  <p>最后剩下的一段纸条也会扔到碎纸盒中</p> \
 </blockquote> \
-<p>如果不能理解&#xff0c;请参考视频版描述&#xff1a;</p> \
+<p>如果不能理解&#xff0c;请参考视频版描述&#xff1a;(视频地址<a href="https://www.bilibili.com/video/BV1VB4y117vL">https://www.bilibili.com/video/BV1VB4y117vL</a>)</p> \
 <iframe src="//player.bilibili.com/player.html?aid=596169980&bvid=BV1VB4y117vL&cid=589022887&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="500px" width="100%"> <a href="https://www.bilibili.com/video/BV1VB4y117vL">BiliBili视频地址：https://www.bilibili.com/video/BV1VB4y117vL</a> </iframe> \
 <p>或者播放题目描述PPT&#xff1a;<a href="https://letmefly.xyz/Links/Redirect/id.html?10">https://letmefly.xyz/Links/Redirect/id.html?10</a></p> \
 <p><strong>视频的意思是&#xff1a;</strong></p> \
