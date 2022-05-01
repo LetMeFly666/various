@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 12:46:26
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 12:58:48
+ * @LastEditTime: 2022-05-01 20:09:59
  */
 const problemDescriptionData = '<p>坏坏的小F递给了MM一张纸条&#xff0c;上面写着&#xff1a;</p> \
 <p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml">\
@@ -62,6 +62,12 @@ const problemDescriptionData = '<p>坏坏的小F递给了MM一张纸条&#xff0c;�
  '
 
 const inputDescriptionData = '<p>输入包括一行空格隔开的一些字符串&#xff0c;代表碎纸盒中从上到下的纸条上的内容</p> \
+<ul><li><span class="katex--inline"><span class="katex"><span class="katex-mathml">\
+\n\n \n  \n   1\n  \n  \n   ≤\n  \n  \n   字\n  \n  \n   符\n  \n  \n   串\n  \n  \n   ≤\n  \n  \n   1\n  \n  \n   \n    0\n   \n   \n    3\n   \n  \n \n \n  1\leq 字符串 \leq 10^3\n \n\
+     </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.78041em; vertical-align: -0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.77194em; vertical-align: -0.13597em;"></span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">串</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span></li><li><span class="katex--inline"><span class="katex"><span class="katex-mathml">\
+     \n\n \n  \n   1\n  \n  \n   ≤\n  \n  \n   字\n  \n  \n   符\n  \n  \n   串\n  \n  \n   .\n  \n  \n   l\n  \n  \n   e\n  \n  \n   n\n  \n  \n   g\n  \n  \n   t\n  \n  \n   h\n  \n  \n   ≤\n  \n  \n   1\n  \n  \n   \n    0\n   \n   \n    3\n   \n  \n \n \n  1\leq 字符串.length\leq 10^3\n \n\
+     </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.78041em; vertical-align: -0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">串</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right: 0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right: 0.03588em;">g</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span></li></ul> \
+\
 <p>请放心&#xff0c;和样例不同&#xff0c;<strong>测试数据中纸条上的文字全是英文&#xff0c;不包含中文</strong></p> '
 
 const outputDescriptionData = '<p>输出包括一行一个字符串</p> \
