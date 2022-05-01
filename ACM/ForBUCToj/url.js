@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-03-11 03:17:10
+ * @LastEditTime: 2022-05-01 12:46:13
  */
 
 //#region function
@@ -70,6 +70,7 @@ const couldSeeList = {
         6083: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415455", "problemHref": "https://buctcoder.com/problem.php?id=6083" },
         6084: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415471", "problemHref": "https://buctcoder.com/problem.php?id=6084" },
         6085: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415480", "problemHref": "https://buctcoder.com/problem.php?id=6085" },
+        6264: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124513273", "problemHref": "https://buctcoder.com/problem.php?id=6264" },
     }
     //#endregion
 
