@@ -2,12 +2,15 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 20:28:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 14:07:29
+ * @LastEditTime: 2022-05-02 14:24:56
  */
-function add1script(scriptURL, ifDifferentEachTime=true) {
+function add1script(scriptURL, ifDifferentEachTime=true, onerror=null) {
     const script=document.createElement('script');//创建script标签节点
     script.setAttribute('type','text/javascript');//设置script类型
     script.setAttribute('src', scriptURL + (ifDifferentEachTime ? ('?v=' + Math.random()) : ("")));
+    if (onerror) {
+        script.onerror = onerror;
+    }
     document.head.appendChild(script);
 }
 
@@ -25,7 +28,7 @@ function setTitleInputOutput(LetMeFlyOJ_title, LetMeFlyOJ_inputData, LetMeFlyOJ_
 function renderProblem() {
     function errorRender() {
         alert("错误的题目id!");
-        add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/.errorProblem.js')
+        add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/errorProblem.js')
     }
     const href = location.href;
     try {
@@ -35,8 +38,8 @@ function renderProblem() {
             return;
         }
         const id = _id[1];
-        add1script('https://letmefly.xyz/ACM/LetMeFlyOJ/problems/' + id + '.js');
-        add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/' + id + '.js', false);
+        add1script('https://letmefly.xyz/ACM/LetMeFlyOJ/problems/' + id + '.js', errorRender);
+        add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/' + id + '.js', false, errorRender);
     }
     catch (err) {
         errorRender();
