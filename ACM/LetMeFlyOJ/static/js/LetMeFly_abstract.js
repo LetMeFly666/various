@@ -2,8 +2,12 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 20:28:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 14:31:12
+ * @LastEditTime: 2022-05-02 15:29:32
  */
+$(document).ready(function () {
+    renderProblem();
+});
+
 function add1script(scriptURL, ifDifferentEachTime=true, onerror=null) {
     const script=document.createElement('script');//创建script标签节点
     script.setAttribute('type','text/javascript');//设置script类型
@@ -40,16 +44,13 @@ function renderProblem() {
         const id = _id[1];
         add1script('https://letmefly.xyz/ACM/LetMeFlyOJ/problems/' + id + '.js', errorRender);
         add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/' + id + '.js', false, errorRender);
+        $("#submit")[0].href = "submit.html?id=" + id;
     }
     catch (err) {
         errorRender();
         return;
     }
 }
-
-$(document).ready(function () {
-    renderProblem();
-});
 
 var lastSubmitted = '';
 // var editor = ace.edit("editor");
@@ -61,17 +62,27 @@ var lastSubmitted = '';
 // editor.container.style.fontFamily = "'Roboto Mono', 'Bitstream Vera Sans Mono', 'Menlo', 'Consolas', 'Lucida Console', monospace";
 // editor.setShowPrintMargin(false);
 // editor.renderer.updateFontSize();
-function transform() {
+function transform(submitBeside) {
+    console.log(submitBeside);
+    if (submitBeside.getAttribute("clicked")) {
+        submitBeside.setAttribute("clicked", "");
+        submitBeside.innerHTML = "侧边提交";
+        let main = $("#main");
+        main.addClass("container");
+        main.css("width", "");
+        $("#submitPage").remove();
+        return;
+    }
+    submitBeside.setAttribute("clicked", "1");
+    submitBeside.innerHTML = "收起边栏";
     let height = document.body.clientHeight;
     let width = parseInt(document.body.clientWidth * 0.618);
     let width2 = parseInt(document.body.clientWidth * 0.382);
     let submitURL = $("#submit")[0].href;
-    console.log(width);
     let main = $("#main");
     let problem = main.html();
     main.removeClass("container");
     main.css("width", width2);
-    main.css("margin-left", "10px");
     main.parent().append("<div id='submitPage' class='container' style='opacity:0.8;position:fixed;z-index:1000;top:49px;right:-" + width2 + "px'></div>");
     //main.css("float","left");
     $("#submitPage").html("<iframe src='" + submitURL + "&spa' width='" + width + "px' height='" + height + "px' ></iframe>");
