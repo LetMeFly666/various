@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 22:09:13
+ * @LastEditTime: 2022-05-02 22:13:39
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -61,10 +61,12 @@
             document.querySelector("#HiddenIframe").removeAttribute("hidden");
             document.getElementById("frmSolution").submit();
         }
+        var submissionId;
         window.addEventListener('message', function(event) {
             if (event.origin == 'https://que.letmefly.xyz') {
-                alert(event.data);
+                submissionId = event.data;
             }
         }, false);
+        // iframe.contentWindow.postMessage("主页面消息", "https://que.letmefly.xyz")
     </script>
 </body>
