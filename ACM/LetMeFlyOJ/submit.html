@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 20:11:17
+ * @LastEditTime: 2022-05-02 22:09:13
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -15,9 +15,8 @@
 
 <body>
     <center>
-        <script src="include/checksource.js"></script>
         <h1>提交代码</h1>
-        <form id="frmSolution" action="https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/submit/" method="post" onsubmit="submit()" target="HiddenIframe">
+        <form id="frmSolution" action="https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/submit/" method="post" onsubmit="submit_()" target="HiddenIframe">
             <input id="problem_id" type="hidden" value="6264" name="id">
             <span id="language_span">Language:
                 <select id="language" name="language">
@@ -50,15 +49,22 @@
                     </option>
                 </select>
             </span>
-            <button id="Submit" type="button" class="ui primary icon button" onclick="submit();">提交</button>
+            <button id="Submit" type="button" class="ui primary icon button" onclick="submit_();">提交</button>
             <br/><br/>
             <textarea name="Code" id="Code" style="width: 60%; height: 500px;"></textarea>
         </form>
+        <iframe id="HiddenIframe" name="HiddenIframe" style="width: 60%; height: 500px;" hidden></iframe>
     </center>
-    <iframe id="HiddenIframe" name="HiddenIframe"></iframe>
     <script>
-        function submit() {
+        function submit_() {
+            document.querySelector("#Code").setAttribute("hidden", "");
+            document.querySelector("#HiddenIframe").removeAttribute("hidden");
             document.getElementById("frmSolution").submit();
         }
+        window.addEventListener('message', function(event) {
+            if (event.origin == 'https://que.letmefly.xyz') {
+                alert(event.data);
+            }
+        }, false);
     </script>
 </body>
