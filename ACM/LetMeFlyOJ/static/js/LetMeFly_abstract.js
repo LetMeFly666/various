@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 20:28:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 14:24:56
+ * @LastEditTime: 2022-05-02 14:31:12
  */
 function add1script(scriptURL, ifDifferentEachTime=true, onerror=null) {
     const script=document.createElement('script');//创建script标签节点
@@ -28,7 +28,7 @@ function setTitleInputOutput(LetMeFlyOJ_title, LetMeFlyOJ_inputData, LetMeFlyOJ_
 function renderProblem() {
     function errorRender() {
         alert("错误的题目id!");
-        add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/errorProblem.js')
+        add1script('https://letmefly.xyz/ACM/LetMeFlyOJ/problems/errorProblem.js')
     }
     const href = location.href;
     try {
