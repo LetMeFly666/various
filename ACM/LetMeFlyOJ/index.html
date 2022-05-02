@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 13:47:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 19:32:15
+ * @LastEditTime: 2022-05-02 13:06:21
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -82,7 +82,7 @@
             for (var i = 0; i < problems.length; i++) {
                 const id = problems[i]["id"];
                 const title = problems[i]["title"];
-                innerHTML += '<tr><td><b>' + id + '</b></td><td class="left aligned"><a style="vertical-align: middle; " href="problem/' + id + '.html" nochangetarget="true">' + title + '</a><div class="show_tag_controled" style="float: right; "><span class="ui header"></span></div></td><td>未知</td><td>未知</td><td>待开发</td></tr>';
+                innerHTML += '<tr><td><b>' + id + '</b></td><td class="left aligned"><a style="vertical-align: middle; " href="problem.html?id=' + id + '" nochangetarget="true">' + title + '</a><div class="show_tag_controled" style="float: right; "><span class="ui header"></span></div></td><td>未知</td><td>未知</td><td>待开发</td></tr>';
             }
             tableData.innerHTML = innerHTML;
         }

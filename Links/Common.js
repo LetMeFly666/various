@@ -2,8 +2,17 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 22:05:22
+ * @LastEditTime: 2022-05-02 13:51:27
  */
+
+//#region 是否重复加载
+if (window._LINKS_COMMONJS) {
+    console.log("多次引用");
+}
+else {
+    window._LINKS_COMMONJS = true;
+
+// 下面开始代码部分
 
 //#region Title.ico
 (function() {
@@ -245,3 +254,6 @@ function ifIn(a, b) {
     return false;
 }
 //#endregion
+
+}
+//#endregion 是否重复加载

@@ -2,10 +2,35 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 20:28:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 21:33:31
+ * @LastEditTime: 2022-05-02 13:31:31
  */
+function add1script(scriptURL, ifDifferentEachTime=true) {
+    const script=document.createElement('script');//创建script标签节点
+    script.setAttribute('type','text/javascript');//设置script类型
+    script.setAttribute('src', scriptURL + (ifDifferentEachTime ? ('?v=' + Math.random()) : ("")));
+    document.head.appendChild(script);
+}
+
+function renderProblem() {
+    const href = location.href;
+    try {
+        const _id = href.split("?id=");
+        if (_id.length == 1) {
+            alert("错误的题目id!");
+            return;
+        }
+        const id = _id[1];
+        add1script('https://letmefly.xyz/ACM/LetMeFlyOJ/problems/' + id + '.js');
+        add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/' + id + '.js', false);
+    }
+    catch (err) {
+        // add1script('https://letmefly.xyz/Links/Common.js');
+        alert("错误的题目id!");
+    }
+}
+
 $(document).ready(function () {
-    // $("body").append("<div style='text-align: center;padding-bottom: 16px;'><a href='https://beian.miit.gov.cn/'         target='_blank'>京ICP备2022003195号</a></div>");
+    renderProblem();
 });
 
 var lastSubmitted = '';
