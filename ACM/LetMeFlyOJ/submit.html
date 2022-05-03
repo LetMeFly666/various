@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 14:38:59
+ * @LastEditTime: 2022-05-03 14:44:50
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -63,7 +63,7 @@
             document.querySelector("#Submit").innerHTML = "正在提交";
             document.querySelector("#Submit").setAttribute("onclick", "refreshResult();");
             document.querySelector("#Submit").setAttribute("disabled", "disabled");
-            document.querySelector("#OnlyH1Now").innerHTML = "刷新结果";
+            document.querySelector("#OnlyH1Now").innerHTML = "提交结果";
             document.querySelector("#language_span").setAttribute("hidden", "hidden");
         }
         var submissionId;
@@ -72,7 +72,7 @@
                 submissionId = event.data;
                 const iframe = document.querySelector("#HiddenIframe");
                 iframe.src = "https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/result/?submissionId=" + submissionId;
-                document.querySelector("#Submit").innerHTML = "提交结果";
+                document.querySelector("#Submit").innerHTML = "刷新结果";
                 document.querySelector("#Submit").removeAttribute("disabled");
             }
         }, false);
