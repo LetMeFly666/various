@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 16:10:25
+ * @LastEditTime: 2022-05-03 16:12:56
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -95,6 +95,9 @@
             }
             const id = href.split("?id=")[1].split("&")[0];
             document.getElementById("problem_id").setAttribute("value", id);
+        }
+        window.onload = function () {
+            getProblemId();
         }
     </script>
 </body>
