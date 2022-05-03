@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 22:13:39
+ * @LastEditTime: 2022-05-03 14:38:59
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -15,7 +15,7 @@
 
 <body>
     <center>
-        <h1>提交代码</h1>
+        <h1 id="OnlyH1Now">提交代码</h1>
         <form id="frmSolution" action="https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/submit/" method="post" onsubmit="submit_()" target="HiddenIframe">
             <input id="problem_id" type="hidden" value="6264" name="id">
             <span id="language_span">Language:
@@ -57,16 +57,29 @@
     </center>
     <script>
         function submit_() {
-            document.querySelector("#Code").setAttribute("hidden", "");
+            document.querySelector("#Code").setAttribute("hidden", "hidden");
             document.querySelector("#HiddenIframe").removeAttribute("hidden");
             document.getElementById("frmSolution").submit();
+            document.querySelector("#Submit").innerHTML = "正在提交";
+            document.querySelector("#Submit").setAttribute("onclick", "refreshResult();");
+            document.querySelector("#Submit").setAttribute("disabled", "disabled");
+            document.querySelector("#OnlyH1Now").innerHTML = "刷新结果";
+            document.querySelector("#language_span").setAttribute("hidden", "hidden");
         }
         var submissionId;
         window.addEventListener('message', function(event) {
             if (event.origin == 'https://que.letmefly.xyz') {
                 submissionId = event.data;
+                const iframe = document.querySelector("#HiddenIframe");
+                iframe.src = "https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/result/?submissionId=" + submissionId;
+                document.querySelector("#Submit").innerHTML = "提交结果";
+                document.querySelector("#Submit").removeAttribute("disabled");
             }
         }, false);
         // iframe.contentWindow.postMessage("主页面消息", "https://que.letmefly.xyz")
+        function refreshResult() {
+            const iframe = document.querySelector("#HiddenIframe");
+            iframe.src = "https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/result/?submissionId=" + submissionId;
+        }
     </script>
 </body>
