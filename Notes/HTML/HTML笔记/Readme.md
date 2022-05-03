@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-12-29 11:12:19
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-01-03 11:44:30
+ * @LastEditTime: 2022-05-03 16:00:26
 -->
 # HTML
 
@@ -132,3 +132,12 @@
 实际开发中，不会直接用一堆a，而是用li包含链接li+a的做法。
 1. li+a语义更清晰，一看就是有条理的列表型内容
 2. 如果直接用a，搜索引擎容易辨别有堆砌关键字的嫌疑(故意堆砌关键字容易被搜索引擎降权)，从而影响网站排名。
+
+
+### 经验记录
+
+不完全准确经验：
+
+html form 的 target 可以设置为某个iframe的name。那么submit结果就会显示在对应的iframe中
+
+但是这样的话，如果method=post，发送的请求就有origin；如果method=get，发送的请求就没有origin。

@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 15:44:36
+ * @LastEditTime: 2022-05-03 15:57:47
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -77,6 +77,7 @@
                 document.querySelector("#Submit").removeAttribute("disabled");
                 document.querySelector("#problem_id").setAttribute("value", submissionId);
                 document.querySelector("#problem_id").setAttribute("name", "submissionId");
+                document.getElementById("frmSolution").setAttribute("action", "https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/result/")
                 refreshResult();
             }
         }, false);
