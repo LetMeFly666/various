@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 15:34:53
+ * @LastEditTime: 2022-05-03 15:44:36
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -65,7 +65,7 @@
             document.querySelector("#OnlyH1Now").innerHTML = "提交结果";
             document.querySelector("#Code").remove();
             document.querySelector("#language_span").remove();
-            document.querySelector("#frmSolution").setAttribute("method", "get");
+            // document.querySelector("#frmSolution").setAttribute("method", "get");
             document.querySelector("#frmSolution").setAttribute("onsubmit", "refreshResult();");
         }
         var submissionId;
@@ -75,6 +75,8 @@
                 const iframe = document.querySelector("#HiddenIframe");
                 document.querySelector("#Submit").innerHTML = "刷新结果";
                 document.querySelector("#Submit").removeAttribute("disabled");
+                document.querySelector("#problem_id").setAttribute("value", submissionId);
+                document.querySelector("#problem_id").setAttribute("name", "submissionId");
                 refreshResult();
             }
         }, false);
