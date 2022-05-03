@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 15:57:47
+ * @LastEditTime: 2022-05-03 16:10:25
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -84,6 +84,17 @@
         // iframe.contentWindow.postMessage("主页面消息", "https://que.letmefly.xyz")
         function refreshResult() {
             document.getElementById("frmSolution").submit();
+        }
+        function getProblemId() {
+            const href = location.href;
+            if (href.split("?id=").length != 2) {
+                alert("错误的题目id！");
+                document.querySelector("#Submit").setAttribute("disabled", "disabled");
+                document.querySelector("#OnlyH1Now").innerHTML = "不合法的题目id";
+                return false;
+            }
+            const id = href.split("?id=")[1].split("&")[0];
+            document.getElementById("problem_id").setAttribute("value", id);
         }
     </script>
 </body>
