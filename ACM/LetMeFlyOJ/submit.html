@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-02 15:31:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 16:12:56
+ * @LastEditTime: 2022-05-03 16:34:19
 -->
 <!DOCTYPE html>
 <html lang="zn">
@@ -17,7 +17,7 @@
     <center>
         <h1 id="OnlyH1Now">提交代码</h1>
         <form id="frmSolution" action="https://que.letmefly.xyz/LetMeFly/LetMeFlyOJ/submit/" method="post" onsubmit="submit_()" target="HiddenIframe">
-            <input id="problem_id" type="hidden" value="6264" name="id">
+            <input id="problem_id" type="hidden" name="id">
             <span id="language_span">Language:
                 <select id="language" name="language">
                     <option value="0">
@@ -72,7 +72,6 @@
         window.addEventListener('message', function(event) {
             if (event.origin == 'https://que.letmefly.xyz') {
                 submissionId = event.data;
-                const iframe = document.querySelector("#HiddenIframe");
                 document.querySelector("#Submit").innerHTML = "刷新结果";
                 document.querySelector("#Submit").removeAttribute("disabled");
                 document.querySelector("#problem_id").setAttribute("value", submissionId);
