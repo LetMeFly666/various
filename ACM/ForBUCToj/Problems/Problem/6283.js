@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-04 15:49:14
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-04 16:11:47
+ * @LastEditTime: 2022-05-04 17:42:30
  */
 const problemDescriptionData = '<p>这是一个日本的创意广告&#xff0c;讲述了一百个人如何交换名片&#xff08;与此题无关&#xff0c;可自行决定是否观看&#xff09;<a href="https://www.bilibili.com/video/BV1wS4y1m7sM">https://www.bilibili.com/video/BV1wS4y1m7sM</a>:</p> \
 <iframe src="//player.bilibili.com/player.html?aid=725165451&bvid=BV1wS4y1m7sM&cid=562324021&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>\
@@ -23,7 +23,7 @@ const problemDescriptionData = '<p>这是一个日本的创意广告&#xff0c;讲�
 <p>那么经过M次名片收取活动后&#xff0c;地球人与三体人的亲密度增加了多少呢&#xff1f;</p> '
 
 const inputDescriptionData = '<p><strong>输入格式&#xff1a;</strong></p> \
-<pre><code>N M\
+<pre><code>N M\n\
 A1 A2 ... AN\
 </code></pre> \
 <p>N代表一共有N个三体人&#xff0c;M代表一共收取M次名片。<br /> Ai代表收取一张三体人i的名片&#xff0c;亲密度将会增加Ai&#xff08;1 ≤ i ≤ N&#xff09;</p> \
@@ -36,7 +36,7 @@ A1 A2 ... AN\
       \n       \n        \n         \n          1\n         \n         \n          ≤\n         \n         \n          \n           A\n          \n          \n           i\n          \n         \n         \n          ≤\n         \n         \n          1\n         \n         \n          \n           0\n          \n          \n           5\n          \n         \n        \n        \n         1\leq A_i\leq 10^5\n        \n       \
       </span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.78041em; vertical-align: -0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></p> </li><li> <p>所有输入的数都是整数</p> </li></ul> \
 <p><strong>样例解释&#xff1a;</strong></p> \
-<pre><code>5 3\
+<pre><code>5 3\n\
 10 14 19 34 33\
 </code></pre> \
 <p>三体星球共有5个三体人&#xff0c;小T共收取3次名片</p> \
