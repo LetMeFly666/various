@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 20:28:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-03 16:34:12
+ * @LastEditTime: 2022-05-04 15:56:58
  */
 $(document).ready(function () {
     renderProblem();
@@ -18,7 +18,7 @@ function add1script(scriptURL, ifDifferentEachTime=true, onerror=null) {
     document.head.appendChild(script);
 }
 
-function setTitleInputOutput(LetMeFlyOJ_title, LetMeFlyOJ_inputData, LetMeFlyOJ_outputData) {
+function setTitleInputOutput(LetMeFlyOJ_title, LetMeFlyOJ_inputData, LetMeFlyOJ_outputData, LetMeFlyOJ_memory, LetMeFlyOJ_time) {
     document.title = LetMeFlyOJ_title;
     document.querySelector("#problemName").innerHTML = LetMeFlyOJ_title;
 
@@ -27,6 +27,9 @@ function setTitleInputOutput(LetMeFlyOJ_title, LetMeFlyOJ_inputData, LetMeFlyOJ_
 
     document.querySelector("#copyout").setAttribute("data-clipboard-text", LetMeFlyOJ_outputData);
     document.querySelector("#copyoutCode").innerHTML = LetMeFlyOJ_outputData;
+
+    document.querySelector("#LetMeFlyOJ_memory").innerHTML = LetMeFlyOJ_memory;
+    document.querySelector("#LetMeFlyOJ_time").innerHTML = LetMeFlyOJ_time;
 }
 
 function renderProblem() {
@@ -42,6 +45,7 @@ function renderProblem() {
             return;
         }
         const id = _id[1];
+        document.querySelector("#solution").href = "/ACM/ForBUCToj/index.html?problemId=" + id;
         add1script('https://letmefly.xyz/ACM/LetMeFlyOJ/problems/' + id + '.js', errorRender);
         add1script('https://letmefly.xyz/ACM/ForBUCToj/Problems/Problem/' + id + '.js', false, errorRender);
         $("#submit")[0].href = "submit.html?id=" + id;

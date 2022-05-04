@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 19:33:34
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 15:29:33
+ * @LastEditTime: 2022-05-04 15:56:26
 -->
 <html style="position: fixed; width: 100%; overflow: hidden; "
     class="os-windows screen-desktop device-desktop" lang="	zh">
@@ -40,8 +40,8 @@
                     <h1 class="ui header" id="problemName"> 题目正在加载中</h1>
                 </div>
                 <div class="row" style="margin-top: -15px">
-                    <span class="ui label">内存限制：128 MB</span>
-                    <span class="ui label">时间限制：1.000 S</span>
+                    <span class="ui label">内存限制：<ab id="LetMeFlyOJ_memory">128 MB</ab></span>
+                    <span class="ui label">时间限制：<ab id="LetMeFlyOJ_time">1.000 S</ab></span>
                 </div>
                 <div class="row" style="margin-top: -23px">
                     <span class="ui label">评测方式：文本比较</span>
@@ -63,6 +63,7 @@
                             <a id="submit" class="small ui primary button" href="submit.html?id=">提交</a>
                             <!-- <a class="small ui positive button" href="status.php?problem_id=A&amp;cid=2540">提交记录</a> -->
                             <ab class="small ui positive button" onclick="transform(this)" role="button">侧边提交</ab>
+                            <a id="solution" class="small ui primary button" href="/ACM/ForBUCToj/index.html?problemId=" target="_blank">题解点我</a>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-03-16 10:51:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 12:46:13
+ * @LastEditTime: 2022-05-04 16:07:08
  */
 
 //#region function
@@ -71,6 +71,11 @@ const couldSeeList = {
         6084: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415471", "problemHref": "https://buctcoder.com/problem.php?id=6084" },
         6085: { "time": new Date("2022-03-11 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/123415480", "problemHref": "https://buctcoder.com/problem.php?id=6085" },
         6264: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124513273", "problemHref": "https://buctcoder.com/problem.php?id=6264" },
+        6279: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124559946", "problemHref": "https://buctcoder.com/problem.php?id=6279" },
+        6281: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124561332", "problemHref": "https://buctcoder.com/problem.php?id=6281" },
+        6282: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124561694", "problemHref": "https://buctcoder.com/problem.php?id=6282" },
+        6283: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124565988", "problemHref": "https://buctcoder.com/problem.php?id=6283" },
+        6291: { "time": new Date("2022-05-06 17:00:0"), "explanationHref": "https://letmefly.blog.csdn.net/article/details/124572426", "problemHref": "https://buctcoder.com/problem.php?id=6291" },
     }
     //#endregion
 
