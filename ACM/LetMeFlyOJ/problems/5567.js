@@ -2,9 +2,9 @@
  * @Author: LetMeFly
  * @Date: 2022-05-05 09:21:42
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-05 09:21:42
+ * @LastEditTime: 2022-05-05 10:15:34
  */
-const LetMeFlyOJ_title = "进阶实验8-2.2：特殊堆栈";
+const LetMeFlyOJ_title = "What are you Nong Sha Li?";  // 进阶实验8-2.2：特殊堆栈
 const LetMeFlyOJ_inputData = "Pop\n\
 Push 1\n\
 GetMedia\n\
