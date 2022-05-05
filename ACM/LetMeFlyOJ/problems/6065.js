@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-05 09:48:24
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-05 09:48:24
+ * @LastEditTime: 2022-05-05 10:07:23
  */
 const LetMeFlyOJ_title = "HTML新手 - 图片收集者";
 const LetMeFlyOJ_inputData = '<html>\n\

@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-05-01 20:28:50
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-04 15:56:58
+ * @LastEditTime: 2022-05-05 10:09:18
  */
 $(document).ready(function () {
     renderProblem();
@@ -23,10 +23,10 @@ function setTitleInputOutput(LetMeFlyOJ_title, LetMeFlyOJ_inputData, LetMeFlyOJ_
     document.querySelector("#problemName").innerHTML = LetMeFlyOJ_title;
 
     document.querySelector("#copyin").setAttribute("data-clipboard-text", LetMeFlyOJ_inputData);
-    document.querySelector("#copyinCode").innerHTML = LetMeFlyOJ_inputData;
+    document.querySelector("#copyinCode").innerText = LetMeFlyOJ_inputData;
 
     document.querySelector("#copyout").setAttribute("data-clipboard-text", LetMeFlyOJ_outputData);
-    document.querySelector("#copyoutCode").innerHTML = LetMeFlyOJ_outputData;
+    document.querySelector("#copyoutCode").innerText = LetMeFlyOJ_outputData;
 
     document.querySelector("#LetMeFlyOJ_memory").innerHTML = LetMeFlyOJ_memory;
     document.querySelector("#LetMeFlyOJ_time").innerHTML = LetMeFlyOJ_time;
