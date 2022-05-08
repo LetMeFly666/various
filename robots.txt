@@ -1,4 +1,2 @@
-# 目前该网站处于基础阶段，没有抓取的价值
-
 User-agent: *
-# Disallow: *
+Allow: /
