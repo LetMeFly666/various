@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-02 13:51:27
+ * @LastEditTime: 2022-05-13 15:59:03
  */
 
 //#region 是否重复加载
@@ -29,7 +29,7 @@ function PV() {
     try{
         const data = { 'url': location.href};
         const request = new XMLHttpRequest();
-        request.open("POST", "https://que.letmefly.xyz/LetMeFly/ForProgram/HtmlPVer", false);
+        request.open("POST", "https://www.letmefly.xyz/ForProgram/HtmlPVer", false);
         request.send(JSON.stringify(data));
     }
     catch(error) {}

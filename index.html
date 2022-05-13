@@ -41,7 +41,7 @@
         function getVisitorNum() {
             const visitorNum = document.querySelector("#VisitorNum");
             const httprequest = new XMLHttpRequest();
-            httprequest.open("GET", "https://que.letmefly.xyz/LetMeFly/ForProgram/getAllVisitorNum/", false);
+            httprequest.open("GET", "https://www.letmefly.xyz/ForProgram/getAllVisitorNum/", false);
             try {
                 httprequest.send();
                 const result = JSON.parse(httprequest.response);  // {"total": 43367}
