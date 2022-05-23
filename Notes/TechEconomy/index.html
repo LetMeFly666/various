@@ -1,0 +1,60 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2022-05-23 19:49:52
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2022-05-23 19:55:58
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>技术经济与企业管理笔记 - LetMeFly</title>
+    <script src="/Links/Common.js"></script>
+</head>
+
+<body>
+    <iframe src="技术经济笔记.html" width="100%" height="1000px"></iframe>
+    <script id="setIframeToAutoHeight">
+        
+        function setOneIframe(iframe) {
+            setIframeHeight(iframe);
+            function setOnce(settime) {
+                setTimeout(() => {
+                    setIframeHeight(iframe, onload=false);
+                }, settime);
+            }
+            setOnce(500);
+            setOnce(2000);
+            setOnce(5000);
+            setOnce(10000);
+        }
+        const iframes = document.querySelectorAll('iframe');
+        for (let i = 0; i < iframes.length; i++) {
+            setOneIframe(iframes[i]);
+        }
+        
+    </script>
+    <script id="setIframeHrefAsBlank">
+        function setAIframe(iframe) {
+            const doc = iframe.contentDocument;
+            const as_ = doc.querySelectorAll('a');
+            for (let i = 0; i < as_.length; i++) {
+                const href = as_[i].getAttribute('href');
+                if (href && href[0] == '#') continue;
+                as_[i].setAttribute('target', '_blank');
+            }
+        }
+        function setManyTimes(iframe) {
+            setTimeout(() => {setAIframe(iframe);}, 500);
+            setTimeout(() => {setAIframe(iframe);}, 1500);
+            setTimeout(() => {setAIframe(iframe);}, 2500);
+            setTimeout(() => {setAIframe(iframe);}, 5000);
+            iframe.onload = function() {setAIframe(iframe);}
+        }
+        const iframes2 = document.querySelectorAll('iframe');
+        for (let i_frame = 0; i_frame < iframes2.length; i_frame++) {
+            setManyTimes(iframes2[i_frame]);            
+        }
+    </script>
+</body>
