@@ -1,11 +1,11 @@
 name: 'Auto Run At 21:00UTC'
 
 on:
-  # schedule:
-    # - cron: '0 22 * * *'
-  # push:
-  #   branches: 
-  #     - master
+  schedule:
+    - cron: '0 10 * * *'
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
