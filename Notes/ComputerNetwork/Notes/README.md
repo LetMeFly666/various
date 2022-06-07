@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-06-07 09:19:32
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-06-07 15:02:33
+ * @LastEditTime: 2022-06-07 15:05:59
 -->
 # 计算机网络
 
@@ -104,11 +104,14 @@ D = --------------                 |         -  |
 学习时常用：
 
 &nbsp;&nbsp;&nbsp;应用层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：应用进程的交换来实现特定网络应用的问题
-&nbsp;&nbsp;&nbsp;运输层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：进程间基于网络的通信问题
-&nbsp;&nbsp;&nbsp;网络层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：分组在多个网络上传输(路由)问题
-数据链路层↑  ：分组在一个网络(或一段链路)上的传输问题
-&nbsp;&nbsp;&nbsp;物理层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：何种信号表示何种比特
 
+&nbsp;&nbsp;&nbsp;运输层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：进程间基于网络的通信问题
+
+&nbsp;&nbsp;&nbsp;网络层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：分组在多个网络上传输(路由)问题
+
+数据链路层↑  ：分组在一个网络(或一段链路)上的传输问题
+
+&nbsp;&nbsp;&nbsp;物理层&nbsp;&nbsp;&nbsp;&nbsp;↑  ：何种信号表示何种比特
 
 **专用术语**：
 
