@@ -1,0 +1,196 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2022-06-07 23:05:55
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2022-06-08 00:54:47
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <script src="/Links/Common.js"></script>
+    <title>二维码生成与识别 - llqrcode.js</title>
+    <link href="/Links/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .btn1 {
+            margin: 10px;
+        }
+
+        .panel {
+            width: 200px;
+            margin: 10px auto;
+        }
+
+        #outdiv {
+            width: 500px;
+            height: 500px;
+        }
+
+        #qrfile {
+            width: 290px;
+            height: 270px;
+            position: relative;
+        }
+
+        #out-canvas {
+
+            margin-top: 40px;
+            /*  border: solid ;
+  border-width: 1px 1px 1px 1px;
+  border-color: brown;*/
+        }
+
+        #imghelp input {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+            font: 18px arial, sans-serif;
+            background: #f0f0f0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 20px;
+            opacity: 0;
+        }
+
+        #uploadText {
+            position: absolute;
+            left: 0;
+            top: 30px;
+            bottom: 0;
+            width: 100%;
+            z-index: 99;
+            font: 18px arial, sans-serif;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 0;
+            -webkit-appearance: none;
+        }
+
+        #result {
+            border: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: #ccc;
+            width: 290px;
+            /* height: 35px; */
+            outline: none;
+            box-shadow: none;
+            -webkit-appearance: none;
+        }
+    </style>
+    <!-- 识别二维码引用的js库 -->
+    <script type="text/javascript" src="/Links/llqrcode.js"></script>
+    <!--<script type="text/javascript" src="./qr/plusone.js" gapi_processed="true"></script>-->
+    <script type="text/javascript" src="/Links/webqr.js"></script>
+</head>
+
+<body>
+
+    <!-- <link rel="stylesheet" href="css/buttons.css"> -->
+    <div class="container">
+        <div class="row">
+            <!-- 生成二维码模块 -->
+            <div class="col-md-5">
+                <h4 style="color: skyblue">生成二维码</h4>
+                <!-- 文本框 -->
+                <textarea id="contents" cols="33" rows="10" placeholder="输入内容即可生成二维码"
+                    style="margin: 5px"></textarea><br>
+                <!-- 识别按钮 -->
+                <button type="button" class="btn btn-success btn1" onclick="generateQRCode()">点击按钮生成二维码</button>
+                <!-- 错误信息提示 -->
+                <div id="message"></div>
+                <!-- 成功生成二维码显示的面板标题 -->
+                <div class="panel panel-primary" style="display: none;" id="1">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">成功生成的二维码</h3>
+                    </div>
+                </div>
+                <!-- 二维码 -->
+                <div id="qrcode"></div>
+            </div>
+            <!-- 识别二维码模块 -->
+            <div class="col-md-5 col-md-offset-2">
+                <div id="outdiv">
+                    <div id="qrfile">
+                        <h4 style="color: skyblue">识别二维码图片</h4>
+                        <div style="border:1px solid;height: 220px ; width: 290px;margin-bottom: 50px">
+                            <canvas id="out-canvas" width="290" height="220"></canvas>
+                        </div>
+                        <div id="imghelp">
+                            <p id="uploadText">点击选择本地二维码图片</p>
+                            <input type="file" id="fileBtn" onchange="handleFiles(this.files)" />
+                        </div>
+                        <div>
+                            <span style="color: green;">识别二维码的结果为：</span>
+                            <div type="text" id="result"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+    </div>
+    </div>
+    <canvas id="qr-canvas" width="800" height="600" style="width: 800px; height: 600px;"></canvas>
+    <script type="text/javascript" src="/Links/jquery.min.js"></script>
+    <!-- 生成二维码调用的js库 -->
+    <script src="/Links/qrcode.min.js"></script>
+    <script src="/Links/jquery.qrcode.min.js"></script>
+
+    <script>
+
+        // 生成二维码函数
+        function generateQRCode() {
+
+            var contents = $('#contents').val();
+            if ($("canvas")) {
+                $("canvas").remove();
+            }
+            if (contents === "") {
+                $('#message').text("文本框为空，请输入内容");
+                $('#message').css('color', 'red');
+                $('#message').css('font-size', '20px')
+                return;
+            }
+            $('#1').css('display', 'block');
+            jQuery('#qrcode').qrcode({
+                text: contents
+            });
+        }
+        // 二维码识别函数
+
+        function load() {
+            if (isCanvasSupported() && window.File && window.FileReader) {
+                initCanvas(800, 600);
+                qrcode.callback = read;
+                document.getElementById("uploadText").style.display = "inline";
+                // setwebcam();
+            }
+            else {
+                document.getElementById("uploadText").style.display = "inline";
+                document.getElementById("uploadText").innerHTML = '<p id="mp1"></p><br>' +
+                    '<br><p id="mp2">抱歉，您的浏览器不支持该识别二维码方法</p><br><br>' +
+                    '<p id="mp1">请使用 <a href="http://www.mozilla.com/firefox"><img src="firefox.png"/></a> 或 <a href="http://chrome.google.com"><img src="chrome_logo.gif"/></a> 或 <a href="http://www.opera.com"><img src="Opera-logo.png"/></a></p>';
+            }
+        }
+
+        window.onload = function() {
+            load();
+        }
+    </script>
+</body>
+
+</html>
