@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-06-07 09:19:32
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-06-07 15:05:59
+ * @LastEditTime: 2022-06-07 15:52:34
 -->
 # 计算机网络
 
@@ -260,7 +260,7 @@ G(x) = 1·x^3 + 1·x^2 + 0·x^1 + 1·x^0
 ```
   RIP             OSPF         BGP
    ↓               |            ↓
-  UDP(端口号520)    |      TCP(端口号179)
+  UDP(端口号520)   |      TCP(端口号179)
    ↓17             ↓89          ↓6  } 协议字段的值
     _____________________________
    |              IP             |
@@ -286,4 +286,89 @@ G(x) = 1·x^3 + 1·x^2 + 0·x^1 + 1·x^0
 ## 应用层
 
 电子邮件、域名系统、文件传输、万维网...
+
+## 名词解释
+
+<details>
+    <summary>名词解释</summary>
+    <li>ACK  确认</li>
+    <li>ADSL  非对称数字用户线</li>
+    <li>ANSI  先进的加密标准</li>
+    <li>AP  接入点/应用程序</li>
+    <li>API  应用编程接口</li>
+    <li>ARP  地址解析协议</li>
+    <li>ARPA  美国国防部远景研究规划局（高级研究计划</li>署）
+    <li>ARQ  自动重传请求</li>
+    <li>AS  自治系统/鉴别服务器</li>
+    <li>ATU  接入端接单元</li>
+    <li>ATM  异步传递方式</li>
+    <li>BGP  边界网关协议</li>
+    <li>CCITT  国际电报电话咨询委员会</li>
+    <li>CDMA  码分多址</li>
+    <li>CHAP  口令握手鉴别协议</li>
+    <li>CIDR  无分类域间路由选择</li>
+    <li>CNNIC  中国互联网络信息中心</li>
+    <li>CSMA/CD  载波监听多点接入/冲突检测</li>
+    <li>CSMA/CA  载波监听多点接入/冲突避免</li>
+    <li>DDOS  分布式拒绝服务</li>
+    <li>DES  数据加密标准</li>
+    <li>DHCP 动态主机配置协议</li>
+    <li>DNS  域名服务</li>
+    <li>EGP  外部网关协议</li>
+    <li>EIA  美国电子工业协会</li>
+    <li>FCS  帧检验序列</li>
+    <li>FDDI  光纤分布式数据接口</li>
+    <li>FDM  频分复用</li>
+    <li>FTP  文件传送协议</li>
+    <li>FIFO  先进先出</li>
+    <li>GSM  全球移动通信系统，GSM体制</li>
+    <li>HDLC  高级数据链路控制</li>
+    <li>HFC  光纤同轴混合（网）</li>
+    <li>HTML  超文本标记语言</li>
+    <li>HTTP  超文本传送协议</li>
+    <li>ICMP  网际控制报文协议</li>
+    <li>IEEE  （美国）电气和电子工程师学会</li>
+    <li>IGMP  网际组管理协议</li>
+    <li>IGP  内部网关协议</li>
+    <li>IMAP  网际报文存取协议</li>
+    <li>IP  网际协议</li>
+    <li>ISDN  综合业务数字网</li>
+    <li>ISO  国际标准化组织</li>
+    <li>ITU  国际电信联盟</li>
+    <li>LAN  局域网</li>
+    <li>MAN  城域网</li>
+    <li>MPEG  活动图像专家组</li>
+    <li>MTU  最大传送单元</li>
+    <li>OSI/Rm  开放系统互连基本参考模型</li>
+    <li>OSPF  开放最短通路优先</li>
+    <li>PCM  脉码调制</li>
+    <li>PDA  个人数字助理</li>
+    <li>PKI  公钥基础结构</li>
+    <li>PPP  点对点协议</li>
+    <li>RIP  路由信息协议</li>
+    <li>SMTP  简单邮件传送协议</li>
+    <li>SSID  服务集标识符</li>
+    <li>SSL  安全插口层，或安全套接层（协议）</li>
+    <li>STDM  统计时分复用</li>
+    <li>STP  屏蔽双绞线</li>
+    <li>TCP  传输控制协议</li>
+    <li>TDM  时分复用</li>
+    <li>TIA  电信行业协会</li>
+    <li>TLD  顶级域名</li>
+    <li>TPDU  运输协议数据单元</li>
+    <li>TTL  生存时间，或寿命</li>
+    <li>UA  用户代理</li>
+    <li>URL  统一资源定位符</li>
+    <li>UTP  无屏蔽双绞线</li>
+    <li>VLAN  虚拟局域网</li>
+    <li>VLSM  变长子网掩码</li>
+    <li>VPN  虚专用网</li>
+    <li>WAN  广域网</li>
+    <li>WDM  波分复用</li>
+    <li>WI-FI  无线保真度（无线局域网的同义词）</li>
+    <li>WLAN  无线局域网</li>
+    <li>WWW  万维网</li>
+    <li>NAT  网络地址转换</li>
+    <li>NCP  网络控制协议</li>
+</details>
 
