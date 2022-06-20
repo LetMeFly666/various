@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-13 15:59:03
+ * @LastEditTime: 2022-06-20 22:23:37
  */
 
 //#region 是否重复加载
@@ -19,7 +19,7 @@ else {
     var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = '/Links/Title.ico';
+    link.href = 'https://letmefly.xyz/Links/favicon.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
 }());
 //#endregion
