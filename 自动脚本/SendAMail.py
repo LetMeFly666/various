@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2021-08-25 12:29:20
 LastEditors: LetMeFly
-LastEditTime: 2021-08-25 12:33:49
+LastEditTime: 2022-07-04 22:11:48
 '''
 import smtplib
 from email.mime.text import MIMEText
@@ -29,7 +29,8 @@ def send_email(to_who="xxx@qq.com", title="问卷杀手", text="欢迎加入问�
             server.quit()  # 关闭连接
         except smtplib.SMTPRecipientsRefused:
             print("地址错误")
-        except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        except Exception as e:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+            print(e)
             ret = False
         '''
          raise SMTPRecipientsRefused(senderrs)
@@ -42,4 +43,5 @@ smtplib.SMTPRecipientsRefused: {'': (501, b'Bad address syntax. http://service.m
         print("邮件发送成功")
     else:
         print("邮件发送失败")
+        assert (ret)  # 这样Github会发送“失败邮件”
     return ret
