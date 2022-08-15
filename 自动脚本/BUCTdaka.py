@@ -1,5 +1,6 @@
 import requests
 import datetime
+import random
 import os
 
 ISHOME = False
@@ -8,7 +9,7 @@ def getdate():
     return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y%m%d")
 
 
-def getTh(lastTime=datetime.datetime(2021,8,6)):
+def getTh(lastTime=datetime.datetime(2021,8,6)) -> str:
     a = str(datetime.datetime.utcnow() - lastTime)
     try:
         a = a.split(',')[0]
@@ -164,6 +165,8 @@ def tryOnce(url, headers, datas):
         send_email("814114971@qq.com", "打卡失败提醒", f"尝试了{allNeedToTry}次打卡均未成功，手动打一下叭~")
 
 tryOnce(url, headers, datas)
+
+# MaoBegin
 headers['Cookie'] = COOKIE_BUCTDAKA_MAOMAO
 datas['remark'] = f'六点起床第{getTh(datetime.datetime(2021,12,9))}天，早睡早起增强抵抗力'
 if ISHOME:
@@ -172,4 +175,9 @@ if ISHOME:
     datas['area'] = AREA_BUCTDAKA_HOME_MAOMAO
     datas['province'] = PROVINCE_BUCTDAKA_HOME_MAOMAO
     datas['city'] = CITY_BUCTDAKA_HOME_MAOMAO
-tryOnce(url, headers, datas)
+
+diffDayFromSeparate = int(getTh(lastTime=datetime.datetime(2022, 8, 9)).split(' ')[0])
+percentage = max(5, 100 - diffDayFromSeparate)
+print(percentage)
+if random.randint(1, 100) > percentage:
+    tryOnce(url, headers, datas)
