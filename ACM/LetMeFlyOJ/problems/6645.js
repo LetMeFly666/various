@@ -2,12 +2,12 @@
  * @Author: LetMeFly
  * @Date: 2022-08-23 10:41:21
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-23 10:42:54
+ * @LastEditTime: 2022-08-23 18:18:54
  */
 const LetMeFlyOJ_title = "谁是今天的女王";
 const LetMeFlyOJ_inputData = '100 2\n\
 90 150';
-const LetMeFlyOJ_outputData = "I'm the queue today!";
+const LetMeFlyOJ_outputData = "I'm the queen today!";
 const LetMeFlyOJ_memory = "128M";
 const LetMeFlyOJ_time = "1000ms";
 
