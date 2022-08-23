@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-08-23 10:41:37
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-23 10:49:28
+ * @LastEditTime: 2022-08-23 10:56:48
  */
 const problemDescriptionData = '<p><i><font color="#d6d6d6">在只有女生的今天里&#xff0c;我要征服世界&#xff01;</font></i></p> \n\
 <p align="right"><i><font color="#d6d6d6">—— Tisfy</font></i></p> \n\
@@ -16,7 +16,7 @@ const problemDescriptionData = '<p><i><font color="#d6d6d6">在只有女生的�
  \n\
 <p></p>\n\
 <div class="csdn-video-box">\n\
- <iframe id="KMXPup3y-1661222813811" src="https://player.bilibili.com/player.html?aid&#61;644863915" allowfullscreen="true" data-mediaembed="bilibili"></iframe>\n\
+<iframe src="//player.bilibili.com/player.html?aid=644863915&bvid=BV1rY4y1F7B5&cid=811690814&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500px"> </iframe>\n\
  <p>谁才是今天的女王</p>\n\
 </div>\n\
 <p></p> '
