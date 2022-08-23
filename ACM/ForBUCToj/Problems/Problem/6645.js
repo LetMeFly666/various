@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-08-23 10:41:37
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-23 18:18:37
+ * @LastEditTime: 2022-08-23 18:38:01
  */
 const problemDescriptionData = '<p><i><font color="#d6d6d6">在只有女生的今天里&#xff0c;我要征服世界&#xff01;</font></i></p> \n\
 <p align="right"><i><font color="#d6d6d6">—— Tisfy</font></i></p> \n\
@@ -247,7 +247,7 @@ script1.setAttribute('src','https://letmefly.xyz/ACM/ForBUCToj/Common.js?v=' + M
 document.head.appendChild(script1);  // 将js追加为body的子标签
 
 function callBack() {
-    alert("谁是今天的女王");
+    alert("ㅤ谁是今天的女王ㅤ", hei = 75, Time = 3500);
 }
 
 //判断script1是否加载成功
