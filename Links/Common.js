@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-06-20 22:23:37
+ * @LastEditTime: 2022-08-27 13:37:41
  */
 
 //#region 是否重复加载
@@ -14,8 +14,11 @@ else {
 
 // 下面开始代码部分
 
-//#region Title.ico
+//#region favicon.ico
 (function() {
+    if (window._LINKS_COMMONJS_NOTCHANGEICO) {  // Donnot change ico
+        return;
+    }
     var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
