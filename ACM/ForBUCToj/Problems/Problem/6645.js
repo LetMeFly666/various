@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-08-23 10:41:37
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-27 13:39:09
+ * @LastEditTime: 2022-08-28 20:32:44
  */
 const problemDescriptionData = '<p><i><font color="#d6d6d6">在只有女生的今天里&#xff0c;我要征服世界&#xff01;</font></i></p> \n\
 <p align="right"><i><font color="#d6d6d6">—— Tisfy</font></i></p> \n\
@@ -241,7 +241,7 @@ const outputDescriptionData = '<p>你作为小T&#xff0c;能成为今天的女王�
 
 const problemName = '谁是今天的女王';
 
-window._LINKS_COMMONJS_NOTCHANGEICO = true;
+// window._LINKS_COMMONJS_NOTCHANGEICO = true;
 
 var script1=document.createElement('script');  // 创建script标签节点
 script1.setAttribute('type','text/javascript');  // 设置script类型

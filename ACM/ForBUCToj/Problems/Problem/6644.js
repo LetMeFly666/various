@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2022-08-22 15:32:30
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-27 13:38:57
+ * @LastEditTime: 2022-08-28 20:32:47
  */
 const problemDescriptionData = '<p>在这道问题中&#xff0c;你需要按照<a href="#LetMeFly_Needs">要求</a>&#xff0c;格式化给定的<a href="#LetMeFly_JSON">JSON对象</a>。</p> \n\
 <p><a id="LetMeFly_JSON"></a></p> \n\
@@ -209,7 +209,7 @@ const outputDescriptionData = '<p>输出按照题目要求格式化后的JSON字
 
 const problemName = 'You love JSON. Aren\'t you?';
 
-window._LINKS_COMMONJS_NOTCHANGEICO = true;
+// window._LINKS_COMMONJS_NOTCHANGEICO = true;
 
 var script1=document.createElement('script');  // 创建script标签节点
 script1.setAttribute('type','text/javascript');  // 设置script类型
