@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-05-01 22:37:56
+ * @LastEditTime: 2022-08-29 09:04:19
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -111,6 +111,9 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
 
         if (callBack)
             callBack();
+    }
+    else {
+        window._LINKS_COMMONJS_NOTCHANGEICO = true;
     }
 
     //#region SetTips
