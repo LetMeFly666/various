@@ -26,7 +26,6 @@ if __name__ == '__main__':
     AREA_BUCTDAKA = os.environ["AREA_BUCTDAKA"]
     CITY_BUCTDAKA = os.environ["CITY_BUCTDAKA"]
     COOKIE_BUCTDAKA = os.environ["COOKIE_BUCTDAKA"]
-    COOKIE_BUCTDAKA_MAOMAO = os.environ["COOKIE_BUCTDAKA_MAOMAO"]
     CREATED_BUCTDAKA = os.environ["CREATED_BUCTDAKA"]
     DATAS_BUCTDAKA = os.environ["DATAS_BUCTDAKA"]
     GEOAPIINFO_BUCTDAKA = os.environ["GEOAPIINFO_BUCTDAKA"]
@@ -36,15 +35,10 @@ if __name__ == '__main__':
     UID_BUCTDAKA = os.environ["UID_BUCTDAKA"]
     USERAGENT_BUCTDAKA = os.environ["USERAGENT_BUCTDAKA"]
     ADDRESS_BUCTDAKA_HOME = os.environ["ADDRESS_BUCTDAKA_HOME"]
-    ADDRESS_BUCTDAKA_HOME_MAOMAO = os.environ["ADDRESS_BUCTDAKA_HOME_MAOMAO"]
     GEOAPIINFO_BUCTDAKA_HOME = os.environ["GEOAPIINFO_BUCTDAKA_HOME"]
-    GEOAPIINFO_BUCTDAKA_HOME_MAOMAO = os.environ["GEOAPIINFO_BUCTDAKA_HOME_MAOMAO"]
     AREA_BUCTDAKA_HOME = os.environ["AREA_BUCTDAKA_HOME"]
-    AREA_BUCTDAKA_HOME_MAOMAO = os.environ["AREA_BUCTDAKA_HOME_MAOMAO"]
     PROVINCE_BUCTDAKA_HOME = os.environ["PROVINCE_BUCTDAKA_HOME"]
-    PROVINCE_BUCTDAKA_HOME_MAOMAO = os.environ["PROVINCE_BUCTDAKA_HOME_MAOMAO"]
     CITY_BUCTDAKA_HOME = os.environ["CITY_BUCTDAKA_HOME"]
-    CITY_BUCTDAKA_HOME_MAOMAO = os.environ["CITY_BUCTDAKA_HOME_MAOMAO"]
     TEST = os.environ["TEST"]  # 不能加上‘secrets.’吗
 
     print("Begin")
@@ -165,19 +159,3 @@ def tryOnce(url, headers, datas):
         send_email("814114971@qq.com", "打卡失败提醒", f"尝试了{allNeedToTry}次打卡均未成功，手动打一下叭~")
 
 tryOnce(url, headers, datas)
-
-# MaoBegin
-headers['Cookie'] = COOKIE_BUCTDAKA_MAOMAO
-datas['remark'] = f'六点起床第{getTh(datetime.datetime(2021,12,9))}天，早睡早起增强抵抗力'
-if ISHOME:
-    datas['address'] = ADDRESS_BUCTDAKA_HOME_MAOMAO
-    datas['geo_api_info'] = GEOAPIINFO_BUCTDAKA_HOME_MAOMAO
-    datas['area'] = AREA_BUCTDAKA_HOME_MAOMAO
-    datas['province'] = PROVINCE_BUCTDAKA_HOME_MAOMAO
-    datas['city'] = CITY_BUCTDAKA_HOME_MAOMAO
-
-diffDayFromSeparate = int(getTh(lastTime=datetime.datetime(2022, 8, 9)).split(' ')[0])
-percentage = max(5, 100 - diffDayFromSeparate)
-print(percentage)
-if random.randint(1, 100) > percentage:
-    tryOnce(url, headers, datas)
