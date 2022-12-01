@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-08-08 13:28:51
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-27 13:37:41
+ * @LastEditTime: 2022-12-01 15:55:21
  */
 
 //#region 是否重复加载
@@ -13,6 +13,22 @@ else {
     window._LINKS_COMMONJS = true;
 
 // 下面开始代码部分
+
+// 缅怀🕯️
+const THEGRAYSTYLE = document.createElement("style");
+THEGRAYSTYLE.innerHTML = "html { \n-webkit-filter: grayscale(100%); \n-moz-filter: grayscale(100%); \n-ms-filter: grayscale(100%); \n-o-filter: grayscale(100%); \nfilter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);  \n_filter:none; \n}"
+function ifChange() {
+    const href = location.href;
+    const mainHref = href.indexOf("://") ? href.substring(href.indexOf("://") + 3) : href;
+    for (var i = 0; i + 1 < mainHref.length; i++) {
+        if (mainHref[i] == '/' && mainHref[i + 1] != '?')
+            return false;
+    }
+    return true;
+}
+if (ifChange()) {
+    document.querySelector("head").append(THEGRAYSTYLE);
+}
 
 //#region favicon.ico
 (function() {
