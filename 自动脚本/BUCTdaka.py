@@ -3,7 +3,7 @@ import datetime
 import random
 import os
 
-ISHOME = False
+ISHOME = True
 
 def getdate():
     return (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y%m%d")
