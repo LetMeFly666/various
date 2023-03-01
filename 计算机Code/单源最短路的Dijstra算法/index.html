@@ -1,0 +1,38 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2023-03-01 19:47:18
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2023-03-01 19:58:22
+-->
+<!DOCTYPE html>
+<html lang="zn">
+<head>
+    <meta charset="UTF-8">
+    <title>单源最短路的Dijstra算法</title>
+    <script src="/Links/Common.js"></script>
+</head>
+<body>
+
+    <h1 style="text-align:center">单源最短路的Dijstra算法</h1>
+    <button onclick="MyVideo()" id="MyVideo">视频讲解</button>
+    <button onclick="MyPPT()">PPT下载</button>
+
+    <script>
+        function MyPPT() {
+            location.href = "https://LetMeFly666.github.io/FileStorge/Files/Dijstra单源最短路径ByLetMeFly.pptx";
+        }
+
+        function MyVideo() {
+            // location.href = "https://www.bilibili.com/video//";
+            alert("录屏正在生成/审核中，请耐心等待");
+        }
+
+        setTimeout(() => {
+            if (location.href.indexOf("IsVideo") != -1) {
+                document.querySelector("#MyVideo").click();
+            }
+        }, 50);
+    </script>
+    
+</body>
+</html>
