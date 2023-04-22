@@ -81,8 +81,9 @@
 
             TitleH1.addEventListener("mouseover", showHidden);
             TitleH1Hidden.addEventListener("mouseout", showOriginal);
-            // TitleH1Hidden.addEventListener("click", showOriginal);  // 手机端，没有“鼠标移出操作”，因此需要通过点击来实现回归原始
-            // TitleH1.addEventListener("click", showHidden);  // 其实手机端的“点击”会自带“鼠标移入”，但还是手动加一个比较好
+            // // 手机端
+            // TitleH1.addEventListener("touchstart", showHidden);
+            // TitleH1Hidden.addEventListener("touchstart", showOriginal);
         }
     </script>
 
