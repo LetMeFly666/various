@@ -12,6 +12,10 @@
             border: 2px solid rgb(164, 74, 74);
             font-family: 楷体;
         }
+
+        #TitleH1Hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -22,7 +26,9 @@
 
     <div id="Visitor">总访问量：<a id="VisitorNum">正在计算...</a></div>
 
-    <h1 style="text-align:center">HTML新手的牛刀小试</h1><br /><hr />
+    <h1 style="text-align:center" id="TitleH1" LetMeFly_Hidden="false">HTML新手的牛刀小试</h1>
+    <h1 style="text-align:center" id="TitleH1Hidden"><span style="color:#fff; text-shadow:0 0 1em #FF80BF,0 0 0.7em #FF80BF,0 0 0.5em #FF80BF,0 0 0.2em #FF80BF;">私の心は，Unlock！</span></h1>
+    <br /><hr />
 
     <a href="ACM">ACM</a><br /><hr />
     <a href="计算机Code">计算机代码</a><br /><hr />
@@ -52,12 +58,35 @@
                 visitorNum.innerHTML = "获取失败！";
             }
         }
+
+        function setTitleHover() {
+            const TitleH1 = document.querySelector("#TitleH1");
+            const TitleH1Hidden = document.querySelector("#TitleH1Hidden");
+
+            function showOriginal() {
+                console.log("showOriginal");
+                TitleH1.setAttribute("style", "display: block");
+                TitleH1Hidden.setAttribute("style", "display: none");
+            }
+
+            function showHidden() {
+                console.log("showHidden");
+                TitleH1.setAttribute("style", "display: none");
+                TitleH1Hidden.setAttribute("style", "display: block");
+            }
+            TitleH1.addEventListener("mouseover", showHidden);
+            TitleH1Hidden.addEventListener("mouseout", showOriginal);
+        }
     </script>
 
     <script>
         setTimeout(() => {
             getVisitorNum();
         }, 20);
+
+        setTimeout(() => {
+            setTitleHover();
+        }, 20)
     </script>
 
 </body>
