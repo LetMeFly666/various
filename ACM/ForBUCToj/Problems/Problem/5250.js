@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-04-28 09:51:41
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-04-13 22:07:51
+ * @LastEditTime: 2023-04-24 15:48:59
  */
 
 const begin = '<div id="article_content" class="article_content clearfix">\n\
@@ -180,6 +180,8 @@ const problem_description_data = '<img src="data:image/jpeg;base64,/9j/4AAQSkZJR
 const input_description_data = '<p>一行一个字符串&#xff0c;代表小朋友的名字&#xff0c;长度不超过200。</p> '
 
 const output_description_data = '<p>输出一行一个数&#xff0c;表示这位小朋友的书包编号。</p> '
+
+var isProblem = true;  // 无法获取Common.js中的局部变量isProblem，那么就默认为true吧！
 
 const change__ = function() {
     const numOfProblem = 6;
