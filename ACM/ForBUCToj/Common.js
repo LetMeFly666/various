@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2021-10-29 11:32:03
  * @LastEditors: LetMeFly
- * @LastEditTime: 2022-08-29 09:04:19
+ * @LastEditTime: 2023-04-24 15:36:00
  */
 /*
     用js将数学公式打到BUCT_OJ上去
@@ -102,7 +102,7 @@ function __LetMeFly_BUCTOJ_ProblemPrinter(problemDescriptionData, inputDescripti
             var link = document.createElement('link');
             link.type = 'image/x-icon';
             link.rel = 'shortcut icon';
-            link.href = 'https://letmefly666.github.io/various/Links/Title.ico';
+            link.href = 'https://web.letmefly.eu.org/Links/favicon.ico';
             document.getElementsByTagName('head')[0].appendChild(link);
         }
         catch(TypeError) {}
