@@ -30,7 +30,7 @@
 
     <h1 style="text-align:center" >
         <span id="TitleH1">HTML新手的牛刀小试</span>
-        <span id="TitleH1Hidden">私の心は，Unlock！</span>
+        <span id="TitleH1Hidden">HiddenText</span>
     </h1>
     <br /><hr />
 
@@ -73,6 +73,8 @@
             }
 
             function showHidden() {
+                const choosenList = ['私の心は，Unlock！', '人活着就是为了樱岛麻衣'];
+                TitleH1Hidden.innerHTML = choosenList[Math.floor(Math.random() * choosenList.length)];
                 TitleH1.setAttribute("style", "display: none");
                 TitleH1Hidden.setAttribute("style", "display: block");
             }
