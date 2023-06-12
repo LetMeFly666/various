@@ -1,20 +1,413 @@
-<!--
+<!-- 
  * @Author: LetMeFly
  * @Date: 2023-06-10 19:54:14
  * @LastEditors: LetMeFly
- * @LastEditTime: 2023-06-10 19:55:18
+ * @LastEditTime: 2023-06-12 17:06:05
+ * @More: 最小支持300像素的宽度
 -->
 <!DOCTYPE html>
 <html lang="zn">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CS1906</title>
     <script src="/Links/Common.js"></script>
+    <style id="CSSForCommon">
+        body {
+            background-color: #eeeeee;
+        }
+
+        @media screen and (max-width: 500px) {
+            #MainDiv {
+                /* 手机  */
+                width: 80%;
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            #MainDiv {
+                width: 500px;
+            }
+        }
+
+        #MainDiv {
+            margin: auto;
+            background-color: #ffffff;
+            padding-left: 30px;
+            padding-right: 30px;
+            height: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #HexCode {
+            height: 25px;
+            cursor: pointer;
+        }
+
+        #Foot {
+            position: relative;
+            background-color: #f7f7f7;
+            width: calc(100% + 40px);
+            margin: auto;
+            margin-left: -30px;
+            padding: 20px 10px;
+            font-size: 5px;
+        }
+
+        #Foot a {
+            text-decoration: none;
+        }
+    </style>
+    <style id="CSSForGongZhongHao">
+        #GongZhongHao {
+            position: relative;
+            background-color: #f7f7f7;
+            width: 98%;
+            margin: auto;
+            height: 143.2px;
+            font-size: 14px;
+            min-width: 241.642px;
+            cursor: pointer;
+        }
+
+        #GongZhongHaoShang {
+            height: 107.6px;
+        }
+
+        #GongZhongHaoRealShang {
+            padding: 20px 16px;
+            height: 67.6px;
+        }
+
+        #GongZhongHaoShangLeft {
+            padding-right: 10px;
+            width: 44px;
+            float: left;
+        }
+
+        #GongZhongHaoLOGO {
+            border-radius: 100%;
+            width: 44px;
+        }
+
+        #GongZhongHaoShangRight {
+            float: left;
+            height: 100%;
+        }
+
+        #GongZhongHaoShangRightJianTou {
+            float: right;
+            margin-top: 26px;
+        }
+
+        #GongZhongHaoShangRightZhong {
+            margin-top: 5px;
+        }
+
+        #GongZhongHaoShangRightXia {
+            margin-top: 10px;
+        }
+
+        #GongZhongHaoHR {
+            width: 90%;
+        }
+
+        #GongZhongHaoXiaWenZi {
+            margin-top: -5px;
+            margin-left: 5%;
+        }
+
+        #XueYuanTuiSong {
+            background-color: #f7f7f7;
+            margin: auto;
+            padding: 20px 16px;
+            cursor: pointer;
+        }
+
+        #XueYuanTuiSongTitleMoreInfo {
+            margin-top: 7px;
+        }
+    </style>
+    <style id="CSSForMovingCode">
+        #code {
+            background-color: silver;
+            padding: 1em 0;
+            font-size: 20px;
+            font-family: monospace;
+            border-radius: 0.5em;
+        }
+
+        #code p {
+            white-space: pre;
+            padding: 0 1em;
+            margin: 0.5em;
+        }
+
+        #code p:not(:last-child) {
+            animation: step 2s infinite;
+            animation-delay: var(--d);
+        }
+
+        #code p:nth-child(2) {
+            --d: 0s;
+        }
+
+        #code p:nth-child(3) {
+            --d: 0.5s;
+        }
+
+        #code p:nth-child(4) {
+            --d: 1s;
+        }
+
+        #code p:nth-child(1),
+        #code p:nth-child(5) {
+            --d: 1.5s;
+        }
+
+        @keyframes step {
+
+            0%,
+            25% {
+                color: white;
+                background-color: dodgerblue;
+            }
+
+            26%,
+            100% {
+                color: black;
+                background-color: transparent;
+            }
+        }
+    </style>
+    <style id="CSSForHeart">
+        #ForHeart {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: black; */
+            overflow: hidden;
+        }
+
+        #realHeart {
+            width: 225px;
+            height: 250px;
+            position: relative;
+        }
+
+        #realHeart span {
+            position: absolute;
+            left: 0;
+            color: goldenrod;
+            font-size: 15px;
+            font-family: sans-serif;
+            text-shadow: 0 0 1em white;
+            animation:
+                x-move 10s ease-in-out infinite alternate,
+                y-move 20s linear infinite;
+            animation-delay: calc(20s / var(--particles) * var(--n) * -1);
+            user-select: none;
+        }
+
+        #realHeart span:first-child {
+            color: orangered;
+            font-size: 1em;
+            text-shadow:
+                0 0 0.1em black,
+                0 0 1em white;
+            z-index: 1;
+        }
+
+        @keyframes x-move {
+            to {
+                left: 225px;
+            }
+        }
+
+        @keyframes y-move {
+            0% {
+                transform: translateY(90px);
+            }
+
+            10% {
+                transform: translateY(22.5px);
+            }
+
+            15% {
+                transform: translateY(2.5px);
+            }
+
+            18% {
+                transform: translateY(0);
+            }
+
+            20% {
+                transform: translateY(2.5px);
+            }
+
+            22% {
+                transform: translateY(17.5px);
+            }
+
+            24% {
+                transform: translateY(32.5px);
+            }
+
+            25% {
+                transform: translateY(55px);
+            }
+
+            26% {
+                transform: translateY(32.5px);
+            }
+
+            28% {
+                transform: translateY(17.5px);
+            }
+
+            30% {
+                transform: translateY(2.5px);
+            }
+
+            32% {
+                transform: translateY(0);
+            }
+
+            35% {
+                transform: translateY(2.5px);
+            }
+
+            40% {
+                transform: translateY(22.5px);
+            }
+
+            50% {
+                transform: translateY(90px);
+            }
+
+            71% {
+                transform: translateY(215px);
+            }
+
+            72.5% {
+                transform: translateY(220px);
+            }
+
+            75% {
+                transform: translateY(225px);
+            }
+
+            77.5% {
+                transform: translateY(220px);
+            }
+
+            79% {
+                transform: translateY(215px);
+            }
+
+            100% {
+                transform: translateY(90px);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    不善煽情，唯有真情
-    <br>
-    CS1906最棒！毕业快乐
+    <div id="MainDiv">
+        <p><img src="img/WeAreBUCT.svg" alt="我们是北京化工大学的"><img src="img/CS1906.svg" alt="计科1906"></p>
+        <p>这是我们班的公众号：</p>
+        <div id="GongZhongHao" onclick="GoToGongZhongHao()">
+            <div id="GongZhongHaoShang">
+                <div id="GongZhongHaoRealShang">
+                    <div id="GongZhongHaoShangLeft">
+                        <img id="GongZhongHaoLOGO" src="img/GongZhongHaoLOGO.jpg" alt="计科1906公众号LOGO">
+                    </div>
+                    <div id="GongZhongHaoShangRight">
+                        <div id="GongZhongHaoShangRightShang">
+                            <b>BUCT计科1906</b>
+                        </div>
+                        <div id="GongZhongHaoShangRightZhong">
+                            欢迎光临北化计科1906
+                        </div>
+                        <div id="GongZhongHaoShangRightXia">
+                            1906篇原创文章
+                        </div>
+                    </div>
+                    <div id="GongZhongHaoShangRightJianTou">&gt;</div>
+                </div>
+            </div>
+            <hr id="GongZhongHaoHR">
+            <div id="GongZhongHaoXia">
+                <div id="GongZhongHaoXiaWenZi">公众号</div>
+            </div>
+        </div>
+        <p>这是学院给我们班做的推送：</p>
+        <div id="XueYuanTuiSong" onclick="GoToXueYuanTuiSong()">
+            <div id="XueYuanTuiSongTitle"><b>我们正青春 | 计科1906：戮力同心 奋楫笃行</b></div>
+            <div id="XueYuanTuiSongTitleMoreInfo">
+                <span>戮力同心,奋楫前行</span>
+                <br>
+                <span>不忘初心，继续前行</span>
+            </div>
+        </div>
+        <p>你以为程序员的生活是这样的？</p>
+        <div id="code">
+            <p>function repeat() {</p>
+            <p> eat();</p>
+            <p> sleep();</p>
+            <p> code();</p>
+            <p> repeat();</p>
+            <p>}</p>
+        </div>
+        <p>不，程序员也有他们的浪漫</p>
+        <div id="ForHeart">
+            <div id="realHeart"></div>
+        </div>
+        <p>我们不善煽情，唯有真情</p>
+        <p>计科1906的<span title="小可爱">XiaoKeAi</span>们都认为：</p>
+        <p>
+            <svg id="HexCode">
+                <text y='25' font-family='"monospace", monospace' fill='#36BCF7' font-size='20'>
+                    0x 3139 3036 4245 5354
+                </text>
+            </svg>
+        </p>
+
+        <div id="Foot">
+            <span>计科1906毕业留念</span>
+            <span>By <a href="https://letmefly.xyz">LetMeFly</a></span>
+            <br>
+            <span>Using <a href='https://github.com/HerbertKarajan/css-js-animation'>Karajan</a>'s CSS &amp; <a href='https://d3js.org/'>d3js</a></span>
+            <br>
+            <span>You can edit me on <a href='https://github.com/LetMeFly666/various/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BACode/%E8%AE%A1%E7%A7%911906%E6%AF%95%E4%B8%9A%E4%BA%86/index.html'>Github</a></span>
+        </div>
+    </div>
+
+    <script>
+        function GoToGongZhongHao() {
+            window.open('https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MjM5NzQ5NjU0Nw==#wechat_redirect', '_blank')
+        }
+
+        function GoToXueYuanTuiSong() {
+            window.open('https://mp.weixin.qq.com/s/CS1iMW8pfxAlBuRiHckq9g', '_blank')
+        }
+    </script>
+    <script src='/Links/d3.v7.min.js'></script>
+    <script id="ForHeartJS">
+        const words = ['计科1906', 'Tisfy', '但啟涛', '厉昊', '史郅非', '姜丽敏', '孟徳炜', '张大千', '张燊朋', '方夏捷', '李傲深', '李岩', '李楠', '李欢欢', '李腾飞', '杜子涵', '梁洪铭', '王东华', '王子元', '王悦', '王治阵', '袁凯', '谢盈盈', '赵千慧', '赵家成', '金晶', '钱扬', '钱扬', '陈柯舟', '高子乔'];
+
+        d3.select('#realHeart')
+            .style('--particles', words.length)
+            .selectAll('span')
+            .data(words)
+            .enter()
+            .append('span')
+            .style('--n', (d, i) => i + 1)
+            .text((d) => d);
+    </script>
 </body>
