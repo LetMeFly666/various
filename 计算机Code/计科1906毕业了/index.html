@@ -2,7 +2,7 @@
  * @Author: LetMeFly
  * @Date: 2023-06-10 19:54:14
  * @LastEditors: LetMeFly
- * @LastEditTime: 2023-06-12 17:06:05
+ * @LastEditTime: 2023-06-12 17:10:51
  * @More: 最小支持300像素的宽度
 -->
 <!DOCTYPE html>
@@ -371,7 +371,7 @@
         <p>我们不善煽情，唯有真情</p>
         <p>计科1906的<span title="小可爱">XiaoKeAi</span>们都认为：</p>
         <p>
-            <svg id="HexCode">
+            <svg id="HexCode" title="快速连点5次？">
                 <text y='25' font-family='"monospace", monospace' fill='#36BCF7' font-size='20'>
                     0x 3139 3036 4245 5354
                 </text>
@@ -396,6 +396,8 @@
         function GoToXueYuanTuiSong() {
             window.open('https://mp.weixin.qq.com/s/CS1iMW8pfxAlBuRiHckq9g', '_blank')
         }
+
+        addClick(document.querySelector("#HexCode"), 'hex.html');
     </script>
     <script src='/Links/d3.v7.min.js'></script>
     <script id="ForHeartJS">
