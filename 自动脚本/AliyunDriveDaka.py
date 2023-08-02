@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2023-08-02 18:19:51
 LastEditors: LetMeFly
-LastEditTime: 2023-08-02 18:38:31
+LastEditTime: 2023-08-02 18:40:26
 Description: 参考了https://github.com/libuke/aliyundrive-checkin/blob/main/aliyundrive.py
 '''
 import requests
@@ -15,7 +15,7 @@ ALIYUNDRIVE_REFRESH_TOKEN = os.environ["ALIYUNDRIVE_REFRESH_TOKEN"]
 def main():
     # 获取access_token
     response = requests.post(
-        url='https://auth.aliyundrive.com/v2/account/token',
+        url='-https://auth.aliyundrive.com/v2/account/token',
         json={
             'grant_type': 'refresh_token',
             'refresh_token': ALIYUNDRIVE_REFRESH_TOKEN
