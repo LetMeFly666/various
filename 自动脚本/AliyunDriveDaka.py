@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2023-08-02 18:19:51
 LastEditors: LetMeFly
-LastEditTime: 2023-08-02 18:32:18
+LastEditTime: 2023-08-02 18:34:33
 Description: 参考了https://github.com/libuke/aliyundrive-checkin/blob/main/aliyundrive.py
 '''
 import requests
@@ -46,8 +46,10 @@ if __name__ == '__main__':
     for i in range(tryTime):
         try:
             main()
+            print("打卡成功")
             exit(0)
         except:
+            print("打卡失败~")
             time.sleep(5)
     from SendAMail import send_email
     send_email("Tisfy@qq.com", "阿里云盘自动签到失败提醒", f"尝试了{tryTime}次均未签到成功，手动签一下叭~")
