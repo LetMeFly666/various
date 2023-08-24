@@ -1,0 +1,20 @@
+name: 'Auto Run At 15:00UTC - QQ音乐每日时长'
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'run QQMusicOnedayTime'
+        env:
+          ALIYUNDRIVE_REFRESH_TOKEN: ${{ secrets.ALIYUNDRIVE_REFRESH_TOKEN }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        run: |
+          chmod +x 自动脚本/QQMusicOnedayTime.sh
+          bash 自动脚本/QQMusicOnedayTime.sh
