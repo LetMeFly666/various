@@ -15,8 +15,7 @@ jobs:
         uses: actions/checkout@v2
       - name: 'run QQMusicOnedayTime'
         env:
-          ALIYUNDRIVE_REFRESH_TOKEN: ${{ secrets.ALIYUNDRIVE_REFRESH_TOKEN }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          QQMUSICONEDAYTIME_DATA: ${{ secrets.QQMUSICONEDAYTIME_DATA }}
         run: |
           chmod +x 自动脚本/QQMusicOnedayTime.sh
           bash 自动脚本/QQMusicOnedayTime.sh
