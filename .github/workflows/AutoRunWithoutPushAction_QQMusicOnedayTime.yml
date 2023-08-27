@@ -1,8 +1,9 @@
-name: 'Auto Run At 15:00UTC - QQ音乐每日时长'
+name: 'Auto Run At 15:00UTC - QQ音乐每日时长 - 每年运行一次好了'
+# 只增加当日时长，但不增加音响力  每年的8月27日0:56UTC执行（8:56）
 
 on:
   schedule:
-    - cron: '0 15 * * *'
+    - cron: '56 0 27 8 *'
   # push:
   #   branches: 
   #     - master
