@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2023-08-02 18:19:51
 LastEditors: LetMeFly
-LastEditTime: 2023-09-09 09:42:07
+LastEditTime: 2023-09-09 09:45:21
 Description: 参考了https://github.com/libuke/aliyundrive-checkin/blob/main/aliyundrive.py
 Description: token获取：https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
 '''
@@ -24,7 +24,7 @@ def main():
     )
 
     print(response)
-    print(response.text)
+    # print(response.text)  # 可能含有token，还是不要随便print为好
     access_token = response.json()['access_token']
 
     # 签到
