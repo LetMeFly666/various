@@ -2,8 +2,9 @@
 Author: LetMeFly
 Date: 2023-08-02 18:19:51
 LastEditors: LetMeFly
-LastEditTime: 2023-09-09 09:07:05
+LastEditTime: 2023-09-09 09:42:07
 Description: 参考了https://github.com/libuke/aliyundrive-checkin/blob/main/aliyundrive.py
+Description: token获取：https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
 '''
 import requests
 import time
