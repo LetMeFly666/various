@@ -2,7 +2,7 @@
 Author: LetMeFly
 Date: 2023-08-02 18:19:51
 LastEditors: LetMeFly
-LastEditTime: 2023-08-02 18:43:45
+LastEditTime: 2023-09-09 09:07:05
 Description: 参考了https://github.com/libuke/aliyundrive-checkin/blob/main/aliyundrive.py
 '''
 import requests
@@ -23,6 +23,7 @@ def main():
     )
 
     print(response)
+    print(response.text)
     access_token = response.json()['access_token']
 
     # 签到
