@@ -1,0 +1,103 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2023-08-17 10:42:38
+ * @LastEditors: LetMeFly
+ * @LastEditTime: 2023-09-23 19:28:20
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyMyRailgun</title>
+    <style>
+        table,
+        table tr th,
+        table tr td {
+            border: 1px solid #0094ff;
+        }
+    
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+    
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="color: blueviolet;">Only My Railgun</h1>
+    <div class="LetLyric"></div>
+
+    <script>
+        const LetLyric = function(lyric, div) {
+            lyric.forEach(line => {
+                const table = document.createElement("table");
+                table.setAttribute("style", "margin-top: 20px; font-family: 楷体; font-size: large;");
+                table.setAttribute("align", "center");
+                div.appendChild(table);
+                function getMaxElement() {
+                    var ans = 0;
+                    line.forEach(thisLanguage => {
+                        ans = thisLanguage.length > ans ? thisLanguage.length : ans;
+                    })
+                    return ans;
+                }
+                const maxElement = getMaxElement();
+                line.forEach(thisLanguage => {
+                    const tr = document.createElement("tr");
+                    table.appendChild(tr);
+                    for (var i = 0; i < thisLanguage.length; i++) {
+                        const td = document.createElement("td");
+                        tr.appendChild(td);
+                        if (i == thisLanguage.length - 1) {
+                            td.setAttribute("colspan", maxElement - thisLanguage.length + 1);
+                        }
+                        td.innerText =thisLanguage[i];
+                    }
+                });
+            });
+        };
+    </script>
+
+    <script>
+        const lyric_onlyMyRailGun = [[
+                ["はな",  "",  "こころ",   "",  "きざ",   "",   "ゆめ",  ""],
+                [ "放",  "て",   "心",    "に",  "刻",  "んだ",  "夢",   "を"],
+                ["hana", "te", "kokoro", "ni", "kiza", "nda",  "yume", "wo"],
+                [                "释放吧！铭刻心底的梦想"                   ]
+            ], [
+                ["みらい",  "",   "お",  "",  "ざ",      ""    ],
+                [ "未来", "さえ", "置", "き", "去",  "りにして" ],
+                ["mirai", "sae",  "o", "ki", "za", "rinishite"],
+                [              "就连未来也不惜抛下"             ]
+            ], [
+                ["げんかい",  "",   "し",    "",   "いみ", "な",  "" ],
+                [  "限界",  "など", "知", "らない", "意味", "無", "い"],
+                ["genkai", "nado", "shi", "ranai", "imi", "na", "i" ],
+                [          "无需在乎任何界限 毫无任何意义"            ],
+            ], [
+                [  "",    "ちから",  "",   "ひかり", "ち",    ""  ],
+                ["この",   "能力",   "が",   "光",   "散",  "らす" ],
+                ["kono", "chikara", "ga", "hikari", "chi", "rasu"],
+                [               "用这份力量绽放光芒"               ],
+            ], [
+                [  "",   "さき",   "",  "はる",   "",  "おも",  ""  ],
+                ["その",  "先",   "に",  "遥",  "かな", "想",  "いを"],
+                ["sono", "saki", "ni", "haru", "kana", "omo", "iwo"],
+                [                "照亮前方遥远的梦想"                ],
+            ]
+        ];
+
+        LetLyric(lyric_onlyMyRailGun, document.querySelector('.LetLyric'));
+    </script>
+
+<ruby>
+    这 <rp>(拼音:</rp><rt>zhe</rt><rp>)</rp>
+</ruby>
+ 
+</body>
+</html>
