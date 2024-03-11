@@ -50,6 +50,7 @@
     <script src="https://utteranc.es/client.js" repo="LetMeFly666/various" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
 
     <script>
+        var nowAudio;
         function getVisitorNum() {
             const visitorNum = document.querySelector("#VisitorNum");
             const httprequest = new XMLHttpRequest();
@@ -73,6 +74,15 @@
                 TitleH1Hidden.setAttribute("style", "display: none");
             }
 
+            function playTheAudio() {
+                if (!nowAudio) {
+                    nowAudio = new Audio('https://cdn.letmefly.xyz/audio/ACG/Sakurasou_no_Pet_na_Kanojo/nee_anata_wa_nani_iro_ni_nari_tai.mp3');
+                }
+                if (nowAudio.paused) {
+                    nowAudio.play();
+                }
+            }
+
             function showHidden() {
                 const choosenList = [
                     '私の心は，Unlock！',
@@ -92,9 +102,14 @@
                     '呐,你想变成什么颜色？——椎名真白',  // 樱花庄的宠物女孩
                     'ねぇ，あなたは何色になりたい?',  // 樱花庄的宠物女孩
                 ];
-                TitleH1Hidden.innerHTML = choosenList[Math.floor(Math.random() * choosenList.length)];
+                const chosenIndex = Math.floor(Math.random() * choosenList.length);
+                TitleH1Hidden.innerHTML = choosenList[chosenIndex];
                 TitleH1.setAttribute("style", "display: none");
                 TitleH1Hidden.setAttribute("style", "display: block");
+
+                if (chosenIndex == 14 || chosenIndex == 15) {
+                    playTheAudio();
+                }
             }
 
             TitleH1.addEventListener("mouseover", showHidden);
