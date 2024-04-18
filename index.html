@@ -58,7 +58,7 @@
     <script src="https://utteranc.es/client.js" repo="LetMeFly666/various" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
 
     <script>
-        var nowAudio;
+        var nowAudio, nowAudioURL;
         function getVisitorNum() {
             const visitorNum = document.querySelector("#VisitorNum");
             const httprequest = new XMLHttpRequest();
@@ -82,9 +82,10 @@
                 TitleH1Hidden.setAttribute("style", "display: none");
             }
 
-            function playTheAudio() {
-                if (!nowAudio) {
-                    nowAudio = new Audio('https://cdn.letmefly.xyz/audio/ACG/Sakurasou_no_Pet_na_Kanojo/nee_anata_wa_nani_iro_ni_nari_tai.mp3');
+            function playTheAudio(audioURL) {
+                if (!nowAudio || audioURL != nowAudioURL) {
+                    nowAudio = new Audio(audioURL);
+                    nowAudioURL = audioURL;
                 }
                 if (nowAudio.paused) {
                     nowAudio.play();
@@ -92,7 +93,7 @@
             }
 
             function showHidden() {
-                const choosenList = [
+                const choosenList = [  // 不可随意调换顺序
                     '私の心は，Unlock！',
                     'CL一生推',
                     'CLANNAD，读作CL，写作人生',
@@ -109,6 +110,7 @@
                     '白く！輝く！奇跡の——花！White Lily☆',  // 天使降临到了我身边
                     '呐,你想变成什么颜色？——椎名真白',  // 樱花庄的宠物女孩
                     'ねぇ，あなたは何色になりたい?',  // 樱花庄的宠物女孩
+                    '吾王剑锋所指，吾等心之所向',  // Fate - Saber
                 ];
                 const chosenIndex = Math.floor(Math.random() * choosenList.length);
                 TitleH1Hidden.innerHTML = choosenList[chosenIndex];
@@ -116,7 +118,10 @@
                 TitleH1Hidden.setAttribute("style", "display: block");
 
                 if (chosenIndex == 14 || chosenIndex == 15) {
-                    playTheAudio();
+                    playTheAudio('https://cdn.letmefly.xyz/audio/ACG/Sakurasou_no_Pet_na_Kanojo/nee_anata_wa_nani_iro_ni_nari_tai.mp3');
+                }
+                if (chosenIndex == 16) {
+                    playTheAudio('https://cdn.letmefly.xyz/audio/ACG/Fate/Zero/Saber_anata_ga__watashi_no_master_ka.mp3');
                 }
             }
 
@@ -158,8 +163,10 @@
 
         function showToru() {
             const picList = [
-                'https://cdn.letmefly.xyz/img/ACG/KobayashiSannchi_no_Meido_Ragonn/Toru_sway.gif',
-                'https://cdn.letmefly.xyz/img/ACG/Sousou_no_free_ren/linie_png_front.png',
+                'https://cdn.letmefly.xyz/img/ACG/KobayashiSannchi_no_Meido_Ragonn/Toru_sway.gif',  // 小林家的龙女仆 - 托尔摇摆
+                'https://cdn.letmefly.xyz/img/ACG/Sousou_no_free_ren/linie_png_front.png',  // 葬送的芙莉莲 - 莉涅
+                'https://cdn.letmefly.xyz/img/ACG/Fate/Character/SaberArtGoStage1.webp',  // Fate - Saber(呆毛王)
+                'https://cdn.letmefly.xyz/img/ACG/Fate/Character/Rin_Ryuji_Higurashi_cut_in.png',  // Fate - 遠坂·凛
             ];
             const pic = picList[parseInt(Math.random() * picList.length)];
             const ToruSwayLabel = document.querySelector("#ToruSway");
