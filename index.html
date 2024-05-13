@@ -23,6 +23,7 @@
             position: fixed;
             left: 0;
             bottom: 0;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -161,7 +162,7 @@
             `);
         }
 
-        function showToru() {
+        function showToru() {  // 显示页面左下角的图片
             const picList = [
                 'https://cdn.letmefly.xyz/img/ACG/KobayashiSannchi_no_Meido_Ragonn/Toru_sway.gif',  // 小林家的龙女仆 - 托尔摇摆
                 'https://cdn.letmefly.xyz/img/ACG/Sousou_no_free_ren/linie_png_front.png',  // 葬送的芙莉莲 - 莉涅
@@ -173,6 +174,21 @@
             const pic = picList[parseInt(Math.random() * picList.length)];
             const ToruSwayLabel = document.querySelector("#ToruSway");
             ToruSwayLabel.setAttribute('src', pic);
+
+            function resizeImage() {  // 图像大小最大为原始图像的大小、图像高度不超过页面高度的60%、图像宽度不超过页面宽度的30%
+                const pageWidth = window.innerWidth;
+                const pageHeight = window.innerHeight;
+                const maxWidth = pageWidth * 0.30;
+                const maxHeight = pageHeight * 0.60;
+                ToruSwayLabel.style.maxWidth = maxWidth + 'px';
+                ToruSwayLabel.style.maxHeight = maxHeight + 'px';
+            }
+
+            ToruSwayLabel.onload = function() {
+                ToruSwayLabel.style.visibility = 'visible';
+                resizeImage();
+                window.addEventListener('resize', resizeImage);
+            };
         }
     </script>
 
