@@ -1,8 +1,10 @@
 name: 'Auto Run At 00:00UTC - 阿里云盘打卡'
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  # schedule:
+  #   - cron: '0 0 * * *'
+  schedule:  # 每年的6月28日2:03UTC执行（10:03）
+    - cron: '3 2 28 6 *'
   # push:
   #   branches: 
   #     - master
