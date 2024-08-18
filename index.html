@@ -112,6 +112,7 @@
                     '呐,你想变成什么颜色？——椎名真白',  // 樱花庄的宠物女孩
                     'ねぇ，あなたは何色になりたい?',  // 樱花庄的宠物女孩
                     '吾王剑锋所指，吾等心之所向',  // Fate - Saber
+                    '迷子でもいい、迷子でも進め。',  // BanG Dream!/MyGo!!!!! - 不畏迷茫，迷茫着也要砥砺前行。
                 ];
                 const chosenIndex = Math.floor(Math.random() * choosenList.length);
                 TitleH1Hidden.innerHTML = choosenList[chosenIndex];
@@ -126,6 +127,9 @@
                 }
                 else if (chosenIndex == 9) {
                     playTheAudio('https://cdn.letmefly.xyz/audio/ACG/Oni_Metsu_no_Ha/ahaei.mp3');
+                }
+                else if (chosenIndex == 17) {
+                    playTheAudio('https://cdn.letmefly.xyz/audio/ACG/BanG_Dream/MyGo/BanGDream_ItsMyGo/mygo_S01E12_11.16.7+6_maigoDemoii_maigoDemoSusume.mp3');
                 }
             }
 
