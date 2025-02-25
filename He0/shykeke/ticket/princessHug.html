@@ -1,0 +1,163 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2025-02-14 12:30:04
+ * @LastEditors: LetMeFly.xyz
+ * @LastEditTime: 2025-02-14 12:32:47
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>SHYkeke的公主抱券</title>
+    <script src="/Links/Common.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffb7d5 0%, #ff85b2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: '微软雅黑', cursive;
+        }
+
+        .coupon {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4081;
+            animation: heart-float 3s linear forwards;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 2.5em;
+            margin: 0 0 20px 0;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
+        }
+
+        .content {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #666;
+            margin: 20px 0;
+        }
+
+        .rules {
+            border-top: 2px dashed #ff4081;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #e91e63;
+            transform: scale(1.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes heart-float {
+            0% { opacity: 0; transform: translateY(0) scale(0); }
+            20% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+        }
+
+        @media (max-width: 480px) {
+            .coupon {
+                padding: 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="coupon" id="coupon">
+        <div class="hearts" id="hearts"></div>
+        <h1>✨公主抱券✨</h1>
+        <div class="content">
+            <p>持此券者可享受：</p>
+            <p><strong>公主抱服务一次</strong>👸💪</p>
+            <div class="rules">
+                <p>📜使用条款：</p>
+                <p>1. 不限使用时间地点</p>
+                <p>2. 不可转让他人使用</p>
+                <p>3. 持有人可随时兑现</p>
+                <p>🕒 永久有效</p>
+            </div>
+        </div>
+        <button onclick="useCoupon()">立即使用</button>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            return heart;
+        }
+
+        function useCoupon() {
+            const coupon = document.getElementById('coupon');
+            coupon.style.animation = 'none';
+            coupon.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                coupon.style.transform = 'scale(1)';
+                coupon.style.animation = 'float 3s ease-in-out infinite';
+            }, 300);
+
+            // 添加爱心动画
+            const heartsContainer = document.getElementById('hearts');
+            for(let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    heartsContainer.appendChild(createHeart());
+                }, i * 100);
+            }
+
+            // 移除爱心
+            setTimeout(() => {
+                while(heartsContainer.firstChild) {
+                    heartsContainer.removeChild(heartsContainer.firstChild);
+                }
+            }, 3000);
+
+            alert('🎉 公主抱已生效！请找帅帅飞兑现！');
+        }
+    </script>
+</body>
+</html>
