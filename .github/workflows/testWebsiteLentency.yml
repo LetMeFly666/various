@@ -1,4 +1,4 @@
-name: Test blog.letmefly.xyz latency
+name: Test blog.letmefly.xyz latency - 境外访问延迟测试
 
 on:
    workflow_dispatch:
@@ -29,11 +29,32 @@ jobs:
         run: |
           TARGET=blog.letmefly.xyz
           IP=${{ steps.resolve.outputs.IP }}
-          echo "Testing $TARGET ($IP) 20 times..."
+          echo "time_connect time_starttransfer time_total"
+          
+          # 初始化累加器
+          sum_connect=0
+          sum_starttransfer=0
+          sum_total=0
+          
           for i in {1..20}; do
-            echo "=== Request $i ==="
-            curl -o /dev/null -s \
+            # 取三个时间
+            read connect starttransfer total <<< $(curl -o /dev/null -s \
                  --resolve $TARGET:443:$IP \
-                 -w "time_connect: %{time_connect}  time_starttransfer: %{time_starttransfer}  time_total: %{time_total}\n" \
-                 https://$TARGET
+                 -w "%{time_connect} %{time_starttransfer} %{time_total}" \
+                 https://$TARGET)
+                 
+            # 累加
+            sum_connect=$(echo "$sum_connect + $connect" | bc)
+            sum_starttransfer=$(echo "$sum_starttransfer + $starttransfer" | bc)
+            sum_total=$(echo "$sum_total + $total" | bc)
+            
+            # 输出
+            echo "$connect $starttransfer $total"
           done
+          
+          # 计算平均
+          avg_connect=$(echo "scale=4; $sum_connect/20" | bc)
+          avg_starttransfer=$(echo "scale=4; $sum_starttransfer/20" | bc)
+          avg_total=$(echo "scale=4; $sum_total/20" | bc)
+          
+          echo "AVERAGE $avg_connect $avg_starttransfer $avg_total"
