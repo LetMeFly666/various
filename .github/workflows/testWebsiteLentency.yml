@@ -1,0 +1,39 @@
+name: Test blog.letmefly.xyz latency
+
+on:
+   workflow_dispatch:
+
+jobs:
+  latency-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print debug info
+        run: |
+          echo "==== Debug Info ===="
+          echo "Runner hostname: $(hostname)"
+          echo "GitHub runner public IP:"
+          curl -s https://ifconfig.me || echo "Failed to get public IP"
+          echo "==================="
+
+      - name: Resolve target IP
+        id: resolve
+        run: |
+          TARGET=blog.letmefly.xyz
+          IP=$(dig +short $TARGET | head -n1)
+          echo "Target: $TARGET"
+          echo "Resolved IP: $IP"
+          echo "IP=$IP" >> $GITHUB_OUTPUT
+
+      - name: Test latency 20 times
+        run: |
+          TARGET=blog.letmefly.xyz
+          IP=${{ steps.resolve.outputs.IP }}
+          echo "Testing $TARGET ($IP) 20 times..."
+          for i in {1..20}; do
+            echo "=== Request $i ==="
+            curl -o /dev/null -s \
+                 --resolve $TARGET:443:$IP \
+                 -w "time_connect: %{time_connect}  time_starttransfer: %{time_starttransfer}  time_total: %{time_total}\n" \
+                 https://$TARGET
+          done
