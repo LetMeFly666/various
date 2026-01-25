@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单屏幕取色器</title>
+    <script src="https://web.letmefly.xyz/Links/Common.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .picker-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        #pick-btn {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 30px;
+        }
+        #pick-btn:hover {
+            background-color: #3367d6;
+        }
+        #pick-btn:disabled {
+            background-color: #9aa0a6;
+            cursor: not-allowed;
+        }
+        .color-result {
+            margin-top: 20px;
+        }
+        .color-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin: 0 auto 15px;
+            border: 1px solid #ddd;
+            background-color: transparent;
+        }
+        .color-code {
+            font-size: 18px;
+            color: #555;
+            margin: 8px 0;
+        }
+        .tip {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="picker-container">
+        <h1>屏幕取色器</h1>
+        <button id="pick-btn">点击开始取色</button>
+        
+        <div class="color-result">
+            <div class="color-preview" id="color-preview"></div>
+            <div class="color-code" id="hex-code">Hex: 未选择</div>
+            <div class="color-code" id="rgb-code">RGB: 未选择</div>
+        </div>
+
+        <div class="tip">
+            提示：<br>
+            1. 点击按钮后鼠标变为取色器，可点击屏幕任意位置取色（包括浏览器外）<br>
+            2. 按 Esc 键可取消取色<br>
+            3. 仅支持 Chrome/Edge/Opera 等 Chromium 内核浏览器
+        </div>
+    </div>
+
+    <script>
+        // 获取页面元素
+        const pickBtn = document.getElementById('pick-btn');
+        const colorPreview = document.getElementById('color-preview');
+        const hexCode = document.getElementById('hex-code');
+        const rgbCode = document.getElementById('rgb-code');
+
+        // 检查浏览器是否支持 EyeDropper API
+        if (!window.EyeDropper) {
+            pickBtn.disabled = true;
+            hexCode.textContent = '当前浏览器不支持取色功能';
+            rgbCode.textContent = '请使用 Chrome/Edge 95+ 版本';
+        } else {
+            // 创建 EyeDropper 实例
+            const eyeDropper = new EyeDropper();
+
+            // 绑定按钮点击事件
+            pickBtn.addEventListener('click', async () => {
+                try {
+                    // 启动取色器（核心API调用）
+                    const result = await eyeDropper.open();
+                    // 获取取色结果的 Hex 颜色值
+                    const hex = result.sRGBHex;
+                    
+                    // 更新颜色预览和代码展示
+                    colorPreview.style.backgroundColor = hex;
+                    hexCode.textContent = `Hex: ${hex}`;
+                    // 将 Hex 转换为 RGB 格式
+                    const rgb = hexToRgb(hex);
+                    rgbCode.textContent = `RGB: ${rgb}`;
+
+                } catch (error) {
+                    // 用户取消取色（按Esc）
+                    colorPreview.style.backgroundColor = 'transparent';
+                    hexCode.textContent = 'Hex: 取消选择';
+                    rgbCode.textContent = 'RGB: 取消选择';
+                }
+            });
+        }
+
+        // Hex 转 RGB 工具函数
+        function hexToRgb(hex) {
+            // 去除 # 号
+            const pureHex = hex.replace('#', '');
+            // 解析 RGB 分量
+            const r = parseInt(pureHex.substring(0, 2), 16);
+            const g = parseInt(pureHex.substring(2, 4), 16);
+            const b = parseInt(pureHex.substring(4, 6), 16);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+    </script>
+</body>
+</html>
