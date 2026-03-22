@@ -1,119 +1,99 @@
+<!--
+ * @Author: LetMeFly
+ * @Date: 2026-03-22 20:39:51
+ * @LastEditors: LetMeFly.xyz
+ * @LastEditTime: 2026-03-22 22:43:51
+-->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi</title>
-    <script src="/Links/Common.js"></script>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
-            color: #3b3b3b;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        #content {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            margin-bottom: 20px;
-        }
-
-        #content p {
-            display: none;
-            margin: 15px 0;
-            font-size: 20px;
-            line-height: 1.6;
-            font-weight: bold;
-        }
-
-        #buttons {
-            display: none;
-            margin-top: 20px;
-        }
-
-        button {
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 12px 25px;
-            font-size: 18px;
-            cursor: pointer;
-            margin: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        button:hover {
-            background-color: #ff4a3a;
-            transform: translateY(-2px);
-        }
-
-        .message {
-            margin-top: 20px;
-            font-weight: bold;
-            color: #d5006d;
-            font-size: 20px;
-            animation: fadeIn 0.5s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Protected Page</title>
+<script async src="https://web.letmefly.xyz/Links/Common.js"></script>
+<script src="https://input.letmefly.xyz/sdk.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0a0a0a}
+#_o{position:fixed;inset:0;z-index:99999;display:flex;justify-content:center;align-items:center}
+._b{text-align:center;padding:48px 36px;border-radius:20px;background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);backdrop-filter:blur(24px);max-width:400px;width:90%;
+box-shadow:0 8px 32px rgba(0,0,0,.4)}
+._i{font-size:52px;margin-bottom:24px;display:block;opacity:.7}
+._t{font-size:20px;font-weight:600;color:#fff;margin-bottom:6px}
+._h{font-size:13px;color:#555;margin-bottom:32px}
+._w input{width:100%;padding:14px 20px;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.04);color:#fff;font-size:15px;outline:none;transition:border .2s,box-shadow .2s;
+margin-bottom:18px}
+._w input:focus{border-color:rgba(99,102,241,.6);box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+._w input::placeholder{color:#3a3a3a}
+._btn{width:100%;padding:14px;border-radius:12px;border:none;
+background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;font-size:15px;font-weight:600;
+cursor:pointer;transition:all .2s;letter-spacing:.5px}
+._btn:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 4px 16px rgba(99,102,241,.3)}
+._btn:active{transform:scale(.98)}
+._e{color:#ef4444;font-size:13px;margin-top:14px;min-height:20px}
+._sk{animation:sk .5s ease}
+@keyframes sk{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+._ft{margin-top:28px;font-size:11px;color:#333}
+</style>
 </head>
 <body>
-
-<div id="content">
-    <p id="para1">虽然我觉得我已经猜到了答案，但我现在仍然十分忐忑。</p>
-    <p id="para2">每当看到你的回眸一笑，每当听到你的声音轻轻唤我，我的心都会不由自主地加速跳动。</p>
-    <p id="para3">我想陪你走过每一个四季，探索世界的每一个角落。</p>
-    <p id="para4">沈鸿艺，我喜欢你，可以做我的女朋友，让我成为你的人生战友吗？</p>
+<div id="_o">
+<div class="_b" id="_bx">
+<span class="_i">&#x1F512;</span>
+<div class="_t">原页面已隐藏</div>
+<div class="_h">此页面内容已加密，请输入暗号查看</div>
+<div class="_w">
+<input type="password" id="_p" placeholder="输入暗号..." autofocus
+ onkeydown="event.key==='Enter'&&window._u&&_u()" class="keylog-input">
 </div>
-<div id="buttons">
-    <button id="button1">好的！</button>
-    <button id="button2"><small>我不</small></button>
+<button class="_btn" id="_bt" onclick="window._u&&_u()">解 锁</button>
+<div class="_e" id="_er"></div>
+<div class="_ft">SHA-256 verified</div>
 </div>
-
+</div>
 <script>
-    setTimeout(() => {
-        document.getElementById('para1').style.display = 'block';
-    }, 2000);
-
-    setTimeout(() => {
-        document.getElementById('para2').style.display = 'block';
-    }, 11000);
-
-    setTimeout(() => {
-        document.getElementById('para3').style.display = 'block';
-    }, 22000);
-
-    setTimeout(() => {
-        document.getElementById('para4').style.display = 'block';
-    }, 30000);
-
-    setTimeout(() => {
-        document.getElementById('buttons').style.display = 'block';
-    }, 40000);
-
-    document.getElementById('button1').addEventListener('click', () => {
-        window.location.href = '../WeCan';
-    });
-
-    document.getElementById('button2').addEventListener('click', () => {
-        const message = document.createElement('div');
-        message.className = 'message';
-        message.textContent = '再给你一次选择机会';
-        document.body.appendChild(message);
-    });
+var _S="72ASuYAggQibXEC3/qROYQ==",_H="e8a285898f3acefc4fdec482580e895bd42e4798ba58b32b0b08afc89491e679";
+function b64d(s){for(var b=atob(s),a=new Uint8Array(b.length),i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a}
+async function sha256h(m){var h=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(m));
+return Array.from(new Uint8Array(h)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}
+async function dk(pwd,salt,len){
+var enc=new TextEncoder(),bs=32,n=Math.ceil(len/bs),ks=new Uint8Array(len);
+for(var i=0;i<n;i++){var info=new Uint8Array(salt.length+4);info.set(salt);
+info[salt.length]=(i>>>24)&255;info[salt.length+1]=(i>>>16)&255;
+info[salt.length+2]=(i>>>8)&255;info[salt.length+3]=i&255;
+var k=await crypto.subtle.importKey("raw",enc.encode(pwd),"PBKDF2",false,["deriveBits"]);
+var bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:info,iterations:1,hash:"SHA-256"},k,256);
+var bl=new Uint8Array(bits),off=i*bs;
+for(var j=0;j<bs&&off+j<len;j++)ks[off+j]=bl[j]}return ks}
+async function inflate(d){var s=new DecompressionStream("deflate"),w=s.writable.getWriter();w.write(d);w.close();
+var r=s.readable.getReader(),c=[],t=0;for(;;){var v=await r.read();if(v.done)break;c.push(v.value);t+=v.value.length}
+var o=new Uint8Array(t),p=0;for(var i=0;i<c.length;i++){o.set(c[i],p);p+=c[i].length}return o}
+async function decryptData(pwd,ctBytes,saltBytes){
+var ks=await dk(pwd,saltBytes,ctBytes.length);
+var pt=new Uint8Array(ctBytes.length);
+for(var i=0;i<ctBytes.length;i++)pt[i]=ctBytes[i]^ks[i];
+return new TextDecoder().decode(await inflate(pt))}
+var _saltBytes=b64d(_S);
+var _ctBytes=null;
+setTimeout(function(){_ctBytes=b64d(document.getElementById("_d").textContent.trim())},0);
+window._u=async function(){
+var p=document.getElementById("_p").value;if(!p)return;
+var bt=document.getElementById("_bt"),er=document.getElementById("_er");
+bt.textContent="验证中...";bt.disabled=true;er.textContent="";
+var h=await sha256h(p);
+if(h!==_H){er.textContent="\u274C 暗号错误";bt.textContent="解 锁";bt.disabled=false;
+var bx=document.getElementById("_bx");bx.classList.remove("_sk");void bx.offsetWidth;bx.classList.add("_sk");return}
+bt.textContent="解密中...";
+try{
+if(!_ctBytes)_ctBytes=b64d(document.getElementById("_d").textContent.trim());
+var html=await decryptData(p,_ctBytes,_saltBytes);
+document.open();document.write(html);document.close()
+}catch(e){er.textContent="失败: "+e.message;bt.textContent="解 锁";bt.disabled=false}};
 </script>
-
+<script id="_d" type="text/plain">
+tBCzNhNh+eqH6ymrHsiVMewWxoWdWtedfZt1U79WVis3UeCjxhncXjcO5+SYXaAuDS2RJj1lEk9cHwvEPqomujjUJm2c8c4B9czZ9TXS99Y5B2IUHq3qr1hqzWuSg8rMDJrLMBmYO3BIBxmMvGSTwXuBvCf9tN5KZztmwrLZU8YIGvZHJ/jZkn3qz4azf8vCUenPKqvA33skCSPZ0jvxLM2+BnWit1keCpgjtm3DxdY2xCLV1SFZGMyqO8tAfu7DV8IDw5qeypJ8LpzUjIAz7RauTdiulqpHpOE1I6J9eU9+bzD1KVrk97MMf1BxpKlQaQdq2q1julNImERJTFXnma7LWH0u7VTw+VVXSLnCvalIUmD4CdBJzSo3kG8SOnQBWiyOiv5BBmLnL47SWeKtkLfFIefULAoGUFR/gmS4DjE1M+84DtCcR6Z11wqsJTpGsYR4awK6muZbsuyn2Y7JDssvGXJJ854fs9Zvmy5WKu84rL5d7mVWCUaNzIR7MgQCcgSdoeAX8DaaC9I4fG31ixly7LtbYy8APjiHvyCcHGaoWd8puXvprwFrG7k5CUKlCl461fMyKeIYb+GvpFtz15qOtZRu0N38Srnu/Mbwd7izkxzOj4z86Rtsuj4iFRZthyhrOn1QatKfEEopvyBqpqUIrRxLOBOJcR8jIUVmH6dCFWOUOL8Q5kPxukULVo0Q2YW4CZvejh331vkUbteWzcP3HbRm8a6zs0/WSvYF5yrP56dsygkxTBxmjZJvxDUJZ/QVe9N8oE9aYb+OvxQzO98NWNnXASIIkBJUKqm6CdHccrz3N0YKdSs71uH1FairMVCKzm81vCfCldREH4MvxEaiwAYI+7h3+muL/Fo4pMiQeUvMiSsvIkZ1/ae9xjuD7KAHevxvrH3NZXQWPnkn0Z4sAljaDh3JFNDjxE0N/znciEboJQmrf0McEXOYp94Gl++SmTdnFpZYQJ1JdrvRFB34OAMuQSFUCy1WtmJVfzLB36/uEsp0hcpgxZvdRYvt0vuTJyCkHDP1hkvom503MC/rbgrHPf3G5isAX+X7tgX1LTfIZunE+rfVxcA0gqDFpfjxIm2Gvyn2q4+QN3PGH/XxyTMeNA1zFO78A0xvyM29yrwjLqx2LVlVDIG99RPKtm0MRRykvV5lh6F9jo42puCD1P8sxjtvEgq/sd3a3qj5MZmFcY2E9NN7oqz/T25Sbol4FG608OTTRXge+qC71p/n5c9sUSzoM5UKUFekBBObyH7yeuzBcR34ry7M0WdALvAuyIl4xFW6zbIHNyefgWSkYev3pwKYF31SpZSjp+scXOFb11n7zpWjnHcTXz0XUFlMHwFHgSBabhA3JU8OdJU3dRFEJVhGipfoW55CKByD4PiPdKoH6TLyh8gfwNk3EqcFm+vY44Gc+VBj27CTZOKQtg3Khmk9doCzKcU+h5M9WaYuVlx8oNa6xOkZvB1FulwGtKvB3UoxtxApc7lnRtWLTpJ1j0fjT+Os3CmSx4DdTwTlIPvyoUws1GMG2bEWkbeBIWMlnNuBeBT+FoA8ocwuhWMM66kOkl0RTZy4JH6htfWb2Ld3gW1WmDkcq9Pj0rEAPZ2Ct+vXhBKgUZar2SfagxROnk1t5vyaTInYYjvXiqIPy/nGQi+VQmYj0f6BTo2yKXW+hhz/NSUoB82n0nkzPFFfS1bV4cjcO9+Mr08rUWqVCa2NPzo4IT79eQhgfRLzjYSUWpZ3ys2IHxb0lRI5aWWI4oFkjEiGA9NctjMYBMS5QlW82IlvPvt2Ew==
+</script>
 </body>
 </html>

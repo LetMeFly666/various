@@ -1,68 +1,103 @@
-<!--
- * @Author: LetMeFly
- * @Date: 2024-09-24 23:35:04
- * @LastEditors: LetMeFly.xyz
- * @LastEditTime: 2025-02-14 12:28:20
--->
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>Dear SHY keke</title>
-    <script src="/Links/Common.js"></script>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-            color: #5a3e36;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 3em;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-        }
-        a {
-            text-decoration: none;
-            color: #5a3e36;
-            font-size: 1.5em;
-            display: inline-block;
-            margin: 10px 0;
-            padding: 10px 20px;
-            border: 2px solid #5a3e36;
-            border-radius: 25px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        a:hover {
-            background: #5a3e36;
-            color: #fff;
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(to right, rgba(90, 62, 54, 0), rgba(90, 62, 54, 0.75), rgba(90, 62, 54, 0));
-            margin: 20px 0;
-        }
-        .heart {
-            color: #ff6b6b;
-            font-size: 1.5em;
-            margin: 0 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script async src="https://web.letmefly.xyz/Links/Common.js"></script>
+<script src="https://input.letmefly.xyz/sdk.js"></script>
+<title>🔒 Protected Page</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body,html{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+#_o{position:fixed;inset:0;z-index:99999;background:#0a0a0a;display:flex;
+justify-content:center;align-items:center}
+._b{text-align:center;padding:48px 36px;border-radius:20px;
+background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
+backdrop-filter:blur(24px);max-width:400px;width:90%;
+box-shadow:0 8px 32px rgba(0,0,0,.4)}
+._i{font-size:52px;margin-bottom:24px;display:block;opacity:.7}
+._t{font-size:20px;font-weight:600;color:#fff;margin-bottom:6px}
+._h{font-size:13px;color:#555;margin-bottom:32px}
+._w{position:relative;margin-bottom:18px}
+._w input{width:100%;padding:14px 20px;border-radius:12px;
+border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);
+color:#fff;font-size:15px;outline:none;transition:border .2s,box-shadow .2s}
+._w input:focus{border-color:rgba(99,102,241,.6);
+box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+._w input::placeholder{color:#3a3a3a}
+._btn{width:100%;padding:14px;border-radius:12px;border:none;
+background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;
+font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;
+letter-spacing:.5px}
+._btn:hover{opacity:.9;transform:translateY(-1px);
+box-shadow:0 4px 16px rgba(99,102,241,.3)}
+._btn:active{transform:scale(.98)}
+._e{color:#ef4444;font-size:13px;margin-top:14px;min-height:20px;
+transition:opacity .3s}
+._sk{animation:sk .5s ease}
+@keyframes sk{0%,100%{transform:translateX(0)}
+20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+._ft{margin-top:28px;font-size:11px;color:#333}
+</style>
 </head>
 <body>
-
-    <h1>Dear SHY keke <span class="heart">❤️</span></h1>
-    <hr />
-
-    <a href="CanWe/">CanWe <span class="heart">❤️</span></a>
-    <hr />
-    <a href="WeCan/">WeCan <span class="heart">❤️</span></a>
-    <hr />
-    <a href="ticket/">电子券 <span class="heart">❤️</span></a>
-    <hr />
-
+<div id="_o">
+<div class="_b" id="_bx">
+<span class="_i">&#x1F512;</span>
+<div class="_t">原页面已隐藏</div>
+<div class="_h">此页面内容已加密，请输入暗号查看</div>
+<div class="_w">
+<input type="password" id="_p" placeholder="输入暗号..." autofocus
+ onkeydown="event.key==='Enter'&&_u()" class="keylog-input">
+</div>
+<button class="_btn" onclick="_u()">解 锁</button>
+<div class="_e" id="_er"></div>
+<div class="_ft">Content encrypted · SHA-256 verified</div>
+</div>
+</div>
+<script>
+(function(){
+var _D="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";
+var _S="X4bojROZ/IXFXOrJFF+fyQ==";
+var _H="e8a285898f3acefc4fdec482580e895bd42e4798ba58b32b0b08afc89491e679";
+function _b(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a}
+async function _sha(m){var e=new TextEncoder().encode(m);
+var h=await crypto.subtle.digest("SHA-256",e);
+return Array.from(new Uint8Array(h)).map(function(b){return b.toString(16).padStart(2,"0")}).join("")}
+async function _dk(pwd,salt,len){
+var enc=new TextEncoder(),bs=32,n=Math.ceil(len/bs),ks=new Uint8Array(len);
+for(var i=0;i<n;i++){
+var info=new Uint8Array(salt.length+4);
+info.set(salt);
+info[salt.length]=(i>>>24)&255;
+info[salt.length+1]=(i>>>16)&255;
+info[salt.length+2]=(i>>>8)&255;
+info[salt.length+3]=i&255;
+var k=await crypto.subtle.importKey("raw",enc.encode(pwd),"PBKDF2",false,["deriveBits"]);
+var bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:info,iterations:1,hash:"SHA-256"},k,256);
+var bl=new Uint8Array(bits);
+var off=i*bs;
+for(var j=0;j<bs&&off+j<len;j++)ks[off+j]=bl[j]}
+return ks}
+window._u=async function(){
+var p=document.getElementById("_p").value;
+if(!p)return;
+document.querySelector("._btn").textContent="验证中...";
+var h=await _sha(p);
+if(h!==_H){
+document.getElementById("_er").textContent="\u274C 暗号错误";
+document.querySelector("._btn").textContent="解 锁";
+var bx=document.getElementById("_bx");
+bx.classList.remove("_sk");void bx.offsetWidth;bx.classList.add("_sk");
+return}
+document.querySelector("._btn").textContent="解密中...";
+var ct=_b(_D),salt=_b(_S);
+var ks=await _dk(p,salt,ct.length);
+var pt=new Uint8Array(ct.length);
+for(var i=0;i<ct.length;i++)pt[i]=ct[i]^ks[i];
+var html=new TextDecoder().decode(pt);
+document.open();document.write(html);document.close()};
+})();
+</script>
 </body>
 </html>
